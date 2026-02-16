@@ -1,0 +1,1 @@
+Ziel: Aufrechterhaltung, Wartung und tägliche Nutzung bestehender Systeme.

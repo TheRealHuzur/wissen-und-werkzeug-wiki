@@ -1,0 +1,26 @@
+views:
+  - type: table
+    name: Tabelle
+    filters:
+      and:
+        - file.folder == "20_ip_atoms"
+    order:
+      - file.name
+      - status
+      - id
+      - area
+      - type
+      - intent
+      - parent_topic
+      - subtopic
+      - created
+      - summary
+      - file.folder
+    sort:
+      - property: subtopic
+        direction: DESC
+      - property: type
+        direction: ASC
+    columnSize:
+      note.type: 157
+      note.intent: 126

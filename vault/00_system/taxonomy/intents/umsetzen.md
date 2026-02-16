@@ -1,0 +1,1 @@
+Ziel: Praktische Anwendung und Implementierung (Hands-on).

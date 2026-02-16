@@ -1,0 +1,206 @@
+views:
+  - type: table
+    name: "Audit: Alle Module"
+    filters:
+      or:
+        - file.folder == "20_ip_atoms"
+        - file.folder == "10_expertise_map"
+    order:
+      - file.name
+      - id
+      - area
+      - parent_topic
+      - subtopic
+      - type
+      - intent
+      - status
+      - created
+      - aliases
+      - moc_level
+    sort:
+      - property: area
+        direction: ASC
+      - property: parent_topic
+        direction: ASC
+      - property: subtopic
+        direction: ASC
+  - type: table
+    name: 🔍 Fehlende Aliases
+    filters:
+      and:
+        - file.folder == "20_ip_atoms" || file.folder == "10_expertise_map"
+        - "!aliases || aliases.length == 0"
+    order:
+      - file.name
+      - id
+      - area
+      - status
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: ⚠️ ID nicht in Aliases
+    filters:
+      and:
+        - file.folder == "20_ip_atoms" || file.folder == "10_expertise_map"
+        - id
+        - aliases
+        - "!aliases.includes(id)"
+    order:
+      - file.name
+      - id
+      - aliases
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: 📊 Type-Werte (Drift-Check)
+    filters:
+      or:
+        - file.folder == "20_ip_atoms"
+        - file.folder == "10_expertise_map"
+    order:
+      - type
+      - file.name
+      - id
+    sort:
+      - property: type
+        direction: ASC
+    group:
+      - property: type
+  - type: table
+    name: 📊 Intent-Werte (Drift-Check)
+    filters:
+      and:
+        - file.folder == "20_ip_atoms"
+    order:
+      - intent
+      - file.name
+      - id
+    sort:
+      - property: intent
+        direction: ASC
+    group:
+      - property: intent
+  - type: table
+    name: 📊 Status-Verteilung
+    filters:
+      or:
+        - file.folder == "20_ip_atoms"
+        - file.folder == "10_expertise_map"
+    order:
+      - status
+      - file.name
+      - area
+      - type
+    sort:
+      - property: status
+        direction: ASC
+    group:
+      - property: status
+  - type: table
+    name: 📊 Parent Topics (Drift-Check)
+    filters:
+      or:
+        - file.folder == "20_ip_atoms"
+        - file.folder == "10_expertise_map"
+    order:
+      - parent_topic
+      - file.name
+      - subtopic
+    sort:
+      - property: parent_topic
+        direction: ASC
+    group:
+      - property: parent_topic
+  - type: table
+    name: 📊 Subtopics (Drift-Check)
+    filters:
+      and:
+        - file.folder == "20_ip_atoms"
+        - subtopic
+    order:
+      - subtopic
+      - parent_topic
+      - file.name
+    sort:
+      - property: subtopic
+        direction: ASC
+    group:
+      - property: subtopic
+  - type: table
+    name: ⚠️ Fehlende Pflichtfelder (IP)
+    filters:
+      and:
+        - file.folder == "20_ip_atoms"
+        - "!id || !area || !parent_topic || !subtopic || !type || !intent || !status || !created || !summary"
+    order:
+      - file.name
+      - id
+      - area
+      - parent_topic
+      - subtopic
+      - type
+      - intent
+      - status
+      - created
+      - summary
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: ⚠️ Fehlende Pflichtfelder (MOC)
+    filters:
+      and:
+        - file.folder == "10_expertise_map"
+        - "!id || !moc_level || !status || !summary"
+    order:
+      - file.name
+      - id
+      - moc_level
+      - status
+      - summary
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: ⚠️ Summary zu kurz (<150)
+    filters:
+      and:
+        - file.folder == "20_ip_atoms"
+        - summary
+        - summary.length < 150
+    order:
+      - file.name
+      - summary
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: 📅 Älteste Entwürfe
+    filters:
+      and:
+        - file.folder == "20_ip_atoms"
+        - status == "entwurf"
+    order:
+      - created
+      - file.name
+      - area
+      - parent_topic
+      - subtopic
+    sort:
+      - property: created
+        direction: ASC
+  - type: table
+    name: 🔍 Dubletten-Check (Name)
+    filters:
+      or:
+        - file.folder == "20_ip_atoms"
+        - file.folder == "10_expertise_map"
+    order:
+      - file.name
+      - file.folder
+      - id
+    sort:
+      - property: file.name
+        direction: ASC

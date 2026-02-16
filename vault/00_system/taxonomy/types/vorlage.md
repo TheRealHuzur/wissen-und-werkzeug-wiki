@@ -1,0 +1,1 @@
+Strukturierte Dokumente oder Artefakte zur Wiederverwendung. Priorität: Effizienz/Standardisierung.

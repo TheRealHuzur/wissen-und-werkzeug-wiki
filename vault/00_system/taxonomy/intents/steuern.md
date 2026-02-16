@@ -1,0 +1,1 @@
+Ziel: Überwachung, Messung und Korrektur von Ergebnissen (Governance). Ebenso gehören hier auch strategische Überlegungen zu.

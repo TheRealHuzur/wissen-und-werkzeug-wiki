@@ -1,0 +1,1 @@
+Ziel: Konzeption, Design und Architektur von neuen Lösungen.

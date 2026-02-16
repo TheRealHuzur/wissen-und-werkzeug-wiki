@@ -1,0 +1,1 @@
+Schritt-für-Schritt-Handlungsanweisungen (SOPs). Priorität: Operative Ausführung.

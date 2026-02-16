@@ -1,0 +1,1 @@
+Definiert Basiskonzepte, Begriffe und theoretische Rahmenwerke. Priorität: Begriffsdefinition.
