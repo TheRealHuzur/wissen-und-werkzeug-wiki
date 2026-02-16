@@ -1,14 +1,16 @@
-import fs from 'node:fs/promises';
+﻿import fs from 'node:fs/promises';
 import path from 'node:path';
 
 const SOURCE_VAULT = 'vault';
 const ATTACHMENTS_DIR = 'vault/00_system/attachments';
-const OUT_DOCS_DIR = 'src/content/docs/fach-expertise';
+const OUT_DOCS_DIR = 'src/content/docs';
+const LEGACY_OUT_DOCS_DIR = 'src/content/docs/fach-expertise';
 const OUT_ASSETS_DIR = 'public/wiki-assets';
-const AREA_ALLOW = 'fach_expertise';
 const STATUS_READY = 'ki_ready';
 const STATUS_REJECTED = 'verworfen';
-const BASE_PREFIX = '/wiki';
+const SITE = 'https://www.wissen-und-werkzeug.de';
+const BASE = '/wiki';
+const BASE_PREFIX = BASE;
 
 const SKIP_DIRS = new Set(['.obsidian', '.trash', '_private']);
 
@@ -89,9 +91,21 @@ function parseFrontmatter(content) {
   return { hasFrontmatter: true, frontmatter, body };
 }
 
-async function ensureCleanOutDir(dir) {
-  await fs.rm(dir, { recursive: true, force: true });
-  await fs.mkdir(dir, { recursive: true });
+async function cleanExportDocsDir() {
+  await fs.mkdir(OUT_DOCS_DIR, { recursive: true });
+  const entries = await fs.readdir(OUT_DOCS_DIR, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const fullPath = path.join(OUT_DOCS_DIR, entry.name);
+    if (!entry.isFile()) continue;
+    const lower = entry.name.toLowerCase();
+    if (lower === 'index.md' || lower === 'index.mdx') continue;
+    if (lower.endsWith('.md') || lower.endsWith('.mdx')) {
+      await fs.rm(fullPath, { force: true });
+    }
+  }
+
+  await fs.rm(LEGACY_OUT_DOCS_DIR, { recursive: true, force: true });
 }
 
 async function walkMarkdownFiles(rootDir) {
@@ -120,11 +134,27 @@ async function walkMarkdownFiles(rootDir) {
 }
 
 function buildRoute(slug) {
-  return `${BASE_PREFIX}/fach-expertise/${slug}/`;
+  return `${BASE_PREFIX}/${slug}/`;
 }
 
 function normalizeLookupKey(input) {
   return input.trim().toLowerCase();
+}
+
+function slugify(input) {
+  return String(input ?? '')
+    .trim()
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s_-]/gu, '')
+    .replace(/[\s_]+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function normalizeAssetKey(input) {
+  return String(input ?? '')
+    .toLowerCase()
+    .replace(/[\s._,-]+/g, '');
 }
 
 function splitWikilinkTarget(rawTarget) {
@@ -153,50 +183,81 @@ function yamlQuote(input) {
   return `"${String(input).replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\r?\n/g, ' ')}"`;
 }
 
-async function copyAttachmentIfExists(filename) {
-  const safeName = path.basename(filename);
-  const source = path.join(ATTACHMENTS_DIR, safeName);
-  try {
-    await fs.access(source);
-  } catch {
-    return false;
+function sanitizeDescription(input) {
+  let text = String(input ?? '');
+  text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1');
+  text = text.replace(/[*_`]/g, '');
+  text = text.replace(/\s+/g, ' ').trim();
+
+  if (text.length <= 160) {
+    return text;
   }
 
-  await fs.mkdir(OUT_ASSETS_DIR, { recursive: true });
-  const target = path.join(OUT_ASSETS_DIR, safeName);
-  try {
-    await fs.access(target);
-  } catch {
-    await fs.copyFile(source, target);
+  const sliced = text.slice(0, 159);
+  const boundary = sliced.lastIndexOf(' ');
+  const compact = (boundary > 80 ? sliced.slice(0, boundary) : sliced).trim();
+  return `${compact}\u2026`;
+}
+
+function toBool(value) {
+  if (typeof value === 'boolean') return value;
+  if (typeof value === 'number') {
+    if (value === 1) return true;
+    if (value === 0) return false;
+    return undefined;
   }
-  return true;
+  if (typeof value === 'string') {
+    const normalized = value.trim().toLowerCase();
+    if (normalized === 'true' || normalized === '1') return true;
+    if (normalized === 'false' || normalized === '0') return false;
+  }
+  return undefined;
+}
+
+function toNumber(value) {
+  const parsed = Number.parseInt(String(value ?? '').trim(), 10);
+  if (Number.isNaN(parsed)) {
+    return undefined;
+  }
+  return parsed;
 }
 
 async function buildAttachmentIndex() {
-  const index = new Map();
+  const exact = new Map();
+  const normalized = new Map();
   let entries = [];
   try {
     entries = await fs.readdir(ATTACHMENTS_DIR, { withFileTypes: true });
   } catch {
-    return index;
+    return { exact, normalized };
   }
 
   for (const entry of entries) {
     if (!entry.isFile()) continue;
-    const key = normalizeLookupKey(entry.name);
-    if (!index.has(key)) {
-      index.set(key, entry.name);
+    const exactKey = normalizeLookupKey(entry.name);
+    if (!exact.has(exactKey)) {
+      exact.set(exactKey, entry.name);
+    }
+    const normalizedKey = normalizeAssetKey(entry.name);
+    if (normalizedKey && !normalized.has(normalizedKey)) {
+      normalized.set(normalizedKey, entry.name);
     }
   }
-  return index;
+  return { exact, normalized };
 }
 
 async function copyAttachmentByNameIfExists(filename, attachmentIndex) {
   const safeName = path.basename(filename);
-  const key = normalizeLookupKey(safeName);
-  const matchedName = attachmentIndex.get(key);
+  const exactKey = normalizeLookupKey(safeName);
+  let matchedName = attachmentIndex.exact.get(exactKey);
+  let fuzzyMatched = false;
   if (!matchedName) {
-    return false;
+    const normalizedKey = normalizeAssetKey(safeName);
+    matchedName = attachmentIndex.normalized.get(normalizedKey);
+    fuzzyMatched = Boolean(matchedName);
+  }
+  if (!matchedName) {
+    return { copied: false, filename: safeName, fuzzyMatched: false };
   }
 
   const source = path.join(ATTACHMENTS_DIR, matchedName);
@@ -207,7 +268,7 @@ async function copyAttachmentByNameIfExists(filename, attachmentIndex) {
   } catch {
     await fs.copyFile(source, target);
   }
-  return true;
+  return { copied: true, filename: safeName, sourceName: matchedName, fuzzyMatched };
 }
 
 function extractLinkTarget(rawTarget) {
@@ -226,13 +287,14 @@ async function main() {
   let scannedFiles = 0;
   let exportedFiles = 0;
   let skippedNoFrontmatter = 0;
-  let skippedWrongArea = 0;
   let skippedStatusMissing = 0;
   let skippedStatusNotReady = 0;
   let skippedStatusVerworfen = 0;
-  let skippedIdMissing = 0;
   let brokenWikilinksCount = 0;
   let missingAssetsCount = 0;
+  let descriptionsFromSummary = 0;
+  let descriptionsFromDescription = 0;
+  let descriptionsMissing = 0;
   const skippedSamples = [];
 
   function addSkipSample(file, reason) {
@@ -241,7 +303,7 @@ async function main() {
     }
   }
 
-  await ensureCleanOutDir(OUT_DOCS_DIR);
+  await cleanExportDocsDir();
   const attachmentIndex = await buildAttachmentIndex();
 
   const markdownFiles = await walkMarkdownFiles(SOURCE_VAULT);
@@ -254,12 +316,6 @@ async function main() {
     if (!hasFrontmatter) {
       skippedNoFrontmatter += 1;
       addSkipSample(file, 'noFrontmatter');
-      continue;
-    }
-
-    if (frontmatter.area !== AREA_ALLOW) {
-      skippedWrongArea += 1;
-      addSkipSample(file, 'wrongArea');
       continue;
     }
 
@@ -281,23 +337,18 @@ async function main() {
       continue;
     }
 
-    const rawId = String(frontmatter.id ?? '').trim();
-    const canonicalId = rawId;
-    if (!canonicalId) {
-      skippedIdMissing += 1;
-      addSkipSample(file, 'idMissing');
-      continue;
-    }
-
     const parsed = path.parse(file);
     const sourceName = parsed.name;
+    const rawId = String(frontmatter.id ?? '').trim();
+    const slug = slugify(rawId || sourceName) || slugify(sourceName) || 'untitled';
     const aliases = Array.isArray(frontmatter.aliases)
       ? frontmatter.aliases.map((value) => String(value).trim()).filter(Boolean)
       : [];
     const title = frontmatter.title ? String(frontmatter.title) : toTitleCase(sourceName);
     candidates.push({
       file,
-      id: canonicalId,
+      id: rawId || sourceName,
+      slug,
       rawId,
       sourceName,
       aliases,
@@ -325,9 +376,9 @@ async function main() {
   }
 
   for (const candidate of candidates) {
-    const route = buildRoute(candidate.id);
-    addLookupKey(candidate.id, route, `${candidate.file} (id)`);
-    if (candidate.rawId && candidate.rawId !== candidate.id) {
+    const route = buildRoute(candidate.slug);
+    addLookupKey(candidate.slug, route, `${candidate.file} (id/slug)`);
+    if (candidate.rawId) {
       addLookupKey(candidate.rawId, route, `${candidate.file} (raw id)`);
     }
     for (const alias of candidate.aliases) {
@@ -352,13 +403,18 @@ async function main() {
         const inner = match[1].trim();
         const [embedTargetRaw] = inner.split('|');
         const filename = path.basename(extractLinkTarget(embedTargetRaw || '').trim());
-        const copied = await copyAttachmentIfExists(filename);
-        if (!copied) {
+        const resolved = await copyAttachmentByNameIfExists(filename, attachmentIndex);
+        if (!resolved.copied) {
           missingAssetsCount += 1;
           console.warn(`[warn] Missing asset: ${filename} (source: ${candidate.file})`);
           out += match[0];
         } else {
-          out += `![](${BASE_PREFIX}/wiki-assets/${encodeURIComponent(filename)})`;
+          if (resolved.fuzzyMatched) {
+            console.warn(
+              `[warn] Fuzzy asset match: ${filename} -> ${resolved.sourceName} (source: ${candidate.file})`
+            );
+          }
+          out += `![](/wiki-assets/${encodeURIComponent(resolved.filename)})`;
         }
         lastIndex = pattern.lastIndex;
       }
@@ -374,7 +430,6 @@ async function main() {
       while ((match = pattern.exec(body)) !== null) {
         out += body.slice(lastIndex, match.index);
 
-        const altText = match[1];
         const rawTarget = match[2].trim();
         if (/^https?:\/\//i.test(rawTarget) || rawTarget.startsWith('/')) {
           out += match[0];
@@ -387,13 +442,18 @@ async function main() {
             ? rawTarget.slice(1, -1).trim()
             : rawTarget;
         const imageName = path.basename(normalizedTarget);
-        const copied = await copyAttachmentByNameIfExists(imageName, attachmentIndex);
-        if (!copied) {
+        const resolved = await copyAttachmentByNameIfExists(imageName, attachmentIndex);
+        if (!resolved.copied) {
           missingAssetsCount += 1;
           console.warn(`[warn] Missing asset: ${imageName} (source: ${candidate.file})`);
           out += match[0];
         } else {
-          out += `![${altText}](${BASE_PREFIX}/wiki-assets/${imageName})`;
+          if (resolved.fuzzyMatched) {
+            console.warn(
+              `[warn] Fuzzy asset match: ${imageName} -> ${resolved.sourceName} (source: ${candidate.file})`
+            );
+          }
+          out += `![](/wiki-assets/${encodeURIComponent(resolved.filename)})`;
         }
 
         lastIndex = pattern.lastIndex;
@@ -425,11 +485,71 @@ async function main() {
       return `[${text}](${route}${anchor})`;
     });
 
-    const description = candidate.frontmatter.summary
-      ? `\ndescription: ${yamlQuote(candidate.frontmatter.summary)}`
-      : '';
-    const output = `---\ntitle: ${yamlQuote(candidate.title)}${description}\n---\n\n${body.replace(/^\s*\r?\n/, '')}`;
-    const outputFile = path.join(OUT_DOCS_DIR, `${candidate.id}.md`);
+    const sourceDescription = String(candidate.frontmatter.description ?? '').trim();
+    const sourceSummary = String(candidate.frontmatter.summary ?? '').trim();
+    let description = '';
+    if (sourceDescription) {
+      const sanitizedDescription = sanitizeDescription(sourceDescription);
+      if (sanitizedDescription) {
+        description = sanitizedDescription;
+        descriptionsFromDescription += 1;
+      }
+    }
+    if (!description && sourceSummary) {
+      description = sanitizeDescription(sourceSummary);
+      if (description) {
+        descriptionsFromSummary += 1;
+      }
+    }
+    if (!description) {
+      descriptionsMissing += 1;
+      console.warn(`[warn] Missing description/summary (source: ${candidate.file})`);
+    }
+
+    const sourceOrder = candidate.frontmatter.sidebar_order ?? candidate.frontmatter.order;
+    const sourceHidden = candidate.frontmatter.sidebar_hidden ?? candidate.frontmatter.hidden;
+    const sidebarOrder = toNumber(sourceOrder);
+    const sidebarHidden = toBool(sourceHidden);
+
+    const canonicalHref = `${SITE}${buildRoute(candidate.slug)}`;
+    const jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: candidate.title,
+      url: canonicalHref,
+    };
+    if (description) {
+      jsonLd.description = description;
+    }
+
+    const frontmatterLines = ['---', `title: ${yamlQuote(candidate.title)}`];
+    if (description) {
+      frontmatterLines.push(`description: ${yamlQuote(description)}`);
+    }
+    frontmatterLines.push(`slug: ${yamlQuote(candidate.slug)}`);
+    frontmatterLines.push('head:');
+    frontmatterLines.push('  - tag: link');
+    frontmatterLines.push('    attrs:');
+    frontmatterLines.push('      rel: canonical');
+    frontmatterLines.push(`      href: ${yamlQuote(canonicalHref)}`);
+    frontmatterLines.push('  - tag: script');
+    frontmatterLines.push('    attrs:');
+    frontmatterLines.push('      type: application/ld+json');
+    frontmatterLines.push(`    content: ${yamlQuote(JSON.stringify(jsonLd))}`);
+
+    if (sidebarOrder !== undefined || sidebarHidden !== undefined) {
+      frontmatterLines.push('sidebar:');
+      if (sidebarOrder !== undefined) {
+        frontmatterLines.push(`  order: ${sidebarOrder}`);
+      }
+      if (sidebarHidden !== undefined) {
+        frontmatterLines.push(`  hidden: ${sidebarHidden}`);
+      }
+    }
+
+    frontmatterLines.push('---');
+    const output = `${frontmatterLines.join('\n')}\n\n${body.replace(/^\s*\r?\n/, '')}`;
+    const outputFile = path.join(OUT_DOCS_DIR, `${candidate.slug}.md`);
     await fs.writeFile(outputFile, output, 'utf8');
     exportedFiles += 1;
   }
@@ -437,13 +557,14 @@ async function main() {
   console.log(`[summary] scannedFiles: ${scannedFiles}`);
   console.log(`[summary] exportedFiles: ${exportedFiles}`);
   console.log(`[summary] skipped.noFrontmatter: ${skippedNoFrontmatter}`);
-  console.log(`[summary] skipped.wrongArea: ${skippedWrongArea}`);
   console.log(`[summary] skipped.statusMissing: ${skippedStatusMissing}`);
   console.log(`[summary] skipped.statusNotReady: ${skippedStatusNotReady}`);
   console.log(`[summary] skipped.statusVerworfen: ${skippedStatusVerworfen}`);
-  console.log(`[summary] skipped.idMissing: ${skippedIdMissing}`);
   console.log(`[summary] brokenWikilinksCount: ${brokenWikilinksCount}`);
   console.log(`[summary] missingAssetsCount: ${missingAssetsCount}`);
+  console.log(`[summary] descriptionsFromSummary: ${descriptionsFromSummary}`);
+  console.log(`[summary] descriptionsFromDescription: ${descriptionsFromDescription}`);
+  console.log(`[summary] descriptionsMissing: ${descriptionsMissing}`);
   if (skippedSamples.length > 0) {
     console.log('[summary] skipSamples (max 10):');
     for (const sample of skippedSamples) {
@@ -457,3 +578,4 @@ main().catch((error) => {
   console.error(error);
   process.exit(1);
 });
+
