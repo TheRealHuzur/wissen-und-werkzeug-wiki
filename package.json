@@ -3,12 +3,16 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "export:wiki": "node scripts/export-wiki.mjs",
+    "predev": "node scripts/export-wiki.mjs",
     "dev": "astro dev",
+    "prebuild": "node scripts/export-wiki.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/starlight": "^0.37.6",
     "astro": "^5.17.1"
   }
 }

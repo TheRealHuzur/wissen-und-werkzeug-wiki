@@ -1,5 +1,17 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import starlight from '@astrojs/starlight';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  site: 'https://www.wissen-und-werkzeug.de',
+  base: '/wiki',
+  trailingSlash: 'always',
+  integrations: [
+    starlight({
+      title: 'Wissen & Werkzeug Wiki',
+      sidebar: [
+        { label: 'Startseite', link: '/' },
+      ],
+      favicon: '/favicon.svg',
+    }),
+  ],
+});
