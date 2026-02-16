@@ -2,12 +2,16 @@
 import path from 'node:path';
 
 const SOURCE_VAULT = 'vault';
+const MOC_ROOT_DIR = 'vault/10_expertise_map';
 const ATTACHMENTS_DIR = 'vault/00_system/attachments';
 const OUT_DOCS_DIR = 'src/content/docs';
 const LEGACY_OUT_DOCS_DIR = 'src/content/docs/fach-expertise';
 const OUT_ASSETS_DIR = 'public/wiki-assets';
+const GENERATED_SIDEBAR_FILE = 'src/generated/sidebar.mjs';
 const STATUS_READY = 'ki_ready';
 const STATUS_REJECTED = 'verworfen';
+const STATUS_ACTIVE = 'aktiv';
+const STATUS_DRAFT = 'entwurf';
 const SITE = 'https://www.wissen-und-werkzeug.de';
 const BASE = '/wiki';
 const BASE_PREFIX = BASE;
@@ -25,13 +29,23 @@ function toTitleCase(input) {
 }
 
 function parseFrontmatter(content) {
+  const parsed = parseYamlFrontmatter(content, { strict: false });
+  return {
+    hasFrontmatter: parsed.hasFrontmatter,
+    frontmatter: parsed.frontmatter,
+    body: parsed.body,
+  };
+}
+
+function parseYamlFrontmatter(content, options = {}) {
+  const strict = Boolean(options.strict);
   if (!content.startsWith('---')) {
-    return { hasFrontmatter: false, frontmatter: {}, body: content };
+    return { hasFrontmatter: false, frontmatter: {}, body: content, warnings: [] };
   }
 
   const endMatch = content.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/);
   if (!endMatch) {
-    return { hasFrontmatter: false, frontmatter: {}, body: content };
+    return { hasFrontmatter: false, frontmatter: {}, body: content, warnings: [] };
   }
 
   const block = endMatch[0];
@@ -39,6 +53,8 @@ function parseFrontmatter(content) {
   const body = content.slice(block.length);
   const frontmatter = {};
   const lines = yamlRaw.split(/\r?\n/);
+  const warnings = [];
+  let activeListKey = null;
 
   function parseYamlString(value) {
     let out = value.trim();
@@ -53,42 +69,56 @@ function parseFrontmatter(content) {
 
   for (let i = 0; i < lines.length; i += 1) {
     const line = lines[i];
-    const match = line.match(/^([A-Za-z0-9_-]+)\s*:\s*(.*)$/);
-    if (!match) continue;
-
-    const key = match[1];
-    const rawValue = match[2] ?? '';
-    if (key === 'aliases') {
-      const aliases = [];
-      const trimmed = rawValue.trim();
-      if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
-        const inner = trimmed.slice(1, -1).trim();
-        if (inner.length > 0) {
-          for (const part of inner.split(',')) {
-            const alias = parseYamlString(part);
-            if (alias) aliases.push(alias);
-          }
-        }
-      } else if (trimmed.length > 0) {
-        aliases.push(parseYamlString(trimmed));
-      } else {
-        while (i + 1 < lines.length) {
-          const next = lines[i + 1];
-          const itemMatch = next.match(/^\s*-\s+(.+)$/);
-          if (!itemMatch) break;
-          const alias = parseYamlString(itemMatch[1]);
-          if (alias) aliases.push(alias);
-          i += 1;
-        }
-      }
-      frontmatter.aliases = aliases;
+    if (!line.trim() || /^\s*#/.test(line)) {
       continue;
     }
 
-    frontmatter[key] = parseYamlString(rawValue);
+    const match = line.match(/^([A-Za-z0-9_-]+)\s*:\s*(.*)$/);
+    if (!match) {
+      const listMatch = line.match(/^\s*-\s+(.+)$/);
+      if (listMatch && activeListKey) {
+        if (!Array.isArray(frontmatter[activeListKey])) {
+          frontmatter[activeListKey] = [];
+        }
+        const item = parseYamlString(listMatch[1]);
+        if (item) frontmatter[activeListKey].push(item);
+        continue;
+      }
+
+      if (strict) {
+        warnings.push(`Unsupported YAML syntax at line ${i + 1}`);
+      }
+      continue;
+    }
+
+    const key = match[1];
+    const rawValue = match[2] ?? '';
+    const trimmed = rawValue.trim();
+    activeListKey = null;
+
+    if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+      const items = [];
+      const inner = trimmed.slice(1, -1).trim();
+      if (inner.length > 0) {
+        for (const part of inner.split(',')) {
+          const item = parseYamlString(part);
+          if (item) items.push(item);
+        }
+      }
+      frontmatter[key] = items;
+      continue;
+    }
+
+    if (trimmed.length === 0) {
+      frontmatter[key] = '';
+      activeListKey = key;
+      continue;
+    }
+
+    frontmatter[key] = parseYamlString(trimmed);
   }
 
-  return { hasFrontmatter: true, frontmatter, body };
+  return { hasFrontmatter: true, frontmatter, body, warnings };
 }
 
 async function cleanExportDocsDir() {
@@ -179,6 +209,15 @@ function headingSlug(input) {
     .replace(/^-+|-+$/g, '');
 }
 
+function extractFirstH1(content) {
+  const lines = String(content ?? '').split(/\r?\n/);
+  for (const line of lines) {
+    const match = line.match(/^#\s+(.+)$/);
+    if (match) return match[1].trim();
+  }
+  return '';
+}
+
 function yamlQuote(input) {
   return `"${String(input).replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\r?\n/g, ' ')}"`;
 }
@@ -220,6 +259,17 @@ function toNumber(value) {
     return undefined;
   }
   return parsed;
+}
+
+function buildMocLabel(frontmatter, body, fallbackName) {
+  const h1 = extractFirstH1(body);
+  if (h1) return h1;
+
+  const title = String(frontmatter.title ?? '').trim();
+  if (title) return title;
+
+  const identifier = String(frontmatter.id ?? '').trim() || fallbackName;
+  return toTitleCase(identifier);
 }
 
 async function buildAttachmentIndex() {
@@ -283,6 +333,157 @@ function resolveInternalRoute(routeMap, target) {
   return routeMap.get(normalized) || routeMap.get(basenameKey) || null;
 }
 
+function buildSidebarItemsFromMocs(mocs, includeDraft) {
+  const parents = new Map();
+
+  for (const moc of mocs) {
+    const status = normalizeLookupKey(String(moc.status ?? ''));
+    if (status === STATUS_REJECTED) continue;
+    if (status !== STATUS_ACTIVE && !(includeDraft && status === STATUS_DRAFT)) continue;
+
+    if (moc.level === 'parent') {
+      const parentKey = moc.parentTopic || moc.id;
+      const node = parents.get(parentKey) ?? {
+        key: parentKey,
+        label: toTitleCase(parentKey),
+        parentMoc: null,
+        subtopics: [],
+      };
+      node.label = moc.label || node.label;
+      node.parentMoc = moc;
+      parents.set(parentKey, node);
+      continue;
+    }
+
+    if (moc.level === 'subtopic') {
+      const parentKey = moc.parentTopic;
+      const node = parents.get(parentKey) ?? {
+        key: parentKey,
+        label: toTitleCase(parentKey),
+        parentMoc: null,
+        subtopics: [],
+      };
+      node.subtopics.push(moc);
+      parents.set(parentKey, node);
+    }
+  }
+
+  const groups = Array.from(parents.values())
+    .map((node) => {
+      if (!node.parentMoc && node.subtopics.length === 0) return null;
+      const items = [];
+      if (node.parentMoc) {
+        items.push({
+          label: 'Uebersicht',
+          link: buildRoute(node.parentMoc.slug),
+        });
+      }
+
+      const subtopics = node.subtopics
+        .slice()
+        .sort((a, b) => a.label.localeCompare(b.label, 'de', { sensitivity: 'base' }));
+      for (const subtopic of subtopics) {
+        items.push({
+          label: subtopic.label,
+          link: buildRoute(subtopic.slug),
+        });
+      }
+
+      return {
+        label: node.label,
+        items,
+      };
+    })
+    .filter(Boolean)
+    .sort((a, b) => a.label.localeCompare(b.label, 'de', { sensitivity: 'base' }));
+
+  return groups;
+}
+
+async function generateSidebarFromMocs() {
+  const mocFiles = await walkMarkdownFiles(MOC_ROOT_DIR);
+  const mocs = [];
+  const yamlWarningFiles = [];
+  let parentCount = 0;
+  let subtopicCount = 0;
+
+  for (const file of mocFiles) {
+    const raw = await fs.readFile(file, 'utf8');
+    const parsed = parseYamlFrontmatter(raw, { strict: true });
+    if (!parsed.hasFrontmatter) continue;
+    if (parsed.warnings.length > 0) {
+      yamlWarningFiles.push(file);
+      continue;
+    }
+
+    const level = normalizeLookupKey(String(parsed.frontmatter.moc_level ?? ''));
+    if (level !== 'parent' && level !== 'subtopic') {
+      continue;
+    }
+
+    const sourceName = path.parse(file).name;
+    const id = String(parsed.frontmatter.id ?? '').trim() || sourceName;
+    const slug = slugify(id) || slugify(sourceName) || 'untitled';
+    const label = buildMocLabel(parsed.frontmatter, parsed.body, sourceName);
+    const parentTopicRaw = String(parsed.frontmatter.parent_topic ?? '').trim();
+    const parentTopic = slugify(parentTopicRaw || (level === 'parent' ? id : ''));
+    const subtopic = String(parsed.frontmatter.subtopic ?? '').trim();
+
+    if (level === 'subtopic' && (!parentTopic || !subtopic)) {
+      yamlWarningFiles.push(file);
+      continue;
+    }
+
+    if (level === 'parent') parentCount += 1;
+    if (level === 'subtopic') subtopicCount += 1;
+
+    mocs.push({
+      file,
+      id,
+      slug,
+      label,
+      level,
+      status: String(parsed.frontmatter.status ?? '').trim(),
+      parentTopic,
+      subtopic,
+    });
+  }
+
+  let sidebar = buildSidebarItemsFromMocs(mocs, false);
+  let fallbackUsed = false;
+  let adoptedCount = mocs.filter((moc) => normalizeLookupKey(String(moc.status ?? '')) === STATUS_ACTIVE)
+    .length;
+  if (sidebar.length === 0) {
+    sidebar = buildSidebarItemsFromMocs(mocs, true);
+    fallbackUsed = true;
+    adoptedCount = mocs.filter((moc) => {
+      const status = normalizeLookupKey(String(moc.status ?? ''));
+      return status === STATUS_ACTIVE || status === STATUS_DRAFT;
+    }).length;
+    if (sidebar.length > 0) {
+      console.warn('[warn] Sidebar fallback: entwurf included');
+    }
+  }
+
+  await fs.mkdir(path.dirname(GENERATED_SIDEBAR_FILE), { recursive: true });
+  const sidebarModule = `// Auto-generated by scripts/export-wiki.mjs\nexport const sidebar = ${JSON.stringify(
+    sidebar,
+    null,
+    2
+  )};\n`;
+  await fs.writeFile(GENERATED_SIDEBAR_FILE, sidebarModule, 'utf8');
+
+  return {
+    totalMocs: mocs.length,
+    parentCount,
+    subtopicCount,
+    adoptedCount,
+    fallbackUsed,
+    yamlWarningsCount: yamlWarningFiles.length,
+    yamlWarningFiles,
+  };
+}
+
 async function main() {
   let scannedFiles = 0;
   let exportedFiles = 0;
@@ -296,6 +497,15 @@ async function main() {
   let descriptionsFromDescription = 0;
   let descriptionsMissing = 0;
   const skippedSamples = [];
+  const mocSummary = {
+    totalMocs: 0,
+    parentCount: 0,
+    subtopicCount: 0,
+    adoptedCount: 0,
+    fallbackUsed: false,
+    yamlWarningsCount: 0,
+    yamlWarningFiles: [],
+  };
 
   function addSkipSample(file, reason) {
     if (skippedSamples.length < 10) {
@@ -305,6 +515,7 @@ async function main() {
 
   await cleanExportDocsDir();
   const attachmentIndex = await buildAttachmentIndex();
+  Object.assign(mocSummary, await generateSidebarFromMocs());
 
   const markdownFiles = await walkMarkdownFiles(SOURCE_VAULT);
   scannedFiles = markdownFiles.length;
@@ -565,6 +776,23 @@ async function main() {
   console.log(`[summary] descriptionsFromSummary: ${descriptionsFromSummary}`);
   console.log(`[summary] descriptionsFromDescription: ${descriptionsFromDescription}`);
   console.log(`[summary] descriptionsMissing: ${descriptionsMissing}`);
+  console.log(`[summary] mocs.total: ${mocSummary.totalMocs}`);
+  console.log(`[summary] mocs.parent: ${mocSummary.parentCount}`);
+  console.log(`[summary] mocs.subtopic: ${mocSummary.subtopicCount}`);
+  console.log(`[summary] mocs.inSidebar: ${mocSummary.adoptedCount}`);
+  console.log(`[summary] mocs.fallbackUsed: ${mocSummary.fallbackUsed}`);
+  console.log(`[summary] mocs.yamlWarnings: ${mocSummary.yamlWarningsCount}`);
+  if (mocSummary.yamlWarningFiles.length > 0) {
+    const maxWarnings = 20;
+    console.log(`[summary] mocs.yamlWarningFiles (max ${maxWarnings}):`);
+    const sampleWarnings = mocSummary.yamlWarningFiles.slice(0, maxWarnings);
+    for (const warningFile of sampleWarnings) {
+      console.log(`- ${warningFile}`);
+    }
+    if (mocSummary.yamlWarningFiles.length > maxWarnings) {
+      console.log(`... +${mocSummary.yamlWarningFiles.length - maxWarnings} more`);
+    }
+  }
   if (skippedSamples.length > 0) {
     console.log('[summary] skipSamples (max 10):');
     for (const sample of skippedSamples) {
