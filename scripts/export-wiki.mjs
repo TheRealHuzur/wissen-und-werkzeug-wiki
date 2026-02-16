@@ -6,16 +6,11 @@ const ATTACHMENTS_DIR = 'vault/00_system/attachments';
 const OUT_DOCS_DIR = 'src/content/docs/fach-expertise';
 const OUT_ASSETS_DIR = 'public/wiki-assets';
 const AREA_ALLOW = 'fach_expertise';
+const STATUS_READY = 'ki_ready';
+const STATUS_REJECTED = 'verworfen';
+const BASE_PREFIX = '/wiki';
 
 const SKIP_DIRS = new Set(['.obsidian', '.trash', '_private']);
-
-function slugify(input) {
-  return input
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .replace(/-{2,}/g, '-');
-}
 
 function toTitleCase(input) {
   return input
@@ -41,18 +36,54 @@ function parseFrontmatter(content) {
   const yamlRaw = block.replace(/^---\r?\n/, '').replace(/\r?\n---\r?\n?$/, '');
   const body = content.slice(block.length);
   const frontmatter = {};
+  const lines = yamlRaw.split(/\r?\n/);
 
-  for (const line of yamlRaw.split(/\r?\n/)) {
+  function parseYamlString(value) {
+    let out = value.trim();
+    if (
+      (out.startsWith('"') && out.endsWith('"')) ||
+      (out.startsWith("'") && out.endsWith("'"))
+    ) {
+      out = out.slice(1, -1);
+    }
+    return out;
+  }
+
+  for (let i = 0; i < lines.length; i += 1) {
+    const line = lines[i];
     const match = line.match(/^([A-Za-z0-9_-]+)\s*:\s*(.*)$/);
     if (!match) continue;
-    let value = match[2].trim();
-    if (
-      (value.startsWith('"') && value.endsWith('"')) ||
-      (value.startsWith("'") && value.endsWith("'"))
-    ) {
-      value = value.slice(1, -1);
+
+    const key = match[1];
+    const rawValue = match[2] ?? '';
+    if (key === 'aliases') {
+      const aliases = [];
+      const trimmed = rawValue.trim();
+      if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+        const inner = trimmed.slice(1, -1).trim();
+        if (inner.length > 0) {
+          for (const part of inner.split(',')) {
+            const alias = parseYamlString(part);
+            if (alias) aliases.push(alias);
+          }
+        }
+      } else if (trimmed.length > 0) {
+        aliases.push(parseYamlString(trimmed));
+      } else {
+        while (i + 1 < lines.length) {
+          const next = lines[i + 1];
+          const itemMatch = next.match(/^\s*-\s+(.+)$/);
+          if (!itemMatch) break;
+          const alias = parseYamlString(itemMatch[1]);
+          if (alias) aliases.push(alias);
+          i += 1;
+        }
+      }
+      frontmatter.aliases = aliases;
+      continue;
     }
-    frontmatter[match[1]] = value;
+
+    frontmatter[key] = parseYamlString(rawValue);
   }
 
   return { hasFrontmatter: true, frontmatter, body };
@@ -89,15 +120,42 @@ async function walkMarkdownFiles(rootDir) {
 }
 
 function buildRoute(slug) {
-  return `/fach-expertise/${slug}/`;
+  return `${BASE_PREFIX}/fach-expertise/${slug}/`;
 }
 
 function normalizeLookupKey(input) {
   return input.trim().toLowerCase();
 }
 
+function splitWikilinkTarget(rawTarget) {
+  const trimmed = rawTarget.trim();
+  const hashIndex = trimmed.indexOf('#');
+  if (hashIndex === -1) {
+    return { target: trimmed, heading: '' };
+  }
+  return {
+    target: trimmed.slice(0, hashIndex).trim(),
+    heading: trimmed.slice(hashIndex + 1).trim(),
+  };
+}
+
+function headingSlug(input) {
+  return input
+    .trim()
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s-]/gu, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function yamlQuote(input) {
+  return `"${String(input).replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\r?\n/g, ' ')}"`;
+}
+
 async function copyAttachmentIfExists(filename) {
-  const source = path.join(ATTACHMENTS_DIR, filename);
+  const safeName = path.basename(filename);
+  const source = path.join(ATTACHMENTS_DIR, safeName);
   try {
     await fs.access(source);
   } catch {
@@ -105,8 +163,50 @@ async function copyAttachmentIfExists(filename) {
   }
 
   await fs.mkdir(OUT_ASSETS_DIR, { recursive: true });
-  const target = path.join(OUT_ASSETS_DIR, filename);
-  await fs.copyFile(source, target);
+  const target = path.join(OUT_ASSETS_DIR, safeName);
+  try {
+    await fs.access(target);
+  } catch {
+    await fs.copyFile(source, target);
+  }
+  return true;
+}
+
+async function buildAttachmentIndex() {
+  const index = new Map();
+  let entries = [];
+  try {
+    entries = await fs.readdir(ATTACHMENTS_DIR, { withFileTypes: true });
+  } catch {
+    return index;
+  }
+
+  for (const entry of entries) {
+    if (!entry.isFile()) continue;
+    const key = normalizeLookupKey(entry.name);
+    if (!index.has(key)) {
+      index.set(key, entry.name);
+    }
+  }
+  return index;
+}
+
+async function copyAttachmentByNameIfExists(filename, attachmentIndex) {
+  const safeName = path.basename(filename);
+  const key = normalizeLookupKey(safeName);
+  const matchedName = attachmentIndex.get(key);
+  if (!matchedName) {
+    return false;
+  }
+
+  const source = path.join(ATTACHMENTS_DIR, matchedName);
+  await fs.mkdir(OUT_ASSETS_DIR, { recursive: true });
+  const target = path.join(OUT_ASSETS_DIR, safeName);
+  try {
+    await fs.access(target);
+  } catch {
+    await fs.copyFile(source, target);
+  }
   return true;
 }
 
@@ -116,22 +216,36 @@ function extractLinkTarget(rawTarget) {
   return filePart;
 }
 
+function resolveInternalRoute(routeMap, target) {
+  const normalized = normalizeLookupKey(target);
+  const basenameKey = normalizeLookupKey(path.parse(target).name || target);
+  return routeMap.get(normalized) || routeMap.get(basenameKey) || null;
+}
+
 async function main() {
-  let scannedTotal = 0;
-  let exportedTotal = 0;
+  let scannedFiles = 0;
+  let exportedFiles = 0;
   let skippedNoFrontmatter = 0;
   let skippedWrongArea = 0;
-  let skippedMissingStatus = 0;
-  let skippedNotKiReady = 0;
-  let skippedVerworfen = 0;
+  let skippedStatusMissing = 0;
+  let skippedStatusNotReady = 0;
+  let skippedStatusVerworfen = 0;
+  let skippedIdMissing = 0;
   let brokenWikilinksCount = 0;
   let missingAssetsCount = 0;
-  const missingStatusPaths = [];
+  const skippedSamples = [];
+
+  function addSkipSample(file, reason) {
+    if (skippedSamples.length < 10) {
+      skippedSamples.push(`${file} (${reason})`);
+    }
+  }
 
   await ensureCleanOutDir(OUT_DOCS_DIR);
+  const attachmentIndex = await buildAttachmentIndex();
 
   const markdownFiles = await walkMarkdownFiles(SOURCE_VAULT);
-  scannedTotal = markdownFiles.length;
+  scannedFiles = markdownFiles.length;
 
   const candidates = [];
   for (const file of markdownFiles) {
@@ -139,40 +253,54 @@ async function main() {
     const { hasFrontmatter, frontmatter, body } = parseFrontmatter(raw);
     if (!hasFrontmatter) {
       skippedNoFrontmatter += 1;
+      addSkipSample(file, 'noFrontmatter');
       continue;
     }
 
     if (frontmatter.area !== AREA_ALLOW) {
       skippedWrongArea += 1;
+      addSkipSample(file, 'wrongArea');
       continue;
     }
 
     if (!Object.hasOwn(frontmatter, 'status') || String(frontmatter.status).trim() === '') {
-      skippedMissingStatus += 1;
-      if (missingStatusPaths.length < 20) {
-        missingStatusPaths.push(file);
-      }
+      skippedStatusMissing += 1;
+      addSkipSample(file, 'statusMissing');
       continue;
     }
 
     const status = String(frontmatter.status).trim();
-    if (status === 'verworfen') {
-      skippedVerworfen += 1;
+    if (status === STATUS_REJECTED) {
+      skippedStatusVerworfen += 1;
+      addSkipSample(file, 'statusVerworfen');
       continue;
     }
-    if (status !== 'ki_ready') {
-      skippedNotKiReady += 1;
+    if (status !== STATUS_READY) {
+      skippedStatusNotReady += 1;
+      addSkipSample(file, 'statusNotReady');
+      continue;
+    }
+
+    const rawId = String(frontmatter.id ?? '').trim();
+    const canonicalId = rawId;
+    if (!canonicalId) {
+      skippedIdMissing += 1;
+      addSkipSample(file, 'idMissing');
       continue;
     }
 
     const parsed = path.parse(file);
     const sourceName = parsed.name;
-    const slug = slugify(sourceName);
+    const aliases = Array.isArray(frontmatter.aliases)
+      ? frontmatter.aliases.map((value) => String(value).trim()).filter(Boolean)
+      : [];
     const title = frontmatter.title ? String(frontmatter.title) : toTitleCase(sourceName);
     candidates.push({
       file,
+      id: canonicalId,
+      rawId,
       sourceName,
-      slug,
+      aliases,
       title,
       frontmatter,
       body,
@@ -180,11 +308,34 @@ async function main() {
   }
 
   const routeMap = new Map();
+  const keyOwnerMap = new Map();
+
+  function addLookupKey(key, route, sourceRef) {
+    const normalized = normalizeLookupKey(key);
+    if (!normalized) return;
+    const existing = routeMap.get(normalized);
+    if (existing && existing !== route) {
+      console.warn(
+        `[warn] Key collision for "${normalized}" between ${keyOwnerMap.get(normalized)} and ${sourceRef}`
+      );
+      return;
+    }
+    routeMap.set(normalized, route);
+    keyOwnerMap.set(normalized, sourceRef);
+  }
+
   for (const candidate of candidates) {
-    const route = buildRoute(candidate.slug);
-    routeMap.set(normalizeLookupKey(candidate.sourceName), route);
+    const route = buildRoute(candidate.id);
+    addLookupKey(candidate.id, route, `${candidate.file} (id)`);
+    if (candidate.rawId && candidate.rawId !== candidate.id) {
+      addLookupKey(candidate.rawId, route, `${candidate.file} (raw id)`);
+    }
+    for (const alias of candidate.aliases) {
+      addLookupKey(alias, route, `${candidate.file} (alias)`);
+    }
+    addLookupKey(candidate.sourceName, route, `${candidate.file} (sourceName)`);
     if (candidate.frontmatter.title) {
-      routeMap.set(normalizeLookupKey(String(candidate.frontmatter.title)), route);
+      addLookupKey(String(candidate.frontmatter.title), route, `${candidate.file} (title)`);
     }
   }
 
@@ -199,14 +350,15 @@ async function main() {
       while ((match = pattern.exec(body)) !== null) {
         out += body.slice(lastIndex, match.index);
         const inner = match[1].trim();
-        const filename = extractLinkTarget(inner).split('|')[0].trim();
+        const [embedTargetRaw] = inner.split('|');
+        const filename = path.basename(extractLinkTarget(embedTargetRaw || '').trim());
         const copied = await copyAttachmentIfExists(filename);
         if (!copied) {
           missingAssetsCount += 1;
           console.warn(`[warn] Missing asset: ${filename} (source: ${candidate.file})`);
           out += match[0];
         } else {
-          out += `![](/wiki-assets/${filename})`;
+          out += `![](${BASE_PREFIX}/wiki-assets/${encodeURIComponent(filename)})`;
         }
         lastIndex = pattern.lastIndex;
       }
@@ -214,12 +366,54 @@ async function main() {
       return out;
     })();
 
+    body = await (async () => {
+      const pattern = /!\[([^\]]*)\]\(([^)\r\n]+)\)/g;
+      let out = '';
+      let lastIndex = 0;
+      let match;
+      while ((match = pattern.exec(body)) !== null) {
+        out += body.slice(lastIndex, match.index);
+
+        const altText = match[1];
+        const rawTarget = match[2].trim();
+        if (/^https?:\/\//i.test(rawTarget) || rawTarget.startsWith('/')) {
+          out += match[0];
+          lastIndex = pattern.lastIndex;
+          continue;
+        }
+
+        const normalizedTarget =
+          rawTarget.startsWith('<') && rawTarget.endsWith('>')
+            ? rawTarget.slice(1, -1).trim()
+            : rawTarget;
+        const imageName = path.basename(normalizedTarget);
+        const copied = await copyAttachmentByNameIfExists(imageName, attachmentIndex);
+        if (!copied) {
+          missingAssetsCount += 1;
+          console.warn(`[warn] Missing asset: ${imageName} (source: ${candidate.file})`);
+          out += match[0];
+        } else {
+          out += `![${altText}](${BASE_PREFIX}/wiki-assets/${imageName})`;
+        }
+
+        lastIndex = pattern.lastIndex;
+      }
+
+      out += body.slice(lastIndex);
+      return out;
+    })();
+
     body = body.replace(/\[\[([^\]]+)\]\]/g, (_, inner) => {
       const [targetRaw, aliasRaw] = inner.split('|');
-      const target = extractLinkTarget(targetRaw || '');
-      const label = (aliasRaw || target || '').trim();
-      const key = normalizeLookupKey(path.parse(target).name || target);
-      const route = routeMap.get(key);
+      const { target, heading } = splitWikilinkTarget(targetRaw || '');
+      const label = (aliasRaw || target || heading || '').trim();
+      if (/^https?:\/\//i.test(target)) {
+        const externalHref = heading ? `${target}#${headingSlug(heading)}` : target;
+        const externalText = label || target;
+        return `[${externalText}](${externalHref})`;
+      }
+
+      const route = resolveInternalRoute(routeMap, target);
       if (!route) {
         brokenWikilinksCount += 1;
         console.warn(`[warn] Broken wikilink: [[${inner}]] (source: ${candidate.file})`);
@@ -227,28 +421,33 @@ async function main() {
         return `[${fallback}](#)`;
       }
       const text = label || target;
-      return `[${text}](${route})`;
+      const anchor = heading ? `#${headingSlug(heading)}` : '';
+      return `[${text}](${route}${anchor})`;
     });
 
-    const output = `---\ntitle: ${candidate.title}\n---\n\n${body.replace(/^\s*\r?\n/, '')}`;
-    const outputFile = path.join(OUT_DOCS_DIR, `${candidate.slug}.md`);
+    const description = candidate.frontmatter.summary
+      ? `\ndescription: ${yamlQuote(candidate.frontmatter.summary)}`
+      : '';
+    const output = `---\ntitle: ${yamlQuote(candidate.title)}${description}\n---\n\n${body.replace(/^\s*\r?\n/, '')}`;
+    const outputFile = path.join(OUT_DOCS_DIR, `${candidate.id}.md`);
     await fs.writeFile(outputFile, output, 'utf8');
-    exportedTotal += 1;
+    exportedFiles += 1;
   }
 
-  console.log(`[summary] scannedTotal: ${scannedTotal}`);
-  console.log(`[summary] exportedTotal: ${exportedTotal}`);
-  console.log(`[summary] skippedNoFrontmatter: ${skippedNoFrontmatter}`);
-  console.log(`[summary] skippedWrongArea: ${skippedWrongArea}`);
-  console.log(`[summary] skippedMissingStatus: ${skippedMissingStatus}`);
-  console.log(`[summary] skippedNotKiReady: ${skippedNotKiReady}`);
-  console.log(`[summary] skippedVerworfen: ${skippedVerworfen}`);
+  console.log(`[summary] scannedFiles: ${scannedFiles}`);
+  console.log(`[summary] exportedFiles: ${exportedFiles}`);
+  console.log(`[summary] skipped.noFrontmatter: ${skippedNoFrontmatter}`);
+  console.log(`[summary] skipped.wrongArea: ${skippedWrongArea}`);
+  console.log(`[summary] skipped.statusMissing: ${skippedStatusMissing}`);
+  console.log(`[summary] skipped.statusNotReady: ${skippedStatusNotReady}`);
+  console.log(`[summary] skipped.statusVerworfen: ${skippedStatusVerworfen}`);
+  console.log(`[summary] skipped.idMissing: ${skippedIdMissing}`);
   console.log(`[summary] brokenWikilinksCount: ${brokenWikilinksCount}`);
   console.log(`[summary] missingAssetsCount: ${missingAssetsCount}`);
-  if (missingStatusPaths.length > 0) {
-    console.log('[summary] missingStatusPaths (max 20):');
-    for (const file of missingStatusPaths) {
-      console.log(`- ${file}`);
+  if (skippedSamples.length > 0) {
+    console.log('[summary] skipSamples (max 10):');
+    for (const sample of skippedSamples) {
+      console.log(`- ${sample}`);
     }
   }
 }

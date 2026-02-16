@@ -1,17 +1,6 @@
 ---
-id: definition_der_kunde_verwaltung
-aliases:
-  - definition_der_kunde_verwaltung
-  - Definition Der Kunde (Verwaltung)
-
-area: fach_expertise
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: grundlagen
-intent: verstehen
-status: ki_ready
-created: 2026-02-16
-summary: "Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+title: "Definition Der Kunde (verwaltung)"
+description: "Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
 ---
 
 %%
@@ -72,7 +61,7 @@ Die Frage *"Wer erhält das finale Ergebnis?"* definiert das Prozessende.
 - **Wichtig:** Übergaben zwischen Abteilungen sind **keine** Prozessenden, sondern lediglich **Zwischenergebnisse**.
     - *Beispiel:* Wenn Abteilung A einen Teilbericht erstellt und an Abteilung B zur Endfertigung weiterleitet, ist der Prozess hier *nicht* zu Ende. Abteilung B ist zwar Empfänger der Teilleistung, aber der Geschäftsprozess läuft weiter, bis das Gesamtergebnis die Verwaltung verlässt.
         
-        ![ChatGPT Image 19. Jan. 2026, 12_52_20.png](kunde_in_der_verwaltung.png)
+        ![ChatGPT Image 19. Jan. 2026, 12_52_20.png](/wiki/wiki-assets/kunde_in_der_verwaltung.png)
         
 
 > 🖼 GRAFIK: Das Kunden-Spektrum in der VerwaltungKI-Beschreibung:
@@ -104,6 +93,6 @@ Eine Übersichtsgrafik, die die Verwaltung als zentralen Akteur in einem Netzwer
 
 ## 🔗 Verwandte Module
 
-- **[[Definition Geschäftsprozess (Verwaltung)]]***Kontext:* Vertieft das Verständnis, wie der hier definierte Kundenbezug ("Endkunde") genutzt wird, um den Gesamtprozess vom Teilprozess abzugrenzen.
-- **[[Identifikation von Geschäftsprozessen]]
+- **[Definition Geschäftsprozess (Verwaltung)](/wiki/fach-expertise/definition_geschaftsprozess_verwaltung/)***Kontext:* Vertieft das Verständnis, wie der hier definierte Kundenbezug ("Endkunde") genutzt wird, um den Gesamtprozess vom Teilprozess abzugrenzen.
+- **[Identifikation von Geschäftsprozessen](/wiki/fach-expertise/identifikation_von_geschaftsprozessen/)
 - ***Kontext:* Nutzt den Kundenbegriff als methodisches Werkzeug, um in Workshops konkrete Prozesse zu benennen und aufzulisten.

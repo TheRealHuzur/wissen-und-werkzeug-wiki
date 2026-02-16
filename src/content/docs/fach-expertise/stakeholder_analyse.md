@@ -1,17 +1,6 @@
 ---
-id: stakeholder_analyse
-aliases:
-  - stakeholder_analyse
-  - Stakeholder-Analyse
-
-area: fach_expertise
-parent_topic: prozessmanagement
-subtopic: projekte_planen_und_steuern
-type: grundlagen
-intent: steuern
-status: ki_ready
-created: 2026-02-16
-summary: "Eine strukturierte Methode, um in drei Schritten betroffene Personengruppen zu identifizieren, ihren Einfluss und ihr Interesse zu bewerten und daraus gezielte Kommunikationsmaßnahmen abzuleiten."
+title: "Stakeholder Analyse"
+description: "Eine strukturierte Methode, um in drei Schritten betroffene Personengruppen zu identifizieren, ihren Einfluss und ihr Interesse zu bewerten und daraus gezielte Kommunikationsmaßnahmen abzuleiten."
 ---
 
 %%
@@ -49,7 +38,7 @@ Die identifizierten Stakeholder werden anhand von zwei Parametern bewertet:
 
 Daraus ergibt sich eine Matrix mit vier Feldern, in die die Stakeholder eingeordnet werden.
 
-![image.png](stakeholderanalyse.png)
+![image.png](/wiki/wiki-assets/stakeholderanalyse.png)
 
 > 🖼 GRAFIK: Stakeholder-Matrix (Einfluss vs. Interesse)KI-Beschreibung: Ein Koordinatensystem. X-Achse: Interesse (Gering bis Hoch), Y-Achse: Einfluss (Gering bis Hoch). Die vier Quadranten zeigen die unterschiedlichen Strategien.
 > 
@@ -90,7 +79,7 @@ Diese Gruppe ist aktuell wenig relevant, sollte aber nicht vergessen werden.
 
 ## 🔗 Verwandte Module
 
-- **[[Kommunikationsplan]]
+- **[Kommunikationsplan](#)
 - ***Kontext:* Die in der Analyse definierten Maßnahmen werden im Kommunikationsplan operationalisiert.
-- **[[Workshop-Methodik für Prozessaufnahme]]
+- **[Workshop-Methodik für Prozessaufnahme](#)
 - ***Kontext:* Auch bei der Prozessaufnahme ist die Identifikation der richtigen Ansprechpartner (Stakeholder) essenziell.

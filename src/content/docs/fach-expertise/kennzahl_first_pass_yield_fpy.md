@@ -1,17 +1,6 @@
 ---
-id: kennzahl_first_pass_yield_fpy
-aliases:
-  - kennzahl_first_pass_yield_fpy
-  - Kennzahl First Pass Yield (FPY)
-
-area: fach_expertise
-parent_topic: prozessmanagement
-subtopic: controlling
-type: framework
-intent: steuern
-status: ki_ready
-created: 2026-02-16
-summary: "Definition und Berechnung des First Pass Yield (FPY) als Qualitätskennzahl. Sie misst den Anteil der Prozessdurchläufe (Fälle), die im ersten Durchlauf ohne Nacharbeit fehlerfrei abgeschlossen werden, und deckt somit versteckte Ineffizienzen (\"Hidden Factory\") auf."
+title: "First Pass Yield (fpy)"
+description: "Definition und Berechnung des First Pass Yield (FPY) als Qualitätskennzahl. Sie misst den Anteil der Prozessdurchläufe (Fälle), die im ersten Durchlauf ohne Nacharbeit fehlerfrei abgeschlossen werden, und deckt somit versteckte Ineffizienzen (\\\"Hidden Factory\\\") auf."
 ---
 
 %%
@@ -60,7 +49,7 @@ In einem Prozessmodell lässt sich der FPY an Übergabepunkten prüfen. Es entsp
 - **Ja:** Prozess läuft weiter (FPY = 1 bzw. 100% für diesen Fall).
 - **Nein:** Rückschleife/Nacharbeit (FPY = 0 für diesen Fall).
     
-    ![First Pass Yield.png](739183f0-1ef0-4479-8ee3-b815ff2be3c0.png)
+    ![First Pass Yield.png](/wiki/wiki-assets/FPY.png)
     
 
 > 🖼 GRAFIK: FPY-LogikdiagrammKI-Beschreibung: Ein Flussdiagramm, das zwei Teilprozesse zeigt. Dazwischen befindet sich ein Prüfpunkt (Gateway). Ein Pfad "Ja" (Ohne Nacharbeit) führt weiter (FPY=1), ein Pfad "Nein" führt zur Seite (FPY=0).
@@ -70,9 +59,9 @@ In einem Prozessmodell lässt sich der FPY an Übergabepunkten prüfen. Es entsp
 
 ## 🔗 Verwandte Module
 
-- **[[BPMN Das Exklusive Gateway (XOR)]]
+- **[BPMN Das Exklusive Gateway (XOR)](/wiki/fach-expertise/bpmn_das_exklusive_gateway_xor/)
 - ***Kontext:* Das BPMN-Element, mit dem die Entscheidungslogik (Fehlerfrei: Ja/Nein) im Prozessdiagramm modelliert wird.
-- **[[Prozesskennzahlen (KPIs) Die 5 Dimensionen]]
+- **[Prozesskennzahlen (KPIs) Die 5 Dimensionen](#)
 - ***Kontext:* Einordnung des FPY in die Dimension der "Prozessqualität".
-- **[[BPMN Aufgaben und Teilprozesse]]
+- **[BPMN Aufgaben und Teilprozesse](/wiki/fach-expertise/bpmn_aufgaben_und_teilprozesse/)
 - ***Kontext:* FPY wird oft zwischen zwei Teilprozessen gemessen.

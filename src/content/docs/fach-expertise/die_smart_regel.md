@@ -1,17 +1,6 @@
 ---
-id: die_smart_regel
-aliases:
-  - die_smart_regel
-  - Die SMART-Regel
-
-area: fach_expertise
-parent_topic: prozessmanagement
-subtopic: projekte_planen_und_steuern
-type: theorie
-intent: steuern
-status: ki_ready
-created: 2026-02-16
-summary: "Thema-Kontext: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement."
+title: "Die Smart Regel"
+description: "Thema-Kontext: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement."
 ---
 
 %%
@@ -51,7 +40,7 @@ Das Ziel muss erreichbar sein. Dabei sind die verfügbaren Ressourcen (Zeit, Bud
 
 Ein konkreter Zeitrahmen oder ein Enddatum muss definiert sein. Ohne Terminierung fehlt die Verbindlichkeit und Dringlichkeit.
 
-![Smart Regel.png](SMART.png)
+![Smart Regel.png](/wiki/wiki-assets/SMART.png)
 
 > 🖼 GRAFIK: SMART-AkronymKI-Beschreibung: Eine schematische Darstellung der 5 Buchstaben S-M-A-R-T, wobei jedem Buchstaben ein Icon zugeordnet ist: Lupe (Spezifisch), Lineal (Messbar), Stern oder Magnet (Attraktiv), Waage oder Häkchen (Realistisch), Kalender/Uhr (Terminiert).
 > 
@@ -60,7 +49,7 @@ Ein konkreter Zeitrahmen oder ein Enddatum muss definiert sein. Ohne Terminierun
 
 ## 🔗 Verwandte Module
 
-- **[[Prinzipien der Zielformulierung]]
+- **[Prinzipien der Zielformulierung](#)
 - ***Kontext:* Erläutert die übergeordneten Vorteile (Klarheit, Fokus), die durch die Anwendung der SMART-Regel erreicht werden sollen.
-- **[[Kompetenzprofil ProzessmanagerIn]]
+- **[Kompetenzprofil ProzessmanagerIn](#)
 - ***Kontext*: Die Fähigkeit, Ziele (z.B. für Prozessoptimierungen) SMART zu formulieren, ist eine Kernkompetenz im Prozessmanagement.

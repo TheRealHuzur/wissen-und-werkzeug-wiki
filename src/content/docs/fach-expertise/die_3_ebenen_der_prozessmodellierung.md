@@ -1,17 +1,6 @@
 ---
-id: die_3_ebenen_der_prozessmodellierung
-aliases:
-  - die_3_ebenen_der_prozessmodellierung
-  - Die 3 Ebenen der Prozessmodellierung
-
-area: fach_expertise
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: framework
-intent: verstehen
-status: ki_ready
-created: 2026-02-16
-summary: "Innerhalb der Top-Down-Methode wird ein Prozess in drei Ebenen zerlegt: Von der abstrakten Prozessdefinition (Ebene 1) über das strategische Teilprozessmodell (Ebene 2) bis zum operativen Aktivitäten-Modell (Ebene 3). Dies sichert die nötige Granularität für verschiedene Zielgruppen."
+title: "Die 3 Ebenen Der Prozessmodellierung"
+description: "Innerhalb der Top-Down-Methode wird ein Prozess in drei Ebenen zerlegt: Von der abstrakten Prozessdefinition (Ebene 1) über das strategische Teilprozessmodell (Ebene 2) bis zum operativen Aktivitäten-Modell (Ebene 3). Dies sichert die nötige Granularität für verschiedene Zielgruppen."
 ---
 
 %%
@@ -39,7 +28,7 @@ Innerhalb der Top-Down-Methode wird ein Prozess in drei Ebenen zerlegt: Von der 
 
 Die Zerlegung erfolgt hierarchisch, um Komplexität zu reduzieren.
 
-![POWERPNT_fMC0CIQOIS.png](drei_ebenen_prozessbeschreibung.png)
+![POWERPNT_fMC0CIQOIS.png](/wiki/wiki-assets/drei_ebenen_prozessbeschreibung.png)
 
 > 🖼 GRAFIK: Ebenen der ProzessbeschreibungKI-Beschreibung:
 Ein hierarchisches Schaubild, das drei Abstraktionsebenen der Prozessdokumentation und deren inhaltliche Tiefe darstellt.
@@ -86,8 +75,8 @@ Dies ist der Kern des Prozessmodells und die detaillierteste Stufe.
 
 ## 🔗 Verwandte Module
 
-- **[[Top-Down vs Bottom-Up Methode|Top-Down vs Bottom-Up Methode]]
+- **[Top-Down vs Bottom-Up Methode](/wiki/fach-expertise/top_down_vs_bottom_up_methode/)
 - ***Kontext:* Die methodische Grundlage für dieses Ebenen-Modell.
-- **[[BPMN Aufgaben und Teilprozesse]]***Kontext:* Erklärt die BPMN-Elemente für Ebene 2 und 3.
-- **[[Identifikation von Geschäftsprozessen]]
+- **[BPMN Aufgaben und Teilprozesse](/wiki/fach-expertise/bpmn_aufgaben_und_teilprozesse/)***Kontext:* Erklärt die BPMN-Elemente für Ebene 2 und 3.
+- **[Identifikation von Geschäftsprozessen](/wiki/fach-expertise/identifikation_von_geschaftsprozessen/)
 - ***Kontext:* Relevant für Ebene 1 (Definition und Abgrenzung).

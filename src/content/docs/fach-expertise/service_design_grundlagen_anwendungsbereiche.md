@@ -1,16 +1,6 @@
 ---
-id: service_design_grundlagen_anwendungsbereiche
-aliases:
-  - service_design_grundlagen_anwendungsbereiche
-  - Service Design Grundlagen & Anwendungsbereiche
-area: fach_expertise
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: framework
-intent: gestalten
-status: ki_ready
-created: 2026-02-16
-summary: Service Design ist die nutzerzentrierte Gestaltung von Dienstleistungen unter Berücksichtigung aller Touchpoints, Prozesse und Technologien. Es nutzt Methoden wie den "Double Diamond", um Kundenbedürfnisse und Zielvorgaben in Einklang zu bringen, und findet auch in der öffentlichen Verwaltung spezifische Anwendung.
+title: "Service Design Grundlagen & Anwendungsbereiche"
+description: "Service Design ist die nutzerzentrierte Gestaltung von Dienstleistungen unter Berücksichtigung aller Touchpoints, Prozesse und Technologien. Es nutzt Methoden wie den \"Double Diamond\", um Kundenbedürfnisse und Zielvorgaben in Einklang zu bringen, und findet auch in der öffentlichen Verwaltung spezifische Anwendung."
 ---
 
 %%
@@ -51,13 +41,13 @@ Inhaltlich umfasst Service Design die Gestaltung der Schnittstellen zwischen den
 Als Visualisierung des typischen Vorgehens dient der "Double Diamond". Er strukturiert die Arbeit in zwei aufeinanderfolgende Diamanten, die jeweils eine divergierende (öffnende) und eine konvergierende (schließende) Phase durchlaufen:
 
 1. **Der erste Diamant (Problemraum):** Schwerpunkt Forschen. Ziel ist das Verstehen und Definieren des wahren Problems.
-    - **[[Service Design Phase Erkunden]]** (Divergierend: Das Problemfeld weit öffnen)
-    - **`[[Service Design: Phase Definieren]]`** (Konvergierend: Das Kernproblem eingrenzen)
+    - **[Service Design Phase Erkunden](/wiki/fach-expertise/service_design_phase_erkunden/)** (Divergierend: Das Problemfeld weit öffnen)
+    - **`[Service Design: Phase Definieren](#)`** (Konvergierend: Das Kernproblem eingrenzen)
 2. **Der zweite Diamant (Lösungsraum):** Schwerpunkt Gestalten. Ziel ist das Entwickeln von Ideen und das Erstellen der finalen Lösung.
-    - **[[Service Design Phase Entwickeln]]** (Divergierend: Lösungsoptionen generieren)
-    - **[[Service Design Phase Erstellen]]** (Konvergierend: Die beste Lösung finalisieren)
+    - **[Service Design Phase Entwickeln](/wiki/fach-expertise/service_design_phase_entwickeln/)** (Divergierend: Lösungsoptionen generieren)
+    - **[Service Design Phase Erstellen](/wiki/fach-expertise/service_design_phase_erstellen/)** (Konvergierend: Die beste Lösung finalisieren)
 
-![double_diamond.png](double_diamond.png)
+![double_diamond.png](/wiki/wiki-assets/double_diamond.png)
 
 > 🖼 **GRAFIK: Das Double-Diamond-Modell (Designprozess)KI-Beschreibung:**
 Ein schematisches Diagramm, das den Design- und Innovationsprozess anhand von zwei Rauten (Diamonds) darstellt. Es visualisiert den Wechsel zwischen divergendem (breitem) und konvergendem (fokussiertem) Denken.
@@ -87,15 +77,15 @@ Dennoch ist die Erhebung von Kundenbedürfnissen essenziell, um die *Art und Wei
 
 ## 🔗 Verwandte Module
 
-- **[[Service Design Phase Erkunden]]
+- **[Service Design Phase Erkunden](/wiki/fach-expertise/service_design_phase_erkunden/)
 - ***Kontext:* Detailansicht der ersten Phase des Double Diamond.
-- **[[Service Design Phase Definieren]]
+- **[Service Design Phase Definieren](/wiki/fach-expertise/service_design_phase_definieren_define/)
 - ***Kontext:* Detailansicht der zweiten Phase des Double Diamond.
-- **[[Service Design Phase Entwickeln]]
+- **[Service Design Phase Entwickeln](/wiki/fach-expertise/service_design_phase_entwickeln/)
 - ***Kontext:* Detailansicht der dritten Phase des Double Diamond.
-- **[[Service Design Phase Erstellen]]
+- **[Service Design Phase Erstellen](/wiki/fach-expertise/service_design_phase_erstellen/)
 - ***Kontext:* Detailansicht der vierten Phase des Double Diamond.
-- **[[Service Design Sprint]]
+- **[Service Design Sprint](/wiki/fach-expertise/service_design_sprint/)
 - ***Kontext:* Der agile Prozess zur Durchführung von Service Design Projekten.
-- **[[Prozessmanagement]]** 
+- **[Prozessmanagement](#)** 
 *Kontext:* Service Design optimiert Prozesse aus Kundensicht und ergänzt das klassische Prozessmanagement.
