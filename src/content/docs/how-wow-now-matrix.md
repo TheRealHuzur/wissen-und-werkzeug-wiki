@@ -17,13 +17,6 @@ head:
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung gestalten."
 ---
 
-%%
-RAG-CONTEXT-ANCHOR:
-Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
-Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
-Klassifizierung: grundlagen mit der Zielsetzung gestalten.
-%%
-
 # HOW-WOW-NOW Matrix
 
 Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
@@ -50,7 +43,7 @@ Die Matrix nutzt zwei Achsen: **Machbarkeit** (X-Achse) und **Originalität/Inno
 - **HOW? (Hohe Innovation / Niedrige Machbarkeit):** Innovative Konzepte, die aktuell noch an Hürden (Technik, Budget) scheitern. Dies sind strategische Ziele für die Zukunft. Hier muss geklärt werden: „Wie können wir das möglich machen?“
 - **AU! / Discard (Niedrige Innovation / Niedrige Machbarkeit):** Ideen, die kaum Nutzen stiften und schwer umsetzbar sind. Diese sollten konsequent verworfen werden, um keine Ressourcen zu binden.
 
-![](/wiki-assets/NowHowWoW-Matrix.png)
+![](/wiki/wiki-assets/NowHowWoW-Matrix.png)
 
 > 🖼 GRAFIK: Die HOW-WOW-NOW Matrix zur Ideen-Priorisierung
 > 

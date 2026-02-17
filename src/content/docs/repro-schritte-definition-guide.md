@@ -17,13 +17,6 @@ head:
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Künstliche Intelligenz. Es ist im Thema Künstliche Intelligenz verortet und dem Subtopic Vibe Coding zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung umsetzen."
 ---
 
-%%
-RAG-CONTEXT-ANCHOR:
-Dieses Modul dokumentiert Fachwissen im Bereich Künstliche Intelligenz.
-Es ist im Thema Künstliche Intelligenz verortet und dem Subtopic Vibe Coding zugeordnet.
-Klassifizierung: grundlagen mit der Zielsetzung umsetzen.
-%%
-
 # Repro-Schritte (Definition & Guide)
 
 Thema-Kontext: Beschreibt Hintergründe, Anleitungen und Vorlagen zum Vibe Coding. Ebenfalls werden generelle Erläuterungen geleifert, wie Vibe Coding grundsätzlich funktioniert.

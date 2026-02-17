@@ -3,7 +3,7 @@ id: vibe_coding_prompt_vorlage
 aliases:
   - vibe_coding_prompt_vorlage
   - Vibe Coding Prompt-Vorlage
-parent_topic: kunstliche_intelligenz
+parent_topic: kuenstliche_intelligenz
 subtopic: vibe_coding
 type: grundlagen
 intent: gestalten
@@ -23,7 +23,7 @@ Klassifizierung: grundlagen mit der Zielsetzung gestalten.
 
 Thema-Kontext: Beschreibt Hintergründe, Anleitungen und Vorlagen zum Vibe Coding. Ebenfalls werden generelle Erläuterungen geleifert, wie Vibe Coding grundsätzlich funktioniert.
 
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Diese Vorlage dient als standardisierter Prompt für das "Vibe Coding", um Software-Änderungen oder Bugfixes präzise und kontextreich an KI-Codegeräte zu kommunizieren.
 > 

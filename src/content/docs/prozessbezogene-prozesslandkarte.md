@@ -17,13 +17,6 @@ head:
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung verstehen."
 ---
 
-%%
-RAG-CONTEXT-ANCHOR:
-Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
-Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
-Klassifizierung: grundlagen mit der Zielsetzung verstehen.
-%%
-
 # Prozessbezogene Prozesslandkarte
 
 Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.

@@ -17,13 +17,6 @@ head:
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Projekte Planen Und Steuern zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung steuern."
 ---
 
-%%
-RAG-CONTEXT-ANCHOR:
-Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
-Es ist im Thema Prozessmanagement verortet und dem Subtopic Projekte Planen Und Steuern zugeordnet.
-Klassifizierung: grundlagen mit der Zielsetzung steuern.
-%%
-
 # Stakeholder-Analyse
 
 Thema-Kontext: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.
@@ -52,7 +45,7 @@ Die identifizierten Stakeholder werden anhand von zwei Parametern bewertet:
 
 Daraus ergibt sich eine Matrix mit vier Feldern, in die die Stakeholder eingeordnet werden.
 
-![](/wiki-assets/stakeholderanalyse.png)
+![](/wiki/wiki-assets/stakeholderanalyse.png)
 
 > 🖼 GRAFIK: Stakeholder-Matrix (Einfluss vs. Interesse)KI-Beschreibung: Ein Koordinatensystem. X-Achse: Interesse (Gering bis Hoch), Y-Achse: Einfluss (Gering bis Hoch). Die vier Quadranten zeigen die unterschiedlichen Strategien.
 > 

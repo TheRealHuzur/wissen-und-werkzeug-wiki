@@ -21,7 +21,7 @@ Klassifizierung: theorie mit der Zielsetzung betreiben.
 
 # Prinzip Der Kontinuierliche Verbesserungsprozess (KVP)
 
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Der KVP beschreibt den zyklischen Charakter des Prozessmanagements. Er stellt sicher, dass Organisationen auf Veränderungen reagieren und Prozesse nicht als statische Projekte, sondern als dauerhafte Aufgabe begreifen.
 >

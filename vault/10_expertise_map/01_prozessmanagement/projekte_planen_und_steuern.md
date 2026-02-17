@@ -10,8 +10,8 @@ summary: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kon
 ---
 # Projekte planen und steuern
 
-## Einstieg
+## Beschreibung
 Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.
 
-## Qualitäts-Quickcheck
-- Offene Entwürfe: siehe quality_monitor
+![[01_prozessmanagement_projekte_planen_und_steuern.base]]
+

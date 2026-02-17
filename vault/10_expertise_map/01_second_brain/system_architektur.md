@@ -10,8 +10,8 @@ summary: Beschreibt wie das Secound Brain aufgebaut ist. Es wird dargelegt, welc
 ---
 # System Architektur
 
-## Einstieg
+## Beschreibung
 Beschreibt wie das Secound Brain aufgebaut ist. Es wird dargelegt, welche Datenbanken angelegt sind, welche Eigenschaften die Datenbanken haben und wie die Eigenschaftsfelder gefüllt werden.
 
-## Qualitäts-Quickcheck
-- Offene Entwürfe: siehe quality_monitor
+![[01_second_brain_system_achritektur.base]]
+

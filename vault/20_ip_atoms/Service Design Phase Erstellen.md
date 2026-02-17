@@ -25,7 +25,7 @@ Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Opti
 
 ## Zusammenfassung
 
-Die Phase "Erstellen" ist der finale Schritt im Double Diamond, in dem Ideen zu konkreten Lösungen ausgearbeitet, getestet und implementiert werden. Durch Prototyping und Feedbackschleifen wird das Risiko von Fehlentwicklungen minimiert.
+>Die Phase "Erstellen" ist der finale Schritt im Double Diamond, in dem Ideen zu konkreten Lösungen ausgearbeitet, getestet und implementiert werden. Durch Prototyping und Feedbackschleifen wird das Risiko von Fehlentwicklungen minimiert.
 
 **Dieses Modul beantwortet folgende Fragen:**
 

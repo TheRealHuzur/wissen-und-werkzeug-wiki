@@ -83,5 +83,5 @@ Denken in Prozessen bedeutet demnach, nicht in funktionalen Zuständigkeiten zu 
 
 - **[[Identifikation von Geschäftsprozessen]]
 - ***Kontext:* Bietet Methoden, um basierend auf dieser Definition konkrete Prozesse in der Organisation zu finden.
-- **[[Konzept zur Einführung von Prozessmanagement]]***Kontext:* Einordnung der Definition in den größeren Rahmen der organisationalen Einführung.
+- **[[20_ip_atoms/Konzept zur Einführung von Prozessmanagement]]***Kontext:* Einordnung der Definition in den größeren Rahmen der organisationalen Einführung.
 - **[[BPMN Aufgaben und Teilprozesse]]***Kontext:* Zeigt, wie die hier definierten Aktivitäten in der Standardnotation BPMN grafisch dargestellt werden.

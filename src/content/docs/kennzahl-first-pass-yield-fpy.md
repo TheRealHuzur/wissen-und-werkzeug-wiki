@@ -17,13 +17,6 @@ head:
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Controlling zugeordnet. Klassifizierung: framework mit der Zielsetzung steuern."
 ---
 
-%%
-RAG-CONTEXT-ANCHOR:
-Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
-Es ist im Thema Prozessmanagement verortet und dem Subtopic Controlling zugeordnet.
-Klassifizierung: framework mit der Zielsetzung steuern.
-%%
-
 # Kennzahl: First Pass Yield (FPY)
 
 Thema-Kontext: Steuerung von Prozessen anhand von Kennzahlen.
@@ -63,7 +56,7 @@ In einem Prozessmodell lässt sich der FPY an Übergabepunkten prüfen. Es entsp
 - **Ja:** Prozess läuft weiter (FPY = 1 bzw. 100% für diesen Fall).
 - **Nein:** Rückschleife/Nacharbeit (FPY = 0 für diesen Fall).
     
-    ![](/wiki-assets/FPY.png)
+    ![](/wiki/wiki-assets/FPY.png)
     
 
 > 🖼 GRAFIK: FPY-LogikdiagrammKI-Beschreibung: Ein Flussdiagramm, das zwei Teilprozesse zeigt. Dazwischen befindet sich ein Prüfpunkt (Gateway). Ein Pfad "Ja" (Ohne Nacharbeit) führt weiter (FPY=1), ein Pfad "Nein" führt zur Seite (FPY=0).

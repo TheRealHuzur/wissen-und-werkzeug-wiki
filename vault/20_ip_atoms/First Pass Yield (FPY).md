@@ -7,7 +7,7 @@ parent_topic: prozessmanagement
 subtopic: controlling
 type: framework
 intent: steuern
-status: ki_ready
+status: entwurf
 created: 2026-02-16
 summary: Definition und Berechnung des First Pass Yield (FPY) als Qualitätskennzahl. Sie misst den Anteil der Prozessdurchläufe (Fälle), die im ersten Durchlauf ohne Nacharbeit fehlerfrei abgeschlossen werden, und deckt somit versteckte Ineffizienzen ("Hidden Factory") auf.
 ---
@@ -25,7 +25,7 @@ Thema-Kontext: Steuerung von Prozessen anhand von Kennzahlen.
 
 ## Zusammenfassung
 
-Definition und Berechnung des First Pass Yield (FPY) als Qualitätskennzahl. Sie misst den Anteil der Prozessdurchläufe (Fälle), die im ersten Durchlauf ohne Nacharbeit fehlerfrei abgeschlossen werden, und deckt somit versteckte Ineffizienzen ("Hidden Factory") auf.
+>Definition und Berechnung des First Pass Yield (FPY) als Qualitätskennzahl. Sie misst den Anteil der Prozessdurchläufe (Fälle), die im ersten Durchlauf ohne Nacharbeit fehlerfrei abgeschlossen werden, und deckt somit versteckte Ineffizienzen ("Hidden Factory") auf.
 
 Der First Pass Yield (FPY) ist eine harte Qualitätskennzahl, die besonders in arbeitsteiligen Prozessen Schwachstellen aufdeckt, die von reinen Output-Kennzahlen oft übersehen werden.
 
@@ -70,7 +70,7 @@ In einem Prozessmodell lässt sich der FPY an Übergabepunkten prüfen. Es entsp
 
 - **[[BPMN Das Exklusive Gateway (XOR)]]
 - ***Kontext:* Das BPMN-Element, mit dem die Entscheidungslogik (Fehlerfrei: Ja/Nein) im Prozessdiagramm modelliert wird.
-- **[[Prozesskennzahlen (KPIs) Die 5 Dimensionen]]
+- **[[20_ip_atoms/Prozesskennzahlen (KPIs) Die 5 Dimensionen]]
 - ***Kontext:* Einordnung des FPY in die Dimension der "Prozessqualität".
 - **[[BPMN Aufgaben und Teilprozesse]]
 - ***Kontext:* FPY wird oft zwischen zwei Teilprozessen gemessen.

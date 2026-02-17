@@ -7,7 +7,7 @@ parent_topic: prozessmanagement
 subtopic: controlling
 type: grundlagen
 intent: steuern
-status: ki_ready
+status: entwurf
 created: 2026-02-16
 summary: "Beschreibt die drei zentralen Hürden, auf die Unternehmen und Verwaltungen stoßen, wenn sie versuchen, Prozessleistung zu messen: Definition des Messobjekts, Methodik der Messung und das Management-Commitment."
 ---
@@ -25,7 +25,7 @@ Thema-Kontext: Steuerung von Prozessen anhand von Kennzahlen.
 
 ## Zusammenfassung
 
-Beschreibt die drei zentralen Hürden, auf die Unternehmen und Verwaltungen stoßen, wenn sie versuchen, Prozessleistung zu messen: Definition des Messobjekts, Methodik der Messung und das Management-Commitment.
+>Beschreibt die drei zentralen Hürden, auf die Unternehmen und Verwaltungen stoßen, wenn sie versuchen, Prozessleistung zu messen: Definition des Messobjekts, Methodik der Messung und das Management-Commitment.
 
 Obwohl der Gedanke des "Messens" von Leistung einfach erscheint, scheitern Initiativen zur Einführung von Kennzahlen oft an drei spezifischen Hindernissen. Diese wurden unter anderem im Six-Sigma-Kontext (Harry/Schroeder) identifiziert.
 
@@ -61,9 +61,9 @@ Das wahrscheinlich gewaltigste Hindernis ist, die Zusage der Leitung zu gewinnen
 
 ## 🔗 Verwandte Module
 
-- **[[Prozesskennzahlen (KPIs) Die 5 Dimensionen]]
+- **[[20_ip_atoms/Prozesskennzahlen (KPIs) Die 5 Dimensionen]]
 - ***Kontext:* Antwortet auf die erste Hürde ("Was soll gemessen werden?").
-- **[[Konzept zur Einführung von Prozessmanagement]]
+- **[[20_ip_atoms/Konzept zur Einführung von Prozessmanagement]]
 - ***Kontext:* Leistungsmessung ist ein kritischer Teil der Einführung und erfordert Change Management.
-- **[[Kompetenzprofil ProzessmanagerIn]]
+- **[[20_ip_atoms/Kompetenzprofil ProzessmanagerIn]]
 - ***Kontext:* Die Fähigkeit, diese Hürden zu kommunizieren und zu überwinden, ist Teil des Rollenprofils.

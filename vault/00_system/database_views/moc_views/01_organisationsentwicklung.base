@@ -1,0 +1,7 @@
+views:
+  - type: table
+    name: Tabelle
+    filters:
+      and:
+        - parent_topic == "organisationsentwicklung"
+        - "!type.isEmpty()"

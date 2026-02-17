@@ -23,7 +23,7 @@ Klassifizierung: grundlagen mit der Zielsetzung steuern.
 
 Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
 
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Dieses Modul definiert die rechtliche Grenze zwischen dem freien Direktionsrecht des Dienstherrn und der Mitbestimmungspflicht bei organisatorischen Prozessen. Es liefert eine Prüfmatrix zur Bestimmung der "Grundlegendheit" einer Maßnahme.
 > 
@@ -71,5 +71,5 @@ Verwaltungen neigen dazu, große Prozessprojekte in kleine Etappen zu zerlegen, 
 
 ## 🔗 Verwandte Module
 
-- **[[Mitbestimmung im Prozessmanagement (LPVG NRW)]]
+- **[[99_inbox/Mitbestimmung im Prozessmanagement (LPVG NRW)]]
 - ***Kontext:* Das Basismodul mit allen relevanten Paragraphen und der Dienstvereinbarungs-Logik.

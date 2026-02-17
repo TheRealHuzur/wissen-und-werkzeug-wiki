@@ -17,13 +17,6 @@ head:
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung verstehen."
 ---
 
-%%
-RAG-CONTEXT-ANCHOR:
-Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
-Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
-Klassifizierung: framework mit der Zielsetzung verstehen.
-%%
-
 # Die 3 Ebenen der Prozessmodellierung
 
 Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
@@ -42,7 +35,7 @@ Innerhalb der Top-Down-Methode wird ein Prozess in drei Ebenen zerlegt: Von der 
 
 Die Zerlegung erfolgt hierarchisch, um Komplexität zu reduzieren.
 
-![](/wiki-assets/drei_ebenen_prozessbeschreibung.png)
+![](/wiki/wiki-assets/drei_ebenen_prozessbeschreibung.png)
 
 > 🖼 GRAFIK: Ebenen der ProzessbeschreibungKI-Beschreibung:
 Ein hierarchisches Schaubild, das drei Abstraktionsebenen der Prozessdokumentation und deren inhaltliche Tiefe darstellt.

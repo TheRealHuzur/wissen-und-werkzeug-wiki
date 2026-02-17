@@ -10,13 +10,14 @@ summary: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierun
 ---
 # Prozessmanagement
 
-## Einstieg
+## Beschreibung
 Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
+
+![[01_prozessmanagement.base]]
 
 ## Themen (Subtopics)
 - [[bpmn]]
 - [[projekte_planen_und_steuern]]
 - [[controlling]]
 
-## Qualitäts-Quickcheck
-- Offene Entwürfe: siehe quality_monitor
+

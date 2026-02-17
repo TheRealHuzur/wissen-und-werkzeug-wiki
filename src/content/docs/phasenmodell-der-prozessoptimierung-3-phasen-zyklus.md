@@ -17,13 +17,6 @@ head:
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung steuern."
 ---
 
-%%
-RAG-CONTEXT-ANCHOR:
-Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
-Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
-Klassifizierung: theorie mit der Zielsetzung steuern.
-%%
-
 # Phasenmodell der Prozessoptimierung (3-Phasen-Zyklus)
 
 ## **Zusammenfassung**

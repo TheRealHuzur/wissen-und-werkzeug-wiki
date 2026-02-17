@@ -23,7 +23,7 @@ Klassifizierung: grundlagen mit der Zielsetzung umsetzen.
 
 Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
 
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Dieses Modul beschreibt die strukturierte Dokumentation von Umsetzungsmaßnahmen zur Realisierung von Soll-Modellen und bietet eine Schritt-für-Schritt-Anleitung zur Nutzung eines Maßnahmenplans. Er dient als zentrales Werkzeug für Verbindlichkeit, Verantwortlichkeit und Projektcontrolling.
 > 

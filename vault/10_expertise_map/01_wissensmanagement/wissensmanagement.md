@@ -13,7 +13,7 @@ summary: "Wissensmanagement beschreibt, wie Wissen strukturiert aufgenommen, ges
 ## Einstieg
 Wissensmanagement beschreibt, wie Wissen strukturiert aufgenommen, gespeichert und abgerufen werden kann. 
 
+![[01_wissensmanagement.base]]
+
 ## Themen (Subtopics)
 
-## Qualitäts-Quickcheck
-- Offene Entwürfe: siehe quality_monitor

@@ -23,7 +23,7 @@ Klassifizierung: framework mit der Zielsetzung verstehen.
 
 Thema-Kontext: Business Process Model and Notation. Ein internationaler Standard für die grafische Darstellung von Geschäftsprozessen mittels Symbolen wie Gateways, Events und Aktivitäten.
 
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Endereignisse markieren den Abschluss eines Prozesspfades. Sie "konsumieren" die Prozess-Marke. Ein Prozess kann mehrere unterschiedliche Endereignisse haben, um verschiedene Ergebniszustände zu dokumentieren.
 > 

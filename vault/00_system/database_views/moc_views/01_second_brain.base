@@ -1,0 +1,12 @@
+views:
+  - type: table
+    name: Tabelle
+    filters:
+      and:
+        - parent_topic == "second_brain"
+        - "!type.isEmpty()"
+    order:
+      - file.name
+      - status
+    columnSize:
+      file.name: 444

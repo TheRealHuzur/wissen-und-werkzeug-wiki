@@ -22,7 +22,7 @@ Klassifizierung: framework mit der Zielsetzung verstehen.
 # BPMN: Grundlagen und Regeln für BPMN Gateways
 
 Thema-Kontext: Business Process Model and Notation. Ein internationaler Standard für die grafische Darstellung von Geschäftsprozessen mittels Symbolen wie Gateways, Events und Aktivitäten.
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Gateways fungieren in der BPMN als reine Logik-Knoten zur Steuerung des Prozessflusses durch Verzweigung (Split) und Zusammenführung (Join). Sie stellen keine Tätigkeiten dar und verbrauchen keine Zeit. Nach dem „Wissen und Werkzeug“-Prinzip müssen Gateways explizit modelliert werden, wobei ein Split genau einen Eingang und ein Join genau einen Ausgang besitzt.
 > 

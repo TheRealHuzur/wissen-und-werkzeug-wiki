@@ -17,6 +17,8 @@ views:
       - summary
       - file.folder
     sort:
+      - property: status
+        direction: ASC
       - property: subtopic
         direction: DESC
       - property: type

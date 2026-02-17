@@ -17,13 +17,6 @@ head:
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Controlling zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung steuern."
 ---
 
-%%
-RAG-CONTEXT-ANCHOR:
-Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
-Es ist im Thema Prozessmanagement verortet und dem Subtopic Controlling zugeordnet.
-Klassifizierung: grundlagen mit der Zielsetzung steuern.
-%%
-
 # Herausforderungen der Leistungsmessung
 
 Thema-Kontext: Steuerung von Prozessen anhand von Kennzahlen.
@@ -50,7 +43,7 @@ Das wahrscheinlich gewaltigste Hindernis ist, die Zusage der Leitung zu gewinnen
     - Leistungsmessung deckt Ineffizienzen auf.
     - Ohne den Willen der Führung, aus den Daten Konsequenzen zu ziehen, bleibt das Messen eine reine Dokumentationsübung ("Datenfriedhof").
 
-![](/wiki-assets/Hindernisse_des_Messens.png)
+![](/wiki/wiki-assets/Hindernisse_des_Messens.png)
 
 > 🖼 GRAFIK: Die 3 Hürden der Leistungsmessung
 > 

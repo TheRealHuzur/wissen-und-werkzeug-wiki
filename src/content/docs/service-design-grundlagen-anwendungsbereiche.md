@@ -17,13 +17,6 @@ head:
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung gestalten."
 ---
 
-%%
-RAG-CONTEXT-ANCHOR:
-Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
-Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
-Klassifizierung: framework mit der Zielsetzung gestalten.
-%%
-
 # Service Design: Grundlagen & Anwendungsbereiche
 
 Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
@@ -61,7 +54,7 @@ Als Visualisierung des typischen Vorgehens dient der "Double Diamond". Er strukt
     - **[Service Design Phase Entwickeln](/wiki/service-design-phase-entwickeln/)** (Divergierend: Lösungsoptionen generieren)
     - **[Service Design Phase Erstellen](/wiki/service-design-phase-erstellen/)** (Konvergierend: Die beste Lösung finalisieren)
 
-![](/wiki-assets/double_diamond.png)
+![](/wiki/wiki-assets/double_diamond.png)
 
 > 🖼 **GRAFIK: Das Double-Diamond-Modell (Designprozess)KI-Beschreibung:**
 Ein schematisches Diagramm, das den Design- und Innovationsprozess anhand von zwei Rauten (Diamonds) darstellt. Es visualisiert den Wechsel zwischen divergendem (breitem) und konvergendem (fokussiertem) Denken.

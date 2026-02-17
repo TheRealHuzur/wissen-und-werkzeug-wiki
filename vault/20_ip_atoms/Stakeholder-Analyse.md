@@ -7,7 +7,7 @@ parent_topic: prozessmanagement
 subtopic: projekte_planen_und_steuern
 type: grundlagen
 intent: steuern
-status: ki_ready
+status: entwurf
 created: 2026-02-16
 summary: Eine strukturierte Methode, um in drei Schritten betroffene Personengruppen zu identifizieren, ihren Einfluss und ihr Interesse zu bewerten und daraus gezielte Kommunikationsmaßnahmen abzuleiten.
 ---
@@ -25,7 +25,7 @@ Thema-Kontext: Anleitungen und Methoden zur Planung und Steuerung von Projekten 
 
 ## Zusammenfassung
 
-Eine strukturierte Methode, um in drei Schritten betroffene Personengruppen zu identifizieren, ihren Einfluss und ihr Interesse zu bewerten und daraus gezielte Kommunikationsmaßnahmen abzuleiten.
+>Eine strukturierte Methode, um in drei Schritten betroffene Personengruppen zu identifizieren, ihren Einfluss und ihr Interesse zu bewerten und daraus gezielte Kommunikationsmaßnahmen abzuleiten.
 
 Die Frage "Wen nehmen wir auf diese Reise mit?" ist zentral für den Erfolg von Veränderungsprojekten. Eine Stakeholderanalyse schafft Klarheit über das soziale Umfeld eines Projekts und hilft, Widerstände frühzeitig zu erkennen und Unterstützung zu sichern.
 
@@ -90,5 +90,5 @@ Diese Gruppe ist aktuell wenig relevant, sollte aber nicht vergessen werden.
 
 - **[[Kommunikationsplan]]
 - ***Kontext:* Die in der Analyse definierten Maßnahmen werden im Kommunikationsplan operationalisiert.
-- **[[Workshop-Methodik für Prozessaufnahme]]
+- **[[20_ip_atoms/Workshop-Methodik für Prozessaufnahme]]
 - ***Kontext:* Auch bei der Prozessaufnahme ist die Identifikation der richtigen Ansprechpartner (Stakeholder) essenziell.

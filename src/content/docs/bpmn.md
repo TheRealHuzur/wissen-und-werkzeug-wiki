@@ -20,3 +20,20 @@ Business Process Model and Notation. Ein internationaler Standard für die grafi
 
 ## Qualitäts-Quickcheck
 - Offene Entwürfe: siehe quality_monitor
+
+
+## Zugehörige Module
+
+- [Bpmn Aufgaben Und Teilprozesse](/wiki/bpmn-aufgaben-und-teilprozesse/)
+- [Bpmn Das Ereignisbasierte Gateway](/wiki/bpmn-das-ereignisbasierte-gateway/)
+- [Bpmn Das Exklusive Gateway (xor)](/wiki/bpmn-das-exklusive-gateway-xor/)
+- [Bpmn Das Parallele Gateway (and)](/wiki/bpmn-das-parallele-gateway-and/)
+- [Bpmn Datenobjekte & Informationsfluss](/wiki/bpmn-datenobjekte-informationsfluss/)
+- [Bpmn Der Sequenzfluss](/wiki/bpmn-der-sequenzfluss/)
+- [Bpmn Endereignisse](/wiki/bpmn-endereignisse/)
+- [Bpmn Ereignisse (grundlagen & Konzept)](/wiki/bpmn-ereignisse-grundlagen-konzept/)
+- [Bpmn Grundlagen Und Regeln Für Bpmn Gateways](/wiki/bpmn-grundlagen-und-regeln-fur-bpmn-gateways/)
+- [Bpmn Kollaboration & Externe Beteiligte](/wiki/bpmn-kollaboration-externe-beteiligte/)
+- [Bpmn Pools Und Schwimmbahnen](/wiki/bpmn-pools-und-schwimmbahnen/)
+- [Bpmn Startereignisse](/wiki/bpmn-startereignisse/)
+- [Bpmn Zwischenereignisse](/wiki/bpmn-zwischenereignisse/)

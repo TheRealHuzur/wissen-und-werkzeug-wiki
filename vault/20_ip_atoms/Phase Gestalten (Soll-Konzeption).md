@@ -23,7 +23,7 @@ Klassifizierung: theorie mit der Zielsetzung gestalten.
 
 Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
 
-## **Zusammenfassung**
+## Zusammenfassung
 
 > In der "Atelier-Phase" werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design Thinking, um den Lösungsraum strukturiert zu öffnen. Zentral ist hierbei die Klärung des Auftrags: Soll eine visionäre Ideal-Lösung oder ein zeitnah realisierbares Konzept entstehen?
 > 

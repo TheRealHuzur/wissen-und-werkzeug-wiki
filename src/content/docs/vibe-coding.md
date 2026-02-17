@@ -20,3 +20,8 @@ Beschreibt Hintergründe, Anleitungen und Vorlagen zum Vibe Coding. Ebenfalls we
 
 ## Qualitäts-Quickcheck
 - Offene Entwürfe: siehe quality_monitor
+
+
+## Zugehörige Module
+
+- [Repro Schritte (definition & Guide)](/wiki/repro-schritte-definition-guide/)

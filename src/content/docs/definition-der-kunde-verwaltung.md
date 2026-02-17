@@ -17,13 +17,6 @@ head:
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung verstehen."
 ---
 
-%%
-RAG-CONTEXT-ANCHOR:
-Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
-Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
-Klassifizierung: grundlagen mit der Zielsetzung verstehen.
-%%
-
 # Definition: Der Kunde (Verwaltung)
 
 Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
@@ -75,7 +68,7 @@ Die Frage *"Wer erhält das finale Ergebnis?"* definiert das Prozessende.
 - **Wichtig:** Übergaben zwischen Abteilungen sind **keine** Prozessenden, sondern lediglich **Zwischenergebnisse**.
     - *Beispiel:* Wenn Abteilung A einen Teilbericht erstellt und an Abteilung B zur Endfertigung weiterleitet, ist der Prozess hier *nicht* zu Ende. Abteilung B ist zwar Empfänger der Teilleistung, aber der Geschäftsprozess läuft weiter, bis das Gesamtergebnis die Verwaltung verlässt.
         
-        ![](/wiki-assets/kunde_in_der_verwaltung.png)
+        ![](/wiki/wiki-assets/kunde_in_der_verwaltung.png)
         
 
 > 🖼 GRAFIK: Das Kunden-Spektrum in der VerwaltungKI-Beschreibung:

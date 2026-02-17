@@ -20,3 +20,9 @@ Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des 
 
 ## Qualitäts-Quickcheck
 - Offene Entwürfe: siehe quality_monitor
+
+
+## Zugehörige Module
+
+- [Die Smart Regel](/wiki/die-smart-regel/)
+- [Stakeholder Analyse](/wiki/stakeholder-analyse/)

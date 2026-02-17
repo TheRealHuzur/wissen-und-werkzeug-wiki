@@ -23,7 +23,7 @@ Klassifizierung: theorie mit der Zielsetzung verstehen.
 
 Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
 
-## **Zusammenfassung**
+## Zusammenfassung
 
 > In der "Labor-Phase" wird der Ist-Zustand seziert. Es geht um die ungeschönte Aufnahme der Realität. Organisch gewachsene Strukturen werden nachvollzogen, in fachliche Modelle übersetzt und anschließend diagnostiziert. Oberstes Prinzip: Verstehen kommt vor Bewerten.
 > 
@@ -75,7 +75,7 @@ Je nach Komplexität kann die Tiefe der Analyse variieren: Von einer einfachen *
 
 ## 🔗 Verwandte Module
 
-- **[[Workshop-Methodik für Prozessaufnahme]]
+- **[[20_ip_atoms/Workshop-Methodik für Prozessaufnahme]]
 - ***Kontext:* Das konkrete Handwerkszeug für die Interviewführung.
 - **[[Checkliste Schwachstellenanalyse]]
 - ***Kontext:* Ein Leitfaden für die Diagnose-Kriterien (Redundanzen, Medienbrüche etc.).

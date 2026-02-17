@@ -1,10 +1,10 @@
 ---
-id: kunstliche_intelligenz
+id: kuenstliche_intelligenz
 aliases:
-  - kunstliche_intelligenz
+  - kuenstliche_intelligenz
 moc_level: parent
-parent_topic: kunstliche_intelligenz
-subtopic: kunstliche_intelligenz
+parent_topic: kuenstliche_intelligenz
+subtopic: kuenstliche_intelligenz
 status: aktiv
 summary: Der praktische Einsatz von KI-Tools und Sprachmodellen (LLMs like ChatGPT) zur Automatisierung von Aufgaben, Generierung von Inhalten und Unterstützung in der Wissensarbeit.
 ---
@@ -13,9 +13,9 @@ summary: Der praktische Einsatz von KI-Tools und Sprachmodellen (LLMs like ChatG
 ## Einstieg
 Der praktische Einsatz von KI-Tools und Sprachmodellen (LLMs like ChatGPT) zur Automatisierung von Aufgaben, Generierung von Inhalten und Unterstützung in der Wissensarbeit.
 
+![[01_kuenstliche_intelligenz.base]]
+
 ## Themen (Subtopics)
 - [[prompten]]
 - [[vibe_coding]]
 
-## Qualitäts-Quickcheck
-- Offene Entwürfe: siehe quality_monitor

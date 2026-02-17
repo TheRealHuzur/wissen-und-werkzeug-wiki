@@ -58,4 +58,4 @@ Die Detailtiefe der Schwimmbahnen hängt von der Zielgruppe ab:
 ## 🔗 Verwandte Module
 
 - **[[BPMN Kollaboration & Externe Beteiligte]]***Kontext:* Beschreibt, wie Prozesse mit externen Partnern (außerhalb des eigenen Pools) interagieren.
-- **[[Kompetenzprofil ProzessmanagerIn]]***Kontext:* Relevante Rolle für die Definition der Zuständigkeiten im Modell.
+- **[[20_ip_atoms/Kompetenzprofil ProzessmanagerIn]]***Kontext:* Relevante Rolle für die Definition der Zuständigkeiten im Modell.

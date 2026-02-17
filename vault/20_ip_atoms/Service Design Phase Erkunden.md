@@ -25,7 +25,7 @@ Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Opti
 
 ## Zusammenfassung
 
-Die Phase "Erkunden" ist der divergierende Startpunkt im Service Design Prozess, bei dem der Problemraum weit geöffnet wird. Ziel ist das tiefe Verständnis der Nutzerbedürfnisse durch qualitative Forschungsmethoden.
+>Die Phase "Erkunden" ist der divergierende Startpunkt im Service Design Prozess, bei dem der Problemraum weit geöffnet wird. Ziel ist das tiefe Verständnis der Nutzerbedürfnisse durch qualitative Forschungsmethoden.
 
 **Dieses Modul beantwortet folgende Fragen:**
 

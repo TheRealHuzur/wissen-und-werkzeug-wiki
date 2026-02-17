@@ -10,8 +10,7 @@ summary: Steuerung von Prozessen anhand von Kennzahlen.
 ---
 # Controlling
 
-## Einstieg
+## Beschreibung
 Steuerung von Prozessen anhand von Kennzahlen.
 
-## Qualitäts-Quickcheck
-- Offene Entwürfe: siehe quality_monitor
+![[01_prozessmanagement_controlling.base]]

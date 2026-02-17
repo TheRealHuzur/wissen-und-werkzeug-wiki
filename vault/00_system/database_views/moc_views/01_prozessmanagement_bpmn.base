@@ -1,0 +1,11 @@
+views:
+  - type: table
+    name: Tabelle
+    filters:
+      and:
+        - parent_topic == "prozessmanagement"
+        - subtopic == "bpmn"
+        - "!type.isEmpty()"
+    order:
+      - file.name
+      - status

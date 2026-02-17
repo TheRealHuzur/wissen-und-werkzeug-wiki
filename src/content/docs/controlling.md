@@ -20,3 +20,9 @@ Steuerung von Prozessen anhand von Kennzahlen.
 
 ## Qualitäts-Quickcheck
 - Offene Entwürfe: siehe quality_monitor
+
+
+## Zugehörige Module
+
+- [First Pass Yield (fpy)](/wiki/kennzahl-first-pass-yield-fpy/)
+- [Herausforderungen Der Leistungsmessung](/wiki/herausforderungen-der-leistungsmessung/)

@@ -13,7 +13,6 @@ summary: Strukturierte Methoden und Strategien zur Begleitung von Veränderungen
 ## Einstieg
 Strukturierte Methoden und Strategien zur Begleitung von Veränderungen in Organisationen, mit speziellem Fokus auf den Faktor Mensch, die Überwindung von Widerständen und die Sicherung der Akzeptanz.
 
+![[01_changemanagement.base]]
 ## Themen (Subtopics)
 
-## Qualitäts-Quickcheck
-- Offene Entwürfe: siehe quality_monitor

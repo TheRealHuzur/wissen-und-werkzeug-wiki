@@ -1,0 +1,13 @@
+views:
+  - type: table
+    name: Tabelle
+    filters:
+      and:
+        - parent_topic == "prozessmanagement"
+        - subtopic == "projekte_planen_und_steuern"
+        - "!type.isEmpty()"
+    order:
+      - file.name
+      - status
+    columnSize:
+      file.name: 251

@@ -23,7 +23,7 @@ Klassifizierung: theorie mit der Zielsetzung verstehen.
 
 ## Zusammenfassung
 
-Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die "Top-Down-Methode" (vom Groben ins Feine) und die  "Bottom-Up-Methode" (vom Feinen ins Grobe). Für eine strukturierte Modellierung wird in der Praxis der Top-Down-Ansatz empfohlen.
+>Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die "Top-Down-Methode" (vom Groben ins Feine) und die  "Bottom-Up-Methode" (vom Feinen ins Grobe). Für eine strukturierte Modellierung wird in der Praxis der Top-Down-Ansatz empfohlen.
 
 **Dieses Modul beantwortet folgende Fragen:**
 
@@ -56,5 +56,5 @@ Dieser Ansatz arbeitet "vom Feinen ins Grobe". Man sammelt zunächst detailliert
 - *Kontext:* Beschreibt die konkrete Anwendung der Top-Down-Methode.
 - **[[prozessmanagement]]** 
 - *Kontext:* Übergeordnetes Fachgebiet.
-- **[[Workshop-Methodik für Prozessaufnahme]]** 
+- **[[20_ip_atoms/Workshop-Methodik für Prozessaufnahme]]** 
 - *Kontext:* Praktische Anwendung der Methoden im Workshop.

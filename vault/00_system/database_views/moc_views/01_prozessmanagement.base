@@ -1,0 +1,13 @@
+views:
+  - type: table
+    name: Tabelle
+    filters:
+      and:
+        - parent_topic == "prozessmanagement"
+        - "!type.isEmpty()"
+    order:
+      - file.name
+      - status
+    sort:
+      - property: status
+        direction: DESC

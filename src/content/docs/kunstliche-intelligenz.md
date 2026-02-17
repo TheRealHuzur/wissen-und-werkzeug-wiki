@@ -24,3 +24,8 @@ Der praktische Einsatz von KI-Tools und Sprachmodellen (LLMs like ChatGPT) zur A
 
 ## Qualitäts-Quickcheck
 - Offene Entwürfe: siehe quality_monitor
+
+
+## Zugehörige Module
+
+- [Repro Schritte (definition & Guide)](/wiki/repro-schritte-definition-guide/)

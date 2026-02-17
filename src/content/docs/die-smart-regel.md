@@ -17,13 +17,6 @@ head:
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Projekte Planen Und Steuern zugeordnet. Klassifizierung: theorie mit der Zielsetzung steuern."
 ---
 
-%%
-RAG-CONTEXT-ANCHOR:
-Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
-Es ist im Thema Prozessmanagement verortet und dem Subtopic Projekte Planen Und Steuern zugeordnet.
-Klassifizierung: theorie mit der Zielsetzung steuern.
-%%
-
 # Die SMART-Regel
 
 Thema-Kontext: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.
@@ -54,7 +47,7 @@ Das Ziel muss erreichbar sein. Dabei sind die verfügbaren Ressourcen (Zeit, Bud
 
 Ein konkreter Zeitrahmen oder ein Enddatum muss definiert sein. Ohne Terminierung fehlt die Verbindlichkeit und Dringlichkeit.
 
-![](/wiki-assets/SMART.png)
+![](/wiki/wiki-assets/SMART.png)
 
 > 🖼 GRAFIK: SMART-AkronymKI-Beschreibung: Eine schematische Darstellung der 5 Buchstaben S-M-A-R-T, wobei jedem Buchstaben ein Icon zugeordnet ist: Lupe (Spezifisch), Lineal (Messbar), Stern oder Magnet (Attraktiv), Waage oder Häkchen (Realistisch), Kalender/Uhr (Terminiert).
 > 

@@ -17,13 +17,6 @@ head:
       content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung steuern."
 ---
 
-%%
-RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
-Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
-Klassifizierung: theorie mit der Zielsetzung steuern.
-%%
-
 # Vorgehensmodelle der Prozessoptimierung: Evolutionär vs. Revolutionär
 
 Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
@@ -57,7 +50,7 @@ Dieser Ansatz folgt der "Green-Field"-Logik (Grüne Wiese). Er verzichtet bewuss
 - **Vorteil:** Radikale Befreiung von historisch gewachsenen Zöpfen und "Das haben wir schon immer so gemacht"-Denkweisen. Oft der einzige Weg, um disruptive Innovationen zu ermöglichen, die im engen Korsett des Bestands undenkbar wären.
 - **Nachteil:** Gefahr von unrealistischen "Wunschschlössern", die an der Infrastruktur oder dem rechtlichen Rahmen scheitern.
     
-    ![](/wiki-assets/Revo_vs_Evo.png)
+    ![](/wiki/wiki-assets/Revo_vs_Evo.png)
     
 
 > 🖼 **GRAFIK: Vorgehensmodelle der Prozessoptimierung: Evolutionär vs. RevolutionärKI-Beschreibung:**

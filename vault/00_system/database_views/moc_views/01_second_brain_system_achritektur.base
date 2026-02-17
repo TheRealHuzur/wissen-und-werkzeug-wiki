@@ -1,0 +1,11 @@
+views:
+  - type: table
+    name: Tabelle
+    filters:
+      and:
+        - parent_topic == "second_brain"
+        - "!type.isEmpty()"
+        - subtopic == "system_architektur"
+    order:
+      - file.name
+      - status

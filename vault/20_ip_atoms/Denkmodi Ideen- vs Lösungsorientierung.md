@@ -21,7 +21,7 @@ Klassifizierung: theorie mit der Zielsetzung gestalten.
 
 # Denkmodi Ideen- vs Lösungsorientierung
 
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Dieses Modul beschreibt die methodische Trennung zwischen explorativem, öffnendem Denken und konvergierendem, entscheidungsfokussiertem Denken zur Steigerung der Innovationsqualität.
 >

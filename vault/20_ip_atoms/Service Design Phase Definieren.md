@@ -25,7 +25,7 @@ Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Opti
 
 ## Zusammenfassung
 
-In der Phase "Definieren" werden die gesammelten Erkenntnisse analysiert, gefiltert und in eine klare Problemstellung überführt. Es ist eine konvergierende Phase, die den Fokus für die Lösungsentwicklung setzt.
+>In der Phase "Definieren" werden die gesammelten Erkenntnisse analysiert, gefiltert und in eine klare Problemstellung überführt. Es ist eine konvergierende Phase, die den Fokus für die Lösungsentwicklung setzt.
 
 **Dieses Modul beantwortet folgende Fragen:**
 

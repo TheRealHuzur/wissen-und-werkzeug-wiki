@@ -25,7 +25,7 @@ Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Opti
 
 ## Zusammenfassung
 
-Die Phase "Entwickeln" eröffnet den zweiten Diamanten (Lösungsraum) und fokussiert auf die Generierung einer Vielzahl von Ideen. Durch kreative Methoden werden unterschiedliche Lösungsansätze für das definierte Problem entworfen.
+>Die Phase "Entwickeln" eröffnet den zweiten Diamanten (Lösungsraum) und fokussiert auf die Generierung einer Vielzahl von Ideen. Durch kreative Methoden werden unterschiedliche Lösungsansätze für das definierte Problem entworfen.
 
 **Dieses Modul beantwortet folgende Fragen:**
 
@@ -73,5 +73,5 @@ Um das kreative Potenzial zu nutzen, werden verschiedene Techniken eingesetzt:
 - ***Kontext:* Die Basis für die Ideenfindung.
 - **[[Service Design Phase Erstellen]]
 - ***Kontext:* Die Selektion und Ausarbeitung der besten Ideen erfolgt im nächsten Schritt.
-- **[[Workshop-Methodik für Prozessaufnahme]]** 
+- **[[20_ip_atoms/Workshop-Methodik für Prozessaufnahme]]** 
 *Kontext:* Verwandte Methoden zur Arbeit in Gruppen.

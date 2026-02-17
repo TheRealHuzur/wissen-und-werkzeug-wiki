@@ -23,9 +23,10 @@ Klassifizierung: grundlagen mit der Zielsetzung verstehen.
 
 Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
 
-> Zusammenfassung
-Dieses Modul erweitert den klassischen Kundenbegriff für den Verwaltungskontext. Es definiert den Kunden als jeglichen Empfänger einer Leistung – egal ob Bürger, Politik, andere Behörde oder interne Abteilung – und verankert ihn als zentralen Ankerpunkt für die Prozessidentifikation.
-> 
+## Zusammenfassung
+
+>Dieses Modul erweitert den klassischen Kundenbegriff für den Verwaltungskontext. Es definiert den Kunden als jeglichen Empfänger einer Leistung – egal ob Bürger, Politik, andere Behörde oder interne Abteilung – und verankert ihn als zentralen Ankerpunkt für die Prozessidentifikation.
+
 
 **Dieses Modul beantwortet folgende Fragen:**
 

@@ -25,7 +25,7 @@ Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Opti
 
 ## Zusammenfassung
 
-Die Prozess-FMEA (Fehlermöglichkeits- und Einflussanalyse) ist eine präventive Methode zur systematischen Identifikation und Bewertung von Schwachsstellen in Prozessen. Dieses Modul kombiniert die theoretischen Grundlagen (RPZ, Ablaufschritte) mit einem konkreten Anwendungsbeispiel aus der Fortbildungsorganisation.
+>Die Prozess-FMEA (Fehlermöglichkeits- und Einflussanalyse) ist eine präventive Methode zur systematischen Identifikation und Bewertung von Schwachsstellen in Prozessen. Dieses Modul kombiniert die theoretischen Grundlagen (RPZ, Ablaufschritte) mit einem konkreten Anwendungsbeispiel aus der Fortbildungsorganisation.
 
 **Dieses Modul beantwortet folgende Fragen:**
 

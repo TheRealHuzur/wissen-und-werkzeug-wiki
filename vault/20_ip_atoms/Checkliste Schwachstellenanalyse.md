@@ -138,7 +138,7 @@ Diese dritte Option ist entscheidend, um Wissenslücken sichtbar zu machen und g
 
 ## 🔗 Verwandte Module
 
-- **[[Workshop-Methodik für Prozessaufnahme]]**
+- **[[20_ip_atoms/Workshop-Methodik für Prozessaufnahme]]**
     - *Kontext:* Die Checkliste dient oft zur Nachbereitung der Ergebnisse aus diesen Workshops.
 - **[[Identifikation von Geschäftsprozessen]]**
     - *Kontext:* Hilft bei der Abgrenzung, welche Prozesse überhaupt der Analyse unterzogen werden.

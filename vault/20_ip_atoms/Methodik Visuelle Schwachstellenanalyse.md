@@ -23,7 +23,7 @@ Klassifizierung: theorie mit der Zielsetzung gestalten.
 
 Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
 
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Die Visualisierung von Geschäftsprozessen dient  Werkzeug zur Identifikation struktureller Schwachstellen. Besonders in historisch gewachsenen Strukturen der öffentlichen Verwaltung ermöglicht die chronologische Aufbereitung das Erkennen von Schwachstellen und das kritische Hinterfragen althergebrachter Vorgehensweisen.
 > 

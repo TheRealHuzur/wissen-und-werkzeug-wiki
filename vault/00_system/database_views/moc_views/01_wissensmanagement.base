@@ -1,0 +1,13 @@
+views:
+  - type: table
+    name: Tabelle
+    filters:
+      and:
+        - parent_topic == "wissensmanagement"
+        - "!type.isEmpty()"
+    order:
+      - file.name
+      - status
+    sort:
+      - property: status
+        direction: DESC
