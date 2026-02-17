@@ -623,9 +623,33 @@ async function main() {
       addLookupKey(String(candidate.frontmatter.title), route, `${candidate.file} (title)`);
     }
   }
+  const ipsByParentTopic = new Map();
+  const ipsBySubtopic = new Map();
+
+  for (const candidate of candidates) {
+    const isMoc = candidate.file.replace(/\\/g, '/').includes('/10_expertise_map/');
+    if (!isMoc) {
+      const parentTopicRaw = String(candidate.frontmatter.parent_topic ?? '').trim();
+      const parentTopic = slugify(parentTopicRaw);
+      const subtopicRaw = String(candidate.frontmatter.subtopic ?? '').trim();
+      const subtopic = slugify(subtopicRaw);
+
+      if (parentTopic) {
+        if (!ipsByParentTopic.has(parentTopic)) ipsByParentTopic.set(parentTopic, []);
+        ipsByParentTopic.get(parentTopic).push(candidate);
+      }
+      if (subtopic) {
+        if (!ipsBySubtopic.has(subtopic)) ipsBySubtopic.set(subtopic, []);
+        ipsBySubtopic.get(subtopic).push(candidate);
+      }
+    }
+  }
 
   for (const candidate of candidates) {
     let body = candidate.body;
+
+    // Strip .base embeds: ![[...base]] or ![[...base|alias]]
+    body = body.replace(/!\[\[([^\]]+\.base(\|[^\]]*)?)\]\]/g, '');
 
     body = await (async () => {
       const pattern = /!\[\[([^\]]+)\]\]/g;
@@ -718,6 +742,42 @@ async function main() {
       const anchor = heading ? `#${headingSlug(heading)}` : '';
       return `[${text}](${route}${anchor})`;
     });
+
+    // Append related modules list for MOCs
+    const isMoc = candidate.file.replace(/\\/g, '/').includes('/10_expertise_map/');
+    if (isMoc) {
+      const mocLevel = normalizeLookupKey(String(candidate.frontmatter.moc_level ?? ''));
+      const id = candidate.id;
+      const subtopicValue = slugify(String(candidate.frontmatter.subtopic ?? ''));
+
+      let relatedIps = [];
+      if (mocLevel === 'parent') {
+        relatedIps = ipsByParentTopic.get(slugify(id)) || [];
+      } else if (mocLevel === 'subtopic') {
+        relatedIps = ipsBySubtopic.get(subtopicValue) || [];
+      }
+
+      if (relatedIps.length > 0) {
+        // Sort by title
+        relatedIps.sort((a, b) => a.title.localeCompare(b.title, 'de', { sensitivity: 'base' }));
+
+        body += '\n\n## Zugehörige Module\n\n';
+        for (const ip of relatedIps) {
+          body += `- [[${ip.id}|${ip.title}]]\n`;
+        }
+
+        // Re-process the newly added wikilinks
+        body = body.replace(/\[\[([^\]]+)\]\]/g, (_, inner) => {
+          const [targetRaw, aliasRaw] = inner.split('|');
+          const { target, heading } = splitWikilinkTarget(targetRaw || '');
+          const label = (aliasRaw || target || heading || '').trim();
+          const route = resolveInternalRoute(routeMap, target);
+          if (!route) return `[${label || target}](#)`;
+          const anchor = heading ? `#${headingSlug(heading)}` : '';
+          return `[${label || target}](${route}${anchor})`;
+        });
+      }
+    }
 
     const sourceDescription = String(candidate.frontmatter.description ?? '').trim();
     const sourceSummary = String(candidate.frontmatter.summary ?? '').trim();
