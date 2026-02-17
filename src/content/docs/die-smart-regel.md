@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Die Smart Regel\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/die-smart-regel/\",\"description\":\"Thema-Kontext: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Projekte Planen Und Steuern zugeordnet. Klassifizierung: theorie mit der Zielsetzung steuern."
 ---
 
 %%

@@ -15,6 +15,14 @@ export const sidebar = [
       {
         "label": "Uebersicht",
         "link": "/wiki/kunstliche-intelligenz/"
+      },
+      {
+        "label": "Prompten",
+        "link": "/wiki/prompten/"
+      },
+      {
+        "label": "Vibe Coding",
+        "link": "/wiki/vibe-coding/"
       }
     ]
   },
@@ -24,6 +32,18 @@ export const sidebar = [
       {
         "label": "Uebersicht",
         "link": "/wiki/prozessmanagement/"
+      },
+      {
+        "label": "BPMN",
+        "link": "/wiki/bpmn/"
+      },
+      {
+        "label": "Controlling",
+        "link": "/wiki/controlling/"
+      },
+      {
+        "label": "Projekte planen und steuern",
+        "link": "/wiki/projekte-planen-und-steuern/"
       }
     ]
   },
@@ -33,6 +53,10 @@ export const sidebar = [
       {
         "label": "Uebersicht",
         "link": "/wiki/second-brain/"
+      },
+      {
+        "label": "System Architektur",
+        "link": "/wiki/system-architektur/"
       }
     ]
   },

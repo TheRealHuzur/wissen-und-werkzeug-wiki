@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Der Kontinuierliche Verbesserungsprozess (kvp)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/prinzip-der-kontinuierliche-verbesserungsprozess-kvp/\",\"description\":\"Der KVP beschreibt den zyklischen Charakter des Prozessmanagements. Er stellt sicher, dass Organisationen auf Veränderungen reagieren und Prozesse nicht als…\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung betreiben."
 ---
 
 %%

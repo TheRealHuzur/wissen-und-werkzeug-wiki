@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Service Design Phase Erkunden\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-erkunden/\",\"description\":\"Die Phase \\\"Erkunden\\\" ist der divergierende Startpunkt im Service Design Prozess, bei dem der Problemraum weit geöffnet wird. Ziel ist das tiefe Verständnis…\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung gestalten."
 ---
 
 %%

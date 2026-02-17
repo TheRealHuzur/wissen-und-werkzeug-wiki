@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Herausforderungen Der Leistungsmessung\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/herausforderungen-der-leistungsmessung/\",\"description\":\"Beschreibt die drei zentralen Hürden, auf die Unternehmen und Verwaltungen stoßen, wenn sie versuchen, Prozessleistung zu messen: Definition des Messobjekts,…\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Controlling zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung steuern."
 ---
 
 %%

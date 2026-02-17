@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bpmn Kollaboration & Externe Beteiligte\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-kollaboration-externe-beteiligte/\",\"description\":\"Dieses Modul behandelt die Darstellung von externen Prozessbeteiligten in der BPMN (Kollaboration). Es erklärt den Einsatz von Black-Box-Pools, die Nutzung…\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet. Klassifizierung: framework mit der Zielsetzung verstehen."
 ---
 
 %%

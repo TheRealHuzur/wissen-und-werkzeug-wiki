@@ -6,6 +6,7 @@ moc_level: subtopic
 status: aktiv
 area: fach_expertise
 parent_topic: second_brain
+subtopic: system_architektur
 summary: "Beschreibt wie das Secound Brain aufgebaut ist. Es wird dargelegt, welche Datenbanken angelegt sind, welche Eigenschaften die Datenbanken haben und wie die Eigenschaftsfelder gefüllt werden."
 ---
 # System Architektur

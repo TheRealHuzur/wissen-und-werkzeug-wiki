@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Phasenmodell Der Prozessoptimierung (3 Phasen Zyklus)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/phasenmodell-der-prozessoptimierung-3-phasen-zyklus/\",\"description\":\"Dieses Modell bildet das fundamentale Rückgrat jeglicher Prozessoptimierung. Es fungiert als zentrale Meta-Ebene, die den oft komplexen Projektalltag in einen…\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung steuern."
 ---
 
 %%

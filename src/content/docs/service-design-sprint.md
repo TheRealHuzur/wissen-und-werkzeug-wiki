@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Service Design Sprint\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-sprint/\",\"description\":\"Ein Service Design Sprint ist ein strukturierter Prozess zur schnellen Entwicklung und Optimierung von Dienstleistungen. Er gliedert sich in fünf Phasen und…\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung gestalten."
 ---
 
 %%

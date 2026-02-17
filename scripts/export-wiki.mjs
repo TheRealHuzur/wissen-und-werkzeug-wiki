@@ -218,6 +218,16 @@ function extractFirstH1(content) {
   return '';
 }
 
+function extractRagContext(content) {
+  const match = content.match(/%%\r?\n\s*RAG-CONTEXT-ANCHOR:\s*\r?\n([\s\S]*?)\r?\n\s*%%/);
+  if (!match) return null;
+  return match[1]
+    .split(/\r?\n/)
+    .map(line => line.trim())
+    .filter(Boolean)
+    .join(' ');
+}
+
 function yamlQuote(input) {
   return `"${String(input).replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\r?\n/g, ' ')}"`;
 }
@@ -733,6 +743,8 @@ async function main() {
       jsonLd.description = description;
     }
 
+    const ragContext = extractRagContext(candidate.body);
+
     const frontmatterLines = ['---', `title: ${yamlQuote(candidate.title)}`];
     if (description) {
       frontmatterLines.push(`description: ${yamlQuote(description)}`);
@@ -747,6 +759,13 @@ async function main() {
     frontmatterLines.push('    attrs:');
     frontmatterLines.push('      type: application/ld+json');
     frontmatterLines.push(`    content: ${yamlQuote(JSON.stringify(jsonLd))}`);
+
+    if (ragContext) {
+      frontmatterLines.push('  - tag: meta');
+      frontmatterLines.push('    attrs:');
+      frontmatterLines.push('      name: rag-context');
+      frontmatterLines.push(`      content: ${yamlQuote(ragContext)}`);
+    }
 
     if (sidebarOrder !== undefined || sidebarHidden !== undefined) {
       frontmatterLines.push('sidebar:');

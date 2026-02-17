@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Methodik Visuelle Schwachstellenanalyse\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/methodik-visuelle-schwachstellenanalyse/\",\"description\":\"Die Visualisierung von Geschäftsprozessen dient Werkzeug zur Identifikation struktureller Schwachstellen. Besonders in historisch gewachsenen Strukturen der…\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung gestalten."
 ---
 
 %%

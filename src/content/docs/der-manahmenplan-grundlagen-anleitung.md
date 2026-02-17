@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Der Maßnahmenplan Grundlagen & Anleitung\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/der-manahmenplan-grundlagen-anleitung/\",\"description\":\"Dieses Modul beschreibt die strukturierte Dokumentation von Umsetzungsmaßnahmen zur Realisierung von Soll-Modellen und bietet eine…\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung umsetzen."
 ---
 
 %%

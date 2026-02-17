@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Phase Umsetzen (change Management)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/phase-umsetzen-change-management/\",\"description\":\"Die \\\"Werkstatt-Phase\\\" überführt das Soll-Konzept in den Arbeitsalltag. Sie ist die kritischste Phase, da sie tief in Routinen eingreift. Der Fokus liegt auf…\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung umsetzen."
 ---
 
 %%

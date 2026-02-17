@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Repro Schritte (definition & Guide)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/repro-schritte-definition-guide/\",\"description\":\"Repro-Schritte (Reproduction Steps) sind präzise, sequenzielle Anweisungen, um ein technisches Problem oder ein Fehlverhalten exakt nachzustellen.\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Künstliche Intelligenz. Es ist im Thema Künstliche Intelligenz verortet und dem Subtopic Vibe Coding zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung umsetzen."
 ---
 
 %%

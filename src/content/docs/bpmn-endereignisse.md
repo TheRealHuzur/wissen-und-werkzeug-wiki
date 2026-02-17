@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bpmn Endereignisse\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-endereignisse/\",\"description\":\"Endereignisse markieren den Abschluss eines Prozesspfades. Sie \\\"konsumieren\\\" die Prozess-Marke. Ein Prozess kann mehrere unterschiedliche Endereignisse haben,…\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet. Klassifizierung: framework mit der Zielsetzung verstehen."
 ---
 
 %%

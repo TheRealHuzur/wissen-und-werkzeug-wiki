@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /wiki/
+
+# If the request is for a real file or directory, serve it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Otherwise, redirect to index.html (SPA/SSG routing)
+RewriteRule . index.html [L]

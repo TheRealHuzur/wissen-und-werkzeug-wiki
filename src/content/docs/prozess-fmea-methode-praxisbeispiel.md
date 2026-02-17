@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Prozess Fmea Methode & Praxisbeispiel\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/prozess-fmea-methode-praxisbeispiel/\",\"description\":\"Die Prozess-FMEA (Fehlermöglichkeits- und Einflussanalyse) ist eine präventive Methode zur systematischen Identifikation und Bewertung von Schwachsstellen in…\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung verstehen."
 ---
 
 %%

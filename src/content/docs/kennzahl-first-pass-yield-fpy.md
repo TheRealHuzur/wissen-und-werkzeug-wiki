@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"First Pass Yield (fpy)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/kennzahl-first-pass-yield-fpy/\",\"description\":\"Definition und Berechnung des First Pass Yield (FPY) als Qualitätskennzahl. Sie misst den Anteil der Prozessdurchläufe (Fälle), die im ersten Durchlauf ohne…\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Controlling zugeordnet. Klassifizierung: framework mit der Zielsetzung steuern."
 ---
 
 %%

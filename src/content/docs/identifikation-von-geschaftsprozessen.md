@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Identifikation Von Geschäftsprozessen\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/identifikation-von-geschaftsprozessen/\",\"description\":\"Dieses Modul definiert Methoden zur sauberen Identifikation und Abgrenzung von Geschäftsprozessen. Es liefert Benennungsregeln (Objekt + Verb) und eine…\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung verstehen."
 ---
 
 %%

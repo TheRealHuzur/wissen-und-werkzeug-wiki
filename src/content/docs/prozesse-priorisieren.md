@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Prozesse Priorisieren\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/prozesse-priorisieren/\",\"description\":\"Da Ressourcen begrenzt sind, können nicht alle Prozesse gleichzeitig optimiert werden. Dieses Modul beschreibt Kriterien und Vorgehensweisen, um Prozesse…\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung steuern."
 ---
 
 %%

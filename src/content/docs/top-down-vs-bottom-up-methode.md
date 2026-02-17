@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Top Down Vs Bottom Up Methode\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/top-down-vs-bottom-up-methode/\",\"description\":\"Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die \\\\\\\"Top-Down-Methode\\\\\\\" (vom Groben ins Feine) und die \\\\\\\"Bottom-Up-Methode\\\\\\\" (vom Feinen ins…\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung verstehen."
 ---
 
 %%

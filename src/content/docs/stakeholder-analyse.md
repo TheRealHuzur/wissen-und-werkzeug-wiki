@@ -11,6 +11,10 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Stakeholder Analyse\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/stakeholder-analyse/\",\"description\":\"Eine strukturierte Methode, um in drei Schritten betroffene Personengruppen zu identifizieren, ihren Einfluss und ihr Interesse zu bewerten und daraus…\"}"
+  - tag: meta
+    attrs:
+      name: rag-context
+      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Projekte Planen Und Steuern zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung steuern."
 ---
 
 %%
