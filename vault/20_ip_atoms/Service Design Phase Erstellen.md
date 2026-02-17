@@ -21,8 +21,6 @@ Klassifizierung: framework mit der Zielsetzung gestalten.
 
 # Service Design: Phase Erstellen
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
 >Die Phase "Erstellen" ist der finale Schritt im Double Diamond, in dem Ideen zu konkreten Lösungen ausgearbeitet, getestet und implementiert werden. Durch Prototyping und Feedbackschleifen wird das Risiko von Fehlentwicklungen minimiert.

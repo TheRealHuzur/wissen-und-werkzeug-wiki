@@ -13,17 +13,17 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Service Design Phase Entwickeln\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-entwickeln/\",\"description\":\"Die Phase \\\"Entwickeln\\\" eröffnet den zweiten Diamanten (Lösungsraum) und fokussiert auf die Generierung einer Vielzahl von Ideen. Durch kreative Methoden…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung gestalten."
 ---
 
-# Service Design: Phase Entwickeln
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
-Die Phase "Entwickeln" eröffnet den zweiten Diamanten (Lösungsraum) und fokussiert auf die Generierung einer Vielzahl von Ideen. Durch kreative Methoden werden unterschiedliche Lösungsansätze für das definierte Problem entworfen.
+>Die Phase "Entwickeln" eröffnet den zweiten Diamanten (Lösungsraum) und fokussiert auf die Generierung einer Vielzahl von Ideen. Durch kreative Methoden werden unterschiedliche Lösungsansätze für das definierte Problem entworfen.
 
 **Dieses Modul beantwortet folgende Fragen:**
 
@@ -71,5 +71,5 @@ Um das kreative Potenzial zu nutzen, werden verschiedene Techniken eingesetzt:
 - ***Kontext:* Die Basis für die Ideenfindung.
 - **[Service Design Phase Erstellen](/wiki/service-design-phase-erstellen/)
 - ***Kontext:* Die Selektion und Ausarbeitung der besten Ideen erfolgt im nächsten Schritt.
-- **[Workshop-Methodik für Prozessaufnahme](#)** 
+- **[20_ip_atoms/Workshop-Methodik für Prozessaufnahme](#)** 
 *Kontext:* Verwandte Methoden zur Arbeit in Gruppen.

@@ -21,8 +21,6 @@ Klassifizierung: framework mit der Zielsetzung verstehen.
 
 # BPMN: Aufgaben und Teilprozesse
 
-Thema-Kontext: Business Process Model and Notation. Ein internationaler Standard für die grafische Darstellung von Geschäftsprozessen mittels Symbolen wie Gateways, Events und Aktivitäten.
-
 ## Zusammenfassung
 
 Dieses Modul beschreibt die Darstellung des "Was" in einem Prozessmodell durch Aktivitäten. Es definiert Tasks als atomare Einheiten und erläutert die Kapselung von Komplexität durch Teilprozesse sowie die Wiederverwendung mittels Aufrufaktivitäten.

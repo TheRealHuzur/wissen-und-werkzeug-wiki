@@ -13,13 +13,13 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bpmn Der Sequenzfluss\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-der-sequenzfluss/\",\"description\":\"Der Sequenzfluss visualisiert die chronologisch-sachlogische Abfolge eines Prozesses. Er definiert den Pfad und verbindet dabei ausschließlich Elemente…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet. Klassifizierung: framework mit der Zielsetzung verstehen."
 ---
-
-# BPMN: Der Sequenzfluss
-
-Thema-Kontext: Business Process Model and Notation. Ein internationaler Standard für die grafische Darstellung von Geschäftsprozessen mittels Symbolen wie Gateways, Events und Aktivitäten.
 
 ## Zusammenfassung
 

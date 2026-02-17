@@ -13,15 +13,15 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bpmn Startereignisse\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-startereignisse/\",\"description\":\"Startereignisse definieren den Auslöser eines Prozesses und erzeugen beim Eintreten eine neue Prozessinstanz (Token). Sie haben keinen eingehenden, aber genau…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet. Klassifizierung: framework mit der Zielsetzung verstehen."
 ---
 
-# BPMN: Startereignisse
-
-Thema-Kontext: Business Process Model and Notation. Ein internationaler Standard für die grafische Darstellung von Geschäftsprozessen mittels Symbolen wie Gateways, Events und Aktivitäten.
-
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Startereignisse definieren den Auslöser eines Prozesses und erzeugen beim Eintreten eine neue Prozessinstanz (Token). Sie haben keinen eingehenden, aber genau einen ausgehenden Sequenzfluss.
 > 

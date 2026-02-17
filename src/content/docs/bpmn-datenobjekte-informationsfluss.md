@@ -13,15 +13,15 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bpmn Datenobjekte & Informationsfluss\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-datenobjekte-informationsfluss/\",\"description\":\"Datenobjekte und Datenspeicher visualisieren den Informationsfluss innerhalb eines Prozesses, indem sie Transportmedien (z. B. Dokumente) und persistente…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet. Klassifizierung: framework mit der Zielsetzung verstehen."
 ---
 
-# BPMN: Datenobjekte & Informationsfluss
-
-Thema-Kontext: Business Process Model and Notation. Ein internationaler Standard für die grafische Darstellung von Geschäftsprozessen mittels Symbolen wie Gateways, Events und Aktivitäten.
-
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Datenobjekte und Datenspeicher visualisieren den Informationsfluss innerhalb eines Prozesses, indem sie Transportmedien (z. B. Dokumente) und persistente Ablagen (z. B. Datenbanken) darstellen. Die Verbindung erfolgt über Datenassoziationen, wobei die Pfeilrichtung zwischen Input (Lesen) und Output (Schreiben) unterscheidet. Zur Präzisierung können Zustände in eckigen Klammern ergänzt werden; der Informationsaustausch über Poolgrenzen hinweg erfolgt jedoch ausschließlich über den Nachrichtenfluss.
 > 

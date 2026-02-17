@@ -13,13 +13,13 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bpmn Aufgaben Und Teilprozesse\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-aufgaben-und-teilprozesse/\",\"description\":\"Dieses Modul beschreibt die Darstellung des \\\"Was\\\" in einem Prozessmodell durch Aktivitäten. Es definiert Tasks als atomare Einheiten und erläutert die…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet. Klassifizierung: framework mit der Zielsetzung verstehen."
 ---
-
-# BPMN: Aufgaben und Teilprozesse
-
-Thema-Kontext: Business Process Model and Notation. Ein internationaler Standard für die grafische Darstellung von Geschäftsprozessen mittels Symbolen wie Gateways, Events und Aktivitäten.
 
 ## Zusammenfassung
 

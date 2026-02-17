@@ -21,8 +21,6 @@ Klassifizierung: framework mit der Zielsetzung steuern.
 
 # Kennzahl: First Pass Yield (FPY)
 
-Thema-Kontext: Steuerung von Prozessen anhand von Kennzahlen.
-
 ## Zusammenfassung
 
 >Definition und Berechnung des First Pass Yield (FPY) als Qualitätskennzahl. Sie misst den Anteil der Prozessdurchläufe (Fälle), die im ersten Durchlauf ohne Nacharbeit fehlerfrei abgeschlossen werden, und deckt somit versteckte Ineffizienzen ("Hidden Factory") auf.

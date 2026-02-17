@@ -13,15 +13,15 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Phase Umsetzen (change Management)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/phase-umsetzen-change-management/\",\"description\":\"Die \\\"Werkstatt-Phase\\\" überführt das Soll-Konzept in den Arbeitsalltag. Sie ist die kritischste Phase, da sie tief in Routinen eingreift. Der Fokus liegt auf…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung umsetzen."
 ---
 
-# Phase: Umsetzen (Change Management)
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Die "Werkstatt-Phase" überführt das Soll-Konzept in den Arbeitsalltag. Sie ist die kritischste Phase, da sie tief in Routinen eingreift. Der Fokus liegt auf Schulung, technischer Implementierung und kommunikativer Begleitung (Change Management).
 > 
@@ -53,7 +53,7 @@ Die Phase endet nicht mit der technischen Einführung ("Go-Live"), sondern erst 
 
 - **[Kommunikationsplan](#)
 - ***Kontext:* Werkzeug zur Steuerung der Informationsflüsse während der Umsetzung.
-- **[Stakeholder-Analyse](/wiki/stakeholder-analyse/)
+- **[Stakeholder-Analyse](#)
 - ***Kontext:* Methode zur Identifikation von Betroffenen und Widerständen.
 - **[Phasenmodell der Prozessoptimierung (3-Phasen-Zyklus)](/wiki/phasenmodell-der-prozessoptimierung-3-phasen-zyklus/)
 - ***Kontext:* Das übergeordnete Modell.

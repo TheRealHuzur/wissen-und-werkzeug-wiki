@@ -21,7 +21,6 @@ Klassifizierung: framework mit der Zielsetzung verstehen.
 
 # BPMN: Endereignisse
 
-Thema-Kontext: Business Process Model and Notation. Ein internationaler Standard für die grafische Darstellung von Geschäftsprozessen mittels Symbolen wie Gateways, Events und Aktivitäten.
 
 ## Zusammenfassung
 

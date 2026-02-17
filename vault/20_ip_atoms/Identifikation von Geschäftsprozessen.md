@@ -21,8 +21,6 @@ Klassifizierung: grundlagen mit der Zielsetzung verstehen.
 
 # Identifikation von Geschäftsprozessen
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
 > Dieses Modul definiert Methoden zur sauberen Identifikation und Abgrenzung von Geschäftsprozessen. Es liefert Benennungsregeln (Objekt + Verb) und eine Entscheidungsmatrix, um im "Prozess-Screening" echte End-to-End-Prozesse (Kundenfokus) von internen Teilprozessen (Amtsbrille) zu unterscheiden.

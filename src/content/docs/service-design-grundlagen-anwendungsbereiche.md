@@ -13,13 +13,13 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Service Design Grundlagen & Anwendungsbereiche\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-grundlagen-anwendungsbereiche/\",\"description\":\"Service Design ist die nutzerzentrierte Gestaltung von Dienstleistungen unter Berücksichtigung aller Touchpoints, Prozesse und Technologien. Es nutzt Methoden…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung gestalten."
 ---
-
-# Service Design: Grundlagen & Anwendungsbereiche
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
 
 ## Zusammenfassung
 

@@ -21,8 +21,6 @@ Klassifizierung: grundlagen mit der Zielsetzung verstehen.
 
 # Definition: Geschäftsprozess (Verwaltung)
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
 Dieses Modul definiert den Begriff des Geschäftsprozesses speziell für den Verwaltungskontext. Es klärt die zentralen Strukturmerkmale wie Kundenbezug, Auslöser und inhaltlich abgeschlossenes Ergebnis und grenzt Prozesse von bloßen Aktivitäten ab.

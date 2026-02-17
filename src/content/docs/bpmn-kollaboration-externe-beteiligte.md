@@ -13,13 +13,13 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bpmn Kollaboration & Externe Beteiligte\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-kollaboration-externe-beteiligte/\",\"description\":\"Dieses Modul behandelt die Darstellung von externen Prozessbeteiligten in der BPMN (Kollaboration). Es erklärt den Einsatz von Black-Box-Pools, die Nutzung…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet. Klassifizierung: framework mit der Zielsetzung verstehen."
 ---
-
-# BPMN: Kollaboration & Externe Beteiligte
-
-Thema-Kontext: Business Process Model and Notation. Ein internationaler Standard für die grafische Darstellung von Geschäftsprozessen mittels Symbolen wie Gateways, Events und Aktivitäten.
 
 ## Zusammenfassung
 

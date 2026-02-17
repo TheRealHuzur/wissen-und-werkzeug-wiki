@@ -13,15 +13,15 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Prozessbezogene Prozesslandkarte\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/prozessbezogene-prozesslandkarte/\",\"description\":\"Methode zur isolierten Darstellung eines Fokus-Prozesses und seiner direkten Abhängigkeiten (Vor-/Nachlagerung, Steuerung, Stützung). Ziel ist die…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung verstehen."
 ---
 
-# Prozessbezogene Prozesslandkarte
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Methode zur isolierten Darstellung eines Fokus-Prozesses und seiner direkten Abhängigkeiten (Vor-/Nachlagerung, Steuerung, Stützung). Ziel ist die Identifikation tatsächlicher Schnittstellen, vollkommen losgelöst von der bestehenden Aufbauorganisation.
 > 
@@ -78,5 +78,5 @@ Diese Prozesse besitzen einen „Infrastruktur-Charakter“. Sie bearbeiten kein
 - ***Kontext:* Übergeordnetes Fachgebiet der Prozessidentifikation.
 - **[Identifikation von Geschäftsprozessen](/wiki/identifikation-von-geschaftsprozessen/)
 - ***Kontext:* Methodik, um die Prozesse zu benennen, die in der Landkarte verwendet werden.
-- **[Workshop-Methodik für Prozessaufnahme](#)
+- **[20_ip_atoms/Workshop-Methodik für Prozessaufnahme](#)
 - ***Kontext:* Praktische Durchführung zur Erarbeitung dieser Landkarten mit Stakeholdern.

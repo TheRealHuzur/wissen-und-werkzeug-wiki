@@ -13,13 +13,13 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Prozesse Priorisieren\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/prozesse-priorisieren/\",\"description\":\"Da Ressourcen begrenzt sind, können nicht alle Prozesse gleichzeitig optimiert werden. Dieses Modul beschreibt Kriterien und Vorgehensweisen, um Prozesse…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung steuern."
 ---
-
-# Prozesse priorisieren
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
 
 ## Zusammenfassung
 

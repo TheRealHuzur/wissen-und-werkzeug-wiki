@@ -13,17 +13,17 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Vorgehensmodelle Der Prozessoptimierung Evolutionär Vs. Revolutionär\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/vorgehensmodelle-der-prozessoptimierung-evolutionar-vs-revolutionar/\",\"description\":\"Dieses Modul stellt zwei grundlegende Strategien der Prozessoptimierung gegenüber: den evolutionären Ansatz (Schritt-für-Schritt-Verbesserung) und den…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung steuern."
 ---
 
-# Vorgehensmodelle der Prozessoptimierung: Evolutionär vs. Revolutionär
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
-Dieses Modul stellt zwei grundlegende Strategien der Prozessoptimierung gegenüber: den evolutionären Ansatz (Schritt-für-Schritt-Verbesserung) und den revolutionären Ansatz (Green-Field-Methode). Es beleuchtet Entscheidungskriterien wie rechtliche Rahmenbedingungen oder Unternehmenskultur und stellt einen hybriden Best-Practice-Ansatz vor, der Vision und Ist-Analyse verbindet.
+>Dieses Modul stellt zwei grundlegende Strategien der Prozessoptimierung gegenüber: den evolutionären Ansatz (Schritt-für-Schritt-Verbesserung) und den revolutionären Ansatz (Green-Field-Methode). Es beleuchtet Entscheidungskriterien wie rechtliche Rahmenbedingungen oder Unternehmenskultur und stellt einen hybriden Best-Practice-Ansatz vor, der Vision und Ist-Analyse verbindet.
 
 **Dieses Modul beantwortet folgende Fragen:**
 

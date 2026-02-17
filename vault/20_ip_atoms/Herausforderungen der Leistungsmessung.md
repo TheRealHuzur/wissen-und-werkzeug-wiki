@@ -21,8 +21,6 @@ Klassifizierung: grundlagen mit der Zielsetzung steuern.
 
 # Herausforderungen der Leistungsmessung
 
-Thema-Kontext: Steuerung von Prozessen anhand von Kennzahlen.
-
 ## Zusammenfassung
 
 >Beschreibt die drei zentralen Hürden, auf die Unternehmen und Verwaltungen stoßen, wenn sie versuchen, Prozessleistung zu messen: Definition des Messobjekts, Methodik der Messung und das Management-Commitment.

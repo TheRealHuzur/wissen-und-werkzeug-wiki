@@ -13,17 +13,17 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Die 3 Ebenen Der Prozessmodellierung\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/die-3-ebenen-der-prozessmodellierung/\",\"description\":\"Innerhalb der Top-Down-Methode wird ein Prozess in drei Ebenen zerlegt: Von der abstrakten Prozessdefinition (Ebene 1) über das strategische Teilprozessmodell…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung verstehen."
 ---
 
-# Die 3 Ebenen der Prozessmodellierung
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
-Innerhalb der Top-Down-Methode wird ein Prozess in drei Ebenen zerlegt: Von der abstrakten Prozessdefinition (Ebene 1) über das strategische Teilprozessmodell (Ebene 2) bis zum operativen Aktivitäten-Modell (Ebene 3). Dies sichert die nötige Granularität für verschiedene Zielgruppen.
+>Innerhalb der Top-Down-Methode wird ein Prozess in drei Ebenen zerlegt: Von der abstrakten Prozessdefinition (Ebene 1) über das strategische Teilprozessmodell (Ebene 2) bis zum operativen Aktivitäten-Modell (Ebene 3). Dies sichert die nötige Granularität für verschiedene Zielgruppen.
 
 **Dieses Modul beantwortet folgende Fragen:**
 

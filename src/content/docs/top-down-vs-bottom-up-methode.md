@@ -13,15 +13,17 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Top Down Vs Bottom Up Methode\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/top-down-vs-bottom-up-methode/\",\"description\":\"Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die \\\"Top-Down-Methode\\\" (vom Groben ins Feine) und die \\\"Bottom-Up-Methode\\\" (vom Feinen ins…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung verstehen."
 ---
 
-# Top-Down vs. Bottom-Up Methode
-
 ## Zusammenfassung
 
-Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die "Top-Down-Methode" (vom Groben ins Feine) und die  "Bottom-Up-Methode" (vom Feinen ins Grobe). Für eine strukturierte Modellierung wird in der Praxis der Top-Down-Ansatz empfohlen.
+>Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die "Top-Down-Methode" (vom Groben ins Feine) und die  "Bottom-Up-Methode" (vom Feinen ins Grobe). Für eine strukturierte Modellierung wird in der Praxis der Top-Down-Ansatz empfohlen.
 
 **Dieses Modul beantwortet folgende Fragen:**
 
@@ -54,5 +56,5 @@ Dieser Ansatz arbeitet "vom Feinen ins Grobe". Man sammelt zunächst detailliert
 - *Kontext:* Beschreibt die konkrete Anwendung der Top-Down-Methode.
 - **[prozessmanagement](/wiki/prozessmanagement/)** 
 - *Kontext:* Übergeordnetes Fachgebiet.
-- **[Workshop-Methodik für Prozessaufnahme](#)** 
+- **[20_ip_atoms/Workshop-Methodik für Prozessaufnahme](#)** 
 - *Kontext:* Praktische Anwendung der Methoden im Workshop.

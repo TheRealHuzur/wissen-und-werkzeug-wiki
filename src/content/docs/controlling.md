@@ -11,18 +11,11 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Controlling\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/controlling/\",\"description\":\"Steuerung von Prozessen anhand von Kennzahlen.\"}"
+  - tag: meta
+    attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
 ---
 
-# Controlling
-
-## Einstieg
+## Beschreibung
 Steuerung von Prozessen anhand von Kennzahlen.
-
-## Qualitäts-Quickcheck
-- Offene Entwürfe: siehe quality_monitor
-
-
-## Zugehörige Module
-
-- [First Pass Yield (fpy)](/wiki/kennzahl-first-pass-yield-fpy/)
-- [Herausforderungen Der Leistungsmessung](/wiki/herausforderungen-der-leistungsmessung/)

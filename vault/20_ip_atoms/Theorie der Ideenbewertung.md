@@ -21,9 +21,7 @@ Klassifizierung: theorie mit der Zielsetzung gestalten.
 
 # Theorie der Ideenbewertung
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
-Hier noch ein paar fundierte Grundlagen ergänzen
+==Hier noch ein paar fundierte Grundlagen ergänzen==
 
 ## **Zusammenfassung**
 

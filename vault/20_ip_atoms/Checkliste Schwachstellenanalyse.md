@@ -21,8 +21,6 @@ Klassifizierung: grundlagen mit der Zielsetzung verstehen.
 
 # Checkliste: Schwachstellenanalyse
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
 Eine strukturierte Checkliste zur Identifikation von Prozess-Schwachstellen in den Kategorien Technik, Mensch, Daten, Struktur, Ergebnis und Steuerung. Sie dient als pragmatisches Arbeitsinstrument zur Nachbereitung von Prozessaufnahmen, um Lücken aufzudecken, ohne ein komplexes Reifegrad-Audit durchzuführen.

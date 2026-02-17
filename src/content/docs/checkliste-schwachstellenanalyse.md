@@ -13,13 +13,13 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Checkliste Schwachstellenanalyse\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/checkliste-schwachstellenanalyse/\",\"description\":\"Eine strukturierte Checkliste zur Identifikation von Prozess-Schwachstellen in den Kategorien Technik, Mensch, Daten, Struktur, Ergebnis und Steuerung. Sie…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung verstehen."
 ---
-
-# Checkliste: Schwachstellenanalyse
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
 
 ## Zusammenfassung
 
@@ -136,7 +136,7 @@ Diese dritte Option ist entscheidend, um Wissenslücken sichtbar zu machen und g
 
 ## 🔗 Verwandte Module
 
-- **[Workshop-Methodik für Prozessaufnahme](#)**
+- **[20_ip_atoms/Workshop-Methodik für Prozessaufnahme](#)**
     - *Kontext:* Die Checkliste dient oft zur Nachbereitung der Ergebnisse aus diesen Workshops.
 - **[Identifikation von Geschäftsprozessen](/wiki/identifikation-von-geschaftsprozessen/)**
     - *Kontext:* Hilft bei der Abgrenzung, welche Prozesse überhaupt der Analyse unterzogen werden.

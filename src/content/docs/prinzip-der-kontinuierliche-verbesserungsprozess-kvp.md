@@ -13,13 +13,15 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Der Kontinuierliche Verbesserungsprozess (kvp)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/prinzip-der-kontinuierliche-verbesserungsprozess-kvp/\",\"description\":\"Der KVP beschreibt den zyklischen Charakter des Prozessmanagements. Er stellt sicher, dass Organisationen auf Veränderungen reagieren und Prozesse nicht als…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung betreiben."
 ---
 
-# Prinzip Der Kontinuierliche Verbesserungsprozess (KVP)
-
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Der KVP beschreibt den zyklischen Charakter des Prozessmanagements. Er stellt sicher, dass Organisationen auf Veränderungen reagieren und Prozesse nicht als statische Projekte, sondern als dauerhafte Aufgabe begreifen.
 >

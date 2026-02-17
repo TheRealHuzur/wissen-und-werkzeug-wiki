@@ -21,8 +21,6 @@ Klassifizierung: framework mit der Zielsetzung verstehen.
 
 # Die 3 Ebenen der Prozessmodellierung
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
 >Innerhalb der Top-Down-Methode wird ein Prozess in drei Ebenen zerlegt: Von der abstrakten Prozessdefinition (Ebene 1) über das strategische Teilprozessmodell (Ebene 2) bis zum operativen Aktivitäten-Modell (Ebene 3). Dies sichert die nötige Granularität für verschiedene Zielgruppen.

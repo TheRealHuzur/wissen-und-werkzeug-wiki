@@ -13,15 +13,15 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bpmn Das Exklusive Gateway (xor)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-das-exklusive-gateway-xor/\",\"description\":\"Das exklusive Gateway (XOR) steuert eine strikte Entweder/Oder-Entscheidung, bei der exakt ein Pfad gewählt wird. Für maximale Klarheit wird die Verwendung…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet. Klassifizierung: framework mit der Zielsetzung verstehen."
 ---
 
-# BPMN: Das Exklusive Gateway (XOR)
-
-Thema-Kontext: Business Process Model and Notation. Ein internationaler Standard für die grafische Darstellung von Geschäftsprozessen mittels Symbolen wie Gateways, Events und Aktivitäten.
-
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Das exklusive Gateway (XOR) steuert eine strikte Entweder/Oder-Entscheidung, bei der exakt ein Pfad gewählt wird. Für maximale Klarheit wird die Verwendung des „X“-Symbols und die Beschriftung der ausgehenden Pfade mit dem jeweiligen Ergebnis (statt einer zentralen Frage) empfohlen.
 > 

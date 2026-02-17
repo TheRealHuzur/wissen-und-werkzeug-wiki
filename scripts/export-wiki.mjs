@@ -456,6 +456,7 @@ async function generateSidebarFromMocs() {
       status: String(parsed.frontmatter.status ?? '').trim(),
       parentTopic,
       subtopic,
+      summary: String(parsed.frontmatter.summary ?? '').trim(),
     });
   }
 
@@ -484,6 +485,7 @@ async function generateSidebarFromMocs() {
   await fs.writeFile(GENERATED_SIDEBAR_FILE, sidebarModule, 'utf8');
 
   return {
+    mocs,
     totalMocs: mocs.length,
     parentCount,
     subtopicCount,
@@ -517,6 +519,8 @@ async function main() {
     yamlWarningFiles: [],
   };
 
+  const mocSummaryMap = new Map();
+
   function addSkipSample(file, reason) {
     if (skippedSamples.length < 10) {
       skippedSamples.push(`${file} (${reason})`);
@@ -525,7 +529,17 @@ async function main() {
 
   await cleanExportDocsDir();
   const attachmentIndex = await buildAttachmentIndex();
-  Object.assign(mocSummary, await generateSidebarFromMocs());
+  const mocResult = await generateSidebarFromMocs();
+  Object.assign(mocSummary, mocResult);
+
+  // Build a lookup map for MOC summaries
+  // We use both ID and Slug as keys for easier lookup
+  for (const m of mocResult.mocs || []) {
+    if (m.summary) {
+      mocSummaryMap.set(normalizeLookupKey(m.id), m.summary);
+      mocSummaryMap.set(normalizeLookupKey(m.slug), m.summary);
+    }
+  }
 
   const markdownFiles = await walkMarkdownFiles(SOURCE_VAULT);
   scannedFiles = markdownFiles.length;
@@ -818,6 +832,15 @@ async function main() {
 
     const ragContext = extractRagContext(candidate.body);
 
+    // Automated Semantic Context Inheritance
+    // Try to find a summary from the matching MOC (parent_topic or subtopic)
+    let semanticContext = String(candidate.frontmatter.semantic_context ?? '').trim();
+    if (!semanticContext) {
+      const parentLookup = normalizeLookupKey(String(candidate.frontmatter.parent_topic ?? ''));
+      const subtopicLookup = normalizeLookupKey(String(candidate.frontmatter.subtopic ?? ''));
+      semanticContext = mocSummaryMap.get(parentLookup) || mocSummaryMap.get(subtopicLookup) || '';
+    }
+
     const frontmatterLines = ['---', `title: ${yamlQuote(candidate.title)}`];
     if (description) {
       frontmatterLines.push(`description: ${yamlQuote(description)}`);
@@ -832,6 +855,13 @@ async function main() {
     frontmatterLines.push('    attrs:');
     frontmatterLines.push('      type: application/ld+json');
     frontmatterLines.push(`    content: ${yamlQuote(JSON.stringify(jsonLd))}`);
+
+    if (semanticContext) {
+      frontmatterLines.push('  - tag: meta');
+      frontmatterLines.push('    attrs:');
+      frontmatterLines.push('      name: semantic-context');
+      frontmatterLines.push(`      content: ${yamlQuote(semanticContext)}`);
+    }
 
     if (ragContext) {
       frontmatterLines.push('  - tag: meta');
@@ -851,10 +881,13 @@ async function main() {
     }
 
     // Strip the RAG context block from the body so it's not visible to readers
-    const bodyWithoutRag = body.replace(/%%\r?\n\s*RAG-CONTEXT-ANCHOR:\s*\r?\n[\s\S]*?\r?\n\s*%%/g, '').trim();
+    let bodyWithoutRag = body.replace(/%%\r?\n\s*RAG-CONTEXT-ANCHOR:\s*\r?\n[\s\S]*?\r?\n\s*%%/g, '').trim();
+
+    // Remove the first H1 from the body (it's already in the frontmatter as 'title' and rendered by Starlight)
+    bodyWithoutRag = bodyWithoutRag.replace(/^#\s+.+\r?\n?/, '').trim();
 
     frontmatterLines.push('---');
-    const output = `${frontmatterLines.join('\n')}\n\n${bodyWithoutRag.replace(/^\s*\r?\n/, '')}`;
+    const output = `${frontmatterLines.join('\n')}\n\n${bodyWithoutRag}`;
     const outputFile = path.join(OUT_DOCS_DIR, `${candidate.slug}.md`);
     await fs.writeFile(outputFile, output, 'utf8');
     exportedFiles += 1;

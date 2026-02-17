@@ -13,13 +13,13 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Identifikation Von Geschäftsprozessen\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/identifikation-von-geschaftsprozessen/\",\"description\":\"Dieses Modul definiert Methoden zur sauberen Identifikation und Abgrenzung von Geschäftsprozessen. Es liefert Benennungsregeln (Objekt + Verb) und eine…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung verstehen."
 ---
-
-# Identifikation von Geschäftsprozessen
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
 
 ## Zusammenfassung
 

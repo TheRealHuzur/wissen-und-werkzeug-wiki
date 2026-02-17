@@ -21,8 +21,6 @@ Klassifizierung: framework mit der Zielsetzung verstehen.
 
 # BPMN: Das Parallele Gateway (AND)
 
-Thema-Kontext: Business Process Model and Notation. Ein internationaler Standard für die grafische Darstellung von Geschäftsprozessen mittels Symbolen wie Gateways, Events und Aktivitäten.
-
 ## Zusammenfassung
 
 > Das parallele Gateway (AND) steuert die gleichzeitige oder reihenfolgeunabhängige Ausführung aller ausgehenden Pfade. Gekennzeichnet durch das + Symbol, aktiviert es im Split-Modus ausnahmslos alle Wege, während es bei der Zusammenführung als Synchronisationspunkt dient: Der Prozess wird erst fortgesetzt, wenn alle eingehenden Pfade vollständig abgeschlossen sind.

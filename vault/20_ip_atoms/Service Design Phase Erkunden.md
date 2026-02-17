@@ -21,8 +21,6 @@ Klassifizierung: framework mit der Zielsetzung gestalten.
 
 # Service Design: Phase Erkunden
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
 >Die Phase "Erkunden" ist der divergierende Startpunkt im Service Design Prozess, bei dem der Problemraum weit geöffnet wird. Ziel ist das tiefe Verständnis der Nutzerbedürfnisse durch qualitative Forschungsmethoden.

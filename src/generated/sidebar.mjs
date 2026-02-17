@@ -14,7 +14,7 @@ export const sidebar = [
     "items": [
       {
         "label": "Uebersicht",
-        "link": "/kunstliche-intelligenz/"
+        "link": "/kuenstliche-intelligenz/"
       },
       {
         "label": "Prompten",

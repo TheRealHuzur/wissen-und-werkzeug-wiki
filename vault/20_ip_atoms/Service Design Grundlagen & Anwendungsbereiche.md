@@ -21,8 +21,6 @@ Klassifizierung: framework mit der Zielsetzung gestalten.
 
 # Service Design: Grundlagen & Anwendungsbereiche
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
 Service Design ist die nutzerzentrierte Gestaltung von Dienstleistungen unter Berücksichtigung aller Touchpoints, Prozesse und Technologien. Es nutzt Methoden wie den "Double Diamond", um Kundenbedürfnisse und Zielvorgaben in Einklang zu bringen, und findet auch in der öffentlichen Verwaltung spezifische Anwendung.

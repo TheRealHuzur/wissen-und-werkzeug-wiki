@@ -13,17 +13,17 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Service Design Phase Definieren\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-definieren-define/\",\"description\":\"In der Phase \\\"Definieren\\\" werden die gesammelten Erkenntnisse analysiert, gefiltert und in eine klare Problemstellung überführt. Es ist eine konvergierende…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung gestalten."
 ---
 
-# Service Design: Phase Definieren (Define)
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
-In der Phase "Definieren" werden die gesammelten Erkenntnisse analysiert, gefiltert und in eine klare Problemstellung überführt. Es ist eine konvergierende Phase, die den Fokus für die Lösungsentwicklung setzt.
+>In der Phase "Definieren" werden die gesammelten Erkenntnisse analysiert, gefiltert und in eine klare Problemstellung überführt. Es ist eine konvergierende Phase, die den Fokus für die Lösungsentwicklung setzt.
 
 **Dieses Modul beantwortet folgende Fragen:**
 

@@ -21,8 +21,6 @@ Klassifizierung: framework mit der Zielsetzung gestalten.
 
 # Service Design: Phase Entwickeln
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
 >Die Phase "Entwickeln" eröffnet den zweiten Diamanten (Lösungsraum) und fokussiert auf die Generierung einer Vielzahl von Ideen. Durch kreative Methoden werden unterschiedliche Lösungsansätze für das definierte Problem entworfen.

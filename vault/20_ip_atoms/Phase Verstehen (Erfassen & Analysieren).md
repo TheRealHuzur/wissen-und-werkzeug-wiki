@@ -21,8 +21,6 @@ Klassifizierung: theorie mit der Zielsetzung verstehen.
 
 # Phase: Verstehen (Erfassen & Analysieren)
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
 > In der "Labor-Phase" wird der Ist-Zustand seziert. Es geht um die ungeschönte Aufnahme der Realität. Organisch gewachsene Strukturen werden nachvollzogen, in fachliche Modelle übersetzt und anschließend diagnostiziert. Oberstes Prinzip: Verstehen kommt vor Bewerten.

@@ -21,8 +21,6 @@ Klassifizierung: theorie mit der Zielsetzung umsetzen.
 
 # Phase: Umsetzen (Change Management)
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
 > Die "Werkstatt-Phase" überführt das Soll-Konzept in den Arbeitsalltag. Sie ist die kritischste Phase, da sie tief in Routinen eingreift. Der Fokus liegt auf Schulung, technischer Implementierung und kommunikativer Begleitung (Change Management).

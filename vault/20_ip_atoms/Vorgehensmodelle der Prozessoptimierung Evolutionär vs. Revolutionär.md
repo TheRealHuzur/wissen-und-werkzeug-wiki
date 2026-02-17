@@ -21,8 +21,6 @@ Klassifizierung: theorie mit der Zielsetzung steuern.
 
 # Vorgehensmodelle der Prozessoptimierung: Evolutionär vs. Revolutionär
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
 >Dieses Modul stellt zwei grundlegende Strategien der Prozessoptimierung gegenüber: den evolutionären Ansatz (Schritt-für-Schritt-Verbesserung) und den revolutionären Ansatz (Green-Field-Methode). Es beleuchtet Entscheidungskriterien wie rechtliche Rahmenbedingungen oder Unternehmenskultur und stellt einen hybriden Best-Practice-Ansatz vor, der Vision und Ist-Analyse verbindet.

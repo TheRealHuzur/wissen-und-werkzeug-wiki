@@ -13,15 +13,15 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"How Wow Now Matrix\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/how-wow-now-matrix/\",\"description\":\"Die HOW-WOW-NOW Matrix ist ein Priorisierungs-Werkzeug, das Ideen nach ihrer Machbarkeit und ihrem Innovationsgrad clustert, um die nächsten Schritte der…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung gestalten."
 ---
 
-# HOW-WOW-NOW Matrix
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Die HOW-WOW-NOW Matrix ist ein Priorisierungs-Werkzeug, das Ideen nach ihrer Machbarkeit und ihrem Innovationsgrad clustert, um die nächsten Schritte der Umsetzung zu definieren.
 > 

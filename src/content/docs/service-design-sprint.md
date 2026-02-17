@@ -13,17 +13,17 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Service Design Sprint\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-sprint/\",\"description\":\"Ein Service Design Sprint ist ein strukturierter Prozess zur schnellen Entwicklung und Optimierung von Dienstleistungen. Er gliedert sich in fünf Phasen und…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung gestalten."
 ---
 
-# Service Design Sprint
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
-Ein Service Design Sprint ist ein strukturierter Prozess zur schnellen Entwicklung und Optimierung von Dienstleistungen. Er gliedert sich in fünf Phasen und nutzt agile Prinzipien, um effizient nutzerzentrierte Lösungen zu generieren.
+>Ein Service Design Sprint ist ein strukturierter Prozess zur schnellen Entwicklung und Optimierung von Dienstleistungen. Er gliedert sich in fünf Phasen und nutzt agile Prinzipien, um effizient nutzerzentrierte Lösungen zu generieren.
 
 **Dieses Modul beantwortet folgende Fragen:**
 

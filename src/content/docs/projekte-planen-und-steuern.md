@@ -11,18 +11,19 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Projekte Planen Und Steuern\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/projekte-planen-und-steuern/\",\"description\":\"Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.\"}"
+  - tag: meta
+    attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
 ---
 
-# Projekte planen und steuern
-
-## Einstieg
+## Beschreibung
 Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.
 
-## Qualitäts-Quickcheck
-- Offene Entwürfe: siehe quality_monitor
+
+
 
 
 ## Zugehörige Module
 
 - [Die Smart Regel](/wiki/die-smart-regel/)
-- [Stakeholder Analyse](/wiki/stakeholder-analyse/)

@@ -21,8 +21,6 @@ Klassifizierung: theorie mit der Zielsetzung steuern.
 
 # Die SMART-Regel
 
-Thema-Kontext: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.
-
 ## Zusammenfassung Die SMART-Regel
 
 >Die SMART-Formel ist ein Standard-Framework zur Definition von Zielen, die spezifisch, messbar, attraktiv, realistisch und terminiert sind.

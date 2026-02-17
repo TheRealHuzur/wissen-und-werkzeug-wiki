@@ -13,13 +13,15 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Denkmodi Ideen Vs Lösungsorientierung\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/denkmodi-ideen-vs-losungsorientierung/\",\"description\":\"Dieses Modul beschreibt die methodische Trennung zwischen explorativem, öffnendem Denken und konvergierendem, entscheidungsfokussiertem Denken zur Steigerung…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung gestalten."
 ---
 
-# Denkmodi Ideen- vs Lösungsorientierung
-
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Dieses Modul beschreibt die methodische Trennung zwischen explorativem, öffnendem Denken und konvergierendem, entscheidungsfokussiertem Denken zur Steigerung der Innovationsqualität.
 >

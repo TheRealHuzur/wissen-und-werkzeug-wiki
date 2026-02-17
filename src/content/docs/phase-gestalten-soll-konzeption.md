@@ -13,15 +13,15 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Phase Gestalten (soll Konzeption)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/\",\"description\":\"In der \\\"Atelier-Phase\\\" werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung gestalten."
 ---
 
-# Phase: Gestalten (Soll-Konzeption)
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
-## **Zusammenfassung**
+## Zusammenfassung
 
 > In der "Atelier-Phase" werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design Thinking, um den Lösungsraum strukturiert zu öffnen. Zentral ist hierbei die Klärung des Auftrags: Soll eine visionäre Ideal-Lösung oder ein zeitnah realisierbares Konzept entstehen?
 > 

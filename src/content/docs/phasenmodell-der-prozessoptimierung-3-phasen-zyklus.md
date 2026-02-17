@@ -13,13 +13,15 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Phasenmodell Der Prozessoptimierung (3 Phasen Zyklus)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/phasenmodell-der-prozessoptimierung-3-phasen-zyklus/\",\"description\":\"Dieses Modell bildet das fundamentale Rückgrat jeglicher Prozessoptimierung. Es fungiert als zentrale Meta-Ebene, die den oft komplexen Projektalltag in einen…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung steuern."
 ---
 
-# Phasenmodell der Prozessoptimierung (3-Phasen-Zyklus)
-
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Dieses Modell bildet das fundamentale Rückgrat jeglicher Prozessoptimierung. Es fungiert als zentrale Meta-Ebene, die den oft komplexen Projektalltag in einen klaren Dreiklang aus Verstehen, Gestalten und Umsetzen ordnet. Es ist die Antwort auf die Frage: "Wie gehe ich ein Optimierungsprojekt grundsätzlich an?"
 >

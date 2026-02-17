@@ -13,17 +13,17 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Service Design Phase Erstellen\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-erstellen/\",\"description\":\"Die Phase \\\"Erstellen\\\" ist der finale Schritt im Double Diamond, in dem Ideen zu konkreten Lösungen ausgearbeitet, getestet und implementiert werden. Durch…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung gestalten."
 ---
 
-# Service Design: Phase Erstellen
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
-Die Phase "Erstellen" ist der finale Schritt im Double Diamond, in dem Ideen zu konkreten Lösungen ausgearbeitet, getestet und implementiert werden. Durch Prototyping und Feedbackschleifen wird das Risiko von Fehlentwicklungen minimiert.
+>Die Phase "Erstellen" ist der finale Schritt im Double Diamond, in dem Ideen zu konkreten Lösungen ausgearbeitet, getestet und implementiert werden. Durch Prototyping und Feedbackschleifen wird das Risiko von Fehlentwicklungen minimiert.
 
 **Dieses Modul beantwortet folgende Fragen:**
 

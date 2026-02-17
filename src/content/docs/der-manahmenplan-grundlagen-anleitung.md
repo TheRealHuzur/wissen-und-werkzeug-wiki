@@ -13,15 +13,15 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Der Maßnahmenplan Grundlagen & Anleitung\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/der-manahmenplan-grundlagen-anleitung/\",\"description\":\"Dieses Modul beschreibt die strukturierte Dokumentation von Umsetzungsmaßnahmen zur Realisierung von Soll-Modellen und bietet eine…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung umsetzen."
 ---
 
-# Der Maßnahmenplan: Grundlagen & Anleitung
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Dieses Modul beschreibt die strukturierte Dokumentation von Umsetzungsmaßnahmen zur Realisierung von Soll-Modellen und bietet eine Schritt-für-Schritt-Anleitung zur Nutzung eines Maßnahmenplans. Er dient als zentrales Werkzeug für Verbindlichkeit, Verantwortlichkeit und Projektcontrolling.
 > 

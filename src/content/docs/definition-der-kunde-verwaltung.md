@@ -13,17 +13,18 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Definition Der Kunde (verwaltung)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/definition-der-kunde-verwaltung/\",\"description\":\"Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung verstehen."
 ---
 
-# Definition: Der Kunde (Verwaltung)
+## Zusammenfassung
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
+>Dieses Modul erweitert den klassischen Kundenbegriff für den Verwaltungskontext. Es definiert den Kunden als jeglichen Empfänger einer Leistung – egal ob Bürger, Politik, andere Behörde oder interne Abteilung – und verankert ihn als zentralen Ankerpunkt für die Prozessidentifikation.
 
-> Zusammenfassung
-Dieses Modul erweitert den klassischen Kundenbegriff für den Verwaltungskontext. Es definiert den Kunden als jeglichen Empfänger einer Leistung – egal ob Bürger, Politik, andere Behörde oder interne Abteilung – und verankert ihn als zentralen Ankerpunkt für die Prozessidentifikation.
-> 
 
 **Dieses Modul beantwortet folgende Fragen:**
 

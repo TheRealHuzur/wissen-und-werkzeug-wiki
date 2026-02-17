@@ -21,8 +21,6 @@ Klassifizierung: grundlagen mit der Zielsetzung gestalten.
 
 # HOW-WOW-NOW Matrix
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
 > Die HOW-WOW-NOW Matrix ist ein Priorisierungs-Werkzeug, das Ideen nach ihrer Machbarkeit und ihrem Innovationsgrad clustert, um die nächsten Schritte der Umsetzung zu definieren.

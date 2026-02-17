@@ -21,8 +21,6 @@ Klassifizierung: grundlagen mit der Zielsetzung verstehen.
 
 # Prozessbezogene Prozesslandkarte
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
 > Methode zur isolierten Darstellung eines Fokus-Prozesses und seiner direkten Abhängigkeiten (Vor-/Nachlagerung, Steuerung, Stützung). Ziel ist die Identifikation tatsächlicher Schnittstellen, vollkommen losgelöst von der bestehenden Aufbauorganisation.

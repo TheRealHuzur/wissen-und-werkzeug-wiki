@@ -11,6 +11,7 @@ export default defineConfig({
       title: 'Wissen & Werkzeug Wiki',
       sidebar,
       favicon: '/favicon.svg',
+      customCss: ['./src/styles/custom.css'],
     }),
   ],
 });

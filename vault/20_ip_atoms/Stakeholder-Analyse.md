@@ -21,8 +21,6 @@ Klassifizierung: grundlagen mit der Zielsetzung steuern.
 
 # Stakeholder-Analyse
 
-Thema-Kontext: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.
-
 ## Zusammenfassung
 
 >Eine strukturierte Methode, um in drei Schritten betroffene Personengruppen zu identifizieren, ihren Einfluss und ihr Interesse zu bewerten und daraus gezielte Kommunikationsmaßnahmen abzuleiten.

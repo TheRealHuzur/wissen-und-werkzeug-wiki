@@ -13,13 +13,13 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bpmn Pools Und Schwimmbahnen\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-pools-und-schwimmbahnen/\",\"description\":\"Dieses Modul erläutert das Konzept von Pools und Schwimmbahnen (Lanes) in der BPMN. Es beschreibt, wie Verantwortlichkeiten (WER macht WAS) visualisiert…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet. Klassifizierung: framework mit der Zielsetzung verstehen."
 ---
-
-# BPMN: Pools und Schwimmbahnen
-
-Thema-Kontext: Business Process Model and Notation. Ein internationaler Standard für die grafische Darstellung von Geschäftsprozessen mittels Symbolen wie Gateways, Events und Aktivitäten.
 
 ## Zusammenfassung
 
@@ -56,4 +56,4 @@ Die Detailtiefe der Schwimmbahnen hängt von der Zielgruppe ab:
 ## 🔗 Verwandte Module
 
 - **[BPMN Kollaboration & Externe Beteiligte](/wiki/bpmn-kollaboration-externe-beteiligte/)***Kontext:* Beschreibt, wie Prozesse mit externen Partnern (außerhalb des eigenen Pools) interagieren.
-- **[Kompetenzprofil ProzessmanagerIn](#)***Kontext:* Relevante Rolle für die Definition der Zuständigkeiten im Modell.
+- **[20_ip_atoms/Kompetenzprofil ProzessmanagerIn](#)***Kontext:* Relevante Rolle für die Definition der Zuständigkeiten im Modell.

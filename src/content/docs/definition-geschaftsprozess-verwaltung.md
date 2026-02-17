@@ -13,13 +13,13 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Definition Geschäftsprozess (verwaltung)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/definition-geschaftsprozess-verwaltung/\",\"description\":\"Dieses Modul definiert den Begriff des Geschäftsprozesses speziell für den Verwaltungskontext. Es klärt die zentralen Strukturmerkmale wie Kundenbezug,…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung verstehen."
 ---
-
-# Definition: Geschäftsprozess (Verwaltung)
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
 
 ## Zusammenfassung
 
@@ -81,5 +81,5 @@ Denken in Prozessen bedeutet demnach, nicht in funktionalen Zuständigkeiten zu 
 
 - **[Identifikation von Geschäftsprozessen](/wiki/identifikation-von-geschaftsprozessen/)
 - ***Kontext:* Bietet Methoden, um basierend auf dieser Definition konkrete Prozesse in der Organisation zu finden.
-- **[Konzept zur Einführung von Prozessmanagement](#)***Kontext:* Einordnung der Definition in den größeren Rahmen der organisationalen Einführung.
+- **[20_ip_atoms/Konzept zur Einführung von Prozessmanagement](#)***Kontext:* Einordnung der Definition in den größeren Rahmen der organisationalen Einführung.
 - **[BPMN Aufgaben und Teilprozesse](/wiki/bpmn-aufgaben-und-teilprozesse/)***Kontext:* Zeigt, wie die hier definierten Aktivitäten in der Standardnotation BPMN grafisch dargestellt werden.

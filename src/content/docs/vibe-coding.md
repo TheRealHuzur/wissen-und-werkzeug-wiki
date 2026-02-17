@@ -11,17 +11,11 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Vibe Coding\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/vibe-coding/\",\"description\":\"Beschreibt Hintergründe, Anleitungen und Vorlagen zum Vibe Coding. Ebenfalls werden generelle Erläuterungen geleifert, wie Vibe Coding grundsätzlich…\"}"
+  - tag: meta
+    attrs:
+      name: semantic-context
+      content: "Der praktische Einsatz von KI-Tools und Sprachmodellen (LLMs like ChatGPT) zur Automatisierung von Aufgaben, Generierung von Inhalten und Unterstützung in der Wissensarbeit."
 ---
-
-# Vibe Coding
 
 ## Einstieg
 Beschreibt Hintergründe, Anleitungen und Vorlagen zum Vibe Coding. Ebenfalls werden generelle Erläuterungen geleifert, wie Vibe Coding grundsätzlich funktioniert.
-
-## Qualitäts-Quickcheck
-- Offene Entwürfe: siehe quality_monitor
-
-
-## Zugehörige Module
-
-- [Repro Schritte (definition & Guide)](/wiki/repro-schritte-definition-guide/)

@@ -1,0 +1,68 @@
+/* Custom CI Styles for Wissen & Werkzeug Wiki */
+
+:root {
+  /* Brand Colors */
+  --brand-primary-blue: #2a314d;
+  --brand-deep-stage: #0B162A;
+  --brand-accent-turquoise: #0e97ad;
+  --brand-body-text: #484848;
+
+  /* Starlight overrides - Light Mode */
+  --sl-color-accent-low: #0b7a8c;
+  --sl-color-accent: var(--brand-accent-turquoise);
+  --sl-color-accent-high: #3ec7db;
+
+  --sl-color-text: var(--brand-body-text);
+  --sl-color-text-accent: var(--brand-accent-turquoise);
+
+  /* Heading color */
+  --sl-color-white: var(--brand-primary-blue);
+}
+
+/* Dark Mode overrides */
+:root[data-theme='dark'] {
+  --sl-color-accent-low: #0b7a8c;
+  --sl-color-accent: var(--brand-accent-turquoise);
+  --sl-color-accent-high: #3ec7db;
+
+  --sl-color-bg: var(--brand-deep-stage);
+  --sl-color-bg-nav: var(--brand-deep-stage);
+  --sl-color-bg-sidebar: var(--brand-deep-stage);
+
+  --sl-color-text: #e2e8f0;
+  --sl-color-white: #ffffff;
+}
+
+/* Ensure Sidebar stays light if requested (using Starlight specificity) */
+:root:not([data-theme='dark']) .sidebar-content {
+  background-color: var(--sl-color-bg);
+}
+
+/* Typography refinements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--brand-primary-blue) !important;
+}
+
+:root[data-theme='dark'] h1,
+:root[data-theme='dark'] h2,
+:root[data-theme='dark'] h3 {
+  color: #ffffff !important;
+}
+
+a {
+  color: var(--brand-accent-turquoise);
+  text-decoration: none;
+}
+
+/* Fix active link visibility in sidebar */
+[aria-current="page"],
+[aria-current="page"]:hover,
+[aria-current="page"]:focus {
+  color: #ffffff !important;
+  background-color: var(--brand-accent-turquoise) !important;
+}

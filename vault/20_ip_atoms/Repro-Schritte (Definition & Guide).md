@@ -21,8 +21,6 @@ Klassifizierung: grundlagen mit der Zielsetzung umsetzen.
 
 # Repro-Schritte (Definition & Guide)
 
-Thema-Kontext: Beschreibt Hintergründe, Anleitungen und Vorlagen zum Vibe Coding. Ebenfalls werden generelle Erläuterungen geleifert, wie Vibe Coding grundsätzlich funktioniert.
-
 ## Zusammenfassung
 
 > Repro-Schritte (Reproduction Steps) sind präzise, sequenzielle Anweisungen, um ein technisches Problem oder ein Fehlverhalten exakt nachzustellen.

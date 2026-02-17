@@ -11,13 +11,14 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Prozessmanagement\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/prozessmanagement/\",\"description\":\"Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.\"}"
+  - tag: meta
+    attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
 ---
 
-# Prozessmanagement
-
-## Einstieg
+## Beschreibung
 Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 
 
 
@@ -26,8 +27,7 @@ Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Ges
 - [projekte_planen_und_steuern](/wiki/projekte-planen-und-steuern/)
 - [controlling](/wiki/controlling/)
 
-## Qualitäts-Quickcheck
-- Offene Entwürfe: siehe quality_monitor
+
 
 
 ## Zugehörige Module
@@ -53,8 +53,7 @@ Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Ges
 - [Der Maßnahmenplan Grundlagen & Anleitung](/wiki/der-manahmenplan-grundlagen-anleitung/)
 - [Die 3 Ebenen Der Prozessmodellierung](/wiki/die-3-ebenen-der-prozessmodellierung/)
 - [Die Smart Regel](/wiki/die-smart-regel/)
-- [First Pass Yield (fpy)](/wiki/kennzahl-first-pass-yield-fpy/)
-- [Herausforderungen Der Leistungsmessung](/wiki/herausforderungen-der-leistungsmessung/)
+- [Gemba Walk](/wiki/gemba-walk/)
 - [How Wow Now Matrix](/wiki/how-wow-now-matrix/)
 - [Identifikation Von Geschäftsprozessen](/wiki/identifikation-von-geschaftsprozessen/)
 - [Methodik Visuelle Schwachstellenanalyse](/wiki/methodik-visuelle-schwachstellenanalyse/)
@@ -71,6 +70,5 @@ Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Ges
 - [Service Design Phase Erkunden](/wiki/service-design-phase-erkunden/)
 - [Service Design Phase Erstellen](/wiki/service-design-phase-erstellen/)
 - [Service Design Sprint](/wiki/service-design-sprint/)
-- [Stakeholder Analyse](/wiki/stakeholder-analyse/)
 - [Top Down Vs Bottom Up Methode](/wiki/top-down-vs-bottom-up-methode/)
 - [Vorgehensmodelle Der Prozessoptimierung Evolutionär Vs. Revolutionär](/wiki/vorgehensmodelle-der-prozessoptimierung-evolutionar-vs-revolutionar/)

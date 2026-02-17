@@ -21,8 +21,6 @@ Klassifizierung: framework mit der Zielsetzung verstehen.
 
 # Prozess-FMEA: Methode & Praxisbeispiel
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
 >Die Prozess-FMEA (Fehlermöglichkeits- und Einflussanalyse) ist eine präventive Methode zur systematischen Identifikation und Bewertung von Schwachsstellen in Prozessen. Dieses Modul kombiniert die theoretischen Grundlagen (RPZ, Ablaufschritte) mit einem konkreten Anwendungsbeispiel aus der Fortbildungsorganisation.

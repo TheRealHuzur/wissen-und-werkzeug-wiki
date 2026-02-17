@@ -21,8 +21,6 @@ Klassifizierung: grundlagen mit der Zielsetzung steuern.
 
 # Prozesse priorisieren
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
 > Da Ressourcen begrenzt sind, können nicht alle Prozesse gleichzeitig optimiert werden. Dieses Modul beschreibt Kriterien und Vorgehensweisen, um Prozesse systematisch nach Handlungsbedarf, strategischer Relevanz und Machbarkeit zu bewerten und für die Bearbeitung auszuwählen.

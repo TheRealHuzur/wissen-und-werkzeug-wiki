@@ -13,17 +13,17 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Service Design Phase Erkunden\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-erkunden/\",\"description\":\"Die Phase \\\"Erkunden\\\" ist der divergierende Startpunkt im Service Design Prozess, bei dem der Problemraum weit geöffnet wird. Ziel ist das tiefe Verständnis…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung gestalten."
 ---
 
-# Service Design: Phase Erkunden
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
-Die Phase "Erkunden" ist der divergierende Startpunkt im Service Design Prozess, bei dem der Problemraum weit geöffnet wird. Ziel ist das tiefe Verständnis der Nutzerbedürfnisse durch qualitative Forschungsmethoden.
+>Die Phase "Erkunden" ist der divergierende Startpunkt im Service Design Prozess, bei dem der Problemraum weit geöffnet wird. Ziel ist das tiefe Verständnis der Nutzerbedürfnisse durch qualitative Forschungsmethoden.
 
 **Dieses Modul beantwortet folgende Fragen:**
 
@@ -57,5 +57,5 @@ Das Ergebnis dieser Phase ist eine breite Datenbasis ("Input"), die als Rohmater
 - ***Kontext:* Das übergeordnete Modell.
 - **[Service Design Phase Definieren](/wiki/service-design-phase-definieren-define/)
 - ***Kontext:* Der nachfolgende Schritt, in dem die Erkenntnisse verdichtet werden.
-- **[Stakeholder-Analyse](/wiki/stakeholder-analyse/)** 
+- **[Stakeholder-Analyse](#)** 
 *Kontext:* Wichtiges Werkzeug, um in der Erkundungsphase alle Beteiligten zu identifizieren.

@@ -13,17 +13,17 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Die Smart Regel\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/die-smart-regel/\",\"description\":\"Thema-Kontext: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Projekte Planen Und Steuern zugeordnet. Klassifizierung: theorie mit der Zielsetzung steuern."
 ---
 
-# Die SMART-Regel
-
-Thema-Kontext: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.
-
 ## Zusammenfassung Die SMART-Regel
 
-Die SMART-Formel ist ein Standard-Framework zur Definition von Zielen, die spezifisch, messbar, attraktiv, realistisch und terminiert sind.
+>Die SMART-Formel ist ein Standard-Framework zur Definition von Zielen, die spezifisch, messbar, attraktiv, realistisch und terminiert sind.
 
 Um Ziele wirksam zu formulieren und sicherzustellen, dass sie operativ umsetzbar sind, wird häufig die SMART-Regel angewendet. Sie definiert fünf Kriterien, die ein gutes Ziel erfüllen muss:
 
@@ -56,7 +56,7 @@ Ein konkreter Zeitrahmen oder ein Enddatum muss definiert sein. Ohne Terminierun
 
 ## 🔗 Verwandte Module
 
-- **[Prinzipien der Zielformulierung](#)
+- **[20_ip_atoms/Prinzipien der Zielformulierung](#)
 - ***Kontext:* Erläutert die übergeordneten Vorteile (Klarheit, Fokus), die durch die Anwendung der SMART-Regel erreicht werden sollen.
-- **[Kompetenzprofil ProzessmanagerIn](#)
+- **[20_ip_atoms/Kompetenzprofil ProzessmanagerIn](#)
 - ***Kontext*: Die Fähigkeit, Ziele (z.B. für Prozessoptimierungen) SMART zu formulieren, ist eine Kernkompetenz im Prozessmanagement.

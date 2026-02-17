@@ -21,8 +21,6 @@ Klassifizierung: grundlagen mit der Zielsetzung gestalten.
 
 # Vibe Coding: Prompt-Vorlage
 
-Thema-Kontext: Beschreibt Hintergründe, Anleitungen und Vorlagen zum Vibe Coding. Ebenfalls werden generelle Erläuterungen geleifert, wie Vibe Coding grundsätzlich funktioniert.
-
 ## Zusammenfassung
 
 > Diese Vorlage dient als standardisierter Prompt für das "Vibe Coding", um Software-Änderungen oder Bugfixes präzise und kontextreich an KI-Codegeräte zu kommunizieren.

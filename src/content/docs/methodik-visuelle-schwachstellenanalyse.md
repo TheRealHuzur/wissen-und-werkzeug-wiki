@@ -13,15 +13,15 @@ head:
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Methodik Visuelle Schwachstellenanalyse\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/methodik-visuelle-schwachstellenanalyse/\",\"description\":\"Die Visualisierung von Geschäftsprozessen dient Werkzeug zur Identifikation struktureller Schwachstellen. Besonders in historisch gewachsenen Strukturen der…\"}"
   - tag: meta
     attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+  - tag: meta
+    attrs:
       name: rag-context
       content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung gestalten."
 ---
 
-# Methodik: Visuelle Schwachstellenanalyse
-
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
-## **Zusammenfassung**
+## Zusammenfassung
 
 > Die Visualisierung von Geschäftsprozessen dient  Werkzeug zur Identifikation struktureller Schwachstellen. Besonders in historisch gewachsenen Strukturen der öffentlichen Verwaltung ermöglicht die chronologische Aufbereitung das Erkennen von Schwachstellen und das kritische Hinterfragen althergebrachter Vorgehensweisen.
 > 

@@ -11,15 +11,17 @@ head:
     attrs:
       type: application/ld+json
     content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bpmn\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn/\",\"description\":\"Business Process Model and Notation. Ein internationaler Standard für die grafische Darstellung von Geschäftsprozessen mittels Symbolen wie Gateways, Events…\"}"
+  - tag: meta
+    attrs:
+      name: semantic-context
+      content: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
 ---
 
-# BPMN
-
-## Einstieg
+## Beschreibung
 Business Process Model and Notation. Ein internationaler Standard für die grafische Darstellung von Geschäftsprozessen mittels Symbolen wie Gateways, Events und Aktivitäten.
 
-## Qualitäts-Quickcheck
-- Offene Entwürfe: siehe quality_monitor
+
+
 
 
 ## Zugehörige Module

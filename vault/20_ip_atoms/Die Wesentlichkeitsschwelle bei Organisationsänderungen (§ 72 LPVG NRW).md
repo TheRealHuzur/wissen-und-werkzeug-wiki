@@ -21,8 +21,6 @@ Klassifizierung: grundlagen mit der Zielsetzung steuern.
 
 # Die Wesentlichkeitsschwelle bei Organisationsänderungen (§ 72 LPVG NRW)
 
-Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
-
 ## Zusammenfassung
 
 > Dieses Modul definiert die rechtliche Grenze zwischen dem freien Direktionsrecht des Dienstherrn und der Mitbestimmungspflicht bei organisatorischen Prozessen. Es liefert eine Prüfmatrix zur Bestimmung der "Grundlegendheit" einer Maßnahme.
