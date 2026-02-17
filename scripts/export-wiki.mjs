@@ -672,7 +672,7 @@ async function main() {
               `[warn] Fuzzy asset match: ${filename} -> ${resolved.sourceName} (source: ${candidate.file})`
             );
           }
-          out += `![](/wiki-assets/${encodeURIComponent(resolved.filename)})`;
+          out += `![](${BASE_PREFIX}/wiki-assets/${encodeURIComponent(resolved.filename)})`;
         }
         lastIndex = pattern.lastIndex;
       }
@@ -711,7 +711,7 @@ async function main() {
               `[warn] Fuzzy asset match: ${imageName} -> ${resolved.sourceName} (source: ${candidate.file})`
             );
           }
-          out += `![](/wiki-assets/${encodeURIComponent(resolved.filename)})`;
+          out += `![](${BASE_PREFIX}/wiki-assets/${encodeURIComponent(resolved.filename)})`;
         }
 
         lastIndex = pattern.lastIndex;
