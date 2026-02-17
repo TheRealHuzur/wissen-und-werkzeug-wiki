@@ -3,7 +3,6 @@ id: phase_verstehen_erfassen_analysieren
 aliases:
   - phase_verstehen_erfassen_analysieren
   - Phase Verstehen (Erfassen & Analysieren)
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: theorie
@@ -15,7 +14,7 @@ summary: 'In der "Labor-Phase" wird der Ist-Zustand seziert. Es geht um die unge
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: theorie mit der Zielsetzung verstehen.
 %%

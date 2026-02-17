@@ -14,12 +14,12 @@ head:
   - tag: meta
     attrs:
       name: rag-context
-      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung verstehen."
+      content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung verstehen."
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: grundlagen mit der Zielsetzung verstehen.
 %%
@@ -81,7 +81,7 @@ Diese Prozesse besitzen einen „Infrastruktur-Charakter“. Sie bearbeiten kein
 
 ## 🔗 Verwandte Module
 
-- **[Prozessmanagement](#)
+- **[prozessmanagement](/wiki/prozessmanagement/)
 - ***Kontext:* Übergeordnetes Fachgebiet der Prozessidentifikation.
 - **[Identifikation von Geschäftsprozessen](/wiki/identifikation-von-geschaftsprozessen/)
 - ***Kontext:* Methodik, um die Prozesse zu benennen, die in der Landkarte verwendet werden.

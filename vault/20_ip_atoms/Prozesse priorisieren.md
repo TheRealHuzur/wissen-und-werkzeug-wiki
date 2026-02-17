@@ -3,7 +3,6 @@ id: prozesse_priorisieren
 aliases:
   - prozesse_priorisieren
   - Prozesse priorisieren
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: grundlagen
@@ -15,7 +14,7 @@ summary: Da Ressourcen begrenzt sind, können nicht alle Prozesse gleichzeitig o
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: grundlagen mit der Zielsetzung steuern.
 %%
@@ -76,7 +75,7 @@ Neben den operativen Schmerzen ("Pain Points") ist die strategische Relevanz ein
 
 ## 🔗 Verwandte Module
 
-- **[[Prozessmanagement]]
+- **[[prozessmanagement]]
 - ***Kontext:* Übergeordneter Rahmen für die Priorisierung.
 - **[[Identifikation von Geschäftsprozessen]]
 - ***Kontext:* Die Priorisierung baut oft auf den Ergebnissen der Identifikationsphase auf.

@@ -3,7 +3,6 @@ id: bpmn_ereignisse_grundlagen_konzept
 aliases:
   - bpmn_ereignisse_grundlagen_konzept
   - BPMN Ereignisse (Grundlagen & Konzept)
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: bpmn
 type: framework
@@ -15,7 +14,7 @@ summary: Ereignisse sind zentrale Elemente der BPMN, die den Prozessfluss steuer
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet.
 Klassifizierung: framework mit der Zielsetzung verstehen.
 %%

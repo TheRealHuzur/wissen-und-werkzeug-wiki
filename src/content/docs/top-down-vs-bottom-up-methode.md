@@ -1,6 +1,6 @@
 ---
 title: "Top Down Vs Bottom Up Methode"
-description: "Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die \\\"Top-Down-Methode\\\" (vom Groben ins Feine) und die \\\"Bottom-Up-Methode\\\" (vom Feinen ins…"
+description: "Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die \"Top-Down-Methode\" (vom Groben ins Feine) und die \"Bottom-Up-Methode\" (vom Feinen ins…"
 slug: "top-down-vs-bottom-up-methode"
 head:
   - tag: link
@@ -10,16 +10,16 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Top Down Vs Bottom Up Methode\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/top-down-vs-bottom-up-methode/\",\"description\":\"Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die \\\\\\\"Top-Down-Methode\\\\\\\" (vom Groben ins Feine) und die \\\\\\\"Bottom-Up-Methode\\\\\\\" (vom Feinen ins…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Top Down Vs Bottom Up Methode\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/top-down-vs-bottom-up-methode/\",\"description\":\"Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die \\\"Top-Down-Methode\\\" (vom Groben ins Feine) und die \\\"Bottom-Up-Methode\\\" (vom Feinen ins…\"}"
   - tag: meta
     attrs:
       name: rag-context
-      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung verstehen."
+      content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung verstehen."
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: theorie mit der Zielsetzung verstehen.
 %%
@@ -59,7 +59,7 @@ Dieser Ansatz arbeitet "vom Feinen ins Grobe". Man sammelt zunächst detailliert
 
 - **[Die 3 Ebenen der Prozessmodellierung](/wiki/die-3-ebenen-der-prozessmodellierung/)** 
 - *Kontext:* Beschreibt die konkrete Anwendung der Top-Down-Methode.
-- **[Prozessmanagement](#)** 
+- **[prozessmanagement](/wiki/prozessmanagement/)** 
 - *Kontext:* Übergeordnetes Fachgebiet.
 - **[Workshop-Methodik für Prozessaufnahme](#)** 
 - *Kontext:* Praktische Anwendung der Methoden im Workshop.

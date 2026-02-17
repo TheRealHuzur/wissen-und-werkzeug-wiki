@@ -3,20 +3,18 @@ id: bpmn_der_sequenzfluss
 aliases:
   - bpmn_der_sequenzfluss
   - BPMN Der Sequenzfluss
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: bpmn
 type: framework
 intent: verstehen
 status: ki_ready
 created: 2026-02-16
-summary: "Der Sequenzfluss visualisiert die chronologisch-sachlogische Abfolge eines Prozesses. Er definiert den Pfad und verbindet dabei ausschließlich Elemente innerhalb eines Pools."
+summary: Der Sequenzfluss visualisiert die chronologisch-sachlogische Abfolge eines Prozesses. Er definiert den Pfad und verbindet dabei ausschließlich Elemente innerhalb eines Pools.
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet.
 Klassifizierung: framework mit der Zielsetzung verstehen.
 %%

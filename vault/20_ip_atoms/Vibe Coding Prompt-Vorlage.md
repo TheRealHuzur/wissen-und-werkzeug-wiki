@@ -3,7 +3,6 @@ id: vibe_coding_prompt_vorlage
 aliases:
   - vibe_coding_prompt_vorlage
   - Vibe Coding Prompt-Vorlage
-area: fach_expertise
 parent_topic: kunstliche_intelligenz
 subtopic: vibe_coding
 type: grundlagen
@@ -15,7 +14,7 @@ summary: Diese Vorlage dient als standardisierter Prompt für das "Vibe Coding",
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Künstliche Intelligenz.
+Dieses Modul dokumentiert Fachwissen im Bereich Künstliche Intelligenz.
 Es ist im Thema Künstliche Intelligenz verortet und dem Subtopic Vibe Coding zugeordnet.
 Klassifizierung: grundlagen mit der Zielsetzung gestalten.
 %%
@@ -92,7 +91,7 @@ VERIFIKATION:
 
 ## 🔗 Verwandte Module
 
-- **[[Prompten]]
+- **[[prompten]]
 - ***Kontext:* Grundlagen der effektiven Kommunikation mit KI-Modellen.
 - **[[Repro-Schritte (Definition & Guide)]]
 - ***Kontext:* Detail-Erklärung zur Erstellung der Repro-Schritte innerhalb dieser Vorlage.

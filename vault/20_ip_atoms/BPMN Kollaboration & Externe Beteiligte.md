@@ -3,20 +3,18 @@ id: bpmn_kollaboration_externe_beteiligte
 aliases:
   - bpmn_kollaboration_externe_beteiligte
   - BPMN Kollaboration & Externe Beteiligte
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: bpmn
 type: framework
 intent: verstehen
 status: ki_ready
 created: 2026-02-16
-summary: "Dieses Modul behandelt die Darstellung von externen Prozessbeteiligten in der BPMN (Kollaboration). Es erklärt den Einsatz von Black-Box-Pools, die Nutzung von Nachrichtenflüssen zur Kommunikation und die strikten Regeln für Verbindungen über Poolgrenzen hinweg."
+summary: Dieses Modul behandelt die Darstellung von externen Prozessbeteiligten in der BPMN (Kollaboration). Es erklärt den Einsatz von Black-Box-Pools, die Nutzung von Nachrichtenflüssen zur Kommunikation und die strikten Regeln für Verbindungen über Poolgrenzen hinweg.
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet.
 Klassifizierung: framework mit der Zielsetzung verstehen.
 %%

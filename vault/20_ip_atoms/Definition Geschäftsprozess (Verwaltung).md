@@ -3,20 +3,18 @@ id: definition_geschaftsprozess_verwaltung
 aliases:
   - definition_geschaftsprozess_verwaltung
   - Definition Geschäftsprozess (Verwaltung)
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: grundlagen
 intent: verstehen
 status: ki_ready
 created: 2026-02-16
-summary: "Dieses Modul definiert den Begriff des Geschäftsprozesses speziell für den Verwaltungskontext. Es klärt die zentralen Strukturmerkmale wie Kundenbezug, Auslöser und inhaltlich abgeschlossenes Ergebnis und grenzt Prozesse von bloßen Aktivitäten ab."
+summary: Dieses Modul definiert den Begriff des Geschäftsprozesses speziell für den Verwaltungskontext. Es klärt die zentralen Strukturmerkmale wie Kundenbezug, Auslöser und inhaltlich abgeschlossenes Ergebnis und grenzt Prozesse von bloßen Aktivitäten ab.
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: grundlagen mit der Zielsetzung verstehen.
 %%

@@ -14,12 +14,12 @@ head:
   - tag: meta
     attrs:
       name: rag-context
-      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung steuern."
+      content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung steuern."
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: grundlagen mit der Zielsetzung steuern.
 %%
@@ -80,7 +80,7 @@ Neben den operativen Schmerzen ("Pain Points") ist die strategische Relevanz ein
 
 ## 🔗 Verwandte Module
 
-- **[Prozessmanagement](#)
+- **[prozessmanagement](/wiki/prozessmanagement/)
 - ***Kontext:* Übergeordneter Rahmen für die Priorisierung.
 - **[Identifikation von Geschäftsprozessen](/wiki/identifikation-von-geschaftsprozessen/)
 - ***Kontext:* Die Priorisierung baut oft auf den Ergebnissen der Identifikationsphase auf.

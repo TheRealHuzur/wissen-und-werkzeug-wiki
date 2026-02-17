@@ -3,9 +3,10 @@ id: changemanagement
 aliases:
   - changemanagement
 moc_level: parent
+parent_topic: changemanagement
+subtopic: changemanagement
 status: aktiv
-area: fach_expertise
-summary: "Strukturierte Methoden und Strategien zur Begleitung von Veränderungen in Organisationen, mit speziellem Fokus auf den Faktor Mensch, die Überwindung von Widerständen und die Sicherung der Akzeptanz."
+summary: Strukturierte Methoden und Strategien zur Begleitung von Veränderungen in Organisationen, mit speziellem Fokus auf den Faktor Mensch, die Überwindung von Widerständen und die Sicherung der Akzeptanz.
 ---
 # Changemanagement
 

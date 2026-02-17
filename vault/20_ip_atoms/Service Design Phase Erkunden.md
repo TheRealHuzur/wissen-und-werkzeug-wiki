@@ -3,7 +3,6 @@ id: service_design_phase_erkunden
 aliases:
   - service_design_phase_erkunden
   - Service Design Phase Erkunden
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: framework
@@ -15,7 +14,7 @@ summary: Die Phase "Erkunden" ist der divergierende Startpunkt im Service Design
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: framework mit der Zielsetzung gestalten.
 %%

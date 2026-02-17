@@ -3,8 +3,6 @@ id: service_design_phase_entwickeln
 aliases:
   - service_design_phase_entwickeln
   - Service Design Phase Entwickeln
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: framework
@@ -16,7 +14,7 @@ summary: Die Phase "Entwickeln" eröffnet den zweiten Diamanten (Lösungsraum) u
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: framework mit der Zielsetzung gestalten.
 %%

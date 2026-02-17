@@ -1,6 +1,5 @@
 ---
 id:
-area:
 parent_topic:
 subtopic:
 type:

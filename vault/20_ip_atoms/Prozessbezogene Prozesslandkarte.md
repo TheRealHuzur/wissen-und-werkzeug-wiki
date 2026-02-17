@@ -3,7 +3,6 @@ id: prozessbezogene_prozesslandkarte
 aliases:
   - prozessbezogene_prozesslandkarte
   - Prozessbezogene Prozesslandkarte
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: grundlagen
@@ -15,7 +14,7 @@ summary: Methode zur isolierten Darstellung eines Fokus-Prozesses und seiner dir
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: grundlagen mit der Zielsetzung verstehen.
 %%
@@ -77,7 +76,7 @@ Diese Prozesse besitzen einen „Infrastruktur-Charakter“. Sie bearbeiten kein
 
 ## 🔗 Verwandte Module
 
-- **[[Prozessmanagement]]
+- **[[prozessmanagement]]
 - ***Kontext:* Übergeordnetes Fachgebiet der Prozessidentifikation.
 - **[[Identifikation von Geschäftsprozessen]]
 - ***Kontext:* Methodik, um die Prozesse zu benennen, die in der Landkarte verwendet werden.

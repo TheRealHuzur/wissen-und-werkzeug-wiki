@@ -3,7 +3,6 @@ id: identifikation_von_geschaftsprozessen
 aliases:
   - identifikation_von_geschaftsprozessen
   - Identifikation von Geschäftsprozessen
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: grundlagen
@@ -15,7 +14,7 @@ summary: Dieses Modul definiert Methoden zur sauberen Identifikation und Abgrenz
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: grundlagen mit der Zielsetzung verstehen.
 %%

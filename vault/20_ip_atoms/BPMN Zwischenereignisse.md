@@ -3,19 +3,18 @@ id: bpmn_zwischenereignisse
 aliases:
   - bpmn_zwischenereignisse
   - BPMN Zwischenereignisse
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: bpmn
 type: framework
 intent: verstehen
 status: ki_ready
 created: 2026-02-16
-summary: "Zwischenereignisse treten zwischen Start und Ende eines Prozesses auf. In der fachlichen Modellierung werden sie meist als \"empfangende\" Ereignisse genutzt, um Wartezustände (auf Zeit, Nachricht oder Bedingung) darzustellen. **Dieses Modul beantwortet folgende Fragen:** - Wie stelle ich Wartezeiten"
+summary: Zwischenereignisse treten zwischen Start und Ende eines Prozesses auf. In der fachlichen Modellierung werden sie meist als "empfangende" Ereignisse genutzt, um Wartezustände (auf Zeit, Nachricht oder Bedingung) darzustellen. **Dieses Modul beantwortet folgende Fragen:** - Wie stelle ich Wartezeiten
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet.
 Klassifizierung: framework mit der Zielsetzung verstehen.
 %%

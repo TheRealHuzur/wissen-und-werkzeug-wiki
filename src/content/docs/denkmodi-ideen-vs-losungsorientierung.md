@@ -14,12 +14,12 @@ head:
   - tag: meta
     attrs:
       name: rag-context
-      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung gestalten."
+      content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung gestalten."
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: theorie mit der Zielsetzung gestalten.
 %%

@@ -3,7 +3,6 @@ id: vorgehensmodelle_der_prozessoptimierung_evolutionar_vs_revolutionar
 aliases:
   - vorgehensmodelle_der_prozessoptimierung_evolutionar_vs_revolutionar
   - Vorgehensmodelle der Prozessoptimierung Evolutionär vs. Revolutionär
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: theorie
@@ -121,7 +120,7 @@ Dieser Ansatz verhindert sowohl das "Kaputt-Optimieren" schlechter Prozesse als 
 
 ## 🔗 Verwandte Module
 
-- **[[Prozessmanagement]]
+- **[[prozessmanagement]]
 - ***Kontext:* Übergeordnetes Hauptthema, das den Rahmen für diese Vorgehensmodelle bildet.
 - **[[Projekte Planen und Steuern]]
 - ***Kontext:* Relevant für die operative Umsetzung der gewählten Optimierungsstrategie (z.B. als Change-Projekt).

@@ -3,9 +3,10 @@ id: prozessmanagement
 aliases:
   - prozessmanagement
 moc_level: parent
+parent_topic: prozessmanagement
+subtopic: prozessmanagement
 status: aktiv
-area: fach_expertise
-summary: "Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+summary: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
 ---
 # Prozessmanagement
 

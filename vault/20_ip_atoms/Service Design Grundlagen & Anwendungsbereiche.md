@@ -3,7 +3,6 @@ id: service_design_grundlagen_anwendungsbereiche
 aliases:
   - service_design_grundlagen_anwendungsbereiche
   - Service Design Grundlagen & Anwendungsbereiche
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: framework
@@ -15,7 +14,7 @@ summary: Service Design ist die nutzerzentrierte Gestaltung von Dienstleistungen
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: framework mit der Zielsetzung gestalten.
 %%
@@ -97,5 +96,5 @@ Dennoch ist die Erhebung von Kundenbedürfnissen essenziell, um die *Art und Wei
 - ***Kontext:* Detailansicht der vierten Phase des Double Diamond.
 - **[[Service Design Sprint]]
 - ***Kontext:* Der agile Prozess zur Durchführung von Service Design Projekten.
-- **[[Prozessmanagement]]** 
+- **[[prozessmanagement]]** 
 *Kontext:* Service Design optimiert Prozesse aus Kundensicht und ergänzt das klassische Prozessmanagement.

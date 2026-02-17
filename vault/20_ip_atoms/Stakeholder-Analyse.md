@@ -3,20 +3,18 @@ id: stakeholder_analyse
 aliases:
   - stakeholder_analyse
   - Stakeholder-Analyse
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: projekte_planen_und_steuern
 type: grundlagen
 intent: steuern
 status: ki_ready
 created: 2026-02-16
-summary: "Eine strukturierte Methode, um in drei Schritten betroffene Personengruppen zu identifizieren, ihren Einfluss und ihr Interesse zu bewerten und daraus gezielte Kommunikationsmaßnahmen abzuleiten."
+summary: Eine strukturierte Methode, um in drei Schritten betroffene Personengruppen zu identifizieren, ihren Einfluss und ihr Interesse zu bewerten und daraus gezielte Kommunikationsmaßnahmen abzuleiten.
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Projekte Planen Und Steuern zugeordnet.
 Klassifizierung: grundlagen mit der Zielsetzung steuern.
 %%

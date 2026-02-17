@@ -14,12 +14,12 @@ head:
   - tag: meta
     attrs:
       name: rag-context
-      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung gestalten."
+      content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung gestalten."
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: framework mit der Zielsetzung gestalten.
 %%
@@ -101,5 +101,5 @@ Dennoch ist die Erhebung von Kundenbedürfnissen essenziell, um die *Art und Wei
 - ***Kontext:* Detailansicht der vierten Phase des Double Diamond.
 - **[Service Design Sprint](/wiki/service-design-sprint/)
 - ***Kontext:* Der agile Prozess zur Durchführung von Service Design Projekten.
-- **[Prozessmanagement](#)** 
+- **[prozessmanagement](/wiki/prozessmanagement/)** 
 *Kontext:* Service Design optimiert Prozesse aus Kundensicht und ergänzt das klassische Prozessmanagement.

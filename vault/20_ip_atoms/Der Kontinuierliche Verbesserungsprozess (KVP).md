@@ -3,19 +3,18 @@ id: prinzip_der_kontinuierliche_verbesserungsprozess_kvp
 aliases:
   - prinzip_der_kontinuierliche_verbesserungsprozess_kvp
   - Prinzip Der Kontinuierliche Verbesserungsprozess (KVP)
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: theorie
 intent: betreiben
 status: ki_ready
 created: 2025-12-15
-summary: "Der KVP beschreibt den zyklischen Charakter des Prozessmanagements. Er stellt sicher, dass Organisationen auf Veränderungen reagieren und Prozesse nicht als statische Projekte, sondern als dauerhafte Aufgabe begreifen."
+summary: Der KVP beschreibt den zyklischen Charakter des Prozessmanagements. Er stellt sicher, dass Organisationen auf Veränderungen reagieren und Prozesse nicht als statische Projekte, sondern als dauerhafte Aufgabe begreifen.
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: theorie mit der Zielsetzung betreiben.
 %%

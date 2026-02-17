@@ -3,20 +3,18 @@ id: service_design_phase_definieren_define
 aliases:
   - service_design_phase_definieren_define
   - Service Design Phase Definieren (Define)
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: framework
 intent: gestalten
 status: ki_ready
 created: 2026-02-16
-summary: "In der Phase \"Definieren\" werden die gesammelten Erkenntnisse analysiert, gefiltert und in eine klare Problemstellung überführt. Es ist eine konvergierende Phase, die den Fokus für die Lösungsentwicklung setzt."
+summary: In der Phase "Definieren" werden die gesammelten Erkenntnisse analysiert, gefiltert und in eine klare Problemstellung überführt. Es ist eine konvergierende Phase, die den Fokus für die Lösungsentwicklung setzt.
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: framework mit der Zielsetzung gestalten.
 %%

@@ -1,6 +1,5 @@
 ---
 id: ""
-area: fach_expertise
 parent_topic: ""
 subtopic: ""
 type: ""

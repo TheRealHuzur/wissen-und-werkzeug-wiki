@@ -125,7 +125,7 @@ Dieser Ansatz verhindert sowohl das "Kaputt-Optimieren" schlechter Prozesse als 
 
 ## 🔗 Verwandte Module
 
-- **[Prozessmanagement](#)
+- **[prozessmanagement](/wiki/prozessmanagement/)
 - ***Kontext:* Übergeordnetes Hauptthema, das den Rahmen für diese Vorgehensmodelle bildet.
 - **[Projekte Planen und Steuern](#)
 - ***Kontext:* Relevant für die operative Umsetzung der gewählten Optimierungsstrategie (z.B. als Change-Projekt).

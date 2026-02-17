@@ -3,7 +3,6 @@ id: phase_umsetzen_change_management
 aliases:
   - phase_umsetzen_change_management
   - Phase Umsetzen (Change Management)
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: theorie
@@ -15,7 +14,7 @@ summary: Die "Werkstatt-Phase" überführt das Soll-Konzept in den Arbeitsalltag
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: theorie mit der Zielsetzung umsetzen.
 %%

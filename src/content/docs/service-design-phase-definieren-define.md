@@ -1,6 +1,6 @@
 ---
 title: "Service Design Phase Definieren"
-description: "In der Phase \\\"Definieren\\\" werden die gesammelten Erkenntnisse analysiert, gefiltert und in eine klare Problemstellung überführt. Es ist eine konvergierende…"
+description: "In der Phase \"Definieren\" werden die gesammelten Erkenntnisse analysiert, gefiltert und in eine klare Problemstellung überführt. Es ist eine konvergierende…"
 slug: "service-design-phase-definieren-define"
 head:
   - tag: link
@@ -10,16 +10,16 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Service Design Phase Definieren\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-definieren-define/\",\"description\":\"In der Phase \\\\\\\"Definieren\\\\\\\" werden die gesammelten Erkenntnisse analysiert, gefiltert und in eine klare Problemstellung überführt. Es ist eine konvergierende…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Service Design Phase Definieren\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-definieren-define/\",\"description\":\"In der Phase \\\"Definieren\\\" werden die gesammelten Erkenntnisse analysiert, gefiltert und in eine klare Problemstellung überführt. Es ist eine konvergierende…\"}"
   - tag: meta
     attrs:
       name: rag-context
-      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung gestalten."
+      content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung gestalten."
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: framework mit der Zielsetzung gestalten.
 %%

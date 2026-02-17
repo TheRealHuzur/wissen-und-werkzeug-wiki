@@ -3,7 +3,6 @@ id: phasenmodell_der_prozessoptimierung_3_phasen_zyklus
 aliases:
   - phasenmodell_der_prozessoptimierung_3_phasen_zyklus
   - Phasenmodell der Prozessoptimierung (3-Phasen-Zyklus)
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: theorie
@@ -15,7 +14,7 @@ summary: 'Dieses Modell bildet das fundamentale Rückgrat jeglicher Prozessoptim
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: theorie mit der Zielsetzung steuern.
 %%

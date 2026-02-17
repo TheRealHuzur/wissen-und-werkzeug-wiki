@@ -3,7 +3,6 @@ id: der_manahmenplan_grundlagen_anleitung
 aliases:
   - der_manahmenplan_grundlagen_anleitung
   - Der Maßnahmenplan Grundlagen & Anleitung
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: grundlagen
@@ -15,7 +14,7 @@ summary: Dieses Modul beschreibt die strukturierte Dokumentation von Umsetzungsm
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: grundlagen mit der Zielsetzung umsetzen.
 %%
@@ -83,5 +82,5 @@ Verwenden Sie ein klares Status-System, um die Transparenz zu erhöhen:
 
 - **[[Phase Umsetzen (Change Management)]]***Kontext:* Der Maßnahmenplan ist das operative Werkzeug innerhalb der Umsetzungsphase.
 - **[[Projekte Planen und Steuern]]***Kontext:* Bietet den übergeordneten Rahmen für die methodische Steuerung von Maßnahmen.
-- **[[Controlling]]***Kontext:* Der Maßnahmenplan liefert die notwendigen Daten für die Fortschrittskontrolle.
+- **[[controlling]]***Kontext:* Der Maßnahmenplan liefert die notwendigen Daten für die Fortschrittskontrolle.
 - **[[Phase Gestalten (Soll-Konzeption)]]***Kontext:* Die hier entwickelten Konzepte bilden die inhaltliche Grundlage für die Maßnahmen.

@@ -3,8 +3,6 @@ id: die_smart_regel
 aliases:
   - die_smart_regel
   - Die SMART-Regel
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: projekte_planen_und_steuern
 type: theorie
@@ -16,7 +14,7 @@ summary: "Thema-Kontext: Anleitungen und Methoden zur Planung und Steuerung von 
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Projekte Planen Und Steuern zugeordnet.
 Klassifizierung: theorie mit der Zielsetzung steuern.
 %%

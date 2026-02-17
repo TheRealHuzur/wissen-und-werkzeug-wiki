@@ -3,8 +3,6 @@ id: bpmn_aufgaben_und_teilprozesse
 aliases:
   - bpmn_aufgaben_und_teilprozesse
   - BPMN Aufgaben und Teilprozesse
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: bpmn
 type: framework
@@ -16,7 +14,7 @@ summary: Dieses Modul beschreibt die Darstellung des "Was" in einem Prozessmodel
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet.
 Klassifizierung: framework mit der Zielsetzung verstehen.
 %%

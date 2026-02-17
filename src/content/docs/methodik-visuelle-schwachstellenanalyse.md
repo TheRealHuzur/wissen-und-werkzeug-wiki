@@ -14,12 +14,12 @@ head:
   - tag: meta
     attrs:
       name: rag-context
-      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung gestalten."
+      content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung gestalten."
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: theorie mit der Zielsetzung gestalten.
 %%
@@ -68,7 +68,7 @@ Die Visualisierung liefert die objektive Basis, um althergebrachte Vorgehensweis
 
 - **[Checkliste Schwachstellenanalyse](/wiki/checkliste-schwachstellenanalyse/)
 - ***Kontext:* Die operative Liste zur systematischen Prüfung der hier beschriebenen Schwachstellen-Typen.
-- **[Prozessmanagement](#)
+- **[prozessmanagement](/wiki/prozessmanagement/)
 - ***Kontext:* Das übergeordnete Fachgebiet für die Analyse und Gestaltung von Abläufen.
 - **`[BPMN Grundlagen](#)`***Kontext:* Der Standard zur professionellen Visualisierung der hier beschriebenen Prozesse.
 - **[Definition Geschäftsprozess (Verwaltung)](/wiki/definition-geschaftsprozess-verwaltung/)

@@ -5,7 +5,7 @@ export const sidebar = [
     "items": [
       {
         "label": "Uebersicht",
-        "link": "/wiki/changemanagement/"
+        "link": "/changemanagement/"
       }
     ]
   },
@@ -14,15 +14,15 @@ export const sidebar = [
     "items": [
       {
         "label": "Uebersicht",
-        "link": "/wiki/kunstliche-intelligenz/"
+        "link": "/kunstliche-intelligenz/"
       },
       {
         "label": "Prompten",
-        "link": "/wiki/prompten/"
+        "link": "/prompten/"
       },
       {
         "label": "Vibe Coding",
-        "link": "/wiki/vibe-coding/"
+        "link": "/vibe-coding/"
       }
     ]
   },
@@ -31,19 +31,19 @@ export const sidebar = [
     "items": [
       {
         "label": "Uebersicht",
-        "link": "/wiki/prozessmanagement/"
+        "link": "/prozessmanagement/"
       },
       {
         "label": "BPMN",
-        "link": "/wiki/bpmn/"
+        "link": "/bpmn/"
       },
       {
         "label": "Controlling",
-        "link": "/wiki/controlling/"
+        "link": "/controlling/"
       },
       {
         "label": "Projekte planen und steuern",
-        "link": "/wiki/projekte-planen-und-steuern/"
+        "link": "/projekte-planen-und-steuern/"
       }
     ]
   },
@@ -52,11 +52,11 @@ export const sidebar = [
     "items": [
       {
         "label": "Uebersicht",
-        "link": "/wiki/second-brain/"
+        "link": "/second-brain/"
       },
       {
         "label": "System Architektur",
-        "link": "/wiki/system-architektur/"
+        "link": "/system-architektur/"
       }
     ]
   },
@@ -65,7 +65,7 @@ export const sidebar = [
     "items": [
       {
         "label": "Uebersicht",
-        "link": "/wiki/wissensmanagement/"
+        "link": "/wissensmanagement/"
       }
     ]
   }

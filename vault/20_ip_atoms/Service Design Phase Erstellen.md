@@ -3,19 +3,18 @@ id: service_design_phase_erstellen
 aliases:
   - service_design_phase_erstellen
   - Service Design Phase Erstellen
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: framework
 intent: gestalten
 status: ki_ready
 created: 2026-02-16
-summary: "Die Phase \"Erstellen\" ist der finale Schritt im Double Diamond, in dem Ideen zu konkreten Lösungen ausgearbeitet, getestet und implementiert werden. Durch Prototyping und Feedbackschleifen wird das Risiko von Fehlentwicklungen minimiert."
+summary: Die Phase "Erstellen" ist der finale Schritt im Double Diamond, in dem Ideen zu konkreten Lösungen ausgearbeitet, getestet und implementiert werden. Durch Prototyping und Feedbackschleifen wird das Risiko von Fehlentwicklungen minimiert.
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: framework mit der Zielsetzung gestalten.
 %%

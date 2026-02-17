@@ -3,8 +3,6 @@ id: herausforderungen_der_leistungsmessung
 aliases:
   - herausforderungen_der_leistungsmessung
   - Herausforderungen der Leistungsmessung
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: controlling
 type: grundlagen
@@ -16,7 +14,7 @@ summary: "Beschreibt die drei zentralen Hürden, auf die Unternehmen und Verwalt
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Controlling zugeordnet.
 Klassifizierung: grundlagen mit der Zielsetzung steuern.
 %%

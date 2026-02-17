@@ -3,8 +3,6 @@ id: definition_der_kunde_verwaltung
 aliases:
   - definition_der_kunde_verwaltung
   - Definition Der Kunde (Verwaltung)
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: grundlagen
@@ -16,7 +14,7 @@ summary: "Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerun
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: grundlagen mit der Zielsetzung verstehen.
 %%

@@ -3,7 +3,6 @@ id: how_wow_now_matrix
 aliases:
   - how_wow_now_matrix
   - HOW-WOW-NOW Matrix
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: grundlagen
@@ -15,7 +14,7 @@ summary: Die HOW-WOW-NOW Matrix ist ein Priorisierungs-Werkzeug, das Ideen nach 
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: grundlagen mit der Zielsetzung gestalten.
 %%

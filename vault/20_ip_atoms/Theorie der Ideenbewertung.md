@@ -3,20 +3,18 @@ id: theorie_der_ideenbewertung
 aliases:
   - theorie_der_ideenbewertung
   - Theorie der Ideenbewertung
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: theorie
 intent: gestalten
 status: entwurf
 created: 2026-02-16
-summary: "Dieses Modul erläutert die methodischen Grundlagen zur Auswahl von Ideen und verdeutlicht, warum Bewertungsprozesse inhärent subjektiv und kontextabhängig sind. **Dieses Modul beantwortet folgende Fragen:** - Warum können Ideen niemals rein objektiv bewertet werden? - Welche Rolle spielt die Entsche"
+summary: Dieses Modul erläutert die methodischen Grundlagen zur Auswahl von Ideen und verdeutlicht, warum Bewertungsprozesse inhärent subjektiv und kontextabhängig sind. **Dieses Modul beantwortet folgende Fragen:** - Warum können Ideen niemals rein objektiv bewertet werden? - Welche Rolle spielt die Entsche
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: theorie mit der Zielsetzung gestalten.
 %%

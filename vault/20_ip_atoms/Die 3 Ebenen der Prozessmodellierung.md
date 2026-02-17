@@ -3,8 +3,6 @@ id: die_3_ebenen_der_prozessmodellierung
 aliases:
   - die_3_ebenen_der_prozessmodellierung
   - Die 3 Ebenen der Prozessmodellierung
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: framework
@@ -16,7 +14,7 @@ summary: "Innerhalb der Top-Down-Methode wird ein Prozess in drei Ebenen zerlegt
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: framework mit der Zielsetzung verstehen.
 %%

@@ -3,8 +3,6 @@ id: bpmn_das_parallele_gateway_and
 aliases:
   - bpmn_das_parallele_gateway_and
   - BPMN Das Parallele Gateway (AND)
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: bpmn
 type: framework
@@ -16,7 +14,7 @@ summary: "Das parallele Gateway (AND) steuert die gleichzeitige oder reihenfolge
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet.
 Klassifizierung: framework mit der Zielsetzung verstehen.
 %%

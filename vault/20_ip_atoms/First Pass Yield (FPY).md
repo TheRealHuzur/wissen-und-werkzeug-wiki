@@ -3,20 +3,18 @@ id: kennzahl_first_pass_yield_fpy
 aliases:
   - kennzahl_first_pass_yield_fpy
   - Kennzahl First Pass Yield (FPY)
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: controlling
 type: framework
 intent: steuern
 status: ki_ready
 created: 2026-02-16
-summary: "Definition und Berechnung des First Pass Yield (FPY) als Qualitätskennzahl. Sie misst den Anteil der Prozessdurchläufe (Fälle), die im ersten Durchlauf ohne Nacharbeit fehlerfrei abgeschlossen werden, und deckt somit versteckte Ineffizienzen (\"Hidden Factory\") auf."
+summary: Definition und Berechnung des First Pass Yield (FPY) als Qualitätskennzahl. Sie misst den Anteil der Prozessdurchläufe (Fälle), die im ersten Durchlauf ohne Nacharbeit fehlerfrei abgeschlossen werden, und deckt somit versteckte Ineffizienzen ("Hidden Factory") auf.
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Controlling zugeordnet.
 Klassifizierung: framework mit der Zielsetzung steuern.
 %%

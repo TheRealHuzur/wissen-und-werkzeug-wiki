@@ -3,7 +3,6 @@ id: prozess_fmea_methode_praxisbeispiel
 aliases:
   - prozess_fmea_methode_praxisbeispiel
   - Prozess-FMEA Methode & Praxisbeispiel
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: framework
@@ -15,7 +14,7 @@ summary: Die Prozess-FMEA (Fehlermöglichkeits- und Einflussanalyse) ist eine pr
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: framework mit der Zielsetzung verstehen.
 %%
@@ -98,7 +97,7 @@ Anhand des Prozesses "Organisation einer Fortbildung" lassen sich typische Schwa
 
 ## 🔗 Verwandte Module
 
-- **[[Prozessmanagement]]
+- **[[prozessmanagement]]
 - ***Kontext:* Die FMEA ist ein zentrales Werkzeug im Qualitäts- und Prozessmanagement zur Sicherung stabiler Abläufe.
 - **[[BPMN Aufgaben und Teilprozesse]]
 - ***Kontext:* Um eine FMEA durchzuführen (Strukturanalyse), muss der Prozess oft zuerst sauber modelliert (z. B. in BPMN) und in Teilschritte zerlegt werden.

@@ -3,19 +3,18 @@ id: top_down_vs_bottom_up_methode
 aliases:
   - top_down_vs_bottom_up_methode
   - Top-Down vs Bottom-Up Methode
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: theorie
 intent: verstehen
 status: ki_ready
 created: 2025-12-15
-summary: "Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die \"Top-Down-Methode\" (vom Groben ins Feine) und die \"Bottom-Up-Methode\" (vom Feinen ins Grobe). Für eine strukturierte Modellierung wird in der Praxis der Top-Down-Ansatz empfohlen."
+summary: 'Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die "Top-Down-Methode" (vom Groben ins Feine) und die "Bottom-Up-Methode" (vom Feinen ins Grobe). Für eine strukturierte Modellierung wird in der Praxis der Top-Down-Ansatz empfohlen.'
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: theorie mit der Zielsetzung verstehen.
 %%
@@ -55,7 +54,7 @@ Dieser Ansatz arbeitet "vom Feinen ins Grobe". Man sammelt zunächst detailliert
 
 - **[[Die 3 Ebenen der Prozessmodellierung]]** 
 - *Kontext:* Beschreibt die konkrete Anwendung der Top-Down-Methode.
-- **[[Prozessmanagement]]** 
+- **[[prozessmanagement]]** 
 - *Kontext:* Übergeordnetes Fachgebiet.
 - **[[Workshop-Methodik für Prozessaufnahme]]** 
 - *Kontext:* Praktische Anwendung der Methoden im Workshop.

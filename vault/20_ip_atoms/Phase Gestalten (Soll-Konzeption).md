@@ -3,20 +3,18 @@ id: phase_gestalten_soll_konzeption
 aliases:
   - phase_gestalten_soll_konzeption
   - Phase Gestalten (Soll-Konzeption)
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: theorie
 intent: gestalten
 status: ki_ready
 created: 2026-02-16
-summary: "In der \"Atelier-Phase\" werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design Thinking, um den Lösungsraum strukturiert zu öffnen. Zentral ist hierbei die Klärung des Auftrags: Soll eine visionäre Ideal-Lösung oder ein zeitn"
+summary: 'In der "Atelier-Phase" werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design Thinking, um den Lösungsraum strukturiert zu öffnen. Zentral ist hierbei die Klärung des Auftrags: Soll eine visionäre Ideal-Lösung oder ein zeitn'
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: theorie mit der Zielsetzung gestalten.
 %%

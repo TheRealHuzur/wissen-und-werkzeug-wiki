@@ -385,7 +385,7 @@ function buildSidebarItemsFromMocs(mocs, includeDraft) {
       if (node.parentMoc) {
         items.push({
           label: 'Uebersicht',
-          link: buildRoute(node.parentMoc.slug),
+          link: buildRoute(node.parentMoc.slug).replace(BASE_PREFIX, '') || '/',
         });
       }
 
@@ -395,7 +395,7 @@ function buildSidebarItemsFromMocs(mocs, includeDraft) {
       for (const subtopic of subtopics) {
         items.push({
           label: subtopic.label,
-          link: buildRoute(subtopic.slug),
+          link: buildRoute(subtopic.slug).replace(BASE_PREFIX, '') || '/',
         });
       }
 
@@ -552,9 +552,22 @@ async function main() {
       addSkipSample(file, 'statusVerworfen');
       continue;
     }
-    if (status !== STATUS_READY) {
+
+    // New logic: MOCs (in 10_expertise_map) need "aktiv", others need "ki_ready"
+    const isMoc = file.replace(/\\/g, '/').includes('/10_expertise_map/');
+    const requiredStatus = isMoc ? STATUS_ACTIVE : STATUS_READY;
+
+    if (status !== requiredStatus) {
+      // Special case: Allow ki_ready for MOCs too (just in case), or actively enforce difference?
+      // Requirement says: MOCs -> aktiv, IP-atoms -> ki_ready.
+      // Let's be strict as requested:
+      // "bei den moc (die dateien in 10_expertise_map) über aktiv und entwurf."
+
+      // However, if an MOC is accidentally "ki_ready", we probably shouldn't block it?
+      // User said: "Hinweis: Für MOCs ist „ki_ready“ nicht sinnvoll." -> So strict check is good.
+
       skippedStatusNotReady += 1;
-      addSkipSample(file, 'statusNotReady');
+      addSkipSample(file, `statusNotReady (expected ${requiredStatus}, got ${status})`);
       continue;
     }
 

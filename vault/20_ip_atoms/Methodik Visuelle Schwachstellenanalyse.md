@@ -3,7 +3,6 @@ id: methodik_visuelle_schwachstellenanalyse
 aliases:
   - methodik_visuelle_schwachstellenanalyse
   - Methodik Visuelle Schwachstellenanalyse
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: theorie
@@ -15,7 +14,7 @@ summary: Die Visualisierung von Geschäftsprozessen dient Werkzeug zur Identifik
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: theorie mit der Zielsetzung gestalten.
 %%
@@ -64,7 +63,7 @@ Die Visualisierung liefert die objektive Basis, um althergebrachte Vorgehensweis
 
 - **[[Checkliste Schwachstellenanalyse]]
 - ***Kontext:* Die operative Liste zur systematischen Prüfung der hier beschriebenen Schwachstellen-Typen.
-- **[[Prozessmanagement]]
+- **[[prozessmanagement]]
 - ***Kontext:* Das übergeordnete Fachgebiet für die Analyse und Gestaltung von Abläufen.
 - **`[[BPMN Grundlagen]]`***Kontext:* Der Standard zur professionellen Visualisierung der hier beschriebenen Prozesse.
 - **[[Definition Geschäftsprozess (Verwaltung)]]

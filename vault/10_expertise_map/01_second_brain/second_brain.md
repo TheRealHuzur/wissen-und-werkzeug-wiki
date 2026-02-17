@@ -3,8 +3,9 @@ id: second_brain
 aliases:
   - second_brain
 moc_level: parent
+parent_topic: second_brain
+subtopic: second_brain
 status: aktiv
-area: fach_expertise
 summary: "Das Second Brain speichert  und strukturiert Wissen. Es ist idealerweise so in Datenbanken organisiert, dass Zusammenhänge dargestellt werden können und das Wissen mit technischer Unterstützung durchsucht und aufbereitet werden kann. "
 ---
 # Second Brain

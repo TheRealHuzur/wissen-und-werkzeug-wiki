@@ -14,12 +14,12 @@ head:
   - tag: meta
     attrs:
       name: rag-context
-      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung verstehen."
+      content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: framework mit der Zielsetzung verstehen."
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: framework mit der Zielsetzung verstehen.
 %%
@@ -102,7 +102,7 @@ Anhand des Prozesses "Organisation einer Fortbildung" lassen sich typische Schwa
 
 ## 🔗 Verwandte Module
 
-- **[Prozessmanagement](#)
+- **[prozessmanagement](/wiki/prozessmanagement/)
 - ***Kontext:* Die FMEA ist ein zentrales Werkzeug im Qualitäts- und Prozessmanagement zur Sicherung stabiler Abläufe.
 - **[BPMN Aufgaben und Teilprozesse](/wiki/bpmn-aufgaben-und-teilprozesse/)
 - ***Kontext:* Um eine FMEA durchzuführen (Strukturanalyse), muss der Prozess oft zuerst sauber modelliert (z. B. in BPMN) und in Teilschritte zerlegt werden.

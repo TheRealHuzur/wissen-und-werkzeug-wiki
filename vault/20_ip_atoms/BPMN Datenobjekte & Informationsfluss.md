@@ -3,8 +3,6 @@ id: bpmn_datenobjekte_informationsfluss
 aliases:
   - bpmn_datenobjekte_informationsfluss
   - BPMN Datenobjekte & Informationsfluss
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: bpmn
 type: framework
@@ -17,7 +15,7 @@ summary: "Datenobjekte und Datenspeicher visualisieren den Informationsfluss inn
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet.
 Klassifizierung: framework mit der Zielsetzung verstehen.
 %%

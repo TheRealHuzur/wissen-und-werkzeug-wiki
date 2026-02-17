@@ -3,7 +3,6 @@ id: repro_schritte_definition_guide
 aliases:
   - repro_schritte_definition_guide
   - Repro-Schritte (Definition & Guide)
-area: fach_expertise
 parent_topic: kunstliche_intelligenz
 subtopic: vibe_coding
 type: grundlagen
@@ -15,7 +14,7 @@ summary: Repro-Schritte (Reproduction Steps) sind präzise, sequenzielle Anweisu
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Künstliche Intelligenz.
+Dieses Modul dokumentiert Fachwissen im Bereich Künstliche Intelligenz.
 Es ist im Thema Künstliche Intelligenz verortet und dem Subtopic Vibe Coding zugeordnet.
 Klassifizierung: grundlagen mit der Zielsetzung umsetzen.
 %%
@@ -79,5 +78,5 @@ Ein guter Schritt folgt dem Schema: **Startzustand → Aktion → Eingabe → Be
 
 - **[[Vibe Coding Prompt-Vorlage]]
 - ***Kontext:* Die Repro-Schritte sind ein Kernbestandteil der Vibe Coding Vorlage.
-- **[[Prompten]]
+- **[[prompten]]
 - ***Kontext:* Methodik zur präzisen Aufgabenstellung an KIs.

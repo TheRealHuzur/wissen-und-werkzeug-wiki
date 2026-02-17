@@ -3,8 +3,9 @@ id: wissensmanagement
 aliases:
   - wissensmanagement
 moc_level: parent
+parent_topic: wissensmanagement
+subtopic: wissensmanagement
 status: aktiv
-area: fach_expertise
 summary: "Wissensmanagement beschreibt, wie Wissen strukturiert aufgenommen, gespeichert und abgerufen werden kann. "
 ---
 # Wissensmanagement

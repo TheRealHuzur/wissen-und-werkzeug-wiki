@@ -14,12 +14,12 @@ head:
   - tag: meta
     attrs:
       name: rag-context
-      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung umsetzen."
+      content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: grundlagen mit der Zielsetzung umsetzen."
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: grundlagen mit der Zielsetzung umsetzen.
 %%
@@ -87,5 +87,5 @@ Verwenden Sie ein klares Status-System, um die Transparenz zu erhöhen:
 
 - **[Phase Umsetzen (Change Management)](/wiki/phase-umsetzen-change-management/)***Kontext:* Der Maßnahmenplan ist das operative Werkzeug innerhalb der Umsetzungsphase.
 - **[Projekte Planen und Steuern](#)***Kontext:* Bietet den übergeordneten Rahmen für die methodische Steuerung von Maßnahmen.
-- **[Controlling](#)***Kontext:* Der Maßnahmenplan liefert die notwendigen Daten für die Fortschrittskontrolle.
+- **[controlling](/wiki/controlling/)***Kontext:* Der Maßnahmenplan liefert die notwendigen Daten für die Fortschrittskontrolle.
 - **[Phase Gestalten (Soll-Konzeption)](/wiki/phase-gestalten-soll-konzeption/)***Kontext:* Die hier entwickelten Konzepte bilden die inhaltliche Grundlage für die Maßnahmen.

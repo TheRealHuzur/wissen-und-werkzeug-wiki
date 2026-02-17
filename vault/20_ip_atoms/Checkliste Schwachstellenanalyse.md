@@ -3,20 +3,18 @@ id: checkliste_schwachstellenanalyse
 aliases:
   - checkliste_schwachstellenanalyse
   - Checkliste Schwachstellenanalyse
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: prozessmanagement
 type: grundlagen
 intent: verstehen
 status: ki_ready
 created: 2026-02-16
-summary: "Eine strukturierte Checkliste zur Identifikation von Prozess-Schwachstellen in den Kategorien Technik, Mensch, Daten, Struktur, Ergebnis und Steuerung. Sie dient als pragmatisches Arbeitsinstrument zur Nachbereitung von Prozessaufnahmen, um Lücken aufzudecken, ohne ein komplexes Reifegrad-Audit d..."
+summary: Eine strukturierte Checkliste zur Identifikation von Prozess-Schwachstellen in den Kategorien Technik, Mensch, Daten, Struktur, Ergebnis und Steuerung. Sie dient als pragmatisches Arbeitsinstrument zur Nachbereitung von Prozessaufnahmen, um Lücken aufzudecken, ohne ein komplexes Reifegrad-Audit d...
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: grundlagen mit der Zielsetzung verstehen.
 %%
@@ -144,5 +142,5 @@ Diese dritte Option ist entscheidend, um Wissenslücken sichtbar zu machen und g
     - *Kontext:* Die Checkliste dient oft zur Nachbereitung der Ergebnisse aus diesen Workshops.
 - **[[Identifikation von Geschäftsprozessen]]**
     - *Kontext:* Hilft bei der Abgrenzung, welche Prozesse überhaupt der Analyse unterzogen werden.
-- **[[Prozessmanagement]]**
+- **[[prozessmanagement]]**
     - *Kontext:* Das übergeordnete Thema dieses Werkzeugs.

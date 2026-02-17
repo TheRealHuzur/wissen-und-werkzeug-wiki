@@ -3,20 +3,18 @@ id: bpmn_das_exklusive_gateway_xor
 aliases:
   - bpmn_das_exklusive_gateway_xor
   - BPMN Das Exklusive Gateway (XOR)
-
-area: fach_expertise
 parent_topic: prozessmanagement
 subtopic: bpmn
 type: framework
 intent: verstehen
 status: ki_ready
 created: 2025-12-15
-summary: "Das exklusive Gateway (XOR) steuert eine strikte Entweder/Oder-Entscheidung, bei der exakt ein Pfad gewählt wird. Für maximale Klarheit wird die Verwendung des „X“-Symbols und die Beschriftung der ausgehenden Pfade mit dem jeweiligen Ergebnis (statt einer zentralen Frage) empfohlen."
+summary: Das exklusive Gateway (XOR) steuert eine strikte Entweder/Oder-Entscheidung, bei der exakt ein Pfad gewählt wird. Für maximale Klarheit wird die Verwendung des „X“-Symbols und die Beschriftung der ausgehenden Pfade mit dem jeweiligen Ergebnis (statt einer zentralen Frage) empfohlen.
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet.
 Klassifizierung: framework mit der Zielsetzung verstehen.
 %%

@@ -1,6 +1,6 @@
 ---
 title: "Phase Gestalten (soll Konzeption)"
-description: "In der \\\"Atelier-Phase\\\" werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design…"
+description: "In der \"Atelier-Phase\" werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design…"
 slug: "phase-gestalten-soll-konzeption"
 head:
   - tag: link
@@ -10,16 +10,16 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Phase Gestalten (soll Konzeption)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/\",\"description\":\"In der \\\\\\\"Atelier-Phase\\\\\\\" werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Phase Gestalten (soll Konzeption)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/\",\"description\":\"In der \\\"Atelier-Phase\\\" werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design…\"}"
   - tag: meta
     attrs:
       name: rag-context
-      content: "Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung gestalten."
+      content: "Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement. Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet. Klassifizierung: theorie mit der Zielsetzung gestalten."
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach Expertise und dokumentiert Fachwissen im Bereich Prozessmanagement.
+Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
 Es ist im Thema Prozessmanagement verortet und dem Subtopic Prozessmanagement zugeordnet.
 Klassifizierung: theorie mit der Zielsetzung gestalten.
 %%
