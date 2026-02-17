@@ -850,8 +850,11 @@ async function main() {
       }
     }
 
+    // Strip the RAG context block from the body so it's not visible to readers
+    const bodyWithoutRag = body.replace(/%%\r?\n\s*RAG-CONTEXT-ANCHOR:\s*\r?\n[\s\S]*?\r?\n\s*%%/g, '').trim();
+
     frontmatterLines.push('---');
-    const output = `${frontmatterLines.join('\n')}\n\n${body.replace(/^\s*\r?\n/, '')}`;
+    const output = `${frontmatterLines.join('\n')}\n\n${bodyWithoutRag.replace(/^\s*\r?\n/, '')}`;
     const outputFile = path.join(OUT_DOCS_DIR, `${candidate.slug}.md`);
     await fs.writeFile(outputFile, output, 'utf8');
     exportedFiles += 1;
