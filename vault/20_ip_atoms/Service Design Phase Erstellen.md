@@ -4,7 +4,7 @@ aliases:
   - service_design_phase_erstellen
   - Service Design Phase Erstellen
 parent_topic: prozessmanagement
-subtopic: prozessmanagement
+subtopic: service_design
 type: framework
 intent: gestalten
 status: ki_ready
@@ -64,8 +64,8 @@ Um die entwickelte Dienstleistung dauerhaft implementierbar zu machen, ist eine 
 ## 🔗 Verwandte Module
 
 - **[[Service Design Phase Entwickeln]]
-- ***Kontext:* Quelle der Ideen für diese Phase.
+	***Kontext:* Quelle der Ideen für diese Phase.
 - **[[Service Design Sprint]]
-- ***Kontext:* Rahmenwerk, in dem diese Phase oft schnell durchlaufen wird.
+	***Kontext:* Rahmenwerk, in dem diese Phase oft schnell durchlaufen wird.
 - **[[Service Blue Print]]** 
-*Kontext:* Ein wichtiges Werkzeug, um den finalen Service detailliert zu dokumentieren.
+	***Kontext:* Ein wichtiges Werkzeug, um den finalen Service detailliert zu dokumentieren.

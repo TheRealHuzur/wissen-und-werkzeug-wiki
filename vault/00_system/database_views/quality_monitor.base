@@ -7,6 +7,7 @@ views:
     order:
       - file.name
       - status
+      - file.folder
       - id
       - area
       - type
@@ -15,7 +16,6 @@ views:
       - subtopic
       - created
       - summary
-      - file.folder
     sort:
       - property: status
         direction: ASC
@@ -24,5 +24,6 @@ views:
       - property: type
         direction: ASC
     columnSize:
+      file.folder: 98
       note.type: 157
       note.intent: 126

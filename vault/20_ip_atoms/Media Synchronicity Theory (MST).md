@@ -79,17 +79,8 @@ Die folgende Übersicht zeigt, wie effizient verschiedene Medien die beiden Proz
 | **Videokonferenz** | Möglich | Sehr gut | Sehr hoch |
 | **Face-to-Face** | Ineffizient | Ideal | Sehr hoch |
 
-> 🖼 **GRAFIK: Medien-Matrix**  
-> **KI-Beschreibung:** Tabellarische Übersicht oder Matrix-Diagramm, das die Medien (E-Mail bis Face-to-Face) hinsichtlich ihrer Eignung für Conveyance und Convergence einordnet.  
-> - [ ] *Screenshot der Tabelle von Seite 3 einfügen*
 
 ---
 
 ## 🔗 Verwandte Module
 
-- **[[wissensmanagement]]**  
-  Kontext: Der Prozess der "Conveyance" (Informationsübermittlung) ist ein Kernbestandteil des Wissensmanagements (Wissen speichern und abrufen).
-- **[[20_ip_atoms/Workshop-Methodik für Prozessaufnahme]]**  
-  Kontext: Workshops sind klassische "Convergence"-Formate, bei denen Face-to-Face oder Videokonferenzen genutzt werden, um ein gemeinsames Verständnis über Prozesse zu erlangen.
-- **[[20_ip_atoms/Konzept zur Einführung von Prozessmanagement]]**  
-  Kontext: Die Planung der Kommunikation (Medienwahl) ist ein kritischer Erfolgsfaktor bei der Einführung neuer Management-Systeme.

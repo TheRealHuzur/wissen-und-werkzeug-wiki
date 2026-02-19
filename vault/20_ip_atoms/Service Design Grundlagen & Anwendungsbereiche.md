@@ -4,7 +4,7 @@ aliases:
   - service_design_grundlagen_anwendungsbereiche
   - Service Design Grundlagen & Anwendungsbereiche
 parent_topic: prozessmanagement
-subtopic: prozessmanagement
+subtopic: service_design
 type: framework
 intent: gestalten
 status: ki_ready

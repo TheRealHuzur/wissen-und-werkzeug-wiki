@@ -71,7 +71,7 @@ Klassifizierung: grundlagen mit der Zielsetzung steuern.
 
 - **[[20_ip_atoms/Rollenprofil ProzessmanagerIn|Rollenprofil ProzessmanagerIn]]**  
   Kontext: Die Rolle, auf die dieses Profil zugeschnitten ist.
-- **[[Grundlagen und Regeln für BPMN Gateways]]**  
+- **[[BPMN Grundlagen und Regeln für BPMN Gateways]]**  
   Kontext: Fachwissen, das unter "Prozessmodellierung" fällt.
 - **[[20_ip_atoms/Workshop-Methodik für Prozessaufnahme]]**  
   Kontext: Anwendungsfeld für die Moderationskompetenz.

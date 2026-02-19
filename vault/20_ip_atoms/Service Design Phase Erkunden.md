@@ -4,7 +4,7 @@ aliases:
   - service_design_phase_erkunden
   - Service Design Phase Erkunden
 parent_topic: prozessmanagement
-subtopic: prozessmanagement
+subtopic: service_design
 type: framework
 intent: gestalten
 status: ki_ready
@@ -54,8 +54,8 @@ Das Ergebnis dieser Phase ist eine breite Datenbasis ("Input"), die als Rohmater
 ## 🔗 Verwandte Module
 
 - **[[Service Design Grundlagen & Anwendungsbereiche]]
-- ***Kontext:* Das übergeordnete Modell.
+	***Kontext:* Das übergeordnete Modell.
 - **[[Service Design Phase Definieren]]
-- ***Kontext:* Der nachfolgende Schritt, in dem die Erkenntnisse verdichtet werden.
+	***Kontext:* Der nachfolgende Schritt, in dem die Erkenntnisse verdichtet werden.
 - **[[Stakeholder-Analyse]]** 
-*Kontext:* Wichtiges Werkzeug, um in der Erkundungsphase alle Beteiligten zu identifizieren.
+	***Kontext:* Wichtiges Werkzeug, um in der Erkundungsphase alle Beteiligten zu identifizieren.

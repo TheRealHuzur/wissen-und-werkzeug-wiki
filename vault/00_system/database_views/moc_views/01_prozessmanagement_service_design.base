@@ -3,8 +3,8 @@ views:
     name: Tabelle
     filters:
       and:
-        - parent_topic == "kuenstliche_intelligenz"
-        - subtopic == "vibe_coding"
+        - parent_topic == "prozessmanagement"
+        - subtopic == "service_design"
         - "!type.isEmpty()"
     order:
       - file.name

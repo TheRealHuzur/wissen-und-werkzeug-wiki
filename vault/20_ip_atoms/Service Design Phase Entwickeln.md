@@ -4,7 +4,7 @@ aliases:
   - service_design_phase_entwickeln
   - Service Design Phase Entwickeln
 parent_topic: prozessmanagement
-subtopic: prozessmanagement
+subtopic: service_design
 type: framework
 intent: gestalten
 status: ki_ready
@@ -68,8 +68,8 @@ Um das kreative Potenzial zu nutzen, werden verschiedene Techniken eingesetzt:
 ## 🔗 Verwandte Module
 
 - **[[Service Design Phase Definieren]]
-- ***Kontext:* Die Basis für die Ideenfindung.
+	***Kontext:* Die Basis für die Ideenfindung.
 - **[[Service Design Phase Erstellen]]
-- ***Kontext:* Die Selektion und Ausarbeitung der besten Ideen erfolgt im nächsten Schritt.
+	***Kontext:* Die Selektion und Ausarbeitung der besten Ideen erfolgt im nächsten Schritt.
 - **[[20_ip_atoms/Workshop-Methodik für Prozessaufnahme]]** 
-*Kontext:* Verwandte Methoden zur Arbeit in Gruppen.
+	***Kontext:* Verwandte Methoden zur Arbeit in Gruppen.

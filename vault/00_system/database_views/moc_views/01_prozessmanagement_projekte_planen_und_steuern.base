@@ -9,5 +9,6 @@ views:
     order:
       - file.name
       - status
+      - subtopic
     columnSize:
       file.name: 251

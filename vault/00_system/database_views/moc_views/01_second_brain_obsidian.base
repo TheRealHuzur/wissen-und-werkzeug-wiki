@@ -5,6 +5,7 @@ views:
       and:
         - parent_topic == "second_brain"
         - "!type.isEmpty()"
+        - subtopic == "obsidian"
     order:
       - file.name
       - status

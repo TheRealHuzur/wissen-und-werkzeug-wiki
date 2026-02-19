@@ -6,3 +6,6 @@ views:
         - parent_topic == "kuenstliche_intelligenz"
         - subtopic == "prompten"
         - "!type.isEmpty()"
+    order:
+      - file.name
+      - status

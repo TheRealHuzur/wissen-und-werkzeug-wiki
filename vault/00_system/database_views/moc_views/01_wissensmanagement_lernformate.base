@@ -3,9 +3,11 @@ views:
     name: Tabelle
     filters:
       and:
-        - parent_topic == "kuenstliche_intelligenz"
-        - subtopic == "vibe_coding"
+        - parent_topic == "wissensmanagement"
+        - subtopic == "lernformate"
         - "!type.isEmpty()"
     order:
       - file.name
       - status
+    columnSize:
+      file.name: 313

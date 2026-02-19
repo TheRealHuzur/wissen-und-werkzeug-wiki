@@ -4,7 +4,7 @@ aliases:
   - service_design_phase_definieren_define
   - Service Design Phase Definieren (Define)
 parent_topic: prozessmanagement
-subtopic: prozessmanagement
+subtopic: service_design
 type: framework
 intent: gestalten
 status: ki_ready
@@ -51,8 +51,8 @@ Am Ende steht die "Problemdefinition" als gemeinsame Grundlage für die nachfolg
 ## 🔗 Verwandte Module
 
 - **[[Service Design Phase Erkunden]]
-- ***Kontext:* Die vorangehende Phase der Datensammlung.
+	***Kontext:* Die vorangehende Phase der Datensammlung.
 - **[[Service Design Phase Entwickeln]]
-- ***Kontext:* Der nächste Schritt, basierend auf der hier definierten Problemstellung.
+	***Kontext:* Der nächste Schritt, basierend auf der hier definierten Problemstellung.
 - **[[Service Design Grundlagen & Anwendungsbereiche]]
-- ***Kontext:* Einordnung in das Gesamtmodell.
+	***Kontext:* Einordnung in das Gesamtmodell.

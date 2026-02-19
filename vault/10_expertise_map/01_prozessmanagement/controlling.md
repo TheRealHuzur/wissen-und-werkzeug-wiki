@@ -3,9 +3,9 @@ id: controlling
 aliases:
   - controlling
 moc_level: subtopic
-status: aktiv
 parent_topic: prozessmanagement
 subtopic: controlling
+status: aktiv
 summary: Steuerung von Prozessen anhand von Kennzahlen.
 ---
 # Controlling
