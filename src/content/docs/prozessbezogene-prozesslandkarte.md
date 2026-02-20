@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Prozessbezogene Prozesslandkarte\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/prozessbezogene-prozesslandkarte/\",\"description\":\"Methode zur isolierten Darstellung eines Fokus-Prozesses und seiner direkten Abhängigkeiten (Vor-/Nachlagerung, Steuerung, Stützung). Ziel ist die…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/prozessbezogene-prozesslandkarte/#article\",\"headline\":\"Prozessbezogene Prozesslandkarte\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/prozessbezogene-prozesslandkarte/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2025-12-15\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/prozessbezogene-prozesslandkarte/\"},\"description\":\"Methode zur isolierten Darstellung eines Fokus-Prozesses und seiner direkten Abhängigkeiten (Vor-/Nachlagerung, Steuerung, Stützung). Ziel ist die…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/prozessbezogene-prozesslandkarte/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Prozessbezogene Prozesslandkarte\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/prozessbezogene-prozesslandkarte/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -80,3 +80,8 @@ Diese Prozesse besitzen einen „Infrastruktur-Charakter“. Sie bearbeiten kein
 - ***Kontext:* Methodik, um die Prozesse zu benennen, die in der Landkarte verwendet werden.
 - **[20_ip_atoms/Workshop-Methodik für Prozessaufnahme](#)
 - ***Kontext:* Praktische Durchführung zur Erarbeitung dieser Landkarten mit Stakeholdern.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

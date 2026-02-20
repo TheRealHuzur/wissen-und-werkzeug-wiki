@@ -1,5 +1,5 @@
 ---
-title: "Phase Umsetzen (change Management)"
+title: "Phase: Umsetzen (Change Management)"
 description: "Die \"Werkstatt-Phase\" überführt das Soll-Konzept in den Arbeitsalltag. Sie ist die kritischste Phase, da sie tief in Routinen eingreift. Der Fokus liegt auf…"
 slug: "phase-umsetzen-change-management"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Phase Umsetzen (change Management)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/phase-umsetzen-change-management/\",\"description\":\"Die \\\"Werkstatt-Phase\\\" überführt das Soll-Konzept in den Arbeitsalltag. Sie ist die kritischste Phase, da sie tief in Routinen eingreift. Der Fokus liegt auf…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/phase-umsetzen-change-management/#article\",\"headline\":\"Phase: Umsetzen (Change Management)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/phase-umsetzen-change-management/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/phase-umsetzen-change-management/\"},\"description\":\"Die \\\"Werkstatt-Phase\\\" überführt das Soll-Konzept in den Arbeitsalltag. Sie ist die kritischste Phase, da sie tief in Routinen eingreift. Der Fokus liegt auf…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/phase-umsetzen-change-management/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Phase Umsetzen Change Management\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/phase-umsetzen-change-management/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -57,3 +57,8 @@ Die Phase endet nicht mit der technischen Einführung ("Go-Live"), sondern erst 
 - ***Kontext:* Methode zur Identifikation von Betroffenen und Widerständen.
 - **[Phasenmodell der Prozessoptimierung (3-Phasen-Zyklus)](/wiki/phasenmodell-der-prozessoptimierung-3-phasen-zyklus/)
 - ***Kontext:* Das übergeordnete Modell.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

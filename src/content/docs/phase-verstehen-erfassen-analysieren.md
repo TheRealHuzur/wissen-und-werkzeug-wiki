@@ -1,5 +1,5 @@
 ---
-title: "Phase Verstehen (erfassen & Analysieren)"
+title: "Phase: Verstehen (Erfassen & Analysieren)"
 description: "In der \"Labor-Phase\" wird der Ist-Zustand seziert. Es geht um die ungeschönte Aufnahme der Realität. Organisch gewachsene Strukturen werden nachvollzogen, in…"
 slug: "phase-verstehen-erfassen-analysieren"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Phase Verstehen (erfassen & Analysieren)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/phase-verstehen-erfassen-analysieren/\",\"description\":\"In der \\\"Labor-Phase\\\" wird der Ist-Zustand seziert. Es geht um die ungeschönte Aufnahme der Realität. Organisch gewachsene Strukturen werden nachvollzogen, in…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/phase-verstehen-erfassen-analysieren/#article\",\"headline\":\"Phase: Verstehen (Erfassen & Analysieren)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/phase-verstehen-erfassen-analysieren/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/phase-verstehen-erfassen-analysieren/\"},\"description\":\"In der \\\"Labor-Phase\\\" wird der Ist-Zustand seziert. Es geht um die ungeschönte Aufnahme der Realität. Organisch gewachsene Strukturen werden nachvollzogen, in…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/phase-verstehen-erfassen-analysieren/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Phase Verstehen Erfassen Analysieren\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/phase-verstehen-erfassen-analysieren/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -81,3 +81,8 @@ Je nach Komplexität kann die Tiefe der Analyse variieren: Von einer einfachen *
 - ***Kontext:* Ein Werkzeug für die vertiefte Risiko-Analyse in dieser Phase.
 - **[Phasenmodell der Prozessoptimierung (3-Phasen-Zyklus)](/wiki/phasenmodell-der-prozessoptimierung-3-phasen-zyklus/)
 - ***Kontext:* Einordnung der Phase in den Gesamtkontext.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

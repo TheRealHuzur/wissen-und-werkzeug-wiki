@@ -1,5 +1,5 @@
 ---
-title: "Service Design Grundlagen & Anwendungsbereiche"
+title: "Service Design: Grundlagen & Anwendungsbereiche"
 description: "Service Design ist die nutzerzentrierte Gestaltung von Dienstleistungen unter Berücksichtigung aller Touchpoints, Prozesse und Technologien. Es nutzt Methoden…"
 slug: "service-design-grundlagen-anwendungsbereiche"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Service Design Grundlagen & Anwendungsbereiche\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-grundlagen-anwendungsbereiche/\",\"description\":\"Service Design ist die nutzerzentrierte Gestaltung von Dienstleistungen unter Berücksichtigung aller Touchpoints, Prozesse und Technologien. Es nutzt Methoden…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-grundlagen-anwendungsbereiche/#article\",\"headline\":\"Service Design: Grundlagen & Anwendungsbereiche\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-grundlagen-anwendungsbereiche/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-19\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-grundlagen-anwendungsbereiche/\"},\"description\":\"Service Design ist die nutzerzentrierte Gestaltung von Dienstleistungen unter Berücksichtigung aller Touchpoints, Prozesse und Technologien. Es nutzt Methoden…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-grundlagen-anwendungsbereiche/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Service Design Grundlagen Anwendungsbereiche\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-grundlagen-anwendungsbereiche/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -96,3 +96,8 @@ Dennoch ist die Erhebung von Kundenbedürfnissen essenziell, um die *Art und Wei
 - ***Kontext:* Der agile Prozess zur Durchführung von Service Design Projekten.
 - **[prozessmanagement](/wiki/prozessmanagement/)** 
 *Kontext:* Service Design optimiert Prozesse aus Kundensicht und ergänzt das klassische Prozessmanagement.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-19 aktualisiert.

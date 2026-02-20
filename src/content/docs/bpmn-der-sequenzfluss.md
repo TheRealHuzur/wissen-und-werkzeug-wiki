@@ -1,5 +1,5 @@
 ---
-title: "Bpmn Der Sequenzfluss"
+title: "BPMN: Der Sequenzfluss"
 description: "Der Sequenzfluss visualisiert die chronologisch-sachlogische Abfolge eines Prozesses. Er definiert den Pfad und verbindet dabei ausschließlich Elemente…"
 slug: "bpmn-der-sequenzfluss"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bpmn Der Sequenzfluss\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-der-sequenzfluss/\",\"description\":\"Der Sequenzfluss visualisiert die chronologisch-sachlogische Abfolge eines Prozesses. Er definiert den Pfad und verbindet dabei ausschließlich Elemente…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-der-sequenzfluss/#article\",\"headline\":\"BPMN: Der Sequenzfluss\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-der-sequenzfluss/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-der-sequenzfluss/\"},\"description\":\"Der Sequenzfluss visualisiert die chronologisch-sachlogische Abfolge eines Prozesses. Er definiert den Pfad und verbindet dabei ausschließlich Elemente…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-der-sequenzfluss/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Bpmn der Sequenzfluss\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-der-sequenzfluss/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -55,3 +55,8 @@ Um die visuelle Qualität und Verständlichkeit zu erhöhen, sollten folgende Pu
 - **[BPMN Aufgaben und Teilprozesse](/wiki/bpmn-aufgaben-und-teilprozesse/)***Kontext:* Erläutert die Knotenpunkte (Aufgaben), die durch den Sequenzfluss verbunden werden.
 - **[BPMN Pools und Schwimmbahnen](/wiki/bpmn-pools-und-schwimmbahnen/)***Kontext:* Definiert die Container-Grenzen, an denen der Sequenzfluss stoppen muss.
 - **[BPMN Kollaboration & Externe Beteiligte](/wiki/bpmn-kollaboration-externe-beteiligte/)***Kontext:* Erklärt den Nachrichtenfluss, der im Gegensatz zum Sequenzfluss Poolgrenzen überschreiten darf.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

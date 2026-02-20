@@ -1,5 +1,5 @@
 ---
-title: "Service Design Phase Entwickeln"
+title: "Service Design: Phase Entwickeln"
 description: "Die Phase \"Entwickeln\" eröffnet den zweiten Diamanten (Lösungsraum) und fokussiert auf die Generierung einer Vielzahl von Ideen. Durch kreative Methoden…"
 slug: "service-design-phase-entwickeln"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Service Design Phase Entwickeln\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-entwickeln/\",\"description\":\"Die Phase \\\"Entwickeln\\\" eröffnet den zweiten Diamanten (Lösungsraum) und fokussiert auf die Generierung einer Vielzahl von Ideen. Durch kreative Methoden…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-entwickeln/#article\",\"headline\":\"Service Design: Phase Entwickeln\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-entwickeln/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-19\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-entwickeln/\"},\"description\":\"Die Phase \\\"Entwickeln\\\" eröffnet den zweiten Diamanten (Lösungsraum) und fokussiert auf die Generierung einer Vielzahl von Ideen. Durch kreative Methoden…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-entwickeln/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Service Design Phase Entwickeln\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-entwickeln/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -68,8 +68,13 @@ Um das kreative Potenzial zu nutzen, werden verschiedene Techniken eingesetzt:
 ## 🔗 Verwandte Module
 
 - **[Service Design Phase Definieren](/wiki/service-design-phase-definieren-define/)
-- ***Kontext:* Die Basis für die Ideenfindung.
+	***Kontext:* Die Basis für die Ideenfindung.
 - **[Service Design Phase Erstellen](/wiki/service-design-phase-erstellen/)
-- ***Kontext:* Die Selektion und Ausarbeitung der besten Ideen erfolgt im nächsten Schritt.
+	***Kontext:* Die Selektion und Ausarbeitung der besten Ideen erfolgt im nächsten Schritt.
 - **[20_ip_atoms/Workshop-Methodik für Prozessaufnahme](#)** 
-*Kontext:* Verwandte Methoden zur Arbeit in Gruppen.
+	***Kontext:* Verwandte Methoden zur Arbeit in Gruppen.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-19 aktualisiert.

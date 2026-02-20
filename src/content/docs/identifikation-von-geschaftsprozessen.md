@@ -1,5 +1,5 @@
 ---
-title: "Identifikation Von Geschäftsprozessen"
+title: "Identifikation von Geschäftsprozessen"
 description: "Dieses Modul definiert Methoden zur sauberen Identifikation und Abgrenzung von Geschäftsprozessen. Es liefert Benennungsregeln (Objekt + Verb) und eine…"
 slug: "identifikation-von-geschaftsprozessen"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Identifikation Von Geschäftsprozessen\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/identifikation-von-geschaftsprozessen/\",\"description\":\"Dieses Modul definiert Methoden zur sauberen Identifikation und Abgrenzung von Geschäftsprozessen. Es liefert Benennungsregeln (Objekt + Verb) und eine…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/identifikation-von-geschaftsprozessen/#article\",\"headline\":\"Identifikation von Geschäftsprozessen\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/identifikation-von-geschaftsprozessen/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2025-12-15\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/identifikation-von-geschaftsprozessen/\"},\"description\":\"Dieses Modul definiert Methoden zur sauberen Identifikation und Abgrenzung von Geschäftsprozessen. Es liefert Benennungsregeln (Objekt + Verb) und eine…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/identifikation-von-geschaftsprozessen/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Identifikation von Geschaftsprozessen\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/identifikation-von-geschaftsprozessen/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -119,3 +119,8 @@ Bereits während der Identifikation sollten erste Attribute erfasst werden, um e
 - **Technik:** Verwendete Fachverfahren oder IT-Systeme.
 - **Potentiale:** Hinweise auf bekannte Schwachstellen.
 - **Risiken:** Kritische Faktoren im Wissensmanagement (z. B. Kopfmonopole oder fehlende Dokumentation).
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

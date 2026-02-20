@@ -1,5 +1,5 @@
 ---
-title: "Der Kontinuierliche Verbesserungsprozess (kvp)"
+title: "Prinzip Der Kontinuierliche Verbesserungsprozess (KVP)"
 description: "Der KVP beschreibt den zyklischen Charakter des Prozessmanagements. Er stellt sicher, dass Organisationen auf Veränderungen reagieren und Prozesse nicht als…"
 slug: "prinzip-der-kontinuierliche-verbesserungsprozess-kvp"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Der Kontinuierliche Verbesserungsprozess (kvp)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/prinzip-der-kontinuierliche-verbesserungsprozess-kvp/\",\"description\":\"Der KVP beschreibt den zyklischen Charakter des Prozessmanagements. Er stellt sicher, dass Organisationen auf Veränderungen reagieren und Prozesse nicht als…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/prinzip-der-kontinuierliche-verbesserungsprozess-kvp/#article\",\"headline\":\"Prinzip Der Kontinuierliche Verbesserungsprozess (KVP)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/prinzip-der-kontinuierliche-verbesserungsprozess-kvp/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2025-12-15\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/prinzip-der-kontinuierliche-verbesserungsprozess-kvp/\"},\"description\":\"Der KVP beschreibt den zyklischen Charakter des Prozessmanagements. Er stellt sicher, dass Organisationen auf Veränderungen reagieren und Prozesse nicht als…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/prinzip-der-kontinuierliche-verbesserungsprozess-kvp/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Prinzip der Kontinuierliche Verbesserungsprozess Kvp\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/prinzip-der-kontinuierliche-verbesserungsprozess-kvp/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -58,3 +58,8 @@ Dieser Ansatz transformiert die Verwaltung von einer starren Struktur zu einer r
 - *Kontext:* Der KVP ist das treibende Prinzip hinter diesem Modell.
 - **[Prozess-FMEA Methode & Praxisbeispiel](/wiki/prozess-fmea-methode-praxisbeispiel/)** 
 - *Kontext:* Methode zur Risikoanalyse, die oft Impulse für Verbesserungen liefert.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

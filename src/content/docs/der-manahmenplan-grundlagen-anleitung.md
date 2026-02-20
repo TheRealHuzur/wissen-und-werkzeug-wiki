@@ -1,5 +1,5 @@
 ---
-title: "Der Maßnahmenplan Grundlagen & Anleitung"
+title: "Der Maßnahmenplan: Grundlagen & Anleitung"
 description: "Dieses Modul beschreibt die strukturierte Dokumentation von Umsetzungsmaßnahmen zur Realisierung von Soll-Modellen und bietet eine…"
 slug: "der-manahmenplan-grundlagen-anleitung"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Der Maßnahmenplan Grundlagen & Anleitung\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/der-manahmenplan-grundlagen-anleitung/\",\"description\":\"Dieses Modul beschreibt die strukturierte Dokumentation von Umsetzungsmaßnahmen zur Realisierung von Soll-Modellen und bietet eine…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/der-manahmenplan-grundlagen-anleitung/#article\",\"headline\":\"Der Maßnahmenplan: Grundlagen & Anleitung\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/der-manahmenplan-grundlagen-anleitung/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/der-manahmenplan-grundlagen-anleitung/\"},\"description\":\"Dieses Modul beschreibt die strukturierte Dokumentation von Umsetzungsmaßnahmen zur Realisierung von Soll-Modellen und bietet eine…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/der-manahmenplan-grundlagen-anleitung/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Der Manahmenplan Grundlagen Anleitung\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/der-manahmenplan-grundlagen-anleitung/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -82,3 +82,8 @@ Verwenden Sie ein klares Status-System, um die Transparenz zu erhöhen:
 - **[Projekte Planen und Steuern](#)***Kontext:* Bietet den übergeordneten Rahmen für die methodische Steuerung von Maßnahmen.
 - **[controlling](/wiki/controlling/)***Kontext:* Der Maßnahmenplan liefert die notwendigen Daten für die Fortschrittskontrolle.
 - **[Phase Gestalten (Soll-Konzeption)](/wiki/phase-gestalten-soll-konzeption/)***Kontext:* Die hier entwickelten Konzepte bilden die inhaltliche Grundlage für die Maßnahmen.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

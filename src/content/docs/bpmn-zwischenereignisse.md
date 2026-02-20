@@ -1,5 +1,5 @@
 ---
-title: "Bpmn Zwischenereignisse"
+title: "BPMN: Zwischenereignisse"
 description: "Zwischenereignisse treten zwischen Start und Ende eines Prozesses auf. In der fachlichen Modellierung werden sie meist als \"empfangende\" Ereignisse genutzt,…"
 slug: "bpmn-zwischenereignisse"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bpmn Zwischenereignisse\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-zwischenereignisse/\",\"description\":\"Zwischenereignisse treten zwischen Start und Ende eines Prozesses auf. In der fachlichen Modellierung werden sie meist als \\\"empfangende\\\" Ereignisse genutzt,…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-zwischenereignisse/#article\",\"headline\":\"BPMN: Zwischenereignisse\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-zwischenereignisse/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-zwischenereignisse/\"},\"description\":\"Zwischenereignisse treten zwischen Start und Ende eines Prozesses auf. In der fachlichen Modellierung werden sie meist als \\\"empfangende\\\" Ereignisse genutzt,…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-zwischenereignisse/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Bpmn Zwischenereignisse\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-zwischenereignisse/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -70,3 +70,8 @@ Der Prozess pausiert, bis eine bestimmte Bedingung wahr wird (z. B. „Mindestte
 
 - **[BPMN Ereignisse (Grundlagen & Konzept)](/wiki/bpmn-ereignisse-grundlagen-konzept/)***Kontext:* Basisdefinition.
 - **[BPMN Das Ereignisbasierte Gateway](/wiki/bpmn-das-ereignisbasierte-gateway/)***Kontext:* Spezielle Nutzung von Zwischenereignissen zur Pfadentscheidung.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

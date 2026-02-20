@@ -1,5 +1,5 @@
 ---
-title: "Bpmn Kollaboration & Externe Beteiligte"
+title: "BPMN: Kollaboration & Externe Beteiligte"
 description: "Dieses Modul behandelt die Darstellung von externen Prozessbeteiligten in der BPMN (Kollaboration). Es erklärt den Einsatz von Black-Box-Pools, die Nutzung…"
 slug: "bpmn-kollaboration-externe-beteiligte"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bpmn Kollaboration & Externe Beteiligte\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-kollaboration-externe-beteiligte/\",\"description\":\"Dieses Modul behandelt die Darstellung von externen Prozessbeteiligten in der BPMN (Kollaboration). Es erklärt den Einsatz von Black-Box-Pools, die Nutzung…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-kollaboration-externe-beteiligte/#article\",\"headline\":\"BPMN: Kollaboration & Externe Beteiligte\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-kollaboration-externe-beteiligte/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-kollaboration-externe-beteiligte/\"},\"description\":\"Dieses Modul behandelt die Darstellung von externen Prozessbeteiligten in der BPMN (Kollaboration). Es erklärt den Einsatz von Black-Box-Pools, die Nutzung…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-kollaboration-externe-beteiligte/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Bpmn Kollaboration Externe Beteiligte\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-kollaboration-externe-beteiligte/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -57,3 +57,8 @@ Für die Verbindung von Elementen gelten im Kontext von Pools strikte "Immer/Nie
 
 - **[BPMN Pools und Schwimmbahnen](/wiki/bpmn-pools-und-schwimmbahnen/)***Kontext:* Grundlage für das Verständnis von Pools, auf denen die Kollaboration aufbaut.
 - **[Datenobjekte & Informationsfluss](#)***Kontext:* Ergänzend zum Nachrichtenfluss relevant für den Datenaustausch an Schnittstellen.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

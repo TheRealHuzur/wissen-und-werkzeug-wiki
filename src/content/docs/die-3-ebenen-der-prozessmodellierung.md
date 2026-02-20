@@ -1,5 +1,5 @@
 ---
-title: "Die 3 Ebenen Der Prozessmodellierung"
+title: "Die 3 Ebenen der Prozessmodellierung"
 description: "Innerhalb der Top-Down-Methode wird ein Prozess in drei Ebenen zerlegt: Von der abstrakten Prozessdefinition (Ebene 1) über das strategische Teilprozessmodell…"
 slug: "die-3-ebenen-der-prozessmodellierung"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Die 3 Ebenen Der Prozessmodellierung\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/die-3-ebenen-der-prozessmodellierung/\",\"description\":\"Innerhalb der Top-Down-Methode wird ein Prozess in drei Ebenen zerlegt: Von der abstrakten Prozessdefinition (Ebene 1) über das strategische Teilprozessmodell…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/die-3-ebenen-der-prozessmodellierung/#article\",\"headline\":\"Die 3 Ebenen der Prozessmodellierung\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/die-3-ebenen-der-prozessmodellierung/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/die-3-ebenen-der-prozessmodellierung/\"},\"description\":\"Innerhalb der Top-Down-Methode wird ein Prozess in drei Ebenen zerlegt: Von der abstrakten Prozessdefinition (Ebene 1) über das strategische Teilprozessmodell…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/die-3-ebenen-der-prozessmodellierung/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Die 3 Ebenen der Prozessmodellierung\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/die-3-ebenen-der-prozessmodellierung/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -87,3 +87,8 @@ Dies ist der Kern des Prozessmodells und die detaillierteste Stufe.
 - **[BPMN Aufgaben und Teilprozesse](/wiki/bpmn-aufgaben-und-teilprozesse/)***Kontext:* Erklärt die BPMN-Elemente für Ebene 2 und 3.
 - **[Identifikation von Geschäftsprozessen](/wiki/identifikation-von-geschaftsprozessen/)
 - ***Kontext:* Relevant für Ebene 1 (Definition und Abgrenzung).
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

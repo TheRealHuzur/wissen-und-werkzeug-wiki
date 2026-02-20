@@ -12,6 +12,15 @@ const STATUS_READY = 'ki_ready';
 const STATUS_REJECTED = 'verworfen';
 const STATUS_ACTIVE = 'aktiv';
 const STATUS_DRAFT = 'entwurf';
+const AUTHOR_DATA = {
+  name: 'Patrick Roßkothen',
+  expertise: 'Experte für Prozess- und Wissensmanagement',
+  url: 'https://www.wissen-und-werkzeug.de/ueber-mich/',
+  linkedin: 'https://www.linkedin.com/in/patrickrosskothen/',
+  organization: 'Wissen & Werkzeug',
+  organizationUrl: 'https://www.wissen-und-werkzeug.de',
+};
+
 const SITE = 'https://www.wissen-und-werkzeug.de';
 const BASE = '/wiki';
 const BASE_PREFIX = BASE;
@@ -19,12 +28,30 @@ const BASE_PREFIX = BASE;
 const SKIP_DIRS = new Set(['.obsidian', '.trash', '_private']);
 
 function toTitleCase(input) {
+  // German common lowercase words in titles (if not at the start)
+  const GERMAN_LOWERCASE = new Set(['das', 'der', 'die', 'ein', 'eine', 'und', 'in', 'von', 'zu', 'an', 'mit', 'bei', 'fuer', 'für', 'aus', 'am', 'im']);
+
   return input
     .replace(/[_-]+/g, ' ')
     .trim()
     .split(/\s+/)
     .filter(Boolean)
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .map((word, index) => {
+      // Preserve acronyms (all uppercase, length > 1, e.g., BPMN, XOR)
+      // We check if it's all uppercase and contains letters
+      if (word.length > 1 && word === word.toUpperCase() && /[A-Z]/.test(word)) {
+        return word;
+      }
+
+      // Handle common lowercase words in German titles
+      if (index > 0 && GERMAN_LOWERCASE.has(word.toLowerCase())) {
+        return word.toLowerCase();
+      }
+
+      // Default: Capitalize first letter, keep rest as is to preserve existing casing
+      // (This avoids forcing lowercase on things like "XOR" if they were partially correctly cased)
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
     .join(' ');
 }
 
@@ -246,6 +273,39 @@ function sanitizeDescription(input) {
   const boundary = sliced.lastIndexOf(' ');
   const compact = (boundary > 80 ? sliced.slice(0, boundary) : sliced).trim();
   return `${compact}\u2026`;
+}
+
+function formatDate(date) {
+  if (!date) return '';
+  const d = new Date(date);
+  if (isNaN(d.getTime())) return '';
+  return d.toISOString().split('T')[0];
+}
+
+function buildBreadcrumbs(slug) {
+  const parts = slug.split('-').filter(Boolean);
+  const breadcrumbs = [
+    { name: 'Wiki', item: `${SITE}${BASE}/` }
+  ];
+
+  let currentSlug = '';
+  for (let i = 0; i < parts.length - 1; i++) {
+    currentSlug += (currentSlug ? '-' : '') + parts[i];
+    // This is a naive implementation; in a real scenario, we might want to check if the intermediate slug exists.
+    // However, for this wiki structure, it's often a flat or loosely hierarchical slug.
+  }
+
+  breadcrumbs.push({
+    name: toTitleCase(slug.replace(/-/g, ' ')),
+    item: `${SITE}${BASE}/${slug}/`
+  });
+
+  return breadcrumbs.map((b, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: b.name,
+    item: b.item
+  }));
 }
 
 function toBool(value) {
@@ -592,7 +652,13 @@ async function main() {
     const aliases = Array.isArray(frontmatter.aliases)
       ? frontmatter.aliases.map((value) => String(value).trim()).filter(Boolean)
       : [];
-    const title = frontmatter.title ? String(frontmatter.title) : toTitleCase(sourceName);
+
+    const fileStats = await fs.stat(file);
+    const datePublished = formatDate(frontmatter.created || fileStats.birthtime);
+    const dateModified = formatDate(frontmatter.updated || fileStats.mtime);
+
+    const h1 = extractFirstH1(body);
+    const title = frontmatter.title ? String(frontmatter.title) : (h1 || toTitleCase(sourceName));
     candidates.push({
       file,
       id: rawId || sourceName,
@@ -603,6 +669,8 @@ async function main() {
       title,
       frontmatter,
       body,
+      datePublished,
+      dateModified,
     });
   }
 
@@ -660,6 +728,7 @@ async function main() {
   }
 
   for (const candidate of candidates) {
+    const isMoc = candidate.file.replace(/\\/g, '/').includes('/10_expertise_map/');
     let body = candidate.body;
 
     // Strip .base embeds: ![[...base]] or ![[...base|alias]]
@@ -758,7 +827,6 @@ async function main() {
     });
 
     // Append related modules list for MOCs
-    const isMoc = candidate.file.replace(/\\/g, '/').includes('/10_expertise_map/');
     if (isMoc) {
       const mocLevel = normalizeLookupKey(String(candidate.frontmatter.moc_level ?? ''));
       const id = candidate.id;
@@ -820,14 +888,60 @@ async function main() {
     const sidebarHidden = toBool(sourceHidden);
 
     const canonicalHref = `${SITE}${buildRoute(candidate.slug)}`;
+
+    // Expanded JSON-LD
     const jsonLd = {
       '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline: candidate.title,
-      url: canonicalHref,
+      '@graph': [
+        {
+          '@type': 'Article',
+          '@id': `${canonicalHref}#article`,
+          headline: candidate.title,
+          url: canonicalHref,
+          author: {
+            '@type': 'Person',
+            name: AUTHOR_DATA.name,
+            url: AUTHOR_DATA.url,
+            sameAs: [AUTHOR_DATA.linkedin],
+            jobTitle: AUTHOR_DATA.expertise
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: AUTHOR_DATA.organization,
+            url: AUTHOR_DATA.organizationUrl,
+            logo: {
+              '@type': 'ImageObject',
+              url: `${SITE}/favicon.svg`
+            }
+          },
+          datePublished: candidate.datePublished,
+          dateModified: candidate.dateModified,
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': canonicalHref
+          }
+        },
+        {
+          '@type': 'BreadcrumbList',
+          '@id': `${canonicalHref}#breadcrumb`,
+          itemListElement: buildBreadcrumbs(candidate.slug)
+        }
+      ]
     };
+
     if (description) {
-      jsonLd.description = description;
+      jsonLd['@graph'][0].description = description;
+    }
+
+    // Add DefinedTerm logic for MOCs or definitions
+    if (isMoc || candidate.title.toLowerCase().includes('definition')) {
+      jsonLd['@graph'].push({
+        '@type': 'DefinedTerm',
+        '@id': `${canonicalHref}#term`,
+        name: candidate.title,
+        description: description,
+        inDefinedTermSet: `${SITE}${BASE}/`
+      });
     }
 
     const ragContext = extractRagContext(candidate.body);
@@ -886,8 +1000,17 @@ async function main() {
     // Remove the first H1 from the body (it's already in the frontmatter as 'title' and rendered by Starlight)
     bodyWithoutRag = bodyWithoutRag.replace(/^#\s+.+\r?\n?/, '').trim();
 
+    // Append Author & Date section
+    const authorSection = `
+
+---
+
+### Über den Autor
+**[${AUTHOR_DATA.name}](${AUTHOR_DATA.url})** ist ${AUTHOR_DATA.expertise}. Dieses Modul wurde zuletzt am ${candidate.dateModified} aktualisiert.
+`;
+
     frontmatterLines.push('---');
-    const output = `${frontmatterLines.join('\n')}\n\n${bodyWithoutRag}`;
+    const output = `${frontmatterLines.join('\n')}\n\n${bodyWithoutRag}${authorSection}`;
     const outputFile = path.join(OUT_DOCS_DIR, `${candidate.slug}.md`);
     await fs.writeFile(outputFile, output, 'utf8');
     exportedFiles += 1;

@@ -1,5 +1,5 @@
 ---
-title: "Projekte Planen Und Steuern"
+title: "Projekte planen und steuern"
 description: "Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement."
 slug: "projekte-planen-und-steuern"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Projekte Planen Und Steuern\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/projekte-planen-und-steuern/\",\"description\":\"Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/projekte-planen-und-steuern/#article\",\"headline\":\"Projekte planen und steuern\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/projekte-planen-und-steuern/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-17\",\"dateModified\":\"2026-02-19\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/projekte-planen-und-steuern/\"},\"description\":\"Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/projekte-planen-und-steuern/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Projekte Planen und Steuern\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/projekte-planen-und-steuern/\"}]},{\"@type\":\"DefinedTerm\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/projekte-planen-und-steuern/#term\",\"name\":\"Projekte planen und steuern\",\"description\":\"Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.\",\"inDefinedTermSet\":\"https://www.wissen-und-werkzeug.de/wiki/\"}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -26,4 +26,9 @@ Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des 
 
 ## Zugehörige Module
 
-- [Die Smart Regel](/wiki/die-smart-regel/)
+- [Die SMART-Regel](/wiki/die-smart-regel/)
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-19 aktualisiert.

@@ -1,5 +1,5 @@
 ---
-title: "Definition Der Kunde (verwaltung)"
+title: "Definition: Der Kunde (Verwaltung)"
 description: "Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in…"
 slug: "definition-der-kunde-verwaltung"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Definition Der Kunde (verwaltung)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/definition-der-kunde-verwaltung/\",\"description\":\"Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/definition-der-kunde-verwaltung/#article\",\"headline\":\"Definition: Der Kunde (Verwaltung)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/definition-der-kunde-verwaltung/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/definition-der-kunde-verwaltung/\"},\"description\":\"Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/definition-der-kunde-verwaltung/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Definition der Kunde Verwaltung\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/definition-der-kunde-verwaltung/\"}]},{\"@type\":\"DefinedTerm\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/definition-der-kunde-verwaltung/#term\",\"name\":\"Definition: Der Kunde (Verwaltung)\",\"description\":\"Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in…\",\"inDefinedTermSet\":\"https://www.wissen-und-werkzeug.de/wiki/\"}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -104,3 +104,8 @@ Eine Übersichtsgrafik, die die Verwaltung als zentralen Akteur in einem Netzwer
 - **[Definition Geschäftsprozess (Verwaltung)](/wiki/definition-geschaftsprozess-verwaltung/)***Kontext:* Vertieft das Verständnis, wie der hier definierte Kundenbezug ("Endkunde") genutzt wird, um den Gesamtprozess vom Teilprozess abzugrenzen.
 - **[Identifikation von Geschäftsprozessen](/wiki/identifikation-von-geschaftsprozessen/)
 - ***Kontext:* Nutzt den Kundenbegriff als methodisches Werkzeug, um in Workshops konkrete Prozesse zu benennen und aufzulisten.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

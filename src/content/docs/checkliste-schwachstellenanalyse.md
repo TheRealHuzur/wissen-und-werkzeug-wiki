@@ -1,5 +1,5 @@
 ---
-title: "Checkliste Schwachstellenanalyse"
+title: "Checkliste: Schwachstellenanalyse"
 description: "Eine strukturierte Checkliste zur Identifikation von Prozess-Schwachstellen in den Kategorien Technik, Mensch, Daten, Struktur, Ergebnis und Steuerung. Sie…"
 slug: "checkliste-schwachstellenanalyse"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Checkliste Schwachstellenanalyse\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/checkliste-schwachstellenanalyse/\",\"description\":\"Eine strukturierte Checkliste zur Identifikation von Prozess-Schwachstellen in den Kategorien Technik, Mensch, Daten, Struktur, Ergebnis und Steuerung. Sie…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/checkliste-schwachstellenanalyse/#article\",\"headline\":\"Checkliste: Schwachstellenanalyse\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/checkliste-schwachstellenanalyse/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/checkliste-schwachstellenanalyse/\"},\"description\":\"Eine strukturierte Checkliste zur Identifikation von Prozess-Schwachstellen in den Kategorien Technik, Mensch, Daten, Struktur, Ergebnis und Steuerung. Sie…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/checkliste-schwachstellenanalyse/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Checkliste Schwachstellenanalyse\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/checkliste-schwachstellenanalyse/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -142,3 +142,8 @@ Diese dritte Option ist entscheidend, um Wissenslücken sichtbar zu machen und g
     - *Kontext:* Hilft bei der Abgrenzung, welche Prozesse überhaupt der Analyse unterzogen werden.
 - **[prozessmanagement](/wiki/prozessmanagement/)**
     - *Kontext:* Das übergeordnete Thema dieses Werkzeugs.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

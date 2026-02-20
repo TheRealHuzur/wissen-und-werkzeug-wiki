@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Gemba Walk\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/gemba-walk/\",\"description\":\"Dieses Modul führt in das Konzept des Gemba Walks ein: Die Praxis des Managements, den Ort der tatsächlichen Wertschöpfung aufzusuchen, um Prozesse direkt zu…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/gemba-walk/#article\",\"headline\":\"Gemba Walk\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/gemba-walk/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-17\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/gemba-walk/\"},\"description\":\"Dieses Modul führt in das Konzept des Gemba Walks ein: Die Praxis des Managements, den Ort der tatsächlichen Wertschöpfung aufzusuchen, um Prozesse direkt zu…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/gemba-walk/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Gemba Walk\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/gemba-walk/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -64,3 +64,8 @@ Der wichtigste Teil folgt bei der Auslieferung: Wer im Januar selbst auf dem Mot
   *Kontext:* Die Beobachtungen aus Gemba Walks liefern die notwendigen Impulse für den fortlaufenden KVP-Zyklus.
 - **[prozessmanagement](/wiki/prozessmanagement/)**  
   *Kontext:* Das übergeordnete Themen-MOC zur Einordnung aller Optimierungsmethoden.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

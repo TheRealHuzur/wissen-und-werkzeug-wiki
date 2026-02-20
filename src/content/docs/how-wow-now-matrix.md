@@ -1,5 +1,5 @@
 ---
-title: "How Wow Now Matrix"
+title: "HOW-WOW-NOW Matrix"
 description: "Die HOW-WOW-NOW Matrix ist ein Priorisierungs-Werkzeug, das Ideen nach ihrer Machbarkeit und ihrem Innovationsgrad clustert, um die nächsten Schritte der…"
 slug: "how-wow-now-matrix"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"How Wow Now Matrix\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/how-wow-now-matrix/\",\"description\":\"Die HOW-WOW-NOW Matrix ist ein Priorisierungs-Werkzeug, das Ideen nach ihrer Machbarkeit und ihrem Innovationsgrad clustert, um die nächsten Schritte der…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/how-wow-now-matrix/#article\",\"headline\":\"HOW-WOW-NOW Matrix\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/how-wow-now-matrix/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/how-wow-now-matrix/\"},\"description\":\"Die HOW-WOW-NOW Matrix ist ein Priorisierungs-Werkzeug, das Ideen nach ihrer Machbarkeit und ihrem Innovationsgrad clustert, um die nächsten Schritte der…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/how-wow-now-matrix/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"How Wow Now Matrix\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/how-wow-now-matrix/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -77,3 +77,8 @@ Innerhalb des Double Diamond wird die Matrix am Ende der Phase „Entwickeln“ 
 - ***Kontext:* Der methodische Rahmen, in dem das Werkzeug angewendet wird.
 - **[Service Design Phase Erstellen](/wiki/service-design-phase-erstellen/)
 - ***Kontext:* Die Zielphase für Ideen, die im WOW-Bereich gelandet sind.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

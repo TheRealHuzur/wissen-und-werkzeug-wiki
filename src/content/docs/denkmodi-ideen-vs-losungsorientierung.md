@@ -1,5 +1,5 @@
 ---
-title: "Denkmodi Ideen Vs Lösungsorientierung"
+title: "Denkmodi Ideen- vs Lösungsorientierung"
 description: "Dieses Modul beschreibt die methodische Trennung zwischen explorativem, öffnendem Denken und konvergierendem, entscheidungsfokussiertem Denken zur Steigerung…"
 slug: "denkmodi-ideen-vs-losungsorientierung"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Denkmodi Ideen Vs Lösungsorientierung\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/denkmodi-ideen-vs-losungsorientierung/\",\"description\":\"Dieses Modul beschreibt die methodische Trennung zwischen explorativem, öffnendem Denken und konvergierendem, entscheidungsfokussiertem Denken zur Steigerung…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/denkmodi-ideen-vs-losungsorientierung/#article\",\"headline\":\"Denkmodi Ideen- vs Lösungsorientierung\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/denkmodi-ideen-vs-losungsorientierung/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2025-12-15\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/denkmodi-ideen-vs-losungsorientierung/\"},\"description\":\"Dieses Modul beschreibt die methodische Trennung zwischen explorativem, öffnendem Denken und konvergierendem, entscheidungsfokussiertem Denken zur Steigerung…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/denkmodi-ideen-vs-losungsorientierung/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Denkmodi Ideen Vs Losungsorientierung\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/denkmodi-ideen-vs-losungsorientierung/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -69,3 +69,8 @@ Erst die strikte Abfolge aus **Ideen öffnen** und **Lösungen verdichten** füh
 - *Kontext:* Die Definition der Problemstellung bildet die Leitplanken für das ideenorientierte Denken.
  **[Theorie der kognitiven Last](#)** 
 - *Kontext:* Erklärt, warum die gleichzeitige Anwendung beider Modi das Gehirn überfordert und eine zeitliche Trennung notwendig macht.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

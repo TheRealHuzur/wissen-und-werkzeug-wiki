@@ -1,5 +1,5 @@
 ---
-title: "Definition Geschäftsprozess (verwaltung)"
+title: "Definition: Geschäftsprozess (Verwaltung)"
 description: "Dieses Modul definiert den Begriff des Geschäftsprozesses speziell für den Verwaltungskontext. Es klärt die zentralen Strukturmerkmale wie Kundenbezug,…"
 slug: "definition-geschaftsprozess-verwaltung"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Definition Geschäftsprozess (verwaltung)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/definition-geschaftsprozess-verwaltung/\",\"description\":\"Dieses Modul definiert den Begriff des Geschäftsprozesses speziell für den Verwaltungskontext. Es klärt die zentralen Strukturmerkmale wie Kundenbezug,…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/definition-geschaftsprozess-verwaltung/#article\",\"headline\":\"Definition: Geschäftsprozess (Verwaltung)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/definition-geschaftsprozess-verwaltung/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/definition-geschaftsprozess-verwaltung/\"},\"description\":\"Dieses Modul definiert den Begriff des Geschäftsprozesses speziell für den Verwaltungskontext. Es klärt die zentralen Strukturmerkmale wie Kundenbezug,…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/definition-geschaftsprozess-verwaltung/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Definition Geschaftsprozess Verwaltung\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/definition-geschaftsprozess-verwaltung/\"}]},{\"@type\":\"DefinedTerm\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/definition-geschaftsprozess-verwaltung/#term\",\"name\":\"Definition: Geschäftsprozess (Verwaltung)\",\"description\":\"Dieses Modul definiert den Begriff des Geschäftsprozesses speziell für den Verwaltungskontext. Es klärt die zentralen Strukturmerkmale wie Kundenbezug,…\",\"inDefinedTermSet\":\"https://www.wissen-und-werkzeug.de/wiki/\"}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -83,3 +83,8 @@ Denken in Prozessen bedeutet demnach, nicht in funktionalen Zuständigkeiten zu 
 - ***Kontext:* Bietet Methoden, um basierend auf dieser Definition konkrete Prozesse in der Organisation zu finden.
 - **[20_ip_atoms/Konzept zur Einführung von Prozessmanagement](#)***Kontext:* Einordnung der Definition in den größeren Rahmen der organisationalen Einführung.
 - **[BPMN Aufgaben und Teilprozesse](/wiki/bpmn-aufgaben-und-teilprozesse/)***Kontext:* Zeigt, wie die hier definierten Aktivitäten in der Standardnotation BPMN grafisch dargestellt werden.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

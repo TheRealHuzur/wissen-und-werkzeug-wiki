@@ -1,5 +1,5 @@
 ---
-title: "Prozess Fmea Methode & Praxisbeispiel"
+title: "Prozess-FMEA: Methode & Praxisbeispiel"
 description: "Die Prozess-FMEA (Fehlermöglichkeits- und Einflussanalyse) ist eine präventive Methode zur systematischen Identifikation und Bewertung von Schwachsstellen in…"
 slug: "prozess-fmea-methode-praxisbeispiel"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Prozess Fmea Methode & Praxisbeispiel\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/prozess-fmea-methode-praxisbeispiel/\",\"description\":\"Die Prozess-FMEA (Fehlermöglichkeits- und Einflussanalyse) ist eine präventive Methode zur systematischen Identifikation und Bewertung von Schwachsstellen in…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/prozess-fmea-methode-praxisbeispiel/#article\",\"headline\":\"Prozess-FMEA: Methode & Praxisbeispiel\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/prozess-fmea-methode-praxisbeispiel/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/prozess-fmea-methode-praxisbeispiel/\"},\"description\":\"Die Prozess-FMEA (Fehlermöglichkeits- und Einflussanalyse) ist eine präventive Methode zur systematischen Identifikation und Bewertung von Schwachsstellen in…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/prozess-fmea-methode-praxisbeispiel/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Prozess Fmea Methode Praxisbeispiel\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/prozess-fmea-methode-praxisbeispiel/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -99,3 +99,8 @@ Anhand des Prozesses "Organisation einer Fortbildung" lassen sich typische Schwa
 - ***Kontext:* Die FMEA ist ein zentrales Werkzeug im Qualitäts- und Prozessmanagement zur Sicherung stabiler Abläufe.
 - **[BPMN Aufgaben und Teilprozesse](/wiki/bpmn-aufgaben-und-teilprozesse/)
 - ***Kontext:* Um eine FMEA durchzuführen (Strukturanalyse), muss der Prozess oft zuerst sauber modelliert (z. B. in BPMN) und in Teilschritte zerlegt werden.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

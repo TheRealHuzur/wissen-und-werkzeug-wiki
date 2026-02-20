@@ -1,5 +1,5 @@
 ---
-title: "Bpmn Das Ereignisbasierte Gateway"
+title: "BPMN: Das Ereignisbasierte Gateway"
 description: "Das ereignisbasierte Gateway steuert den Prozessverlauf nicht über Datenentscheidungen, sondern über externe Ereignisse. Der Pfad des Ereignisses, das zuerst…"
 slug: "bpmn-das-ereignisbasierte-gateway"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bpmn Das Ereignisbasierte Gateway\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-das-ereignisbasierte-gateway/\",\"description\":\"Das ereignisbasierte Gateway steuert den Prozessverlauf nicht über Datenentscheidungen, sondern über externe Ereignisse. Der Pfad des Ereignisses, das zuerst…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-das-ereignisbasierte-gateway/#article\",\"headline\":\"BPMN: Das Ereignisbasierte Gateway\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-das-ereignisbasierte-gateway/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2025-12-15\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-das-ereignisbasierte-gateway/\"},\"description\":\"Das ereignisbasierte Gateway steuert den Prozessverlauf nicht über Datenentscheidungen, sondern über externe Ereignisse. Der Pfad des Ereignisses, das zuerst…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-das-ereignisbasierte-gateway/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Bpmn das Ereignisbasierte Gateway\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-das-ereignisbasierte-gateway/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -46,3 +46,8 @@ Tritt der Timer zuerst ein, wird der Mahnprozess gestartet. Geht das Geld zuerst
 ## Zusammenführung
 
 Da nur ein Pfad gewählt wird, erfolgt die Zusammenführung nach denselben Regeln wie bei einem **exklusiven Gateway**. Es wird daher für die Zusammenführung das Standard-XOR-Symbol (X) verwendet.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

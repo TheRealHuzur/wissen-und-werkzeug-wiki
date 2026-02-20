@@ -1,5 +1,5 @@
 ---
-title: "Bpmn Das Parallele Gateway (and)"
+title: "BPMN: Das Parallele Gateway (AND)"
 description: "Das parallele Gateway (AND) steuert die gleichzeitige oder reihenfolgeunabhängige Ausführung aller ausgehenden Pfade. Gekennzeichnet durch das + Symbol,…"
 slug: "bpmn-das-parallele-gateway-and"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bpmn Das Parallele Gateway (and)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-das-parallele-gateway-and/\",\"description\":\"Das parallele Gateway (AND) steuert die gleichzeitige oder reihenfolgeunabhängige Ausführung aller ausgehenden Pfade. Gekennzeichnet durch das + Symbol,…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-das-parallele-gateway-and/#article\",\"headline\":\"BPMN: Das Parallele Gateway (AND)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-das-parallele-gateway-and/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2025-12-15\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-das-parallele-gateway-and/\"},\"description\":\"Das parallele Gateway (AND) steuert die gleichzeitige oder reihenfolgeunabhängige Ausführung aller ausgehenden Pfade. Gekennzeichnet durch das + Symbol,…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-das-parallele-gateway-and/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Bpmn das Parallele Gateway And\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-das-parallele-gateway-and/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -40,3 +40,8 @@ Es deckt zwei logische Szenarien ab:
 Die parallele Zusammenführung fungiert als Synchronisationspunkt. Der Prozess kann an dieser Stelle erst fortfahren, wenn **alle** eingehenden Pfade abgearbeitet wurden und am Gateway eingetroffen sind.
 
 - **Zeitverhalten:** Der Pfad, der am längsten dauert, bestimmt den Zeitpunkt, wann der Prozess nach dem Gateway weiterläuft.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

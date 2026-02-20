@@ -1,5 +1,5 @@
 ---
-title: "Bpmn Datenobjekte & Informationsfluss"
+title: "BPMN: Datenobjekte & Informationsfluss"
 description: "Datenobjekte und Datenspeicher visualisieren den Informationsfluss innerhalb eines Prozesses, indem sie Transportmedien (z. B. Dokumente) und persistente…"
 slug: "bpmn-datenobjekte-informationsfluss"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bpmn Datenobjekte & Informationsfluss\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-datenobjekte-informationsfluss/\",\"description\":\"Datenobjekte und Datenspeicher visualisieren den Informationsfluss innerhalb eines Prozesses, indem sie Transportmedien (z. B. Dokumente) und persistente…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-datenobjekte-informationsfluss/#article\",\"headline\":\"BPMN: Datenobjekte & Informationsfluss\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-datenobjekte-informationsfluss/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2025-12-15\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-datenobjekte-informationsfluss/\"},\"description\":\"Datenobjekte und Datenspeicher visualisieren den Informationsfluss innerhalb eines Prozesses, indem sie Transportmedien (z. B. Dokumente) und persistente…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-datenobjekte-informationsfluss/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Bpmn Datenobjekte Informationsfluss\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-datenobjekte-informationsfluss/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -51,3 +51,8 @@ Datenobjekte machen sichtbar, welche Informationen ein Prozess benötigt oder er
 ## Grenzen der Darstellung
 
 Datenobjekte und Assoziationen visualisieren den Informationsfluss ausschließlich **innerhalb** eines Pools (eines einzigen Prozesses). Sobald Informationen über Prozessgrenzen hinweg (zwischen verschiedenen Pools/Teilnehmern) ausgetauscht werden, muss zwingend der **Nachrichtenfluss** (gestrichelte Linie) verwendet werden.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

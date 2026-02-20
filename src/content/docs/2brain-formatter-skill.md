@@ -1,5 +1,5 @@
 ---
-title: "Second Brain Formatter Skill"
+title: "2Brain-Formatter Skill"
 description: "Dieses Modul beschreibt den 2Brain-Formatter Skill, ein KI-gestütztes Werkzeug zur Standardisierung von Wissensmodulen (IP-Atomen). Es dokumentiert den…"
 slug: "2brain-formatter-skill"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Second Brain Formatter Skill\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/2brain-formatter-skill/\",\"description\":\"Dieses Modul beschreibt den 2Brain-Formatter Skill, ein KI-gestütztes Werkzeug zur Standardisierung von Wissensmodulen (IP-Atomen). Es dokumentiert den…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/2brain-formatter-skill/#article\",\"headline\":\"2Brain-Formatter Skill\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/2brain-formatter-skill/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-17\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/2brain-formatter-skill/\"},\"description\":\"Dieses Modul beschreibt den 2Brain-Formatter Skill, ein KI-gestütztes Werkzeug zur Standardisierung von Wissensmodulen (IP-Atomen). Es dokumentiert den…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/2brain-formatter-skill/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"2brain Formatter Skill\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/2brain-formatter-skill/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -63,3 +63,8 @@ Durch die konsequente Anwendung des Formatters wird das Second Brain von einer r
 
 - **[system_architektur](/wiki/system-architektur/)**  
   *Kontext:* Die übergeordnete Einordnung des Skills in die technische Infrastruktur des Wissensmanagement-Systems.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

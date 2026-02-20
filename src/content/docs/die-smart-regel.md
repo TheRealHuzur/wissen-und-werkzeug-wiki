@@ -1,5 +1,5 @@
 ---
-title: "Die Smart Regel"
+title: "Die SMART-Regel"
 description: "Thema-Kontext: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement."
 slug: "die-smart-regel"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Die Smart Regel\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/die-smart-regel/\",\"description\":\"Thema-Kontext: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/die-smart-regel/#article\",\"headline\":\"Die SMART-Regel\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/die-smart-regel/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/die-smart-regel/\"},\"description\":\"Thema-Kontext: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/die-smart-regel/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Die Smart Regel\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/die-smart-regel/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -60,3 +60,8 @@ Ein konkreter Zeitrahmen oder ein Enddatum muss definiert sein. Ohne Terminierun
 - ***Kontext:* Erläutert die übergeordneten Vorteile (Klarheit, Fokus), die durch die Anwendung der SMART-Regel erreicht werden sollen.
 - **[20_ip_atoms/Kompetenzprofil ProzessmanagerIn](#)
 - ***Kontext*: Die Fähigkeit, Ziele (z.B. für Prozessoptimierungen) SMART zu formulieren, ist eine Kernkompetenz im Prozessmanagement.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

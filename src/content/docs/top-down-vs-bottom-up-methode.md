@@ -1,5 +1,5 @@
 ---
-title: "Top Down Vs Bottom Up Methode"
+title: "Top-Down vs. Bottom-Up Methode"
 description: "Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die \"Top-Down-Methode\" (vom Groben ins Feine) und die \"Bottom-Up-Methode\" (vom Feinen ins…"
 slug: "top-down-vs-bottom-up-methode"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Top Down Vs Bottom Up Methode\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/top-down-vs-bottom-up-methode/\",\"description\":\"Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die \\\"Top-Down-Methode\\\" (vom Groben ins Feine) und die \\\"Bottom-Up-Methode\\\" (vom Feinen ins…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/top-down-vs-bottom-up-methode/#article\",\"headline\":\"Top-Down vs. Bottom-Up Methode\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/top-down-vs-bottom-up-methode/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2025-12-15\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/top-down-vs-bottom-up-methode/\"},\"description\":\"Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die \\\"Top-Down-Methode\\\" (vom Groben ins Feine) und die \\\"Bottom-Up-Methode\\\" (vom Feinen ins…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/top-down-vs-bottom-up-methode/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Top Down Vs Bottom Up Methode\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/top-down-vs-bottom-up-methode/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -58,3 +58,8 @@ Dieser Ansatz arbeitet "vom Feinen ins Grobe". Man sammelt zunächst detailliert
 - *Kontext:* Übergeordnetes Fachgebiet.
 - **[20_ip_atoms/Workshop-Methodik für Prozessaufnahme](#)** 
 - *Kontext:* Praktische Anwendung der Methoden im Workshop.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

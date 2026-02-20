@@ -1,5 +1,5 @@
 ---
-title: "Service Design Phase Definieren"
+title: "Service Design: Phase Definieren (Define)"
 description: "In der Phase \"Definieren\" werden die gesammelten Erkenntnisse analysiert, gefiltert und in eine klare Problemstellung überführt. Es ist eine konvergierende…"
 slug: "service-design-phase-definieren-define"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Service Design Phase Definieren\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-definieren-define/\",\"description\":\"In der Phase \\\"Definieren\\\" werden die gesammelten Erkenntnisse analysiert, gefiltert und in eine klare Problemstellung überführt. Es ist eine konvergierende…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-definieren-define/#article\",\"headline\":\"Service Design: Phase Definieren (Define)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-definieren-define/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-19\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-definieren-define/\"},\"description\":\"In der Phase \\\"Definieren\\\" werden die gesammelten Erkenntnisse analysiert, gefiltert und in eine klare Problemstellung überführt. Es ist eine konvergierende…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-definieren-define/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Service Design Phase Definieren Define\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/service-design-phase-definieren-define/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -51,8 +51,13 @@ Am Ende steht die "Problemdefinition" als gemeinsame Grundlage für die nachfolg
 ## 🔗 Verwandte Module
 
 - **[Service Design Phase Erkunden](/wiki/service-design-phase-erkunden/)
-- ***Kontext:* Die vorangehende Phase der Datensammlung.
+	***Kontext:* Die vorangehende Phase der Datensammlung.
 - **[Service Design Phase Entwickeln](/wiki/service-design-phase-entwickeln/)
-- ***Kontext:* Der nächste Schritt, basierend auf der hier definierten Problemstellung.
+	***Kontext:* Der nächste Schritt, basierend auf der hier definierten Problemstellung.
 - **[Service Design Grundlagen & Anwendungsbereiche](/wiki/service-design-grundlagen-anwendungsbereiche/)
-- ***Kontext:* Einordnung in das Gesamtmodell.
+	***Kontext:* Einordnung in das Gesamtmodell.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-19 aktualisiert.

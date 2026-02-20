@@ -1,5 +1,5 @@
 ---
-title: "Prozesse Priorisieren"
+title: "Prozesse priorisieren"
 description: "Da Ressourcen begrenzt sind, können nicht alle Prozesse gleichzeitig optimiert werden. Dieses Modul beschreibt Kriterien und Vorgehensweisen, um Prozesse…"
 slug: "prozesse-priorisieren"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Prozesse Priorisieren\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/prozesse-priorisieren/\",\"description\":\"Da Ressourcen begrenzt sind, können nicht alle Prozesse gleichzeitig optimiert werden. Dieses Modul beschreibt Kriterien und Vorgehensweisen, um Prozesse…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/prozesse-priorisieren/#article\",\"headline\":\"Prozesse priorisieren\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/prozesse-priorisieren/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/prozesse-priorisieren/\"},\"description\":\"Da Ressourcen begrenzt sind, können nicht alle Prozesse gleichzeitig optimiert werden. Dieses Modul beschreibt Kriterien und Vorgehensweisen, um Prozesse…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/prozesse-priorisieren/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Prozesse Priorisieren\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/prozesse-priorisieren/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -79,3 +79,8 @@ Neben den operativen Schmerzen ("Pain Points") ist die strategische Relevanz ein
 - ***Kontext:* Die Priorisierung baut oft auf den Ergebnissen der Identifikationsphase auf.
 - **[BPMN Aufgaben und Teilprozesse](/wiki/bpmn-aufgaben-und-teilprozesse/)
 - ***Kontext:* Verständnis der Granularität ist wichtig für die Bewertung.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.

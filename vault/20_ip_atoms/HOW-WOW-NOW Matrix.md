@@ -4,8 +4,8 @@ aliases:
   - how_wow_now_matrix
   - HOW-WOW-NOW Matrix
 parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: grundlagen
+subtopic: service_design
+type: vorlage
 intent: gestalten
 status: ki_ready
 created: 2026-02-16

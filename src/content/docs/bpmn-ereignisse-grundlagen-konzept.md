@@ -1,5 +1,5 @@
 ---
-title: "Bpmn Ereignisse (grundlagen & Konzept)"
+title: "BPMN: Ereignisse (Grundlagen & Konzept)"
 description: "Ereignisse sind zentrale Elemente der BPMN, die den Prozessfluss steuern, indem sie den Start, Zwischenschritte oder das Ende eines Prozesses definieren. Sie…"
 slug: "bpmn-ereignisse-grundlagen-konzept"
 head:
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bpmn Ereignisse (grundlagen & Konzept)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-ereignisse-grundlagen-konzept/\",\"description\":\"Ereignisse sind zentrale Elemente der BPMN, die den Prozessfluss steuern, indem sie den Start, Zwischenschritte oder das Ende eines Prozesses definieren. Sie…\"}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-ereignisse-grundlagen-konzept/#article\",\"headline\":\"BPMN: Ereignisse (Grundlagen & Konzept)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-ereignisse-grundlagen-konzept/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-ereignisse-grundlagen-konzept/\"},\"description\":\"Ereignisse sind zentrale Elemente der BPMN, die den Prozessfluss steuern, indem sie den Start, Zwischenschritte oder das Ende eines Prozesses definieren. Sie…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-ereignisse-grundlagen-konzept/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Bpmn Ereignisse Grundlagen Konzept\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-ereignisse-grundlagen-konzept/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -75,3 +75,8 @@ Zusätzlich zum Rand können Ereignisse durch Symbole im Inneren genauer bestimm
 - **[BPMN Zwischenereignisse](/wiki/bpmn-zwischenereignisse/)***Kontext:* Vertiefung der Ereignisse innerhalb des Flusses.
 - **[BPMN Endereignisse](/wiki/bpmn-endereignisse/)***Kontext:* Vertiefung des Prozessabschlusses.
 - **[BPMN Der Sequenzfluss](/wiki/bpmn-der-sequenzfluss/)***Kontext:* Verbindung der Ereignisse untereinander.
+
+---
+
+### Über den Autor
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.
