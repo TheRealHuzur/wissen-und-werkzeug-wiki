@@ -11,8 +11,6 @@ summary: Obsidian ist eine lokale Wissensmanagement-Software für Markdown-Notiz
 ---
 # Obsidian
 
-## Beschreibung
-
 Obsidian ist eine Wissensmanagement-Software, die Notizen als lokale Markdown-Dateien speichert. Der Kern ist nicht „Ordner“, sondern Vernetzung: Durch Links zwischen Notizen, Tags, Backlinks und Suchfunktionen entsteht ein flexibles Wissensnetz, das sich für Second-Brain- und Wissenssysteme eignet.
 
 Stärken von Obsidian:
@@ -27,6 +25,6 @@ Stärken von Obsidian:
 
 - Praxisfokus: geeignet, um Wissen sowohl zu dokumentieren als auch aktiv weiterzuentwickeln (Notizen, Konzepte, Projekte, Lernpfade).
 
-Hier Base einfügen
+![[01_second_brain_obsidian.base]]
 
 

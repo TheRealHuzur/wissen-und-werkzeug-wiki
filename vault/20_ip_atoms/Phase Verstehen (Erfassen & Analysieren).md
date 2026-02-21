@@ -9,7 +9,7 @@ type: theorie
 intent: verstehen
 status: ki_ready
 created: 2026-02-16
-summary: 'In der "Labor-Phase" wird der Ist-Zustand seziert. Es geht um die ungeschönte Aufnahme der Realität. Organisch gewachsene Strukturen werden nachvollzogen, in fachliche Modelle übersetzt und anschließend diagnostiziert. Oberstes Prinzip: Verstehen kommt vor Bewerten.'
+summary: In dieser Phase wird der Ist-Zustand seziert. Es geht um die ungeschönte Aufnahme der Realität. Organisch gewachsene Strukturen werden nachvollzogen, in fachliche Modelle übersetzt und anschließend analysiert.
 ---
 
 %%
@@ -23,7 +23,7 @@ Klassifizierung: theorie mit der Zielsetzung verstehen.
 
 ## Zusammenfassung
 
-> In der "Labor-Phase" wird der Ist-Zustand seziert. Es geht um die ungeschönte Aufnahme der Realität. Organisch gewachsene Strukturen werden nachvollzogen, in fachliche Modelle übersetzt und anschließend diagnostiziert. Oberstes Prinzip: Verstehen kommt vor Bewerten.
+> In dieser Phase wird der Ist-Zustand seziert. Es geht um die ungeschönte Aufnahme der Realität. Organisch gewachsene Strukturen werden nachvollzogen, in fachliche Modelle übersetzt und anschließend analysiert. Bildlich gesprochen geht es in dieser Phase ins Labor.
 > 
 
 **Dieses Modul beantwortet folgende Fragen:**

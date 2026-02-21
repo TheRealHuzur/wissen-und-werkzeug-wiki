@@ -2,6 +2,7 @@
 id: vibe_coding
 aliases:
   - vibe_coding
+  - Vibe Coding
 moc_level: subtopic
 parent_topic: kuenstliche_intelligenz
 subtopic: vibe_coding

@@ -2,6 +2,7 @@
 id: projekte_planen_und_steuern
 aliases:
   - projekte_planen_und_steuern
+  - Projekte Planen und Steuern
 moc_level: subtopic
 parent_topic: prozessmanagement
 subtopic: projekte_planen_und_steuern

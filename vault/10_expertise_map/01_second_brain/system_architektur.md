@@ -2,6 +2,7 @@
 id: system_architektur
 aliases:
   - system_architektur
+  - System Architektur
 moc_level: subtopic
 parent_topic: second_brain
 subtopic: system_architektur

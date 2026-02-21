@@ -826,7 +826,7 @@ async function main() {
       return `[${text}](${route}${anchor})`;
     });
 
-    // Append related modules list for MOCs
+    // Append related modules list for MOCs (with special grouping for Prozessmanagement)
     if (isMoc) {
       const mocLevel = normalizeLookupKey(String(candidate.frontmatter.moc_level ?? ''));
       const id = candidate.id;
@@ -843,9 +843,66 @@ async function main() {
         // Sort by title
         relatedIps.sort((a, b) => a.title.localeCompare(b.title, 'de', { sensitivity: 'base' }));
 
-        body += '\n\n## Zugehörige Module\n\n';
-        for (const ip of relatedIps) {
-          body += `- [[${ip.id}|${ip.title}]]\n`;
+        const isProzessmanagement = slugify(id) === 'prozessmanagement';
+        const intentHeadings = {
+          steuern: '### Steuern',
+          verstehen: '### Verstehen',
+          gestalten: '### Gestalten',
+          umsetzen: '### Umsetzen',
+          betreiben: '### Betreiben',
+        };
+
+        if (isProzessmanagement) {
+          const categorized = new Map();
+          const unassigned = [];
+
+          for (const ip of relatedIps) {
+            const intent = normalizeLookupKey(String(ip.frontmatter.intent ?? ''));
+            if (intent && intentHeadings[intent]) {
+              if (!categorized.has(intent)) categorized.set(intent, []);
+              categorized.get(intent).push(ip);
+            } else {
+              unassigned.push(ip);
+            }
+          }
+
+          // Insert into specific headings
+          for (const [intent, heading] of Object.entries(intentHeadings)) {
+            const modules = categorized.get(intent);
+            if (!modules) continue;
+
+            const escapedHeading = heading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            // Regex to find the LAST occurrence of the exact heading
+            const headingRegex = new RegExp(`(^|\\r?\\n)${escapedHeading}\\s*(\\r?\\n|$)`, 'g');
+            let lastMatch = null;
+            let match;
+            while ((match = headingRegex.exec(body)) !== null) {
+              lastMatch = match;
+            }
+
+            if (lastMatch) {
+              const insertPos = lastMatch.index + lastMatch[0].length;
+              const moduleLinks = modules.map((ip) => `- [[${ip.id}|${ip.title}]]`).join('\n') + '\n';
+              body = body.slice(0, insertPos) + moduleLinks + body.slice(insertPos);
+            } else {
+              // If heading not found, add to unassigned
+              unassigned.push(...modules);
+            }
+          }
+
+          if (unassigned.length > 0) {
+            unassigned.sort((a, b) => a.title.localeCompare(b.title, 'de', { sensitivity: 'base' }));
+            body += '\n\n## Zugehörige Module\n\n';
+            for (const ip of unassigned) {
+              body += `- [[${ip.id}|${ip.title}]]\n`;
+            }
+          }
+        } else {
+          // Standard behavior for other MOCs
+          body += '\n\n## Zugehörige Module\n\n';
+          for (const ip of relatedIps) {
+            body += `- [[${ip.id}|${ip.title}]]\n`;
+          }
         }
 
         // Re-process the newly added wikilinks

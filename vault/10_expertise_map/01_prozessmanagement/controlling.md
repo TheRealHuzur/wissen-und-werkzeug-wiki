@@ -2,6 +2,7 @@
 id: controlling
 aliases:
   - controlling
+  - Controlling
 moc_level: subtopic
 parent_topic: prozessmanagement
 subtopic: controlling

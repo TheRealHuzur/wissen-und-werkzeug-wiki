@@ -79,7 +79,7 @@ Verwenden Sie ein klares Status-System, um die Transparenz zu erhöhen:
 ## 🔗 Verwandte Module
 
 - **[Phase Umsetzen (Change Management)](/wiki/phase-umsetzen-change-management/)***Kontext:* Der Maßnahmenplan ist das operative Werkzeug innerhalb der Umsetzungsphase.
-- **[Projekte Planen und Steuern](#)***Kontext:* Bietet den übergeordneten Rahmen für die methodische Steuerung von Maßnahmen.
+- **[Projekte Planen und Steuern](/wiki/projekte-planen-und-steuern/)***Kontext:* Bietet den übergeordneten Rahmen für die methodische Steuerung von Maßnahmen.
 - **[controlling](/wiki/controlling/)***Kontext:* Der Maßnahmenplan liefert die notwendigen Daten für die Fortschrittskontrolle.
 - **[Phase Gestalten (Soll-Konzeption)](/wiki/phase-gestalten-soll-konzeption/)***Kontext:* Die hier entwickelten Konzepte bilden die inhaltliche Grundlage für die Maßnahmen.
 

@@ -2,6 +2,7 @@
 id: bpmn
 aliases:
   - bpmn
+  - BPMN
 moc_level: subtopic
 parent_topic: prozessmanagement
 subtopic: bpmn

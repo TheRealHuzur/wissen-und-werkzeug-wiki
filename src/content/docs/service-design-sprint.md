@@ -60,7 +60,7 @@ Der Einsatz von Service Design Sprints bietet vier zentrale Vorteile:
 
 - **[Service Design Grundlagen & Anwendungsbereiche](/wiki/service-design-grundlagen-anwendungsbereiche/)
 - ***Kontext:* Das theoretische Fundament des Sprints.
-- **[Projekte Planen und Steuern](#)** 
+- **[Projekte Planen und Steuern](/wiki/projekte-planen-und-steuern/)** 
 *Kontext:* Sprints sind eine Methode der Projektsteuerung.
 - **[Service Design Phase Erkunden](/wiki/service-design-phase-erkunden/)
 - ***Kontext:* Entspricht der Forschungsphase im Sprint.

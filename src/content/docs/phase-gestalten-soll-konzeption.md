@@ -1,6 +1,6 @@
 ---
 title: "Phase: Gestalten (Soll-Konzeption)"
-description: "In der \"Atelier-Phase\" werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design…"
+description: "In dieser Phase werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design Thinking,…"
 slug: "phase-gestalten-soll-konzeption"
 head:
   - tag: link
@@ -10,7 +10,7 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/#article\",\"headline\":\"Phase: Gestalten (Soll-Konzeption)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/\"},\"description\":\"In der \\\"Atelier-Phase\\\" werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Phase Gestalten Soll Konzeption\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/\"}]}]}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/#article\",\"headline\":\"Phase: Gestalten (Soll-Konzeption)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-21\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/\"},\"description\":\"In dieser Phase werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design Thinking,…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Phase Gestalten Soll Konzeption\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -23,8 +23,8 @@ head:
 
 ## Zusammenfassung
 
-> In der "Atelier-Phase" werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design Thinking, um den Lösungsraum strukturiert zu öffnen. Zentral ist hierbei die Klärung des Auftrags: Soll eine visionäre Ideal-Lösung oder ein zeitnah realisierbares Konzept entstehen?
-> 
+> In dieser Phase werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design Thinking, um den Lösungsraum strukturiert zu öffnen. Zentral ist hierbei die Klärung des Auftrags: Soll eine visionäre Ideal-Lösung oder ein zeitnah realisierbares Konzept entstehen? Bildlich gesprochen geht es hier ins Atelier.
+
 
 **Dieses Modul beantwortet folgende Fragen:**
 
@@ -101,4 +101,4 @@ Das Resultat ist ein konsentiertes Soll-Modell (z.B. als BPMN oder Service Bluep
 ---
 
 ### Über den Autor
-**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.
+**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-21 aktualisiert.

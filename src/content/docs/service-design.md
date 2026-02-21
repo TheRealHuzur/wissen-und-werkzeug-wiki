@@ -23,21 +23,22 @@ Service Design ist eine interdisziplinäre Methodik zur systematischen Gestaltun
 
 Kernprinzipien:
 
-- Nutzerzentriertheit: Entwicklung konsequent aus der Perspektive der Nutzer.
+- **Nutzerzentriertheit:** Entwicklung konsequent aus der Perspektive der Nutzer.
     
-- Ganzheitlichkeit (End-to-End): Betrachtung der gesamten Service-Reise inklusive aller physischen und digitalen Touchpoints – vom Erstkontakt bis zur Nachbetreuung.
+- **Ganzheitlichkeit (End-to-End):** Betrachtung der gesamten Service-Reise inklusive aller physischen und digitalen Touchpoints – vom Erstkontakt bis zur Nachbetreuung.
     
-- Co-Kreation: Interdisziplinäre Zusammenarbeit und aktive Einbindung relevanter Stakeholder (Nutzer, Mitarbeitende, Management).
+- **Co-Kreation:** Interdisziplinäre Zusammenarbeit und aktive Einbindung relevanter Stakeholder (Nutzer, Mitarbeitende, Management).
     
-- Sichtbarkeit (Evidenz): Schaffung von „Beweisen“ für sonst unsichtbare Leistungen, z. B. durch Bestätigungen, klare Orientierung oder transparente Statusinformationen.
+- **Sichtbarkeit (Evidenz):** Schaffung von „Beweisen“ für sonst unsichtbare Leistungen, z. B. durch Bestätigungen, klare Orientierung oder transparente Statusinformationen.
 
-Hier Base einfügen
+
 
 
 
 
 ## Zugehörige Module
 
+- [HOW-WOW-NOW Matrix](/wiki/how-wow-now-matrix/)
 - [Optimierungs-Hackathon](/wiki/optimierungs-hackathon/)
 - [Service Design Sprint](/wiki/service-design-sprint/)
 - [Service Design: Grundlagen & Anwendungsbereiche](/wiki/service-design-grundlagen-anwendungsbereiche/)

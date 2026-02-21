@@ -2,6 +2,7 @@
 id: prompten
 aliases:
   - prompten
+  - Prompten
 moc_level: subtopic
 parent_topic: kuenstliche_intelligenz
 subtopic: prompten

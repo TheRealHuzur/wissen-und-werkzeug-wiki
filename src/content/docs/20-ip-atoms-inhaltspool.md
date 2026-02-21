@@ -14,7 +14,7 @@ head:
   - tag: meta
     attrs:
       name: semantic-context
-      content: "Das Second Brain speichert  und strukturiert Wissen. Es ist idealerweise so in Datenbanken organisiert, dass Zusammenhänge dargestellt werden können und das Wissen mit technischer Unterstützung durchsucht und aufbereitet werden kann."
+      content: "Das Second Brain speichert  und strukturiert Wissen. Es ist idealerweise so organisiert, dass Zusammenhänge dargestellt werden können und das Wissen mit technischer Unterstützung durchsucht und aufbereitet werden kann."
   - tag: meta
     attrs:
       name: rag-context

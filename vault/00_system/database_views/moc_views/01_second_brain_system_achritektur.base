@@ -9,3 +9,4 @@ views:
     order:
       - file.name
       - status
+      - file.folder

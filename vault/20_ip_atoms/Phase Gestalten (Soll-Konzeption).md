@@ -9,7 +9,7 @@ type: theorie
 intent: gestalten
 status: ki_ready
 created: 2026-02-16
-summary: 'In der "Atelier-Phase" werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design Thinking, um den Lösungsraum strukturiert zu öffnen. Zentral ist hierbei die Klärung des Auftrags: Soll eine visionäre Ideal-Lösung oder ein zeitn'
+summary: In dieser Phase werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design Thinking, um den Lösungsraum strukturiert zu öffnen.
 ---
 
 %%
@@ -23,8 +23,8 @@ Klassifizierung: theorie mit der Zielsetzung gestalten.
 
 ## Zusammenfassung
 
-> In der "Atelier-Phase" werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design Thinking, um den Lösungsraum strukturiert zu öffnen. Zentral ist hierbei die Klärung des Auftrags: Soll eine visionäre Ideal-Lösung oder ein zeitnah realisierbares Konzept entstehen?
-> 
+> In dieser Phase werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design Thinking, um den Lösungsraum strukturiert zu öffnen. Zentral ist hierbei die Klärung des Auftrags: Soll eine visionäre Ideal-Lösung oder ein zeitnah realisierbares Konzept entstehen? Bildlich gesprochen geht es hier ins Atelier.
+
 
 **Dieses Modul beantwortet folgende Fragen:**
 
