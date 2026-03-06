@@ -3,6 +3,10 @@ title: "Inhaltspool (ip_atoms)"
 description: "Dieses Modul beschreibt ipatoms als den zentralen Wissensbestand deines Systems. Es erklärt, was ein Modul ist, wie es für Menschen gut lesbar bleibt und…"
 slug: "20-ip-atoms-inhaltspool"
 head:
+  - tag: meta
+    attrs:
+      name: "robots"
+      content: "noindex, nofollow"
   - tag: link
     attrs:
       rel: canonical

@@ -3,6 +3,10 @@ title: "Maschinenraum (00_system)"
 description: "Dieses Modul beschreibt 00system als technischen Maschinenraum des Vaults. Es erklärt, welche Artefakte dort liegen (Taxonomie, Bases, Templates, Schemas,…"
 slug: "00-system-maschinenraum"
 head:
+  - tag: meta
+    attrs:
+      name: "robots"
+      content: "noindex, nofollow"
   - tag: link
     attrs:
       rel: canonical

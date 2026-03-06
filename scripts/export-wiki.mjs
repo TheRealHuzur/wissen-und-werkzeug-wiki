@@ -1022,6 +1022,19 @@ async function main() {
     frontmatterLines.push('    attrs:');
     frontmatterLines.push('      rel: canonical');
     frontmatterLines.push(`      href: ${yamlQuote(canonicalHref)}`);
+
+    const noIndexSlugs = [
+      '00-system-maschinenraum',
+      '10-expertise-map-moc-struktur',
+      '20-ip-atoms-inhaltspool',
+      '99-inbox-transit-zone'
+    ];
+    if (noIndexSlugs.includes(candidate.slug)) {
+      frontmatterLines.push('  - tag: meta');
+      frontmatterLines.push('    attrs:');
+      frontmatterLines.push('      name: "robots"');
+      frontmatterLines.push('      content: "noindex, nofollow"');
+    }
     frontmatterLines.push('  - tag: script');
     frontmatterLines.push('    attrs:');
     frontmatterLines.push('      type: application/ld+json');

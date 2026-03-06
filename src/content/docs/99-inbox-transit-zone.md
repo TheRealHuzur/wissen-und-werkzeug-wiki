@@ -3,6 +3,10 @@ title: "Transit-Zone (99_inbox)"
 description: "Dieses Modul beschreibt 99inbox als Transit-Zone für neue Entwürfe und Rohmaterial. Es erklärt, warum die Inbox wichtig ist, welche Minimalregeln verhindern,…"
 slug: "99-inbox-transit-zone"
 head:
+  - tag: meta
+    attrs:
+      name: "robots"
+      content: "noindex, nofollow"
   - tag: link
     attrs:
       rel: canonical

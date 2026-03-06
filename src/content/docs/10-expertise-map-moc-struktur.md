@@ -3,6 +3,10 @@ title: "Map of Content Struktur (expertise_map)"
 description: "Dieses Modul erklärt die Map of Content als Navigationsschicht deines Vaults. MOCs sind Übersichtsseiten, die Leserinnen und Leser durch Themen führen, ohne…"
 slug: "10-expertise-map-moc-struktur"
 head:
+  - tag: meta
+    attrs:
+      name: "robots"
+      content: "noindex, nofollow"
   - tag: link
     attrs:
       rel: canonical

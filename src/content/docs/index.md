@@ -1,6 +1,43 @@
 ---
 title: Wissen & Werkzeug Wiki
-description: Wissen & Werkzeug Wiki
+description: "BPMN, Geschäftsprozesse & Innovationsmethoden praxisnah erklärt – das kostenfreie Wissens-Wiki für den öffentlichen Dienst von Patrick Roßkothen."
+head:
+  - tag: title
+    content: "Wissen & Werkzeug Wiki"
+  - tag: meta
+    attrs:
+      property: "og:description"
+      content: "BPMN, Geschäftsprozesse & Innovationsmethoden praxisnah erklärt – das kostenfreie Wissens-Wiki für den öffentlichen Dienst von Patrick Roßkothen."
+  - tag: script
+    attrs:
+      type: "application/ld+json"
+    content: |
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://www.wissen-und-werkzeug.de/wiki/#collectionpage",
+        "name": "Wissen & Werkzeug Wiki",
+        "description": "BPMN, Geschäftsprozesse & Innovationsmethoden praxisnah erklärt – das kostenfreie Wissens-Wiki für den öffentlichen Dienst von Patrick Roßkothen.",
+        "url": "https://www.wissen-und-werkzeug.de/wiki/",
+        "inLanguage": "de",
+        "author": {
+          "@type": "Person",
+          "name": "Patrick Roßkothen",
+          "url": "https://www.wissen-und-werkzeug.de/ueber_mich/",
+          "sameAs": ["https://www.linkedin.com/in/patrickrosskothen/"],
+          "jobTitle": "Experte für Prozess- und Wissensmanagement"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Wissen & Werkzeug",
+          "url": "https://www.wissen-und-werkzeug.de"
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Wissen & Werkzeug",
+          "url": "https://www.wissen-und-werkzeug.de"
+        }
+      }
 ---
 
 # Das Wiki für Prozesse, KI und modernes Wissensmanagement
