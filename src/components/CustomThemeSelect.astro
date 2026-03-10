@@ -1,0 +1,51 @@
+---
+import Default from '@astrojs/starlight/components/ThemeSelect.astro';
+---
+<div class="custom-right-nav">
+  <div class="back-to-main">
+    <a href="https://www.wissen-und-werkzeug.de" title="Zurück zu Wissen & Werkzeug">
+      <span class="desktop-text">← wissen-und-werkzeug.de</span>
+      <span class="mobile-text">← Zurück</span>
+    </a>
+  </div>
+  <Default {...Astro.props}><slot /></Default>
+</div>
+
+<style>
+  .custom-right-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .back-to-main {
+    font-size: 0.85rem;
+  }
+  .desktop-text {
+    display: inline;
+  }
+  .mobile-text {
+    display: none;
+  }
+  .back-to-main a {
+    color: var(--sl-color-text-accent);
+    text-decoration: none;
+    white-space: nowrap;
+    opacity: 0.9;
+  }
+  .back-to-main a:hover {
+    text-decoration: underline;
+    opacity: 1;
+  }
+  /* Show shorter text on very small screens to avoid overflow */
+  @media (max-width: 50rem) {
+    .desktop-text {
+      display: none;
+    }
+    .mobile-text {
+      display: inline;
+    }
+    .custom-right-nav {
+      gap: 0.75rem;
+    }
+  }
+</style>

@@ -22,7 +22,7 @@ export default defineConfig({
       favicon: '/favicon.svg',
       customCss: ['./src/styles/custom.css'],
       components: {
-        Header: './src/components/CustomHeader.astro',
+        ThemeSelect: './src/components/CustomThemeSelect.astro',
       },
     }),
     sitemap({
