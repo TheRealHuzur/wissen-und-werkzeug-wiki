@@ -6,11 +6,11 @@ head:
   - tag: link
     attrs:
       rel: canonical
-      href: "https://www.wissen-und-werkzeug.de/wiki/lerntandems/"
+      href: "https://wissen-und-werkzeug.de/wiki/lerntandems/"
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/lerntandems/#article\",\"headline\":\"Lerntandems\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/lerntandems/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-17\",\"dateModified\":\"2026-02-19\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/lerntandems/\"},\"description\":\"Lerntandems sind persönliche Lernpartnerschaften zwischen zwei Personen zur gegenseitigen Unterstützung beim Wissenserwerb. Dieses Format zeichnet sich durch…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/lerntandems/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Lerntandems\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/lerntandems/\"}]}]}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/lerntandems/#article\",\"headline\":\"Lerntandems\",\"url\":\"https://wissen-und-werkzeug.de/wiki/lerntandems/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-17\",\"dateModified\":\"2026-08-26\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/lerntandems/\"},\"description\":\"Lerntandems sind persönliche Lernpartnerschaften zwischen zwei Personen zur gegenseitigen Unterstützung beim Wissenserwerb. Dieses Format zeichnet sich durch…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/lerntandems/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Lerntandems\",\"item\":\"https://wissen-und-werkzeug.de/wiki/lerntandems/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -53,4 +53,4 @@ Tandems bieten die Möglichkeit, auch komplexere oder persönliche Themen in Ruh
 ---
 
 ### Über den Autor
-**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-19 aktualisiert.
+**[Patrick Roßkothen](https://wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-08-26 aktualisiert.

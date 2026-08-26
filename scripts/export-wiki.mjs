@@ -15,13 +15,13 @@ const STATUS_DRAFT = 'entwurf';
 const AUTHOR_DATA = {
   name: 'Patrick Roßkothen',
   expertise: 'Experte für Prozess- und Wissensmanagement',
-  url: 'https://www.wissen-und-werkzeug.de/ueber-mich/',
+  url: 'https://wissen-und-werkzeug.de/ueber-mich/',
   linkedin: 'https://www.linkedin.com/in/patrickrosskothen/',
   organization: 'Wissen & Werkzeug',
-  organizationUrl: 'https://www.wissen-und-werkzeug.de',
+  organizationUrl: 'https://wissen-und-werkzeug.de',
 };
 
-const SITE = 'https://www.wissen-und-werkzeug.de';
+const SITE = 'https://wissen-und-werkzeug.de';
 const BASE = '/wiki';
 const BASE_PREFIX = BASE;
 

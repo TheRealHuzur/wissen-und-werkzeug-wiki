@@ -6,11 +6,11 @@ head:
   - tag: link
     attrs:
       rel: canonical
-      href: "https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/"
+      href: "https://wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/"
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/#article\",\"headline\":\"Phase: Gestalten (Soll-Konzeption)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-21\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/\"},\"description\":\"In dieser Phase werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design Thinking,…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Phase Gestalten Soll Konzeption\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/\"}]}]}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/#article\",\"headline\":\"Phase: Gestalten (Soll-Konzeption)\",\"url\":\"https://wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-08-26\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/\"},\"description\":\"In dieser Phase werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design Thinking,…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Phase Gestalten Soll Konzeption\",\"item\":\"https://wissen-und-werkzeug.de/wiki/phase-gestalten-soll-konzeption/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -101,4 +101,4 @@ Das Resultat ist ein konsentiertes Soll-Modell (z.B. als BPMN oder Service Bluep
 ---
 
 ### Über den Autor
-**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-21 aktualisiert.
+**[Patrick Roßkothen](https://wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-08-26 aktualisiert.

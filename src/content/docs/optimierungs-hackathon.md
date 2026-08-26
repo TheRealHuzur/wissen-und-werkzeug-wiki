@@ -6,11 +6,11 @@ head:
   - tag: link
     attrs:
       rel: canonical
-      href: "https://www.wissen-und-werkzeug.de/wiki/optimierungs-hackathon/"
+      href: "https://wissen-und-werkzeug.de/wiki/optimierungs-hackathon/"
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/optimierungs-hackathon/#article\",\"headline\":\"Optimierungs-Hackathon\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/optimierungs-hackathon/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-17\",\"dateModified\":\"2026-02-19\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/optimierungs-hackathon/\"},\"description\":\"Der Optimierungs-Hackathon ist ein kompaktes, praxisorientiertes Format zur schnellen Entwicklung von Prozesslösungen. In einem zeitlich begrenzten Sprint…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/optimierungs-hackathon/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Optimierungs Hackathon\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/optimierungs-hackathon/\"}]}]}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/optimierungs-hackathon/#article\",\"headline\":\"Optimierungs-Hackathon\",\"url\":\"https://wissen-und-werkzeug.de/wiki/optimierungs-hackathon/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-17\",\"dateModified\":\"2026-08-26\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/optimierungs-hackathon/\"},\"description\":\"Der Optimierungs-Hackathon ist ein kompaktes, praxisorientiertes Format zur schnellen Entwicklung von Prozesslösungen. In einem zeitlich begrenzten Sprint…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/optimierungs-hackathon/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Optimierungs Hackathon\",\"item\":\"https://wissen-und-werkzeug.de/wiki/optimierungs-hackathon/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -57,4 +57,4 @@ Der Anreiz liegt in der kreativen Atmosphäre und dem unmittelbaren Erleben von 
 ---
 
 ### Über den Autor
-**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-19 aktualisiert.
+**[Patrick Roßkothen](https://wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-08-26 aktualisiert.

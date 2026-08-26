@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 export default defineConfig({
-  site: 'https://www.wissen-und-werkzeug.de',
+  site: 'https://wissen-und-werkzeug.de',
   base: '/wiki',
   trailingSlash: 'always',
   integrations: [

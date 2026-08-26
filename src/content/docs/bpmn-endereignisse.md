@@ -6,11 +6,11 @@ head:
   - tag: link
     attrs:
       rel: canonical
-      href: "https://www.wissen-und-werkzeug.de/wiki/bpmn-endereignisse/"
+      href: "https://wissen-und-werkzeug.de/wiki/bpmn-endereignisse/"
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-endereignisse/#article\",\"headline\":\"BPMN: Endereignisse\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-endereignisse/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-17\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-endereignisse/\"},\"description\":\"Endereignisse markieren den Abschluss eines Prozesspfades. Sie \\\"konsumieren\\\" die Prozess-Marke. Ein Prozess kann mehrere unterschiedliche Endereignisse haben,…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-endereignisse/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Bpmn Endereignisse\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/bpmn-endereignisse/\"}]}]}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/bpmn-endereignisse/#article\",\"headline\":\"BPMN: Endereignisse\",\"url\":\"https://wissen-und-werkzeug.de/wiki/bpmn-endereignisse/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-08-26\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/bpmn-endereignisse/\"},\"description\":\"Endereignisse markieren den Abschluss eines Prozesspfades. Sie \\\"konsumieren\\\" die Prozess-Marke. Ein Prozess kann mehrere unterschiedliche Endereignisse haben,…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/bpmn-endereignisse/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Bpmn Endereignisse\",\"item\":\"https://wissen-und-werkzeug.de/wiki/bpmn-endereignisse/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -78,4 +78,4 @@ Ein zeitbasiertes Endereignis existiert in der BPMN nicht, da ein Zeitpunkt nich
 ---
 
 ### Über den Autor
-**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-17 aktualisiert.
+**[Patrick Roßkothen](https://wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-08-26 aktualisiert.

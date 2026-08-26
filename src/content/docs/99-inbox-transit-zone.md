@@ -3,18 +3,18 @@ title: "Transit-Zone (99_inbox)"
 description: "Dieses Modul beschreibt 99inbox als Transit-Zone für neue Entwürfe und Rohmaterial. Es erklärt, warum die Inbox wichtig ist, welche Minimalregeln verhindern,…"
 slug: "99-inbox-transit-zone"
 head:
+  - tag: link
+    attrs:
+      rel: canonical
+      href: "https://wissen-und-werkzeug.de/wiki/99-inbox-transit-zone/"
   - tag: meta
     attrs:
       name: "robots"
       content: "noindex, nofollow"
-  - tag: link
-    attrs:
-      rel: canonical
-      href: "https://www.wissen-und-werkzeug.de/wiki/99-inbox-transit-zone/"
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/99-inbox-transit-zone/#article\",\"headline\":\"Transit-Zone (99_inbox)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/99-inbox-transit-zone/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-19\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/99-inbox-transit-zone/\"},\"description\":\"Dieses Modul beschreibt 99inbox als Transit-Zone für neue Entwürfe und Rohmaterial. Es erklärt, warum die Inbox wichtig ist, welche Minimalregeln verhindern,…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/99-inbox-transit-zone/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"99 Inbox Transit Zone\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/99-inbox-transit-zone/\"}]}]}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/99-inbox-transit-zone/#article\",\"headline\":\"Transit-Zone (99_inbox)\",\"url\":\"https://wissen-und-werkzeug.de/wiki/99-inbox-transit-zone/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-08-26\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/99-inbox-transit-zone/\"},\"description\":\"Dieses Modul beschreibt 99inbox als Transit-Zone für neue Entwürfe und Rohmaterial. Es erklärt, warum die Inbox wichtig ist, welche Minimalregeln verhindern,…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/99-inbox-transit-zone/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"99 Inbox Transit Zone\",\"item\":\"https://wissen-und-werkzeug.de/wiki/99-inbox-transit-zone/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -59,4 +59,4 @@ Wenn du kuratierst, gehst du in einer einfachen Reihenfolge vor: erst entscheide
 ---
 
 ### Über den Autor
-**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-19 aktualisiert.
+**[Patrick Roßkothen](https://wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-08-26 aktualisiert.

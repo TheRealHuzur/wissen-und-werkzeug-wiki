@@ -3,18 +3,18 @@ title: "Inhaltspool (ip_atoms)"
 description: "Dieses Modul beschreibt ipatoms als den zentralen Wissensbestand deines Systems. Es erklärt, was ein Modul ist, wie es für Menschen gut lesbar bleibt und…"
 slug: "20-ip-atoms-inhaltspool"
 head:
+  - tag: link
+    attrs:
+      rel: canonical
+      href: "https://wissen-und-werkzeug.de/wiki/20-ip-atoms-inhaltspool/"
   - tag: meta
     attrs:
       name: "robots"
       content: "noindex, nofollow"
-  - tag: link
-    attrs:
-      rel: canonical
-      href: "https://www.wissen-und-werkzeug.de/wiki/20-ip-atoms-inhaltspool/"
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/20-ip-atoms-inhaltspool/#article\",\"headline\":\"Inhaltspool (ip_atoms)\",\"url\":\"https://www.wissen-und-werkzeug.de/wiki/20-ip-atoms-inhaltspool/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://www.wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://www.wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-19\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/20-ip-atoms-inhaltspool/\"},\"description\":\"Dieses Modul beschreibt ipatoms als den zentralen Wissensbestand deines Systems. Es erklärt, was ein Modul ist, wie es für Menschen gut lesbar bleibt und…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.wissen-und-werkzeug.de/wiki/20-ip-atoms-inhaltspool/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"20 Ip Atoms Inhaltspool\",\"item\":\"https://www.wissen-und-werkzeug.de/wiki/20-ip-atoms-inhaltspool/\"}]}]}"
+    content: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/20-ip-atoms-inhaltspool/#article\",\"headline\":\"Inhaltspool (ip_atoms)\",\"url\":\"https://wissen-und-werkzeug.de/wiki/20-ip-atoms-inhaltspool/\",\"author\":{\"@type\":\"Person\",\"name\":\"Patrick Roßkothen\",\"url\":\"https://wissen-und-werkzeug.de/ueber-mich/\",\"sameAs\":[\"https://www.linkedin.com/in/patrickrosskothen/\"],\"jobTitle\":\"Experte für Prozess- und Wissensmanagement\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Wissen & Werkzeug\",\"url\":\"https://wissen-und-werkzeug.de\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://wissen-und-werkzeug.de/favicon.svg\"}},\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-08-26\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/20-ip-atoms-inhaltspool/\"},\"description\":\"Dieses Modul beschreibt ipatoms als den zentralen Wissensbestand deines Systems. Es erklärt, was ein Modul ist, wie es für Menschen gut lesbar bleibt und…\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://wissen-und-werkzeug.de/wiki/20-ip-atoms-inhaltspool/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Wiki\",\"item\":\"https://wissen-und-werkzeug.de/wiki/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"20 Ip Atoms Inhaltspool\",\"item\":\"https://wissen-und-werkzeug.de/wiki/20-ip-atoms-inhaltspool/\"}]}]}"
   - tag: meta
     attrs:
       name: semantic-context
@@ -61,4 +61,4 @@ Unfertige Skizzen, Rohnotizen und Importreste gehören in die Inbox. Systemartef
 ---
 
 ### Über den Autor
-**[Patrick Roßkothen](https://www.wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-02-19 aktualisiert.
+**[Patrick Roßkothen](https://wissen-und-werkzeug.de/ueber-mich/)** ist Experte für Prozess- und Wissensmanagement. Dieses Modul wurde zuletzt am 2026-08-26 aktualisiert.
