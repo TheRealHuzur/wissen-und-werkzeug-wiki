@@ -725,8 +725,17 @@ async function main() {
       : [];
 
     const fileStats = await fs.stat(file);
-    const datePublished = formatDate(frontmatter.created || fileStats.birthtime);
-    const dateModified = formatDate(frontmatter.updated || fileStats.mtime);
+    // Kein Datum ohne Frontmatter-Angabe. Der Rueckfall auf die Dateizeit erzeugte
+    // im CI-Checkout das Deploy-Datum statt einer echten Aenderung — eine
+    // ueberpruefbare Falschangabe in strukturierten Daten.
+    // Standards-Wiki, Abschnitt 4.
+    const datePublished = frontmatter.created ? formatDate(frontmatter.created) : '';
+    const dateModified = frontmatter.updated ? formatDate(frontmatter.updated) : '';
+
+    // Der sichtbare Autorensatz behaelt vorerst die Dateizeit als Rueckfall:
+    // dieser Auftrag aendert nichts am Artikelinhalt. Der Autorenblock wird in
+    // Paket 3 neu gebaut, dort faellt die Angabe sauber weg.
+    const displayDateModified = dateModified || formatDate(fileStats.mtime);
 
     const h1 = extractFirstH1(body);
     const title = frontmatter.title ? String(frontmatter.title) : (h1 || toTitleCase(sourceName));
@@ -742,6 +751,7 @@ async function main() {
       body,
       datePublished,
       dateModified,
+      displayDateModified,
     });
   }
 
@@ -1042,8 +1052,6 @@ async function main() {
               url: `${SITE}/favicon.svg`
             }
           },
-          datePublished: candidate.datePublished,
-          dateModified: candidate.dateModified,
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': canonicalHref
@@ -1059,6 +1067,15 @@ async function main() {
 
     if (description) {
       jsonLd['@graph'][0].description = description;
+    }
+
+    // Nur ausgeben, was im Frontmatter tatsaechlich steht — kein Datum ist
+    // besser als ein falsches.
+    if (candidate.datePublished) {
+      jsonLd['@graph'][0].datePublished = candidate.datePublished;
+    }
+    if (candidate.dateModified) {
+      jsonLd['@graph'][0].dateModified = candidate.dateModified;
     }
 
     // Add DefinedTerm logic for MOCs or definitions
@@ -1144,7 +1161,7 @@ async function main() {
 ---
 
 ### Über den Autor
-**[${AUTHOR_DATA.name}](${AUTHOR_DATA.url})** ist ${AUTHOR_DATA.expertise}. Dieser Artikel wurde zuletzt am ${candidate.dateModified} aktualisiert.
+**[${AUTHOR_DATA.name}](${AUTHOR_DATA.url})** ist ${AUTHOR_DATA.expertise}. Dieser Artikel wurde zuletzt am ${candidate.displayDateModified} aktualisiert.
 `;
 
     frontmatterLines.push('---');
