@@ -21,6 +21,14 @@ const AUTHOR_DATA = {
   organizationUrl: 'https://wissen-und-werkzeug.de',
 };
 
+// Interne Vault-Seiten, die nicht veroeffentlicht werden (Maschinenraum, Struktur, Inbox)
+const EXCLUDED_SLUGS = [
+  '00-system-maschinenraum',
+  '10-expertise-map-moc-struktur',
+  '20-ip-atoms-inhaltspool',
+  '99-inbox-transit-zone'
+];
+
 const SITE = 'https://wissen-und-werkzeug.de';
 const BASE = '/wiki';
 const BASE_PREFIX = BASE;
@@ -208,6 +216,48 @@ function slugify(input) {
     .replace(/^-+|-+$/g, '');
 }
 
+// Entfernt interne Arbeitsnotizen und Notion-Artefakte aus dem sichtbaren Text.
+// Der Vault bleibt unveraendert; bereinigt wird ausschliesslich der Export.
+function cleanVaultArtifacts(body) {
+  const lines = body.split(/\r?\n/);
+  const out = [];
+  let index = 0;
+
+  while (index < lines.length) {
+    if (/^\s*>/.test(lines[index])) {
+      let end = index;
+      while (end < lines.length && /^\s*>/.test(lines[end])) end += 1;
+      const block = lines.slice(index, end);
+
+      // Grafik-Platzhalter sind interne Notizen fuer die spaetere Bildphase
+      if (block.some((line) => /GRAFIK:/.test(line))) {
+        index = end;
+        if (index < lines.length && lines[index].trim() === '') index += 1;
+        continue;
+      }
+
+      out.push(...block);
+      index = end;
+      continue;
+    }
+
+    out.push(lines[index]);
+    index += 1;
+  }
+
+  let cleaned = out.join('\n');
+
+  // Notion-Artefakt: "**[[Titel]]***Kontext:* Text" laesst Sternchen woertlich stehen
+  cleaned = cleaned.replace(/\*\*\*Kontext:\*[ \t]*/g, '**  \n  Kontext: ');
+  cleaned = cleaned.replace(/\*\*\*Kontext\*:[ \t]*/g, '**  \n  Kontext: ');
+
+  // Vault-Begriff "Modul" gehoert nicht in den sichtbaren Text
+  cleaned = cleaned.replace(/^(#{1,6}\s*)(?:🔗\s*)?Verwandte Module\s*$/gm, '$1Verwandte Artikel');
+  cleaned = cleaned.replace(/\bDieses Modul\b/g, 'Dieser Artikel');
+
+  return cleaned;
+}
+
 function normalizeAssetKey(input) {
   return String(input ?? '')
     .toLowerCase()
@@ -252,7 +302,8 @@ function extractRagContext(content) {
     .split(/\r?\n/)
     .map(line => line.trim())
     .filter(Boolean)
-    .join(' ');
+    .join(' ')
+    .replace(/\bDieses Modul\b/g, 'Dieser Artikel');
 }
 
 function yamlQuote(input) {
@@ -261,6 +312,7 @@ function yamlQuote(input) {
 
 function sanitizeDescription(input) {
   let text = String(input ?? '');
+  text = text.replace(/\bDieses Modul\b/g, 'Dieser Artikel');
   text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1');
   text = text.replace(/[*_`]/g, '');
   text = text.replace(/\s+/g, ' ').trim();
@@ -444,7 +496,7 @@ function buildSidebarItemsFromMocs(mocs, includeDraft) {
       const items = [];
       if (node.parentMoc) {
         items.push({
-          label: 'Uebersicht',
+          label: 'Übersicht',
           link: buildRoute(node.parentMoc.slug).replace(BASE_PREFIX, '') || '/',
         });
       }
@@ -560,6 +612,7 @@ async function main() {
   let scannedFiles = 0;
   let exportedFiles = 0;
   let skippedNoFrontmatter = 0;
+  let skippedInternal = 0;
   let skippedStatusMissing = 0;
   let skippedStatusNotReady = 0;
   let skippedStatusVerworfen = 0;
@@ -649,6 +702,14 @@ async function main() {
     const sourceName = parsed.name;
     const rawId = String(frontmatter.id ?? '').trim();
     const slug = slugify(rawId || sourceName) || slugify(sourceName) || 'untitled';
+
+    // Interne Vault-Seiten gehoeren nicht ins oeffentliche Wiki
+    if (EXCLUDED_SLUGS.includes(slug)) {
+      skippedInternal += 1;
+      addSkipSample(file, 'internalVaultPage');
+      continue;
+    }
+
     const aliases = Array.isArray(frontmatter.aliases)
       ? frontmatter.aliases.map((value) => String(value).trim()).filter(Boolean)
       : [];
@@ -729,7 +790,7 @@ async function main() {
 
   for (const candidate of candidates) {
     const isMoc = candidate.file.replace(/\\/g, '/').includes('/10_expertise_map/');
-    let body = candidate.body;
+    let body = cleanVaultArtifacts(candidate.body);
 
     // Strip .base embeds: ![[...base]] or ![[...base|alias]]
     body = body.replace(/!\[\[([^\]]+\.base(\|[^\]]*)?)\]\]/g, '');
@@ -892,14 +953,14 @@ async function main() {
 
           if (unassigned.length > 0) {
             unassigned.sort((a, b) => a.title.localeCompare(b.title, 'de', { sensitivity: 'base' }));
-            body += '\n\n## Zugehörige Module\n\n';
+            body += '\n\n## Zugehörige Artikel\n\n';
             for (const ip of unassigned) {
               body += `- [[${ip.id}|${ip.title}]]\n`;
             }
           }
         } else {
           // Standard behavior for other MOCs
-          body += '\n\n## Zugehörige Module\n\n';
+          body += '\n\n## Zugehörige Artikel\n\n';
           for (const ip of relatedIps) {
             body += `- [[${ip.id}|${ip.title}]]\n`;
           }
@@ -1018,18 +1079,15 @@ async function main() {
     }
     frontmatterLines.push(`slug: ${yamlQuote(candidate.slug)}`);
     frontmatterLines.push('head:');
+    // Reiner Inhaltstitel ohne den Zusatz "| Wissen & Werkzeug Wiki"
+    frontmatterLines.push('  - tag: title');
+    frontmatterLines.push(`    content: ${yamlQuote(candidate.title)}`);
     frontmatterLines.push('  - tag: link');
     frontmatterLines.push('    attrs:');
     frontmatterLines.push('      rel: canonical');
     frontmatterLines.push(`      href: ${yamlQuote(canonicalHref)}`);
 
-    const noIndexSlugs = [
-      '00-system-maschinenraum',
-      '10-expertise-map-moc-struktur',
-      '20-ip-atoms-inhaltspool',
-      '99-inbox-transit-zone'
-    ];
-    if (noIndexSlugs.includes(candidate.slug)) {
+    if (EXCLUDED_SLUGS.includes(candidate.slug)) {
       frontmatterLines.push('  - tag: meta');
       frontmatterLines.push('    attrs:');
       frontmatterLines.push('      name: "robots"');
@@ -1076,7 +1134,7 @@ async function main() {
 ---
 
 ### Über den Autor
-**[${AUTHOR_DATA.name}](${AUTHOR_DATA.url})** ist ${AUTHOR_DATA.expertise}. Dieses Modul wurde zuletzt am ${candidate.dateModified} aktualisiert.
+**[${AUTHOR_DATA.name}](${AUTHOR_DATA.url})** ist ${AUTHOR_DATA.expertise}. Dieser Artikel wurde zuletzt am ${candidate.dateModified} aktualisiert.
 `;
 
     frontmatterLines.push('---');
@@ -1089,6 +1147,7 @@ async function main() {
   console.log(`[summary] scannedFiles: ${scannedFiles}`);
   console.log(`[summary] exportedFiles: ${exportedFiles}`);
   console.log(`[summary] skipped.noFrontmatter: ${skippedNoFrontmatter}`);
+  console.log(`[summary] skipped.internalVaultPage: ${skippedInternal}`);
   console.log(`[summary] skipped.statusMissing: ${skippedStatusMissing}`);
   console.log(`[summary] skipped.statusNotReady: ${skippedStatusNotReady}`);
   console.log(`[summary] skipped.statusVerworfen: ${skippedStatusVerworfen}`);
