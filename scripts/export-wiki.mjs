@@ -206,10 +206,20 @@ function normalizeLookupKey(input) {
   return input.trim().toLowerCase();
 }
 
+// Adressen werden transliteriert, nicht als Unicode durchgereicht:
+// ae/oe/ue/ss, uebrige Diakritika auf den Grundbuchstaben, Unterstrich zu Bindestrich.
+// Festlegung aus Standards-Wiki, Abschnitt 2.
 function slugify(input) {
   return String(input ?? '')
     .trim()
+    .normalize('NFC')
     .toLowerCase()
+    .replace(/ä/g, 'ae')
+    .replace(/ö/g, 'oe')
+    .replace(/ü/g, 'ue')
+    .replace(/ß/g, 'ss')
+    .normalize('NFD')
+    .replace(/\p{M}+/gu, '')
     .replace(/[^\p{L}\p{N}\s_-]/gu, '')
     .replace(/[\s_]+/g, '-')
     .replace(/-+/g, '-')
