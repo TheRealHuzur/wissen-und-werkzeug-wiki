@@ -631,6 +631,9 @@ async function main() {
   let descriptionsFromSummary = 0;
   let descriptionsFromDescription = 0;
   let descriptionsMissing = 0;
+  // Notizen ohne updated: — zugleich die Arbeitsliste fuer die Artikelueberarbeitung
+  let missingUpdated = 0;
+  const missingUpdatedSlugs = [];
   const skippedSamples = [];
   const mocSummary = {
     totalMocs: 0,
@@ -731,6 +734,11 @@ async function main() {
     // Standards-Wiki, Abschnitt 4.
     const datePublished = frontmatter.created ? formatDate(frontmatter.created) : '';
     const dateModified = frontmatter.updated ? formatDate(frontmatter.updated) : '';
+
+    if (!dateModified) {
+      missingUpdated += 1;
+      missingUpdatedSlugs.push(slug);
+    }
 
     // Der sichtbare Autorensatz behaelt vorerst die Dateizeit als Rueckfall:
     // dieser Auftrag aendert nichts am Artikelinhalt. Der Autorenblock wird in
@@ -1183,6 +1191,7 @@ async function main() {
   console.log(`[summary] descriptionsFromSummary: ${descriptionsFromSummary}`);
   console.log(`[summary] descriptionsFromDescription: ${descriptionsFromDescription}`);
   console.log(`[summary] descriptionsMissing: ${descriptionsMissing}`);
+  console.log(`[summary] missingUpdated: ${missingUpdated}`);
   console.log(`[summary] mocs.total: ${mocSummary.totalMocs}`);
   console.log(`[summary] mocs.parent: ${mocSummary.parentCount}`);
   console.log(`[summary] mocs.subtopic: ${mocSummary.subtopicCount}`);
@@ -1198,6 +1207,14 @@ async function main() {
     }
     if (mocSummary.yamlWarningFiles.length > maxWarnings) {
       console.log(`... +${mocSummary.yamlWarningFiles.length - maxWarnings} more`);
+    }
+  }
+  // Warnliste, kein Abbruch: diese Notizen erhalten kein dateModified und sind
+  // zugleich die Arbeitsliste fuer die Artikelueberarbeitung.
+  if (missingUpdatedSlugs.length > 0) {
+    console.log(`[warn] Notizen ohne updated: (${missingUpdatedSlugs.length}) — kein dateModified:`);
+    for (const slug of [...missingUpdatedSlugs].sort()) {
+      console.log(`- ${slug}`);
     }
   }
   if (skippedSamples.length > 0) {
