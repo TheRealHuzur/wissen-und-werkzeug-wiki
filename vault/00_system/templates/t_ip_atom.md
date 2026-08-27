@@ -6,26 +6,22 @@ type: ""
 intent: ""
 status: entwurf
 created: YYYY-MM-DD
+updated: YYYY-MM-DD
 summary: ""
 ---
 
 %%
 RAG-CONTEXT-ANCHOR:
-Dieses Modul gehört zur Domäne Fach-Expertise.
-Es ist im Fachgebiet (parent_topic) verortet und dem Unterthema (subtopic) zugeordnet.
+Dieser Artikel dokumentiert Fachwissen im Wiki Wissen & Werkzeug.
+Er ist im Fachgebiet (parent_topic) verortet und dem Unterthema (subtopic) zugeordnet.
 Klassifizierung: type mit der Zielsetzung intent.
 %%
 
-# [Titel des Moduls]
+# [Titel des Artikels]
 
 **Zusammenfassung**
 
-> [Hier steht eine prägnante Inhaltsangabe in 1–2 Sätzen. Wichtig für die Schnellvorschau.]
-
-**Dieses Modul beantwortet folgende Fragen:**
-- Wie [Frage 1]?
-- Was ist der Unterschied zwischen [A] und [B]?
-- Warum sollte ich [X] tun?
+[Hier steht eine prägnante Inhaltsangabe in 2–4 Sätzen, die die Kernfrage des Artikels bereits vollständig beantwortet. Ansprache: du. Kein Zitatblock — die Einrückung suggeriert eine fremde Quelle.]
 
 ## [Zwischenüberschrift]
 
@@ -37,6 +33,22 @@ Klassifizierung: type mit der Zielsetzung intent.
 
 ---
 
-## 🔗 Verwandte Module
+## Häufige Fragen
+
+[Nur aufnehmen, wenn es 3–5 echte Fragen aus der Praxis gibt — sonst diesen Abschnitt ersatzlos streichen. Keine Preise, Termine, Buchung oder Stornobedingungen.]
+
+### [Frage 1 als vollständiger Satz mit Fragezeichen?]
+
+[Der erste Satz beantwortet die Frage vollständig und trägt allein, auch aus dem Zusammenhang gerissen. Danach ein bis zwei Sätze zur Einordnung. 40–80 Wörter, Ansprache: du.]
+
+### [Frage 2 als vollständiger Satz mit Fragezeichen?]
+
+[Erster Satz mit der vollständigen Antwort, danach die Einordnung.]
+
+### [Frage 3 als vollständiger Satz mit Fragezeichen?]
+
+[Erster Satz mit der vollständigen Antwort, danach die Einordnung.]
+
+## Verwandte Artikel
 - **[[Titel aus CSV oder aktueller Session]]**  
-  Kontext: [Kurze Begründung, warum der Link relevant ist]
+  [Ein Satz, warum dieser Artikel hierher gehört]
