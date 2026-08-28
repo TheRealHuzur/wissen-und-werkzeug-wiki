@@ -16,11 +16,13 @@ export const collections = {
         // Zeichenkettenvergleich und bleibt in diesem Format richtig.
         created: z.string().optional(),
         updated: z.string().optional(),
-        // Angebotsverweis, Standards-Wiki Abschnitt 6 und 8. Nur vollstaendig
-        // gefuellt gibt der Export sie aus.
+        // Angebotsverweis, Standards-Wiki Abschnitt 6 und 8, Muster in
+        // Verlinkungsmatrix. offer_heading ist die unverlinkte H2, offer_text
+        // traegt den Link als Inline-Markdown. Ein eigenes Zielfeld gibt es
+        // nicht: Der Ankertext gehoert in den Satz, nicht in die Ueberleitung.
+        // Der Export gibt beide nur aus, wenn die Pruefung dort bestanden ist.
         offer_heading: z.string().optional(),
         offer_text: z.string().optional(),
-        offer_link: z.string().optional(),
       }),
     }),
   }),

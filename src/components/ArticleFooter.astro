@@ -40,12 +40,31 @@ const updatedLabel = showUpdated
     )
   : '';
 
-// Angebotsverweis nur bei vollstaendigen Angaben. Fehlt eines der drei Felder,
-// nennt der Exportlauf die Notiz in seiner Warnliste.
+// Angebotsverweis: Die H2 aus offer_heading bleibt unverlinkte Ueberleitung,
+// der Link steht als Inline-Markdown mitten in offer_text. Muster in
+// Verlinkungsmatrix, Abschnitt "Muster fuer den Verweis".
+//
+// Umgesetzt wird genau dieses eine Muster: ein Link, Ziel als Wurzelpfad mit
+// Schraegstrich vorn und hinten. Bewusst keine allgemeine Markdown-Verarbeitung
+// und keine neue Abhaengigkeit. Der Export laesst nur geprueften Werte durch,
+// die Zerlegung hier ist die zweite Instanz derselben Regel.
 const offerHeading = typeof data.offer_heading === 'string' ? data.offer_heading.trim() : '';
 const offerText = typeof data.offer_text === 'string' ? data.offer_text.trim() : '';
-const offerLink = typeof data.offer_link === 'string' ? data.offer_link.trim() : '';
-const showOffer = Boolean(offerHeading && offerText && offerLink);
+const offerLinks = offerText.match(/\[[^\]]+\]\([^)]*\)/g) ?? [];
+const offerParts =
+  offerLinks.length === 1
+    ? offerText.match(/^([\s\S]*?)\[([^\]]+)\]\((\/[^)\s]*\/)\)([\s\S]*)$/)
+    : null;
+const offer =
+  offerHeading && offerParts
+    ? {
+        heading: offerHeading,
+        before: offerParts[1],
+        label: offerParts[2],
+        href: offerParts[3],
+        after: offerParts[4],
+      }
+    : null;
 ---
 
 {
@@ -74,12 +93,13 @@ const showOffer = Boolean(offerHeading && offerText && offerLink);
         </div>
       </div>
 
-      {showOffer && (
+      {offer && (
         <section class="angebotsverweis">
-          <h2>{offerHeading}</h2>
-          <p>{offerText}</p>
+          <h2>{offer.heading}</h2>
           <p>
-            <a href={offerLink}>{offerHeading}</a>
+            {offer.before}
+            <a href={offer.href}>{offer.label}</a>
+            {offer.after}
           </p>
         </section>
       )}

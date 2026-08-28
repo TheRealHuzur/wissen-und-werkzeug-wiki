@@ -924,16 +924,27 @@ async function main() {
     // Datumszeile nur, wenn updated gesetzt und echt groesser als created ist.
     // Standards-Wiki, Abschnitt 4, Entscheidung vom 28.08.2026.
 
-    // Angebotsverweis: Inhalt je Notiz, Form aus der Komponente. Nur wenn alle
-    // drei Felder gefuellt sind, wird der Block spaeter ausgegeben.
+    // Angebotsverweis: Inhalt je Notiz, Form aus der Komponente. Die H2 aus
+    // offer_heading ist eine unverlinkte Ueberleitung, der Link steht als
+    // Inline-Markdown in offer_text. Muster in Verlinkungsmatrix, Abschnitt
+    // "Muster fuer den Verweis".
     const offerHeading = String(frontmatter.offer_heading ?? '').trim();
     const offerText = String(frontmatter.offer_text ?? '').trim();
-    const offerLink = String(frontmatter.offer_link ?? '').trim();
-    const hasOffer = Boolean(offerHeading && offerText && offerLink);
+    const offerLinks = offerText.match(/\[[^\]]+\]\([^)]*\)/g) ?? [];
+    const offerTarget =
+      offerLinks.length === 1 ? (offerLinks[0].match(/\(([^)]*)\)/)?.[1] ?? '').trim() : '';
+    const offerTargetOk = offerTarget.startsWith('/') && offerTarget.endsWith('/');
+    const hasOffer = Boolean(offerHeading && offerText && offerLinks.length === 1 && offerTargetOk);
 
     if (!hasOffer) {
       missingOffer += 1;
-      missingOfferSlugs.push(slug);
+      let reason;
+      if (!offerHeading && !offerText) reason = 'offer_heading und offer_text fehlen';
+      else if (!offerHeading) reason = 'offer_heading fehlt';
+      else if (!offerText) reason = 'offer_text fehlt';
+      else if (offerLinks.length !== 1) reason = `genau ein Link noetig, gefunden: ${offerLinks.length}`;
+      else reason = `Ziel muss mit / beginnen und enden: ${offerTarget}`;
+      missingOfferSlugs.push(`${slug} (${reason})`);
     }
 
     const h1 = extractFirstH1(body);
@@ -952,7 +963,6 @@ async function main() {
       dateModified,
       offerHeading,
       offerText,
-      offerLink,
       hasOffer,
     });
   }
@@ -1320,7 +1330,6 @@ async function main() {
     if (candidate.hasOffer) {
       frontmatterLines.push(`offer_heading: ${yamlQuote(candidate.offerHeading)}`);
       frontmatterLines.push(`offer_text: ${yamlQuote(candidate.offerText)}`);
-      frontmatterLines.push(`offer_link: ${yamlQuote(candidate.offerLink)}`);
     }
 
     frontmatterLines.push('head:');
