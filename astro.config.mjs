@@ -23,6 +23,7 @@ export default defineConfig({
       customCss: ['./src/styles/custom.css'],
       components: {
         ThemeSelect: './src/components/CustomThemeSelect.astro',
+        Footer: './src/components/Footer.astro',
       },
     }),
     sitemap({

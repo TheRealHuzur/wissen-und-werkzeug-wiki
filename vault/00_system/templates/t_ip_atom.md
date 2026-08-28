@@ -8,6 +8,9 @@ status: entwurf
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 summary: ""
+offer_heading: ""
+offer_text: ""
+offer_link: ""
 ---
 
 %%
