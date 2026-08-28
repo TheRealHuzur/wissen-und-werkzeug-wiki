@@ -28,3 +28,6 @@ src/content/docs/*
 !src/content/docs/index.md
 !src/content/docs/index.mdx
 src/generated/
+
+# --- Generierte Berichte (der Export erzeugt sie bei jedem Lauf neu) ---
+reports/bestandsaufnahme.md
