@@ -7,6 +7,8 @@ moc_level: subtopic
 parent_topic: prozessmanagement
 subtopic: projekte_planen_und_steuern
 status: aktiv
+created: 2026-02-16
+updated:
 summary: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.
 ---
 # Projekte planen und steuern

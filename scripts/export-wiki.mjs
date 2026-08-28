@@ -812,6 +812,8 @@ async function main() {
   // Notizen ohne updated: — zugleich die Arbeitsliste fuer die Artikelueberarbeitung
   let missingUpdated = 0;
   const missingUpdatedSlugs = [];
+  let missingOffer = 0;
+  const missingOfferSlugs = [];
   const skippedSamples = [];
   const mocSummary = {
     totalMocs: 0,
@@ -905,7 +907,6 @@ async function main() {
       ? frontmatter.aliases.map((value) => String(value).trim()).filter(Boolean)
       : [];
 
-    const fileStats = await fs.stat(file);
     // Kein Datum ohne Frontmatter-Angabe. Der Rueckfall auf die Dateizeit erzeugte
     // im CI-Checkout das Deploy-Datum statt einer echten Aenderung — eine
     // ueberpruefbare Falschangabe in strukturierten Daten.
@@ -918,10 +919,33 @@ async function main() {
       missingUpdatedSlugs.push(slug);
     }
 
-    // Der sichtbare Autorensatz behaelt vorerst die Dateizeit als Rueckfall:
-    // dieser Auftrag aendert nichts am Artikelinhalt. Der Autorenblock wird in
-    // Paket 3 neu gebaut, dort faellt die Angabe sauber weg.
-    const displayDateModified = dateModified || formatDate(fileStats.mtime);
+    // Der Rueckfall auf die Dateizeit ist mit Paket 3 ersatzlos entfallen. Kein
+    // sichtbares Datum stammt mehr aus dem Dateisystem: Die Komponente zeigt eine
+    // Datumszeile nur, wenn updated gesetzt und echt groesser als created ist.
+    // Standards-Wiki, Abschnitt 4, Entscheidung vom 28.08.2026.
+
+    // Angebotsverweis: Inhalt je Notiz, Form aus der Komponente. Die H2 aus
+    // offer_heading ist eine unverlinkte Ueberleitung, der Link steht als
+    // Inline-Markdown in offer_text. Muster in Verlinkungsmatrix, Abschnitt
+    // "Muster fuer den Verweis".
+    const offerHeading = String(frontmatter.offer_heading ?? '').trim();
+    const offerText = String(frontmatter.offer_text ?? '').trim();
+    const offerLinks = offerText.match(/\[[^\]]+\]\([^)]*\)/g) ?? [];
+    const offerTarget =
+      offerLinks.length === 1 ? (offerLinks[0].match(/\(([^)]*)\)/)?.[1] ?? '').trim() : '';
+    const offerTargetOk = offerTarget.startsWith('/') && offerTarget.endsWith('/');
+    const hasOffer = Boolean(offerHeading && offerText && offerLinks.length === 1 && offerTargetOk);
+
+    if (!hasOffer) {
+      missingOffer += 1;
+      let reason;
+      if (!offerHeading && !offerText) reason = 'offer_heading und offer_text fehlen';
+      else if (!offerHeading) reason = 'offer_heading fehlt';
+      else if (!offerText) reason = 'offer_text fehlt';
+      else if (offerLinks.length !== 1) reason = `genau ein Link noetig, gefunden: ${offerLinks.length}`;
+      else reason = `Ziel muss mit / beginnen und enden: ${offerTarget}`;
+      missingOfferSlugs.push(`${slug} (${reason})`);
+    }
 
     const h1 = extractFirstH1(body);
     const title = frontmatter.title ? String(frontmatter.title) : (h1 || toTitleCase(sourceName));
@@ -937,7 +961,9 @@ async function main() {
       body,
       datePublished,
       dateModified,
-      displayDateModified,
+      offerHeading,
+      offerText,
+      hasOffer,
     });
   }
 
@@ -1291,6 +1317,21 @@ async function main() {
       frontmatterLines.push(`description: ${yamlQuote(description)}`);
     }
     frontmatterLines.push(`slug: ${yamlQuote(candidate.slug)}`);
+
+    // Durchreichen nach src/content/docs, damit die Artikelfuss-Komponente die
+    // Werte lesen kann. Die JSON-LD-Erzeugung weiter unten bleibt davon
+    // unberuehrt und zieht ihre Werte weiterhin aus denselben Variablen.
+    if (candidate.datePublished) {
+      frontmatterLines.push(`created: ${yamlQuote(candidate.datePublished)}`);
+    }
+    if (candidate.dateModified) {
+      frontmatterLines.push(`updated: ${yamlQuote(candidate.dateModified)}`);
+    }
+    if (candidate.hasOffer) {
+      frontmatterLines.push(`offer_heading: ${yamlQuote(candidate.offerHeading)}`);
+      frontmatterLines.push(`offer_text: ${yamlQuote(candidate.offerText)}`);
+    }
+
     frontmatterLines.push('head:');
     // Reiner Inhaltstitel ohne den Zusatz "| Wissen & Werkzeug Wiki"
     frontmatterLines.push('  - tag: title');
@@ -1341,17 +1382,12 @@ async function main() {
     // Remove the first H1 from the body (it's already in the frontmatter as 'title' and rendered by Starlight)
     bodyWithoutRag = bodyWithoutRag.replace(/^#\s+.+\r?\n?/, '').trim();
 
-    // Append Author & Date section
-    const authorSection = `
-
----
-
-### Über den Autor
-**[${AUTHOR_DATA.name}](${AUTHOR_DATA.url})** ist ${AUTHOR_DATA.expertise}. Dieser Artikel wurde zuletzt am ${candidate.displayDateModified} aktualisiert.
-`;
-
+    // Der Autorenblock wird nicht mehr in den Body geschrieben. Er entsteht seit
+    // Paket 3 zentral in src/components/ArticleFooter.astro, gemeinsam mit dem
+    // Angebotsverweis. AUTHOR_DATA bleibt die Quelle der maschinenlesbaren
+    // Autorenangabe im JSON-LD oben.
     frontmatterLines.push('---');
-    const output = `${frontmatterLines.join('\n')}\n\n${bodyWithoutRag}${authorSection}`;
+    const output = `${frontmatterLines.join('\n')}\n\n${bodyWithoutRag}\n`;
     const outputFile = path.join(OUT_DOCS_DIR, `${candidate.slug}.md`);
     await fs.writeFile(outputFile, output, 'utf8');
     exportedFiles += 1;
@@ -1372,6 +1408,7 @@ async function main() {
   console.log(`[summary] descriptionsFromDescription: ${descriptionsFromDescription}`);
   console.log(`[summary] descriptionsMissing: ${descriptionsMissing}`);
   console.log(`[summary] missingUpdated: ${missingUpdated}`);
+  console.log(`[summary] missingOffer: ${missingOffer}`);
   console.log(`[summary] bestandsaufnahme.articlesWithQuestions: ${bestandsaufnahme.articlesWithQuestions}`);
   console.log(`[summary] bestandsaufnahme.questionsTotal: ${bestandsaufnahme.questionsTotal}`);
   console.log(`[summary] bestandsaufnahme.relatedEntries: ${bestandsaufnahme.relatedTotal}`);
@@ -1399,6 +1436,15 @@ async function main() {
   if (missingUpdatedSlugs.length > 0) {
     console.log(`[warn] Notizen ohne updated: (${missingUpdatedSlugs.length}) — kein dateModified:`);
     for (const slug of [...missingUpdatedSlugs].sort()) {
+      console.log(`- ${slug}`);
+    }
+  }
+  // Zweite Warnliste, bewusst getrennt gefuehrt: missingUpdated ist ein
+  // dokumentierter Pruefwert aus Paket 1 und darf nicht zwei Sachverhalte
+  // vermischen. Fehlt eines der drei offer_-Felder, entfaellt der Block.
+  if (missingOfferSlugs.length > 0) {
+    console.log(`[warn] Notizen ohne vollstaendigen Angebotsverweis (${missingOfferSlugs.length}) — offer_heading, offer_text und offer_link noetig:`);
+    for (const slug of [...missingOfferSlugs].sort()) {
       console.log(`- ${slug}`);
     }
   }

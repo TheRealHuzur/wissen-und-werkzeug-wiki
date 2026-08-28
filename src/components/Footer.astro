@@ -1,0 +1,13 @@
+---
+/**
+ * Starlight-Override fuer den Seitenfuss.
+ *
+ * Der Artikelfuss wird vor <Default /> gerendert, damit Pagination und
+ * Meta-Zeile von Starlight erhalten bleiben.
+ */
+import Default from '@astrojs/starlight/components/Footer.astro';
+import ArticleFooter from './ArticleFooter.astro';
+---
+
+<ArticleFooter />
+<Default><slot /></Default>

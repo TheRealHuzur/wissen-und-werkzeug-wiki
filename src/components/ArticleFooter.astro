@@ -1,0 +1,173 @@
+---
+/**
+ * Artikelfuss: Autorenblock und Angebotsverweis.
+ *
+ * Ersetzt den Markdown-Anhang, den scripts/export-wiki.mjs bis Paket 3 an jeden
+ * Body gehaengt hat. Zentrale Pflege an einer Stelle, Standards-Wiki Abschnitt 8.
+ *
+ * Reihenfolge auf der fertigen Seite: Inhalt, Haeufige Fragen, Verwandte Artikel
+ * (alle drei aus dem Notiz-Body), dann Autorenblock, dann Angebotsverweis.
+ */
+import { Image } from 'astro:assets';
+import portrait from '../assets/patrick-rosskothen.png';
+
+const { entry, id: routeId } = Astro.locals.starlightRoute;
+const data = entry.data as Record<string, unknown>;
+
+// Nur exportierte Artikel bekommen den Fuss. Ausgenommen sind die beiden
+// handgepflegten Seiten index.md und index.mdx sowie die 404-Seite: Starlight
+// baut sie aus einem virtuellen Eintrag, dessen filePath auf eine nicht
+// vorhandene 404.md zeigt und die Pfadpruefung allein deshalb passieren wuerde.
+const filePath = (typeof entry.filePath === 'string' ? entry.filePath : '').replace(/\\/g, '/');
+const isArticle =
+  filePath.startsWith('src/content/docs/') &&
+  !/(^|\/)index\.mdx?$/.test(filePath) &&
+  routeId !== '404';
+
+const created = typeof data.created === 'string' ? data.created.trim() : '';
+const updated = typeof data.updated === 'string' ? data.updated.trim() : '';
+
+// Sichtbares Datum genau dann, wenn updated gesetzt und echt groesser als
+// created ist. Bewusst schaerfer als die Bedingung fuer dateModified in den
+// strukturierten Daten: Ein pauschal nachgetragenes updated wird so nicht
+// sichtbar. Standards-Wiki Abschnitt 4, Entscheidung vom 28.08.2026.
+// Beide Werte liegen als JJJJ-MM-TT vor, der Zeichenkettenvergleich ordnet
+// in diesem Format korrekt.
+const showUpdated = Boolean(created && updated && updated > created);
+const updatedLabel = showUpdated
+  ? new Intl.DateTimeFormat('de-DE', { day: 'numeric', month: 'long', year: 'numeric' }).format(
+      new Date(`${updated}T12:00:00Z`)
+    )
+  : '';
+
+// Angebotsverweis: Die H2 aus offer_heading bleibt unverlinkte Ueberleitung,
+// der Link steht als Inline-Markdown mitten in offer_text. Muster in
+// Verlinkungsmatrix, Abschnitt "Muster fuer den Verweis".
+//
+// Umgesetzt wird genau dieses eine Muster: ein Link, Ziel als Wurzelpfad mit
+// Schraegstrich vorn und hinten. Bewusst keine allgemeine Markdown-Verarbeitung
+// und keine neue Abhaengigkeit. Der Export laesst nur geprueften Werte durch,
+// die Zerlegung hier ist die zweite Instanz derselben Regel.
+const offerHeading = typeof data.offer_heading === 'string' ? data.offer_heading.trim() : '';
+const offerText = typeof data.offer_text === 'string' ? data.offer_text.trim() : '';
+const offerLinks = offerText.match(/\[[^\]]+\]\([^)]*\)/g) ?? [];
+const offerParts =
+  offerLinks.length === 1
+    ? offerText.match(/^([\s\S]*?)\[([^\]]+)\]\((\/[^)\s]*\/)\)([\s\S]*)$/)
+    : null;
+const offer =
+  offerHeading && offerParts
+    ? {
+        heading: offerHeading,
+        before: offerParts[1],
+        label: offerParts[2],
+        href: offerParts[3],
+        after: offerParts[4],
+      }
+    : null;
+---
+
+{
+  isArticle && (
+    <div class="artikelfuss">
+      <div class="autorenblock">
+        {/* Die Quelldatei ist 1536x1024 und damit nicht quadratisch, anders als
+            Standards-Wiki Abschnitt 8 es vorsieht. Bis sie ersetzt ist, schneidet
+            Astro mittig auf ein Quadrat zu: Das Gesicht sitzt dort vollstaendig
+            im Bild. 176 Pixel Kantenlaenge fuer 88 Pixel Darstellung. */}
+        <Image
+          class="autorenfoto"
+          src={portrait}
+          alt="Patrick Roßkothen"
+          width={176}
+          height={176}
+          fit="cover"
+          position="center"
+        />
+        <div class="autorentext">
+          <p>
+            Geschrieben von Patrick Roßkothen, Organisationsberater und Dozent. Mehr zu mir und
+            meiner Arbeit: <a href="/ueber-mich/">Über mich</a>
+          </p>
+          {showUpdated && <p class="autorendatum">Zuletzt aktualisiert am {updatedLabel}</p>}
+        </div>
+      </div>
+
+      {offer && (
+        <section class="angebotsverweis">
+          <h2>{offer.heading}</h2>
+          <p>
+            {offer.before}
+            <a href={offer.href}>{offer.label}</a>
+            {offer.after}
+          </p>
+        </section>
+      )}
+    </div>
+  )
+}
+
+<style>
+  /* Grosszuegige Abstaende sind der Gestaltungsstandard der Hauptwebsite.
+     Farben ausschliesslich ueber bestehende Variablen, keine neuen Farbwerte. */
+  .artikelfuss {
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--sl-color-gray-5);
+  }
+
+  .autorenblock {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .autorenfoto {
+    width: 88px;
+    height: 88px;
+    flex: none;
+    object-fit: cover;
+  }
+
+  .autorentext {
+    flex: 1 1 18rem;
+  }
+
+  .autorentext p {
+    margin: 0;
+    color: var(--sl-color-text);
+  }
+
+  .autorentext a {
+    color: var(--brand-accent-turquoise);
+  }
+
+  /* Unauffaellige eigene Zeile unter dem Satz. Keine eigene Farbe, nur
+     zurueckgenommen. */
+  .autorendatum {
+    margin-top: 0.5rem;
+    font-size: var(--sl-text-sm);
+    opacity: 0.75;
+  }
+
+  /* Textblock, kein Kasten, keine Hintergrundflaeche, keine Schaltflaeche.
+     Standards-Wiki Abschnitt 8: Am Artikelende stehen bereits zwei Bloecke,
+     ein dritter in Bannerform wuerde als Werbung gelesen. */
+  .angebotsverweis {
+    margin-top: 3.5rem;
+  }
+
+  .angebotsverweis h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  .angebotsverweis p {
+    margin: 0 0 0.75rem;
+    color: var(--sl-color-text);
+  }
+
+  .angebotsverweis a {
+    color: var(--brand-accent-turquoise);
+  }
+</style>

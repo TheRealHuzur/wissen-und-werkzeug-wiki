@@ -7,6 +7,8 @@ moc_level: subtopic
 parent_topic: wissensmanagement
 subtopic: lernformate
 status: aktiv
+created: 2026-02-19
+updated:
 summary: Lernformate sind strukturierte Methoden und Settings, mit denen Lernen gestaltet wird. Die Kategorie sammelt und beschreibt unterschiedliche Formate, damit sie je nach Ziel, Zielgruppe, Aufwand und Kontext passend ausgewählt und umgesetzt werden können.
 ---
 # Lernformate
