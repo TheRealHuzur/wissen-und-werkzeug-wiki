@@ -8,6 +8,10 @@ const OUT_DOCS_DIR = 'src/content/docs';
 const LEGACY_OUT_DOCS_DIR = 'src/content/docs/fach-expertise';
 const OUT_ASSETS_DIR = 'public/wiki-assets';
 const GENERATED_SIDEBAR_FILE = 'src/generated/sidebar.mjs';
+// Bericht der Bestandsaufnahme, bewusst ausserhalb von src/content/docs
+const REPORT_FILE = 'reports/bestandsaufnahme.md';
+// Beschreibungen unter dieser Wortzahl sind keine vollstaendigen Saetze
+const SHORT_DESCRIPTION_WORDS = 4;
 const STATUS_READY = 'ki_ready';
 const STATUS_REJECTED = 'verworfen';
 const STATUS_ACTIVE = 'aktiv';
@@ -206,14 +210,198 @@ function normalizeLookupKey(input) {
   return input.trim().toLowerCase();
 }
 
+// Adressen werden transliteriert, nicht als Unicode durchgereicht:
+// ae/oe/ue/ss, uebrige Diakritika auf den Grundbuchstaben, Unterstrich zu Bindestrich.
+// Festlegung aus Standards-Wiki, Abschnitt 2.
 function slugify(input) {
   return String(input ?? '')
     .trim()
+    .normalize('NFC')
     .toLowerCase()
+    .replace(/ä/g, 'ae')
+    .replace(/ö/g, 'oe')
+    .replace(/ü/g, 'ue')
+    .replace(/ß/g, 'ss')
+    .normalize('NFD')
+    .replace(/\p{M}+/gu, '')
     .replace(/[^\p{L}\p{N}\s_-]/gu, '')
     .replace(/[\s_]+/g, '-')
     .replace(/-+/g, '-')
     .replace(/^-+|-+$/g, '');
+}
+
+// --- Bestandsaufnahme -------------------------------------------------------
+// Liest den Vault und sammelt Rohmaterial fuer die spaetere Artikelarbeit.
+// Aendert nichts an der Ausgabe: die Frageliste wird weiterhin exportiert, das
+// Etikett "Kontext:" bleibt stehen, kurze Beschreibungen bleiben stehen.
+
+// Nach Paket 1 heisst es "Dieser Artikel"; im Bestand steht noch "Dieses Modul".
+// Zwei Notizen stellen ein Emoji vor die Zeile — deshalb der freie Vorspann.
+const QUESTION_BLOCK_RE = /^[^*]*\*\*Diese[sr]\s+(?:Modul|Artikel)\s+beantwortet\s+folgende\s+Fragen:?\*\*\s*$/i;
+const RELATED_HEADING_RE = /^#{1,6}\s*(?:🔗\s*)?Verwandte\s+(?:Module|Artikel)\s*$/i;
+const LIST_ITEM_RE = /^\s*[-*]\s+/;
+const KONTEXT_ITEM_RE = /^[\s*]*Kontext[\s*]*:/i;
+
+function countWords(text) {
+  return String(text ?? '').split(/\s+/).filter(Boolean).length;
+}
+
+function collectQuestions(body) {
+  const lines = String(body ?? '').split(/\r?\n/);
+  const questions = [];
+  for (let i = 0; i < lines.length; i += 1) {
+    if (!QUESTION_BLOCK_RE.test(lines[i])) continue;
+    let j = i + 1;
+    while (j < lines.length && lines[j].trim() === '') j += 1;
+    while (j < lines.length && LIST_ITEM_RE.test(lines[j])) {
+      const question = lines[j].replace(LIST_ITEM_RE, '').trim();
+      if (question) questions.push(question);
+      j += 1;
+    }
+    i = j;
+  }
+  return questions;
+}
+
+// Das Etikett kommt aus dem Notion-Export in mehreren Schreibweisen:
+// "***Kontext:*", "***Kontext*:" und "  Kontext:" in der Folgezeile.
+function stripKontextLabel(text) {
+  return String(text ?? '')
+    .replace(/\*/g, ' ')
+    .trim()
+    .replace(/^Kontext\s*:\s*/i, '')
+    .trim();
+}
+
+async function writeBestandsaufnahme(candidates, missingUpdatedSlugs) {
+  const sorted = [...candidates].sort((a, b) => a.slug.localeCompare(b.slug, 'de'));
+
+  const withQuestions = [];
+  const shortDescriptions = [];
+  let questionsTotal = 0;
+  let relatedTotal = 0;
+
+  for (const candidate of sorted) {
+    const questions = collectQuestions(candidate.body);
+    if (questions.length > 0) {
+      withQuestions.push({ slug: candidate.slug, title: candidate.title, questions });
+      questionsTotal += questions.length;
+    }
+    for (const entry of collectRelatedDescriptions(candidate.body)) {
+      relatedTotal += 1;
+      if (entry.wordCount > 0 && entry.wordCount < SHORT_DESCRIPTION_WORDS) {
+        shortDescriptions.push({ slug: candidate.slug, ...entry });
+      }
+    }
+  }
+
+  const lines = [];
+  lines.push('# Bestandsaufnahme Wiki');
+  lines.push('');
+  lines.push('Erzeugt bei jedem Exportlauf aus dem Vault. **Reiner Lesebericht** —');
+  lines.push('an der Ausgabe des Wikis aendert er nichts. Rohmaterial fuer die spaetere');
+  lines.push('Artikelarbeit (Standards-Wiki, Abschnitte 3 und 8).');
+  lines.push('');
+  lines.push('| Kennzahl | Wert |');
+  lines.push('|---|---|');
+  lines.push(`| Artikel im Export | ${sorted.length} |`);
+  lines.push(`| Artikel mit Frageliste | ${withQuestions.length} |`);
+  lines.push(`| Fragen insgesamt | ${questionsTotal} |`);
+  lines.push(`| Eintraege im Verweisblock | ${relatedTotal} |`);
+  lines.push(`| Beschreibungen unter ${SHORT_DESCRIPTION_WORDS} Woertern | ${shortDescriptions.length} |`);
+  lines.push(`| Notizen ohne \`updated:\` | ${missingUpdatedSlugs.length} |`);
+  lines.push('');
+
+  lines.push('## 1. Fragen aus den Artikelanfaengen');
+  lines.push('');
+  lines.push('Werden spaeter zu echten Frage-Antwort-Paaren am Artikelende und sind der');
+  lines.push('erste Inhalt des FAQ-Registers. Bis dahin bleiben sie unveraendert stehen.');
+  lines.push('');
+  for (const entry of withQuestions) {
+    lines.push(`### ${entry.slug}`);
+    lines.push('');
+    lines.push(`${entry.title}`);
+    lines.push('');
+    for (const question of entry.questions) {
+      lines.push(`- ${question}`);
+    }
+    lines.push('');
+  }
+
+  lines.push(`## 2. Beschreibungen im Verweisblock unter ${SHORT_DESCRIPTION_WORDS} Woertern`);
+  lines.push('');
+  lines.push('Kein vollstaendiger Satz. Bei der Artikelarbeit umschreiben oder streichen —');
+  lines.push('ist die Beschreibung kein Satz, steht der Titel allein (Standards-Wiki,');
+  lines.push('Abschnitt 8).');
+  lines.push('');
+  if (shortDescriptions.length === 0) {
+    lines.push('Keine gefunden.');
+    lines.push('');
+  } else {
+    lines.push('| Artikel | Verweisziel | Beschreibung | Woerter |');
+    lines.push('|---|---|---|---|');
+    for (const entry of shortDescriptions) {
+      lines.push(`| ${entry.slug} | ${entry.title} | ${entry.description} | ${entry.wordCount} |`);
+    }
+    lines.push('');
+  }
+
+  lines.push('## 3. Notizen ohne `updated:`');
+  lines.push('');
+  lines.push('Diese Artikel bekommen kein `dateModified` in den strukturierten Daten.');
+  lines.push('Zugleich die Arbeitsliste: `updated:` wird am Tag der Ueberarbeitung gesetzt.');
+  lines.push('');
+  for (const slug of [...missingUpdatedSlugs].sort((a, b) => a.localeCompare(b, 'de'))) {
+    lines.push(`- ${slug}`);
+  }
+  lines.push('');
+
+  await fs.mkdir(path.dirname(REPORT_FILE), { recursive: true });
+  await fs.writeFile(REPORT_FILE, lines.join('\n'), 'utf8');
+
+  return {
+    articlesWithQuestions: withQuestions.length,
+    questionsTotal,
+    relatedTotal,
+    shortDescriptions: shortDescriptions.length,
+  };
+}
+
+function collectRelatedDescriptions(body) {
+  const lines = String(body ?? '').split(/\r?\n/);
+  const entries = [];
+  for (let i = 0; i < lines.length; i += 1) {
+    if (!RELATED_HEADING_RE.test(lines[i])) continue;
+    for (let j = i + 1; j < lines.length && !/^#{1,6}\s/.test(lines[j]); j += 1) {
+      if (!LIST_ITEM_RE.test(lines[j])) continue;
+      const item = lines[j].replace(LIST_ITEM_RE, '');
+
+      // Dritte Form aus dem Notion-Export: das Etikett steht als eigener
+      // Listenpunkt unter dem Titel und gehoert zum vorherigen Eintrag.
+      if (KONTEXT_ITEM_RE.test(item)) {
+        const previous = entries[entries.length - 1];
+        if (previous && !previous.description) {
+          previous.description = stripKontextLabel(item);
+          previous.wordCount = countWords(previous.description);
+        }
+        continue;
+      }
+
+      const linkMatch = item.match(/\[\[([^\]|#]+)/);
+      const title = (linkMatch ? linkMatch[1] : item.replace(/\*/g, '')).trim();
+
+      const closing = item.indexOf(']]');
+      let description = stripKontextLabel(closing === -1 ? '' : item.slice(closing + 2));
+      if (!description) {
+        const next = lines[j + 1] ?? '';
+        const isOwnLine = next.trim() !== '' && !LIST_ITEM_RE.test(next) && !/^#{1,6}\s/.test(next);
+        if (isOwnLine) description = stripKontextLabel(next);
+      }
+
+      entries.push({ title, description, wordCount: countWords(description) });
+    }
+  }
+  return entries;
 }
 
 // Entfernt interne Arbeitsnotizen und Notion-Artefakte aus dem sichtbaren Text.
@@ -621,6 +809,9 @@ async function main() {
   let descriptionsFromSummary = 0;
   let descriptionsFromDescription = 0;
   let descriptionsMissing = 0;
+  // Notizen ohne updated: — zugleich die Arbeitsliste fuer die Artikelueberarbeitung
+  let missingUpdated = 0;
+  const missingUpdatedSlugs = [];
   const skippedSamples = [];
   const mocSummary = {
     totalMocs: 0,
@@ -715,8 +906,22 @@ async function main() {
       : [];
 
     const fileStats = await fs.stat(file);
-    const datePublished = formatDate(frontmatter.created || fileStats.birthtime);
-    const dateModified = formatDate(frontmatter.updated || fileStats.mtime);
+    // Kein Datum ohne Frontmatter-Angabe. Der Rueckfall auf die Dateizeit erzeugte
+    // im CI-Checkout das Deploy-Datum statt einer echten Aenderung — eine
+    // ueberpruefbare Falschangabe in strukturierten Daten.
+    // Standards-Wiki, Abschnitt 4.
+    const datePublished = frontmatter.created ? formatDate(frontmatter.created) : '';
+    const dateModified = frontmatter.updated ? formatDate(frontmatter.updated) : '';
+
+    if (!dateModified) {
+      missingUpdated += 1;
+      missingUpdatedSlugs.push(slug);
+    }
+
+    // Der sichtbare Autorensatz behaelt vorerst die Dateizeit als Rueckfall:
+    // dieser Auftrag aendert nichts am Artikelinhalt. Der Autorenblock wird in
+    // Paket 3 neu gebaut, dort faellt die Angabe sauber weg.
+    const displayDateModified = dateModified || formatDate(fileStats.mtime);
 
     const h1 = extractFirstH1(body);
     const title = frontmatter.title ? String(frontmatter.title) : (h1 || toTitleCase(sourceName));
@@ -732,6 +937,7 @@ async function main() {
       body,
       datePublished,
       dateModified,
+      displayDateModified,
     });
   }
 
@@ -1032,8 +1238,6 @@ async function main() {
               url: `${SITE}/favicon.svg`
             }
           },
-          datePublished: candidate.datePublished,
-          dateModified: candidate.dateModified,
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': canonicalHref
@@ -1049,6 +1253,15 @@ async function main() {
 
     if (description) {
       jsonLd['@graph'][0].description = description;
+    }
+
+    // Nur ausgeben, was im Frontmatter tatsaechlich steht — kein Datum ist
+    // besser als ein falsches.
+    if (candidate.datePublished) {
+      jsonLd['@graph'][0].datePublished = candidate.datePublished;
+    }
+    if (candidate.dateModified) {
+      jsonLd['@graph'][0].dateModified = candidate.dateModified;
     }
 
     // Add DefinedTerm logic for MOCs or definitions
@@ -1134,7 +1347,7 @@ async function main() {
 ---
 
 ### Über den Autor
-**[${AUTHOR_DATA.name}](${AUTHOR_DATA.url})** ist ${AUTHOR_DATA.expertise}. Dieser Artikel wurde zuletzt am ${candidate.dateModified} aktualisiert.
+**[${AUTHOR_DATA.name}](${AUTHOR_DATA.url})** ist ${AUTHOR_DATA.expertise}. Dieser Artikel wurde zuletzt am ${candidate.displayDateModified} aktualisiert.
 `;
 
     frontmatterLines.push('---');
@@ -1143,6 +1356,8 @@ async function main() {
     await fs.writeFile(outputFile, output, 'utf8');
     exportedFiles += 1;
   }
+
+  const bestandsaufnahme = await writeBestandsaufnahme(candidates, missingUpdatedSlugs);
 
   console.log(`[summary] scannedFiles: ${scannedFiles}`);
   console.log(`[summary] exportedFiles: ${exportedFiles}`);
@@ -1156,6 +1371,12 @@ async function main() {
   console.log(`[summary] descriptionsFromSummary: ${descriptionsFromSummary}`);
   console.log(`[summary] descriptionsFromDescription: ${descriptionsFromDescription}`);
   console.log(`[summary] descriptionsMissing: ${descriptionsMissing}`);
+  console.log(`[summary] missingUpdated: ${missingUpdated}`);
+  console.log(`[summary] bestandsaufnahme.articlesWithQuestions: ${bestandsaufnahme.articlesWithQuestions}`);
+  console.log(`[summary] bestandsaufnahme.questionsTotal: ${bestandsaufnahme.questionsTotal}`);
+  console.log(`[summary] bestandsaufnahme.relatedEntries: ${bestandsaufnahme.relatedTotal}`);
+  console.log(`[summary] bestandsaufnahme.shortDescriptions: ${bestandsaufnahme.shortDescriptions}`);
+  console.log(`[summary] bestandsaufnahme.report: ${REPORT_FILE}`);
   console.log(`[summary] mocs.total: ${mocSummary.totalMocs}`);
   console.log(`[summary] mocs.parent: ${mocSummary.parentCount}`);
   console.log(`[summary] mocs.subtopic: ${mocSummary.subtopicCount}`);
@@ -1171,6 +1392,14 @@ async function main() {
     }
     if (mocSummary.yamlWarningFiles.length > maxWarnings) {
       console.log(`... +${mocSummary.yamlWarningFiles.length - maxWarnings} more`);
+    }
+  }
+  // Warnliste, kein Abbruch: diese Notizen erhalten kein dateModified und sind
+  // zugleich die Arbeitsliste fuer die Artikelueberarbeitung.
+  if (missingUpdatedSlugs.length > 0) {
+    console.log(`[warn] Notizen ohne updated: (${missingUpdatedSlugs.length}) — kein dateModified:`);
+    for (const slug of [...missingUpdatedSlugs].sort()) {
+      console.log(`- ${slug}`);
     }
   }
   if (skippedSamples.length > 0) {
