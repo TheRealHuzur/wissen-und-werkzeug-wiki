@@ -7,6 +7,8 @@ moc_level: parent
 parent_topic: second_brain
 subtopic: second_brain
 status: aktiv
+created: 2026-02-16
+updated:
 summary: Das Second Brain speichert  und strukturiert Wissen. Es ist idealerweise so organisiert, dass Zusammenhänge dargestellt werden können und das Wissen mit technischer Unterstützung durchsucht und aufbereitet werden kann.
 ---
 # Second Brain

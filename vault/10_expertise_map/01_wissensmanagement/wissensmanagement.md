@@ -6,6 +6,8 @@ moc_level: parent
 parent_topic: wissensmanagement
 subtopic: wissensmanagement
 status: aktiv
+created: 2026-02-16
+updated:
 summary: "Wissensmanagement beschreibt, wie Wissen strukturiert aufgenommen, gespeichert und abgerufen werden kann. "
 ---
 # Wissensmanagement

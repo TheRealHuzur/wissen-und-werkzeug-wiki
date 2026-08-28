@@ -7,6 +7,8 @@ moc_level: subtopic
 parent_topic: second_brain
 subtopic: obsidian
 status: aktiv
+created: 2026-02-19
+updated:
 summary: Obsidian ist eine lokale Wissensmanagement-Software für Markdown-Notizen. Inhalte werden über Links, Tags und Struktur vernetzt, sodass aus vielen einzelnen Notizen ein navigierbares Wissensnetz entsteht – erweiterbar durch Plugins und Workflows.
 ---
 # Obsidian
