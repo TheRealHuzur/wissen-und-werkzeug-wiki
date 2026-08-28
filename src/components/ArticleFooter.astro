@@ -11,14 +11,18 @@
 import { Image } from 'astro:assets';
 import portrait from '../assets/patrick-rosskothen.png';
 
-const { entry } = Astro.locals.starlightRoute;
+const { entry, id: routeId } = Astro.locals.starlightRoute;
 const data = entry.data as Record<string, unknown>;
 
-// Nur exportierte Artikel bekommen den Fuss. Die beiden handgepflegten Seiten
-// index.md und index.mdx sind keine Artikel, die 404-Seite hat keine
-// Inhaltsdatei und faellt ueber die Pfadpruefung ebenfalls heraus.
+// Nur exportierte Artikel bekommen den Fuss. Ausgenommen sind die beiden
+// handgepflegten Seiten index.md und index.mdx sowie die 404-Seite: Starlight
+// baut sie aus einem virtuellen Eintrag, dessen filePath auf eine nicht
+// vorhandene 404.md zeigt und die Pfadpruefung allein deshalb passieren wuerde.
 const filePath = (typeof entry.filePath === 'string' ? entry.filePath : '').replace(/\\/g, '/');
-const isArticle = filePath.startsWith('src/content/docs/') && !/(^|\/)index\.mdx?$/.test(filePath);
+const isArticle =
+  filePath.startsWith('src/content/docs/') &&
+  !/(^|\/)index\.mdx?$/.test(filePath) &&
+  routeId !== '404';
 
 const created = typeof data.created === 'string' ? data.created.trim() : '';
 const updated = typeof data.updated === 'string' ? data.updated.trim() : '';
