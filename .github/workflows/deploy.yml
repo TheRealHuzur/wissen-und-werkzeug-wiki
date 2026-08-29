@@ -28,10 +28,27 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y lftp
 
       - name: Deploy via lftp (SFTP protocol)
+        env:
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_SERVER: ${{ secrets.SFTP_SERVER }}
+          # Der Variablenname LFTP_PASSWORD ist von lftp vorgegeben:
+          # --env-password liest das Passwort aus genau dieser Variablen.
+          # Das Secret behaelt seinen Namen SFTP_PASSWORD.
+          LFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
         run: |
-          lftp -c "
+          set -euo pipefail
+          # Die Zugangsdaten gehen nicht mehr ueber die Kommandozeile:
+          # In der Prozessliste des Runners stand bisher das Passwort im
+          # Klartext. Das Passwort erreicht lftp jetzt nur ueber die
+          # Umgebung, der Benutzername ueber eine Skriptdatei mit 0600,
+          # die nach dem Lauf in jedem Fall wieder verschwindet.
+          LFTP_SCRIPT="$(mktemp)"
+          trap 'rm -f "$LFTP_SCRIPT"' EXIT
+          chmod 600 "$LFTP_SCRIPT"
+          cat > "$LFTP_SCRIPT" <<EOF
           set sftp:auto-confirm yes;
-          open -u ${{ secrets.SFTP_USERNAME }},${{ secrets.SFTP_PASSWORD }} sftp://${{ secrets.SFTP_SERVER }};
+          open -u "$SFTP_USERNAME" --env-password sftp://$SFTP_SERVER;
           mirror -R ./dist/ /;
           quit;
-          "
+          EOF
+          lftp -f "$LFTP_SCRIPT"
