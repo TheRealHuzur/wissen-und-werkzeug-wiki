@@ -3,6 +3,29 @@ RewriteBase /wiki/
 
 ErrorDocument 404 /wiki/404.html
 
+# www auf die Hauptdomain, dauerhaft (301).
+#
+# Warum die Regel hier steht und nicht nur im Wurzelverzeichnis: Apache
+# vererbt Rewrite-Regeln nicht an Unterverzeichnisse, die selbst
+# RewriteEngine On setzen. Diese Datei tut das in Zeile 1. Jede Regel des
+# Wurzelverzeichnisses, die auch fuer /wiki/ gelten soll, muss deshalb hier
+# wiederholt werden. Ohne diese Wiederholung bliebe ausgerechnet /wiki/ von
+# der Weiterleitung ausgenommen, und zwar ohne auffallendes Symptom: Die
+# Seiten funktionieren weiter, sie liefern unter www nur 200 statt 301.
+#
+# Warum sie vor der Direktausliefer-Regel steht: Stuende sie dahinter,
+# griffe fuer jede vorhandene Seite zuerst das [L] der Direktausliefer-Regel.
+# Umgeleitet wuerden dann nur die 404-Faelle, also gerade nicht die Seiten,
+# auf die es ankommt.
+#
+# Warum %{REQUEST_URI} und keine Rueckreferenz aus dem Muster: In einer
+# Unterverzeichnis-.htaccess sieht eine RewriteRule nur den Pfad nach
+# /wiki/. Ein $1 aus ^(.*)$ liefert "bpmn/" statt "/wiki/bpmn/", die
+# Weiterleitung verloere das /wiki/ und liefe auf eine Fehlerseite.
+# %{REQUEST_URI} ist immer der vollstaendige Pfad.
+RewriteCond %{HTTP_HOST} ^www\.wissen-und-werkzeug\.de$ [NC]
+RewriteRule ^ https://wissen-und-werkzeug.de%{REQUEST_URI} [R=301,L]
+
 # If the request is for a real file or directory, serve it directly
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
