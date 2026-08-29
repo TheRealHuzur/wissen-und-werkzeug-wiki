@@ -10,6 +10,8 @@ intent: verstehen
 status: ki_ready
 created: 2025-12-15
 summary: Das exklusive Gateway (XOR) steuert eine strikte Entweder/Oder-Entscheidung, bei der exakt ein Pfad gewählt wird. Für maximale Klarheit wird die Verwendung des „X“-Symbols und die Beschriftung der ausgehenden Pfade mit dem jeweiligen Ergebnis (statt einer zentralen Frage) empfohlen.
+offer_heading: "Eine Entscheidung im Modell ist eine Entscheidung im Prozess"
+offer_text: "Ob eine Verzweigung wirklich exklusiv ist, zeigt sich erst an den Bedingungen auf den Pfaden. Der [Grundkurs BPMN](/grundkurs-bpmn/) zeigt, wie sich solche Entscheidungen sauber formulieren lassen."
 ---
 
 %%

@@ -10,6 +10,8 @@ intent: verstehen
 status: ki_ready
 created: 2026-02-16
 summary: Dieses Modul beschreibt die Darstellung des "Was" in einem Prozessmodell durch Aktivitäten. Es definiert Tasks als atomare Einheiten und erläutert die Kapselung von Komplexität durch Teilprozesse sowie die Wiederverwendung mittels Aufrufaktivitäten.
+offer_heading: "Wo ein Teilprozess anfängt, ist eine Entscheidung"
+offer_text: "Ob etwas eine Aufgabe bleibt oder ein eigener Teilprozess wird, hängt davon ab, für wen ein Modell gedacht ist. Der [Grundkurs BPMN](/grundkurs-bpmn/) zeigt, woran sich dieser Schnitt festmachen lässt."
 ---
 
 %%

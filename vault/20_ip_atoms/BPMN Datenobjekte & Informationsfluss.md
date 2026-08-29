@@ -10,6 +10,8 @@ intent: verstehen
 status: ki_ready
 created: 2025-12-15
 summary: "Datenobjekte und Datenspeicher visualisieren den Informationsfluss innerhalb eines Prozesses, indem sie Transportmedien (z. B. Dokumente) und persistente Ablagen (z. B. Datenbanken) darstellen. Die Verbindung erfolgt über Datenassoziationen, wobei die Pfeilrichtung zwischen Input (Lesen) und Output "
+offer_heading: "Wenn das Modell auch die Unterlagen erklären soll"
+offer_text: "Datenobjekte zeigen, was ein Prozess braucht und was er hinterlässt, ohne den Ablauf zu überfrachten. Der [Grundkurs BPMN](/grundkurs-bpmn/) ordnet ein, wann sich der Aufwand lohnt und wann er ein Modell nur voller macht."
 ---
 
 

@@ -10,6 +10,8 @@ intent: verstehen
 status: ki_ready
 created: 2025-12-15
 summary: Gateways fungieren in der BPMN als reine Logik-Knoten zur Steuerung des Prozessflusses durch Verzweigung (Split) und Zusammenführung (Join). Sie stellen keine Tätigkeiten dar und verbrauchen keine Zeit. Nach dem „Wissen und Werkzeug“-Prinzip müssen Gateways explizit modelliert werden, wobei ein Spli
+offer_heading: "Regeln kennen und Regeln anwenden sind zwei Dinge"
+offer_text: "Die Regeln für Gateways sind schnell gelesen, im fertigen Modell tauchen sie trotzdem als Fehler wieder auf. Der [Grundkurs BPMN](/grundkurs-bpmn/) zeigt, woran das liegt und worauf es beim Verzweigen ankommt."
 ---
 
 %%
