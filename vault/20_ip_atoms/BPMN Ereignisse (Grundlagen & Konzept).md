@@ -10,6 +10,8 @@ intent: verstehen
 status: ki_ready
 created: 2026-02-16
 summary: Ereignisse sind zentrale Elemente der BPMN, die den Prozessfluss steuern, indem sie den Start, Zwischenschritte oder das Ende eines Prozesses definieren. Sie repräsentieren Zustände („etwas ist passiert“), verbrauchen keine Zeit und werden visuell durch Kreise dargestellt.
+offer_heading: "Ereignisse sind das Fundament, nicht das Beiwerk"
+offer_text: "Start, Zwischenereignis und Ende folgen einem gemeinsamen Konzept, das sich leichter versteht als die einzelnen Symbole. Der [Grundkurs BPMN](/grundkurs-bpmn/) baut dieses Verständnis systematisch auf."
 ---
 
 %%

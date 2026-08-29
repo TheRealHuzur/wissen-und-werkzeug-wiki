@@ -10,6 +10,8 @@ intent: verstehen
 status: ki_ready
 created: 2025-12-15
 summary: "Das parallele Gateway (AND) steuert die gleichzeitige oder reihenfolgeunabhängige Ausführung aller ausgehenden Pfade. Gekennzeichnet durch das + Symbol, aktiviert es im Split-Modus ausnahmslos alle Wege, während es bei der Zusammenführung als Synchronisationspunkt dient: Der Prozess wird erst fortge"
+offer_heading: "Die Zusammenführung ist die schwierigere Hälfte"
+offer_text: "Das parallele Gateway ist schnell gesetzt, falsch gebaut wird häufiger die Zusammenführung als die Verzweigung. Der [Grundkurs BPMN](/grundkurs-bpmn/) erklärt beide Seiten im Zusammenhang und macht sichtbar, woran ein hängender Pfad liegt."
 ---
 
 %%

@@ -10,6 +10,8 @@ intent: verstehen
 status: ki_ready
 created: 2025-12-15
 summary: Gateways fungieren in der BPMN als reine Logik-Knoten zur Steuerung des Prozessflusses durch Verzweigung (Split) und Zusammenführung (Join). Sie stellen keine Tätigkeiten dar und verbrauchen keine Zeit. Nach dem „Wissen und Werkzeug“-Prinzip müssen Gateways explizit modelliert werden, wobei ein Spli
+offer_heading: "Regeln kennen und Regeln anwenden sind zwei Dinge"
+offer_text: "Die Regeln für Gateways sind schnell gelesen, im fertigen Modell tauchen sie trotzdem als Fehler wieder auf. Der [Grundkurs BPMN](/grundkurs-bpmn/) zeigt, woran das liegt und worauf es beim Verzweigen ankommt."
 ---
 
 %%
@@ -54,7 +56,7 @@ Um die Leserichtung und Logik klarzuhalten, gilt:
 
 **Spezifische Gateway-Typen:**
 
-- **[BPMN: Das Exklusive Gateway (XOR)](BPMN%20Das%20Exklusive%20Gateway%20(XOR)%202c8d537992c580078becda90ded5cb0c.md)**  – Vertiefung zur Entweder/Oder-Entscheidung (wird im Text als Standard-Verzweigung referenziert).
+- **[BPMN: Das Exklusive Gateway (XOR)](/wiki/bpmn-das-exklusive-gateway-xor/)** – Vertiefung zur Entweder/Oder-Entscheidung (wird im Text als Standard-Verzweigung referenziert).
 - **[[Das Parallele Gateway (AND)]]** – Für gleichzeitige Pfade (eines der 4 Basis-Gateways).
 - **[[Das Inklusive Gateway (OR)]]** – Die komplexe "Und/Oder"-Variante (eines der 4 Basis-Gateways).
 - **[[Das Ereignisbasierte Gateway]]** – Die erwähnte Ausnahme für ereignisgesteuerte Pfade.

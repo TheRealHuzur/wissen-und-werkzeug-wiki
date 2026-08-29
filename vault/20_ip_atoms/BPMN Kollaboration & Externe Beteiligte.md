@@ -10,6 +10,8 @@ intent: verstehen
 status: ki_ready
 created: 2026-02-16
 summary: Dieses Modul behandelt die Darstellung von externen Prozessbeteiligten in der BPMN (Kollaboration). Es erklärt den Einsatz von Black-Box-Pools, die Nutzung von Nachrichtenflüssen zur Kommunikation und die strikten Regeln für Verbindungen über Poolgrenzen hinweg.
+offer_heading: "Sobald ein Zweiter beteiligt ist, wird es schwieriger"
+offer_text: "Wer außerhalb steht, gehört ins Modell, ohne dass sein Ablauf mitmodelliert wird. Der [Grundkurs BPMN](/grundkurs-bpmn/) zeigt, wo diese Grenze verläuft und woran man sie erkennt."
 ---
 
 %%
