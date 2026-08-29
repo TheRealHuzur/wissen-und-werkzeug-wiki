@@ -56,6 +56,7 @@ Um die Leserichtung und Logik klarzuhalten, gilt:
 
 **Spezifische Gateway-Typen:**
 
+- **[BPMN: Das Exklusive Gateway (XOR)](/wiki/bpmn-das-exklusive-gateway-xor/)** – Vertiefung zur Entweder/Oder-Entscheidung (wird im Text als Standard-Verzweigung referenziert).
 - **[[Das Parallele Gateway (AND)]]** – Für gleichzeitige Pfade (eines der 4 Basis-Gateways).
 - **[[Das Inklusive Gateway (OR)]]** – Die komplexe "Und/Oder"-Variante (eines der 4 Basis-Gateways).
 - **[[Das Ereignisbasierte Gateway]]** – Die erwähnte Ausnahme für ereignisgesteuerte Pfade.
