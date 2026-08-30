@@ -1,0 +1,181 @@
+name: Deploy Trockenlauf (--delete, nur lesend)
+
+# ACHTUNG, bevor hier irgendetwas geaendert wird:
+#
+# Dieser Workflow ist ein reiner Trockenlauf. Er laedt nichts hoch, er
+# loescht nichts, er legt auf dem Server kein Verzeichnis an. Er beantwortet
+# drei Fragen, die aus dem Repository nicht zu beantworten sind:
+#
+#   1. Worauf trifft der Zielpfad "/" aus dem Deploy? Auf das
+#      Wiki-Verzeichnis oder auf das Webspace-Wurzelverzeichnis, in dem auch
+#      die WordPress-Installation der Hauptwebsite liegt?
+#   2. Uebertraegt lftp lokale Punktdateien, insbesondere die .htaccess?
+#   3. Was genau wuerde ein erster Lauf mit --delete loeschen?
+#
+# Die Schreibsperre haengt an genau einem Wort in der mirror-Zeile weiter
+# unten: --dry-run. Wer es entfernt, macht aus diesem Workflow einen
+# scharfen Loeschlauf gegen den Produktivserver. Es gibt deshalb zwei
+# Sicherungen, die beide vor dem Verbindungsaufbau greifen und den Lauf
+# abbrechen lassen:
+#
+#   Sicherung 1 weist an einem oertlichen Testfall nach, dass --dry-run in
+#   der hier installierten lftp-Fassung tatsaechlich nichts veraendert.
+#   Dieser Schritt hat keinerlei Zugangsdaten in seiner Umgebung und kann
+#   den Produktivserver deshalb gar nicht erreichen.
+#
+#   Sicherung 2 prueft den erzeugten lftp-Skripttext darauf, dass --dry-run
+#   wirklich in der mirror-Zeile steht.
+#
+# Beide Sicherungen brechen im Zweifel ab, statt weiterzulaufen.
+#
+# Der eigentliche Deploy (.github/workflows/deploy.yml) wird von diesem
+# Workflow nicht beruehrt und bleibt unveraendert ohne --delete.
+
+on:
+  # NUR von Hand startbar. Kein push, kein schedule, kein pull_request.
+  # Der Workflow darf sich unter keinen Umstaenden von selbst starten.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  trockenlauf:
+    runs-on: ubuntu-latest
+    steps:
+      # Die vier Bauschritte sind zeichengleich mit deploy.yml. Nur so hat
+      # dist/ denselben Inhalt wie bei einem echten Deploy, und nur dann ist
+      # die Loeschliste aussagekraeftig.
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      # Sicherung 1: --dry-run wird nicht angenommen, sondern nachgewiesen.
+      #
+      # Dieser Schritt baut zwei Wegwerfverzeichnisse auf dem Runner und
+      # laesst denselben mirror-Aufruf wie unten darauf los. Danach wird
+      # geprueft, ob sich am Zielverzeichnis etwas geaendert hat. Hat sich
+      # etwas geaendert, wirkt --dry-run nicht wie erwartet, und der Lauf
+      # bricht ab, bevor Zugangsdaten ueberhaupt ins Spiel kommen.
+      #
+      # Bewusst OHNE env: Dieser Schritt hat weder Benutzername noch
+      # Passwort noch Serveradresse. Er kann den Produktivserver technisch
+      # nicht erreichen.
+      - name: Sicherung 1 - beweist, dass --dry-run nichts veraendert
+        run: |
+          set -euo pipefail
+          lftp --version
+
+          PROBE="$(mktemp -d)"
+          trap 'rm -rf "$PROBE"' EXIT
+          mkdir -p "$PROBE/quelle" "$PROBE/ziel"
+
+          # Quelle: eine normale Datei und eine Punktdatei. Die Punktdatei
+          # zeigt, ob mirror Punktdateien ueberhaupt in die Quellmenge
+          # aufnimmt.
+          echo 'inhalt' > "$PROBE/quelle/seite.html"
+          echo 'RewriteEngine On' > "$PROBE/quelle/.htaccess"
+
+          # Ziel: zwei Dateien, die es in der Quelle nicht gibt. Genau die
+          # muessten von --delete als Loeschung vorgeschlagen werden.
+          echo 'alt' > "$PROBE/ziel/nur-auf-dem-ziel.txt"
+          echo 'alt' > "$PROBE/ziel/.nur-auf-dem-ziel-versteckt"
+
+          VORHER="$(ls -a1 "$PROBE/ziel" | sort | tr '\n' ' ')"
+          echo "Ziel vor dem Testlauf:  $VORHER"
+
+          echo '--- Ausgabe des oertlichen Trockenlaufs ---'
+          lftp -c "mirror -R --delete --dry-run --verbose $PROBE/quelle $PROBE/ziel" 2>&1 | tee "$PROBE/ausgabe.txt"
+          echo '--- Ende der Ausgabe ---'
+
+          NACHHER="$(ls -a1 "$PROBE/ziel" | sort | tr '\n' ' ')"
+          echo "Ziel nach dem Testlauf: $NACHHER"
+
+          if [ "$VORHER" != "$NACHHER" ]; then
+            echo "ABBRUCH: --dry-run hat das Zielverzeichnis veraendert."
+            echo "Kein Verbindungsaufbau zum Produktivserver."
+            exit 1
+          fi
+          echo "OK: --dry-run hat nichts angelegt und nichts geloescht."
+
+          # Gegenprobe: Der Trockenlauf muss die Loeschung wenigstens
+          # vorgeschlagen haben. Steht kein Hinweis darauf in der Ausgabe,
+          # dann wirkt entweder --delete oder --verbose nicht wie erwartet,
+          # und die Loeschliste des echten Trockenlaufs waere unvollstaendig
+          # -- also wertlos und irrefuehrend.
+          if ! grep -q 'nur-auf-dem-ziel' "$PROBE/ausgabe.txt"; then
+            echo "ABBRUCH: der Trockenlauf hat keine Loeschung vorgeschlagen."
+            echo "Kein Verbindungsaufbau zum Produktivserver."
+            exit 1
+          fi
+          echo "OK: der Trockenlauf schlaegt Loeschungen vor, ohne sie auszufuehren."
+
+          # Nur zur Kenntnis, kein Abbruchgrund: Nimmt mirror die lokale
+          # Punktdatei in die Quellmenge auf? Das ist am oertlichen
+          # Dateisystem gepruefte Antwort. Fuer SFTP gilt sie nicht
+          # automatisch -- dafuer ist die Ausgabe des echten Trockenlaufs
+          # im naechsten Schritt zustaendig.
+          if grep -q 'htaccess' "$PROBE/ausgabe.txt"; then
+            echo "HINWEIS: mirror nimmt lokale Punktdateien auf, .htaccess kommt vor."
+          else
+            echo "HINWEIS: .htaccess kommt in der Ausgabe NICHT vor."
+          fi
+
+      - name: Trockenlauf via lftp (SFTP protocol)
+        env:
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_SERVER: ${{ secrets.SFTP_SERVER }}
+          # Der Variablenname LFTP_PASSWORD ist von lftp vorgegeben:
+          # --env-password liest das Passwort aus genau dieser Variablen.
+          # Das Secret behaelt seinen Namen SFTP_PASSWORD.
+          LFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+        run: |
+          set -euo pipefail
+          # Behandlung der Zugangsdaten wie im Deploy nach Pull Request 6:
+          # Das Passwort erreicht lftp nur ueber die Umgebung, der
+          # Benutzername ueber eine Skriptdatei mit 0600, die nach dem Lauf
+          # in jedem Fall wieder verschwindet. Nichts davon steht in argv.
+          LFTP_SCRIPT="$(mktemp)"
+          trap 'rm -f "$LFTP_SCRIPT"' EXIT
+          chmod 600 "$LFTP_SCRIPT"
+          cat > "$LFTP_SCRIPT" <<EOF
+          set sftp:auto-confirm yes;
+          open -u "$SFTP_USERNAME" --env-password sftp://$SFTP_SERVER;
+          pwd;
+          cls -la /;
+          cls -la .;
+          mirror -R --delete --dry-run --verbose ./dist/ /;
+          quit;
+          EOF
+
+          # Sicherung 2, letzte Gelegenheit vor dem Verbindungsaufbau.
+          #
+          # Geprueft wird der Text, der gleich wirklich ausgefuehrt wird,
+          # nicht der Text weiter oben in dieser Datei. Fehlt --dry-run in
+          # der mirror-Zeile, bricht der Lauf hier ab, statt zu loeschen.
+          MIRROR_LINE="$(grep '^mirror ' "$LFTP_SCRIPT" || true)"
+          if ! printf '%s' "$MIRROR_LINE" | grep -q -- '--dry-run'; then
+            echo "ABBRUCH: der mirror-Zeile fehlt --dry-run. Kein Verbindungsaufbau."
+            exit 1
+          fi
+          echo "OK: --dry-run steht in der mirror-Zeile. Es wird nichts geschrieben."
+
+          # Ab hier laeuft nur noch Lesendes: pwd, zwei Auflistungen und ein
+          # mirror, dem --dry-run das Ausfuehren verbietet. Mit --dry-run
+          # schreibt mirror die Befehle, die es ausfuehren wuerde, nach
+          # stdout, statt sie auszufuehren. Die Zeilen "put", "mkdir", "rm"
+          # und "chmod" im Protokoll sind Absichten, keine Vorgaenge.
+          lftp -f "$LFTP_SCRIPT"
