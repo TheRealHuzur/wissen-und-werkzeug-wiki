@@ -6,6 +6,7 @@ aliases:
 ebene_1: wissensmanagement
 ebene_2: second-brain
 ebene_3:
+reihenfolge:
 type: CollectionPage
 status: aktiv
 created: 2026-02-16

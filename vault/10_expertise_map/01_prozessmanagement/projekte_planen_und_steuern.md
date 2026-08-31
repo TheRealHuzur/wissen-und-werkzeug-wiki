@@ -6,6 +6,7 @@ aliases:
 ebene_1: prozessmanagement
 ebene_2: prozessmanagement-steuern
 ebene_3: projekte-planen-und-steuern
+reihenfolge:
 type: CollectionPage
 status: aktiv
 created: 2026-02-16

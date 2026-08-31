@@ -6,6 +6,7 @@ aliases:
 ebene_1: prozessmanagement
 ebene_2: prozesse-gestalten
 ebene_3: service-design
+reihenfolge:
 type: CollectionPage
 status: aktiv
 created: 2026-02-19

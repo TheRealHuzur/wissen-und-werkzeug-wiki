@@ -4,6 +4,7 @@ aliases:
 ebene_1: personalbedarfsermittlung
 ebene_2:
 ebene_3:
+reihenfolge:
 type: CollectionPage
 status: entwurf
 created: 2026-08-31

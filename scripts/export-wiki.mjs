@@ -682,6 +682,29 @@ function kinderIndex(mocs) {
   return kinder;
 }
 
+// Geschwister werden nach Beschriftung sortiert. Das ist ueberall richtig,
+// wo keine Reihenfolge gemeint ist, und falsch bei den fuenf Bereichen des
+// Prozessmanagements: Sie stehen in einer fachlichen Ordnung, naemlich
+// Steuern als Klammer, darin Verstehen, Gestalten und Umsetzen als
+// Lebenszyklus, dann Betreiben.
+//
+// Das optionale Feld reihenfolge ueberlagert die alphabetische Sortierung,
+// es ersetzt sie nicht: Notizen mit Wert stehen vorn, aufsteigend nach
+// Zahl; alles ohne Wert folgt alphabetisch. Bei gleichem Wert entscheidet
+// die Beschriftung. Standards-Wiki, Abschnitt 7.
+function vergleicheGeschwister(a, b) {
+  const ra = a.reihenfolge;
+  const rb = b.reihenfolge;
+  if (ra !== undefined && rb === undefined) return -1;
+  if (ra === undefined && rb !== undefined) return 1;
+  if (ra !== undefined && rb !== undefined && ra !== rb) return ra - rb;
+  return a.label.localeCompare(b.label, 'de', { sensitivity: 'base' });
+}
+
+function sortiereGeschwister(liste) {
+  return liste.slice().sort(vergleicheGeschwister);
+}
+
 function buildSidebarItemsFromMocs(mocs, includeDraft) {
   const sichtbar = mocs.filter((moc) => {
     const status = normalizeLookupKey(String(moc.status ?? ''));
@@ -690,8 +713,7 @@ function buildSidebarItemsFromMocs(mocs, includeDraft) {
   });
 
   const kinder = kinderIndex(sichtbar);
-  const nachLabel = (liste) =>
-    liste.slice().sort((a, b) => a.label.localeCompare(b.label, 'de', { sensitivity: 'base' }));
+  const nachLabel = sortiereGeschwister;
   const link = (moc) => buildRoute(moc.slug).replace(BASE_PREFIX, '') || '/';
 
   const erreicht = new Set();
@@ -759,6 +781,10 @@ async function generateSidebarFromMocs() {
       slug,
       label,
       status: String(parsed.frontmatter.status ?? '').trim(),
+      // Bleibt undefined, wenn das Feld leer ist oder fehlt. Das Feld wird
+      // allein hier gelesen und erreicht keine Astro-Komponente; es steht
+      // deshalb weder im Schema noch im durchgereichten Frontmatter.
+      reihenfolge: toNumber(parsed.frontmatter.reihenfolge),
       pfad,
       knoten: knotenSchluessel(pfad),
       tiefe: pfad.length,
@@ -1197,9 +1223,10 @@ async function main() {
     // untergeordneten Knoten, gruppiert nach Bereich.
     if (isMoc && candidate.pfad.length > 0) {
       const eigene = nachTitel(artikelNachKnoten.get(candidate.knoten) || []);
-      const kinder = (mocKinder.get(candidate.knoten) || [])
-        .slice()
-        .sort((a, b) => a.label.localeCompare(b.label, 'de', { sensitivity: 'base' }));
+      // Dieselbe Sortierung wie in der Seitenleiste. Beide muessen dieselbe
+      // Reihenfolge zeigen, sonst widersprechen sich Navigation und
+      // Seiteninhalt.
+      const kinder = sortiereGeschwister(mocKinder.get(candidate.knoten) || []);
       const gruppen = kinder
         .map((kind) => ({ label: kind.label, artikel: nachTitel(artikelImTeilbaum(kind.knoten)) }))
         .filter((gruppe) => gruppe.artikel.length > 0);

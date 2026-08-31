@@ -12,6 +12,7 @@ updated:
 summary: Obsidian ist eine lokale Wissensmanagement-Software für Markdown-Notizen. Inhalte werden über Links, Tags und Struktur vernetzt, sodass aus vielen einzelnen Notizen ein navigierbares Wissensnetz entsteht – erweiterbar durch Plugins und Workflows.
 offer_heading:
 offer_text:
+reihenfolge:
 ---
 # Obsidian
 

@@ -6,6 +6,7 @@ aliases:
 ebene_1: prozessmanagement
 ebene_2: prozesse-verstehen
 ebene_3: bpmn
+reihenfolge:
 type: CollectionPage
 status: aktiv
 created: 2026-02-16
