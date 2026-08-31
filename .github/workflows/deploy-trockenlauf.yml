@@ -36,6 +36,26 @@ on:
   # Der Workflow darf sich unter keinen Umstaenden von selbst starten.
   workflow_dispatch:
 
+# Zwei Deploys, die sich zeitlich ueberschneiden, koennen sich gegenseitig
+# zerlegen: Der eine loescht, was der andere gerade hochlaedt. Seit
+# --delete scharf ist, ist das nicht mehr folgenlos.
+#
+# cancel-in-progress steht ausgeschrieben auf false, obwohl das der
+# Vorgabewert ist, weil hier die eigentliche Entscheidung liegt. Mit true
+# wuerde ein laufender Deploy abgebrochen, sobald ein neuer startet. mirror
+# entfernt ohne --overwrite jede zu ersetzende Datei vor dem Neuhochladen;
+# ein Abbruch mitten im Spiegeln liesse geloeschte Dateien ohne Ersatz
+# zurueck. Mit false wartet der zweite Lauf, bis der erste fertig ist.
+#
+# Der Gruppenname ist fest und in beiden Workflows derselbe, damit
+# Trockenlauf und echter Deploy in dieselbe Warteschlange laufen. Beide
+# sprechen denselben Server an. Mit ${{ github.workflow }} bekaeme jeder
+# Workflow eine eigene Gruppe, und genau diese Ueberschneidung bliebe
+# moeglich.
+concurrency:
+  group: deploy-wiki
+  cancel-in-progress: false
+
 permissions:
   contents: read
 
