@@ -59,22 +59,16 @@ Dieses Wiki richtet sich an alle, die ihre Organisation zukunftsfähig gestalten
 
 ## Die Wissensbereiche im Überblick
 
-**Prozessmanagement im öffentlichen Dienst**
-Prozesse sind die Grundlage allen Handelns. Eine Organisation zu gestalten bedeutet im Kern, ihre Prozesse zu gestalten. Ob Digitalisierung, Wissensmanagement oder die Einführung von KI – für all diese Vorhaben musst du deine Prozesse kennen, sie dokumentieren und kontinuierlich optimieren. Hier lernst du, wie du dabei systematisch vorgehen kannst.
-
-Link: [Übersicht Prozessmanagement](/wiki/prozessmanagement/)
-
-**Wissensmanagement**
-Wissen ist die wertvollste Ressource jeder Organisation. Am wirkungsvollsten wird es zugänglich, wenn es entlang der Prozesse erfasst und aufbereitet wird. Und noch etwas: Wenn KI keine generischen Antworten liefern soll, sondern Antworten, die wirklich zu deiner Organisation passen, musst du sie mit deinem spezifischen Wissen versorgen. Erfahre, wie du Wissen sichtbar machst, KI-gerecht aufbereitest, Wissensverlust durch Personalwechsel vermeidest und eine Kultur strukturierter Wissensweitergabe aufbaust.
-
-Link: [Übersicht Wissensmanagement](/wiki/wissensmanagement/)
-
-**Second Brain**
-Das Second Brain-Konzept nach Tiago Forte beschreibt ein persönliches, digitales Wissenssystem, das deinen Kopf entlastet und dein Wissen dauerhaft verfügbar macht. Ich bin diesem Konzept verfallen – und entwickle es seitdem stetig weiter. Ich zeige dir meine Best Practices und wie du Obsidian nutzt, um Informationen zu erfassen, zu verarbeiten, zu organisieren und gezielt abzurufen – nach der bewährten CODE-Methode: Capture, Organize, Distill, Express.
-
-Link: [Second Brain](/wiki/second-brain/)
-
-
+<div class="bereichskarten">
+<a class="bereichskarte" href="/wiki/prozessmanagement/">
+<span class="bereichskarte-titel">Prozessmanagement im öffentlichen Dienst</span>
+<span class="bereichskarte-text">Prozesse sind die Grundlage allen Handelns. Eine Organisation zu gestalten bedeutet im Kern, ihre Prozesse zu gestalten. Ob Digitalisierung, Wissensmanagement oder die Einführung von KI – für all diese Vorhaben musst du deine Prozesse kennen, sie dokumentieren und kontinuierlich optimieren. Hier lernst du, wie du dabei systematisch vorgehen kannst.</span>
+</a>
+<a class="bereichskarte" href="/wiki/wissensmanagement/">
+<span class="bereichskarte-titel">Wissensmanagement</span>
+<span class="bereichskarte-text">Wissen ist die wertvollste Ressource jeder Organisation. Am wirkungsvollsten wird es zugänglich, wenn es entlang der Prozesse erfasst und aufbereitet wird. Und noch etwas: Wenn KI keine generischen Antworten liefern soll, sondern Antworten, die wirklich zu deiner Organisation passen, musst du sie mit deinem spezifischen Wissen versorgen. Erfahre, wie du Wissen sichtbar machst, KI-gerecht aufbereitest, Wissensverlust durch Personalwechsel vermeidest und eine Kultur strukturierter Wissensweitergabe aufbaust. Dazu gehört auch das Second Brain: ein persönliches, digitales Wissenssystem nach der CODE-Methode, das deinen Kopf entlastet und dein Wissen dauerhaft verfügbar macht.</span>
+</a>
+</div>
 
 ## Für wen ist dieses Wiki gemacht?
 

@@ -1,0 +1,128 @@
+---
+/**
+ * Sichtbarer Brotkruemelpfad.
+ *
+ * Die Auszeichnung als BreadcrumbList steht seit Langem im JSON-LD jeder
+ * Seite, sichtbar war sie nicht. Beide bauen jetzt auf denselben Daten auf und
+ * sagen dasselbe: hier aus ebene_1 bis ebene_3 im Frontmatter, dort aus
+ * denselben Feldern in buildBreadcrumbs() (scripts/export-wiki.mjs).
+ *
+ * Die Zuordnung vom Knotenpfad auf Beschriftung und Adresse des Hubs kommt aus
+ * der erzeugten Datei src/generated/breadcrumbs.mjs, die derselbe Exportlauf
+ * neben sidebar.mjs schreibt. Aus dem Knotennamen laesst sie sich nicht formen:
+ * Dabei kaeme "Bpmn" statt "BPMN" heraus.
+ */
+import { breadcrumbs as hubNachKnoten } from '../generated/breadcrumbs.mjs';
+
+const { entry, id: routeId } = Astro.locals.starlightRoute;
+const data = entry.data as Record<string, unknown>;
+
+// Dieselbe Pruefung wie in ArticleFooter.astro. Ausgenommen sind die beiden
+// handgepflegten Seiten index.md und index.mdx sowie die 404-Seite, die
+// Starlight aus einem virtuellen Eintrag ohne Ebenenfelder baut.
+const filePath = (typeof entry.filePath === 'string' ? entry.filePath : '').replace(/\\/g, '/');
+const isArticle =
+  filePath.startsWith('src/content/docs/') &&
+  !/(^|\/)index\.mdx?$/.test(filePath) &&
+  routeId !== '404';
+
+// import.meta.env.BASE_URL ist "/wiki/". Der Schraegstrich am Ende faellt weg
+// und kommt unten je Stufe wieder dazu, damit trailingSlash: 'always' gilt.
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+// Die Ebenenfelder tragen bereits die Slug-Form, der Export schreibt sie so
+// durch. Sie werden nur zusammengesetzt, nicht noch einmal umgeformt.
+const pfad = ['ebene_1', 'ebene_2', 'ebene_3']
+  .map((feld) => (typeof data[feld] === 'string' ? (data[feld] as string).trim() : ''))
+  .filter(Boolean);
+
+// Aufbau wie in buildBreadcrumbs(): erst "Wiki", dann je Ebene der Hub,
+// zuletzt die Seite selbst. Ist die Seite selbst der Hub, wird ihr eigener
+// Knoten nicht doppelt genannt.
+const stufen: Array<{ name: string; href: string }> = [{ name: 'Wiki', href: `${base}/` }];
+
+for (let i = 1; i <= pfad.length; i += 1) {
+  const hub = hubNachKnoten[pfad.slice(0, i).join('/')];
+  if (!hub) continue;
+  if (hub.slug === routeId) continue;
+  stufen.push({ name: hub.label, href: `${base}/${hub.slug}/` });
+}
+
+const titel = typeof data.title === 'string' ? data.title.trim() : '';
+if (titel) stufen.push({ name: titel, href: `${base}/${routeId}/` });
+
+// Ein Pfad aus einer einzigen Stufe ist keiner. Er kaeme nur zustande, wenn
+// eine Seite weder Ebenenfelder noch Titel haette.
+const zeigen = isArticle && stufen.length > 1;
+---
+
+{
+  zeigen && (
+    <nav class="brotkruemel" aria-label="Brotkrümelpfad">
+      <ol>
+        {stufen.map((stufe, i) =>
+          i === stufen.length - 1 ? (
+            /* Die letzte Stufe ist die Seite, auf der man schon steht. Sie
+               bleibt Text: ein Link auf die eigene Adresse fuehrt nirgendwohin.
+               In der Auszeichnung traegt sie ihre Adresse weiterhin. */
+            <li aria-current="page">{stufe.name}</li>
+          ) : (
+            <li>
+              <a href={stufe.href}>{stufe.name}</a>
+            </li>
+          )
+        )}
+      </ol>
+    </nav>
+  )
+}
+
+<style>
+  /* Der Pfad steht oberhalb der Ueberschrift und soll ihr nicht die Schau
+     stehlen: kleiner, zurueckgenommen, ohne Rahmen und ohne Flaeche. */
+  .brotkruemel {
+    font-size: var(--sl-text-sm);
+    line-height: 1.5;
+  }
+
+  .brotkruemel ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .brotkruemel li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Trennzeichen als Ausgabe des Stylesheets, nicht als Textknoten: So liest
+     ein Vorleseprogramm die Stufen ohne die Zwischenzeichen vor. */
+  .brotkruemel li + li::before {
+    content: '›';
+    margin-inline-end: 0.5rem;
+    color: var(--sl-color-gray-3);
+  }
+
+  .brotkruemel a {
+    color: var(--sl-color-gray-2);
+    text-decoration: none;
+  }
+
+  .brotkruemel a:hover,
+  .brotkruemel a:focus-visible {
+    color: var(--brand-accent-turquoise);
+    text-decoration: underline;
+  }
+
+  /* Die aktuelle Seite ist die einzige Stufe ohne Link und darf das zeigen. */
+  .brotkruemel [aria-current='page'] {
+    color: var(--sl-color-gray-3);
+  }
+</style>

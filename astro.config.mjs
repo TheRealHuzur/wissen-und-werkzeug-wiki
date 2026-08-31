@@ -11,18 +11,47 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [
     starlight({
-      title: 'Wissen & Werkzeug Wiki',
+      // Der Wert erreicht nur noch die 404-Seite: Alle anderen Seiten setzen
+      // ueber den Export einen eigenen title-Tag im head, und im Kopfbereich
+      // steht seit dem Logo die Wortmarke. Ohne "Wiki" liest sich der
+      // 404-Titel als "404 | Wissen & Werkzeug".
+      title: 'Wissen & Werkzeug',
       locales: {
         root: {
           label: 'Deutsch',
           lang: 'de',
         },
       },
+      // Wortmarke statt Texttitel. Zwei Fassungen, weil das Wiki einen dunklen
+      // Modus hat und die farbige Schrift auf dunklem Grund schlecht lesbar
+      // ist. Beide Dateien sind aus den 2560 Pixel breiten Originalen der
+      // Mediathek auf 600 Pixel heruntergerechnet; die Kopfzeile zeigt sie
+      // deutlich kleiner, alles darueber waere unnoetige Ladelast.
+      logo: {
+        light: './src/assets/logo-wortmarke.png',
+        dark: './src/assets/logo-wortmarke-dunkel.png',
+        replacesTitle: true,
+      },
       sidebar,
       favicon: '/favicon.svg',
-      customCss: ['./src/styles/custom.css'],
+      // Montserrat wie auf der Hauptwebsite, als npm-Paket und damit vom
+      // eigenen Server. Bewusst nicht ueber fonts.googleapis.com: Ein Abruf
+      // dort uebertraege die IP-Adresse jedes Besuchers an Google.
+      //
+      // Zwei Eintraege, nicht einer: Der Standardeinstieg des Pakets bringt
+      // allein den aufrechten Schnitt mit. Die Gewichtsachse deckt Fett ab,
+      // Kursiv liegt in einer eigenen Datei.
+      //
+      // Die eigene Datei steht hinten, damit --sl-font dort das letzte Wort hat.
+      customCss: [
+        '@fontsource-variable/montserrat',
+        '@fontsource-variable/montserrat/wght-italic.css',
+        './src/styles/custom.css',
+      ],
       components: {
         ThemeSelect: './src/components/CustomThemeSelect.astro',
+        // Haengt den sichtbaren Brotkruemelpfad oberhalb der H1 ein.
+        PageTitle: './src/components/PageTitle.astro',
         Footer: './src/components/Footer.astro',
       },
     }),
