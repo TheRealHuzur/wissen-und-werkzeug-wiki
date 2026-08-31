@@ -15,7 +15,7 @@ offer_heading:
 offer_text:
 ---
 
-# Name des Parent Topic
+# Name des Bereichs
 
 ## Beschreibung
 
