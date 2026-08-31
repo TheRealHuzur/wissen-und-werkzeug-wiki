@@ -1,14 +1,19 @@
 ---
 id:
-aliases:
-moc_level: parent
-parent_topic:
-subtopic:
-status:
-created: YYYY-MM-DD
-updated: YYYY-MM-DD
-summary:
+aliases: []
+ebene_1:
+ebene_2:
+ebene_3:
+type: CollectionPage
+status: aktiv
+created:
+updated:
+description:
+image:
+offer_heading:
+offer_text:
 ---
+
 # Name des Parent Topic
 
 ## Beschreibung
