@@ -18,6 +18,16 @@ export default defineConfig({
           lang: 'de',
         },
       },
+      // Wortmarke statt Texttitel. Zwei Fassungen, weil das Wiki einen dunklen
+      // Modus hat und die farbige Schrift auf dunklem Grund schlecht lesbar
+      // ist. Beide Dateien sind aus den 2560 Pixel breiten Originalen der
+      // Mediathek auf 600 Pixel heruntergerechnet; die Kopfzeile zeigt sie
+      // deutlich kleiner, alles darueber waere unnoetige Ladelast.
+      logo: {
+        light: './src/assets/logo-wortmarke.png',
+        dark: './src/assets/logo-wortmarke-dunkel.png',
+        replacesTitle: true,
+      },
       sidebar,
       favicon: '/favicon.svg',
       customCss: ['./src/styles/custom.css'],

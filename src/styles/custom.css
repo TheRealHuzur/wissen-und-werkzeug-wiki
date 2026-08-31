@@ -66,3 +66,24 @@ a {
   color: #ffffff !important;
   background-color: var(--brand-accent-turquoise) !important;
 }
+
+/* --- Kopfbereich: Wortmarke ------------------------------------------- */
+
+/* Starlight rechnet die Bildhoehe aus der Navigationshoehe und laesst der
+   Breite freien Lauf. Die Wortmarke ist rund dreimal so breit wie hoch; ohne
+   eigene Grenze waechst sie mit jeder Aenderung der Navigationshoehe mit und
+   draengt auf schmalen Bildschirmen Suche und Menueknopf an den Rand.
+   Deshalb eine feste Hoehe, aus der sich die Breite ergibt, und eine
+   Breitengrenze, die mit dem Bildschirm faellt. */
+.site-title img {
+  height: 2.25rem;
+  max-width: min(100%, 12rem);
+}
+
+/* Unterhalb der Umbruchbreite von Starlight teilen sich Wortmarke, Suchfeld
+   und Menueknopf eine Zeile. Eine Stufe kleiner, damit alle drei hineinpassen. */
+@media (max-width: 30rem) {
+  .site-title img {
+    height: 1.75rem;
+  }
+}
