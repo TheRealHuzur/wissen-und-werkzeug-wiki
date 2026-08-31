@@ -3,13 +3,15 @@ id: controlling
 aliases:
   - controlling
   - Controlling
-moc_level: subtopic
-parent_topic: prozessmanagement
-subtopic: controlling
+ebene_1: prozessmanagement
+ebene_2: prozessmanagement-betreiben
+ebene_3: controlling
+type: CollectionPage
 status: aktiv
 created: 2026-02-16
 updated:
-summary: Steuerung von Prozessen anhand von Kennzahlen.
+description: Steuerung von Prozessen anhand von Kennzahlen.
+image:
 ---
 # Controlling
 

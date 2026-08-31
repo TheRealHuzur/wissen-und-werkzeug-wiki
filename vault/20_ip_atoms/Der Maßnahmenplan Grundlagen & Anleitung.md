@@ -3,13 +3,15 @@ id: der_manahmenplan_grundlagen_anleitung
 aliases:
   - der_manahmenplan_grundlagen_anleitung
   - Der Maßnahmenplan Grundlagen & Anleitung
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: grundlagen
-intent: umsetzen
+ebene_1: prozessmanagement
+ebene_2: prozesse-umsetzen
+ebene_3:
+type: HowTo
 status: ki_ready
 created: 2026-02-16
-summary: Dieses Modul beschreibt die strukturierte Dokumentation von Umsetzungsmaßnahmen zur Realisierung von Soll-Modellen und bietet eine Schritt-für-Schritt-Anleitung zur Nutzung eines Maßnahmenplans. Er dient als zentrales Werkzeug für Verbindlichkeit, Verantwortlichkeit und Projektcontrolling.
+updated:
+description: Dieses Modul beschreibt die strukturierte Dokumentation von Umsetzungsmaßnahmen zur Realisierung von Soll-Modellen und bietet eine Schritt-für-Schritt-Anleitung zur Nutzung eines Maßnahmenplans. Er dient als zentrales Werkzeug für Verbindlichkeit, Verantwortlichkeit und Projektcontrolling.
+image:
 ---
 
 %%

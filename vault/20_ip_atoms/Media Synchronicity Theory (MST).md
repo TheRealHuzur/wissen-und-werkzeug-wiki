@@ -3,13 +3,15 @@ id: media_synchronicity_theory_mst
 aliases:
   - media_synchronicity_theory_mst
   - Media Synchronicity Theory (MST)
-parent_topic: prozessmanagement
-subtopic: projekte_planen_und_steuern
-type: theorie
-intent: steuern
+ebene_1: prozessmanagement
+ebene_2: prozessmanagement-steuern
+ebene_3: projekte-planen-und-steuern
+type: Article
 status: entwurf
 created: 2026-02-16
-summary: Die Media Synchronicity Theory (MST) ist ein Modell zur aufgabenorientierten Wahl von Kommunikationsmedien. Sie unterscheidet zwischen Informationsübermittlung (Conveyance) und der Entwicklung eines gemeinsamen Verständnisses (Convergence) und ordnet diesen Zielen passende synchrone oder asynchrone Medien zu.
+updated:
+description: Die Media Synchronicity Theory (MST) ist ein Modell zur aufgabenorientierten Wahl von Kommunikationsmedien. Sie unterscheidet zwischen Informationsübermittlung (Conveyance) und der Entwicklung eines gemeinsamen Verständnisses (Convergence) und ordnet diesen Zielen passende synchrone oder asynchrone Medien zu.
+image:
 ---
 
 %%

@@ -3,13 +3,15 @@ id: konzept_zur_einfuhrung_von_prozessmanagement
 aliases:
   - konzept_zur_einfuhrung_von_prozessmanagement
   - Konzept zur Einführung von Prozessmanagement
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: framework
-intent: steuern
+ebene_1: prozessmanagement
+ebene_2: prozessmanagement-steuern
+ebene_3:
+type: Article
 status: entwurf
 created: 2026-02-16
-summary: Ein Leitfaden zur Erstellung eines Prozessmanagement-Konzepts, der vor "Death by Concept" warnt. Es wird empfohlen, pilotbasierte Umsetzung und konzeptionelle Ausarbeitung parallel zu betreiben, statt streng sequenziell vorzugehen.
+updated:
+description: Ein Leitfaden zur Erstellung eines Prozessmanagement-Konzepts, der vor "Death by Concept" warnt. Es wird empfohlen, pilotbasierte Umsetzung und konzeptionelle Ausarbeitung parallel zu betreiben, statt streng sequenziell vorzugehen.
+image:
 ---
 
 %%

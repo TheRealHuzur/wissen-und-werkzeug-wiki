@@ -3,13 +3,15 @@ id: incentivierung_in_lerngemeinschaften
 aliases:
   - incentivierung_in_lerngemeinschaften
   - Incentivierung in Lerngemeinschaften
-parent_topic: wissensmanagement
-subtopic: wissensmanagement
-type: grundlagen
-intent: gestalten
+ebene_1: wissensmanagement
+ebene_2:
+ebene_3:
+type: Article
 status: ki_ready
 created: 2026-02-17
-summary: "Dieses Modul erläutert das Konzept der Incentivierung zur Förderung des Wissensaustauschs in Communities. Es konzentriert sich auf die Aktivierung intrinsischer Motivation durch psychologische Belohnung wie Sinnhaftigkeit, Anerkennung und Expertenstatus, um das freiwillige Teilen von Wissen als Unternehmenserfolg zu etablieren."
+updated:
+description: Dieses Modul erläutert das Konzept der Incentivierung zur Förderung des Wissensaustauschs in Communities. Es konzentriert sich auf die Aktivierung intrinsischer Motivation durch psychologische Belohnung wie Sinnhaftigkeit, Anerkennung und Expertenstatus, um das freiwillige Teilen von Wissen als Unternehmenserfolg zu etablieren.
+image:
 ---
 
 %%

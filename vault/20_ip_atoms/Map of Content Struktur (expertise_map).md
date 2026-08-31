@@ -2,13 +2,15 @@
 id: 10_expertise_map_moc_struktur
 aliases:
   - 10_expertise_map_moc_struktur
-parent_topic: second_brain
-subtopic: system_architektur
-type: grundlagen
-intent: verstehen
+ebene_1: wissensmanagement
+ebene_2: second-brain
+ebene_3: system-architektur
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Dieses Modul erklärt die Map of Content als Navigationsschicht deines Vaults. MOCs sind Übersichtsseiten, die Leserinnen und Leser durch Themen führen, ohne Inhalte zu duplizieren. Dadurch entsteht eine stabile Wiki-Struktur und eine klare Orientierung für den menschlichen Einstieg.
+updated:
+description: Dieses Modul erklärt die Map of Content als Navigationsschicht deines Vaults. MOCs sind Übersichtsseiten, die Leserinnen und Leser durch Themen führen, ohne Inhalte zu duplizieren. Dadurch entsteht eine stabile Wiki-Struktur und eine klare Orientierung für den menschlichen Einstieg.
+image:
 ---
 
 %%

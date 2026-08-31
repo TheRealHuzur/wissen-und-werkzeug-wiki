@@ -3,13 +3,15 @@ id: service_design_phase_entwickeln
 aliases:
   - service_design_phase_entwickeln
   - Service Design Phase Entwickeln
-parent_topic: prozessmanagement
-subtopic: service_design
-type: framework
-intent: gestalten
+ebene_1: prozessmanagement
+ebene_2: prozesse-gestalten
+ebene_3: service-design
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Die Phase "Entwickeln" eröffnet den zweiten Diamanten (Lösungsraum) und fokussiert auf die Generierung einer Vielzahl von Ideen. Durch kreative Methoden werden unterschiedliche Lösungsansätze für das definierte Problem entworfen.
+updated:
+description: Die Phase "Entwickeln" eröffnet den zweiten Diamanten (Lösungsraum) und fokussiert auf die Generierung einer Vielzahl von Ideen. Durch kreative Methoden werden unterschiedliche Lösungsansätze für das definierte Problem entworfen.
+image:
 ---
 
 %%

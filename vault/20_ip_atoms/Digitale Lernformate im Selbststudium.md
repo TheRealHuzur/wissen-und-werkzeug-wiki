@@ -3,13 +3,15 @@ id: digitale_lernformate_im_selbststudium
 aliases:
   - digitale_lernformate_im_selbststudium
   - Digitale Lernformate im Selbststudium
-parent_topic: wissensmanagement
-subtopic: lernformate
-type: grundlagen
-intent: verstehen
+ebene_1: wissensmanagement
+ebene_2: lernformate
+ebene_3:
+type: Article
 status: ki_ready
 created: 2026-02-17
-summary: Dieses Modul analysiert verschiedene digitale Lernformate wie Videos, Podcasts und E-Learning-Kurse. Es beleuchtet deren Nutzen für das asynchrone, selbstgesteuerte Lernen sowie den Erstellungsaufwand und die didaktischen Anforderungen, die mit diesen flexiblen Angeboten verbunden sind.
+updated:
+description: Dieses Modul analysiert verschiedene digitale Lernformate wie Videos, Podcasts und E-Learning-Kurse. Es beleuchtet deren Nutzen für das asynchrone, selbstgesteuerte Lernen sowie den Erstellungsaufwand und die didaktischen Anforderungen, die mit diesen flexiblen Angeboten verbunden sind.
+image:
 ---
 
 %%

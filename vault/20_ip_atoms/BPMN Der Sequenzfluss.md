@@ -3,13 +3,15 @@ id: bpmn_der_sequenzfluss
 aliases:
   - bpmn_der_sequenzfluss
   - BPMN Der Sequenzfluss
-parent_topic: prozessmanagement
-subtopic: bpmn
-type: framework
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3: bpmn
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Der Sequenzfluss visualisiert die chronologisch-sachlogische Abfolge eines Prozesses. Er definiert den Pfad und verbindet dabei ausschließlich Elemente innerhalb eines Pools.
+updated:
+description: Der Sequenzfluss visualisiert die chronologisch-sachlogische Abfolge eines Prozesses. Er definiert den Pfad und verbindet dabei ausschließlich Elemente innerhalb eines Pools.
+image:
 offer_heading: "Die einfachste Regel bricht am häufigsten"
 offer_text: "Wohin ein Pfeil zeigen darf und wohin nicht, entscheidet über die Lesbarkeit des ganzen Modells. Der [Grundkurs BPMN](/grundkurs-bpmn/) stellt die Regeln im Zusammenhang vor, statt sie als Liste abzuarbeiten."
 ---

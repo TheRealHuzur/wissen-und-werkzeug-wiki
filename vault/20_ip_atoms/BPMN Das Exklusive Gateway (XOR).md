@@ -3,13 +3,15 @@ id: bpmn_das_exklusive_gateway_xor
 aliases:
   - bpmn_das_exklusive_gateway_xor
   - BPMN Das Exklusive Gateway (XOR)
-parent_topic: prozessmanagement
-subtopic: bpmn
-type: framework
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3: bpmn
+type: Article
 status: ki_ready
 created: 2025-12-15
-summary: Das exklusive Gateway (XOR) steuert eine strikte Entweder/Oder-Entscheidung, bei der exakt ein Pfad gewählt wird. Für maximale Klarheit wird die Verwendung des „X“-Symbols und die Beschriftung der ausgehenden Pfade mit dem jeweiligen Ergebnis (statt einer zentralen Frage) empfohlen.
+updated:
+description: Das exklusive Gateway (XOR) steuert eine strikte Entweder/Oder-Entscheidung, bei der exakt ein Pfad gewählt wird. Für maximale Klarheit wird die Verwendung des „X“-Symbols und die Beschriftung der ausgehenden Pfade mit dem jeweiligen Ergebnis (statt einer zentralen Frage) empfohlen.
+image:
 offer_heading: "Eine Entscheidung im Modell ist eine Entscheidung im Prozess"
 offer_text: "Ob eine Verzweigung wirklich exklusiv ist, zeigt sich erst an den Bedingungen auf den Pfaden. Der [Grundkurs BPMN](/grundkurs-bpmn/) zeigt, wie sich solche Entscheidungen sauber formulieren lassen."
 ---

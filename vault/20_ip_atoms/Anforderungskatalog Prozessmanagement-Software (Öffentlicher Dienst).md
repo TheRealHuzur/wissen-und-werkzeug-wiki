@@ -2,13 +2,15 @@
 id: anforderungskatalog_prozessmanagement_software
 aliases:
   - anforderungskatalog_prozessmanagement_software
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: grundlagen
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3:
+type: Article
 status: entwurf
 created: 2026-02-16
-summary: Dieses Modul bündelt die funktionalen Anforderungen an ein BPM-System, optimiert für die Anforderungen der öffentlichen Verwaltung. Es deckt die Bereiche Modellierung, Kollaboration, Governance und Berichterstattung ab.
+updated:
+description: Dieses Modul bündelt die funktionalen Anforderungen an ein BPM-System, optimiert für die Anforderungen der öffentlichen Verwaltung. Es deckt die Bereiche Modellierung, Kollaboration, Governance und Berichterstattung ab.
+image:
 ---
 
 %%

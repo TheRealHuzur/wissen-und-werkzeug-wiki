@@ -3,13 +3,15 @@ id: die_3_ebenen_der_prozessmodellierung
 aliases:
   - die_3_ebenen_der_prozessmodellierung
   - Die 3 Ebenen der Prozessmodellierung
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: framework
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3:
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: "Innerhalb der Top-Down-Methode wird ein Prozess in drei Ebenen zerlegt: Von der abstrakten Prozessdefinition (Ebene 1) über das strategische Teilprozessmodell (Ebene 2) bis zum operativen Aktivitäten-Modell (Ebene 3). Dies sichert die nötige Granularität für verschiedene Zielgruppen."
+updated:
+description: "Innerhalb der Top-Down-Methode wird ein Prozess in drei Ebenen zerlegt: Von der abstrakten Prozessdefinition (Ebene 1) über das strategische Teilprozessmodell (Ebene 2) bis zum operativen Aktivitäten-Modell (Ebene 3). Dies sichert die nötige Granularität für verschiedene Zielgruppen."
+image:
 ---
 
 %%

@@ -3,13 +3,15 @@ id: bpmn_zwischenereignisse
 aliases:
   - bpmn_zwischenereignisse
   - BPMN Zwischenereignisse
-parent_topic: prozessmanagement
-subtopic: bpmn
-type: framework
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3: bpmn
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Zwischenereignisse treten zwischen Start und Ende eines Prozesses auf. In der fachlichen Modellierung werden sie meist als "empfangende" Ereignisse genutzt, um Wartezustände (auf Zeit, Nachricht oder Bedingung) darzustellen. **Dieses Modul beantwortet folgende Fragen:** - Wie stelle ich Wartezeiten
+updated:
+description: Zwischenereignisse treten zwischen Start und Ende eines Prozesses auf. In der fachlichen Modellierung werden sie meist als "empfangende" Ereignisse genutzt, um Wartezustände (auf Zeit, Nachricht oder Bedingung) darzustellen. **Dieses Modul beantwortet folgende Fragen:** - Wie stelle ich Wartezeiten
+image:
 offer_heading: "Vom Nachschlagen zum Verstehen"
 offer_text: "Welches Zwischenereignis das richtige ist, entscheidet sich selten am Symbol, sondern am Prozess dahinter. Der [Grundkurs BPMN](/grundkurs-bpmn/) ordnet die Ereignistypen so ein, dass du sie im Zusammenhang siehst statt einzeln."
 ---

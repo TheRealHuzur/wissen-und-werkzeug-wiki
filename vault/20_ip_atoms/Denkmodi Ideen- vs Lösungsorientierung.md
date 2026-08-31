@@ -3,13 +3,15 @@ id: denkmodi_ideen_vs_losungsorientierung
 aliases:
   - denkmodi_ideen_vs_losungsorientierung
   - Denkmodi Ideen- vs Lösungsorientierung
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: theorie
-intent: gestalten
+ebene_1: prozessmanagement
+ebene_2: prozesse-gestalten
+ebene_3:
+type: Article
 status: ki_ready
 created: 2025-12-15
-summary: Dieses Modul beschreibt die methodische Trennung zwischen explorativem, öffnendem Denken und konvergierendem, entscheidungsfokussiertem Denken zur Steigerung der Innovationsqualität.
+updated:
+description: Dieses Modul beschreibt die methodische Trennung zwischen explorativem, öffnendem Denken und konvergierendem, entscheidungsfokussiertem Denken zur Steigerung der Innovationsqualität.
+image:
 ---
 
 %%

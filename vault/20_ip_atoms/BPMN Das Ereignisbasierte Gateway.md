@@ -3,13 +3,15 @@ id: bpmn_das_ereignisbasierte_gateway
 aliases:
   - bpmn_das_ereignisbasierte_gateway
   - BPMN Das Ereignisbasierte Gateway
-parent_topic: prozessmanagement
-subtopic: bpmn
-type: framework
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3: bpmn
+type: Article
 status: ki_ready
 created: 2025-12-15
-summary: Das ereignisbasierte Gateway steuert den Prozessverlauf nicht über Datenentscheidungen, sondern über externe Ereignisse. Der Pfad des Ereignisses, das zuerst eintritt (z. B. Nachrichteneingang vs. Zeitablauf), bestimmt exklusiv den weiteren Weg des Prozesses.
+updated:
+description: Das ereignisbasierte Gateway steuert den Prozessverlauf nicht über Datenentscheidungen, sondern über externe Ereignisse. Der Pfad des Ereignisses, das zuerst eintritt (z. B. Nachrichteneingang vs. Zeitablauf), bestimmt exklusiv den weiteren Weg des Prozesses.
+image:
 ---
 
 %%

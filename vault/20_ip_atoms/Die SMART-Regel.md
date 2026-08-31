@@ -3,13 +3,15 @@ id: die_smart_regel
 aliases:
   - die_smart_regel
   - Die SMART-Regel
-parent_topic: prozessmanagement
-subtopic: projekte_planen_und_steuern
-type: theorie
-intent: steuern
+ebene_1: prozessmanagement
+ebene_2: prozessmanagement-steuern
+ebene_3: projekte-planen-und-steuern
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: "Thema-Kontext: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement."
+updated:
+description: "Thema-Kontext: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement."
+image:
 ---
 
 %%

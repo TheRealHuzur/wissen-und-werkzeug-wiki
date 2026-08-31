@@ -3,13 +3,15 @@ id: vibe_coding_prompt_vorlage
 aliases:
   - vibe_coding_prompt_vorlage
   - Vibe Coding Prompt-Vorlage
-parent_topic: kuenstliche_intelligenz
-subtopic: vibe_coding
-type: grundlagen
-intent: gestalten
+ebene_1: kuenstliche-intelligenz
+ebene_2: vibe-coding
+ebene_3:
+type: Article
 status: entwurf
 created: 2026-02-16
-summary: Diese Vorlage dient als standardisierter Prompt für das "Vibe Coding", um Software-Änderungen oder Bugfixes präzise und kontextreich an KI-Codegeräte zu kommunizieren.
+updated:
+description: Diese Vorlage dient als standardisierter Prompt für das "Vibe Coding", um Software-Änderungen oder Bugfixes präzise und kontextreich an KI-Codegeräte zu kommunizieren.
+image:
 ---
 
 %%

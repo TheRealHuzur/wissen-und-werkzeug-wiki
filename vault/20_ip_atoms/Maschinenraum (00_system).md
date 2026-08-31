@@ -2,13 +2,15 @@
 id: 00_system_maschinenraum
 aliases:
   - 00_system_maschinenraum
-parent_topic: second_brain
-subtopic: system_architektur
-type: grundlagen
-intent: verstehen
+ebene_1: wissensmanagement
+ebene_2: second-brain
+ebene_3: system-architektur
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Dieses Modul beschreibt 00_system als technischen Maschinenraum des Vaults. Es erklärt, welche Artefakte dort liegen (Taxonomie, Bases, Templates, Schemas, Anhänge, Skripte) und welche Regeln gelten, damit Validierung, Automatisierung und Link-Stabilität im GitHub-Astro-Flow zuverlässig bleiben.
+updated:
+description: Dieses Modul beschreibt 00_system als technischen Maschinenraum des Vaults. Es erklärt, welche Artefakte dort liegen (Taxonomie, Bases, Templates, Schemas, Anhänge, Skripte) und welche Regeln gelten, damit Validierung, Automatisierung und Link-Stabilität im GitHub-Astro-Flow zuverlässig bleiben.
+image:
 ---
 
 %%

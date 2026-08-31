@@ -3,13 +3,15 @@ id: service_design_phase_erkunden
 aliases:
   - service_design_phase_erkunden
   - Service Design Phase Erkunden
-parent_topic: prozessmanagement
-subtopic: service_design
-type: framework
-intent: gestalten
+ebene_1: prozessmanagement
+ebene_2: prozesse-gestalten
+ebene_3: service-design
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Die Phase "Erkunden" ist der divergierende Startpunkt im Service Design Prozess, bei dem der Problemraum weit geöffnet wird. Ziel ist das tiefe Verständnis der Nutzerbedürfnisse durch qualitative Forschungsmethoden.
+updated:
+description: Die Phase "Erkunden" ist der divergierende Startpunkt im Service Design Prozess, bei dem der Problemraum weit geöffnet wird. Ziel ist das tiefe Verständnis der Nutzerbedürfnisse durch qualitative Forschungsmethoden.
+image:
 ---
 
 %%

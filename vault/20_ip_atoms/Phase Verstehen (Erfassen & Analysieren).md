@@ -3,13 +3,15 @@ id: phase_verstehen_erfassen_analysieren
 aliases:
   - phase_verstehen_erfassen_analysieren
   - Phase Verstehen (Erfassen & Analysieren)
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: theorie
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3:
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: In dieser Phase wird der Ist-Zustand seziert. Es geht um die ungeschönte Aufnahme der Realität. Organisch gewachsene Strukturen werden nachvollzogen, in fachliche Modelle übersetzt und anschließend analysiert.
+updated:
+description: In dieser Phase wird der Ist-Zustand seziert. Es geht um die ungeschönte Aufnahme der Realität. Organisch gewachsene Strukturen werden nachvollzogen, in fachliche Modelle übersetzt und anschließend analysiert.
+image:
 ---
 
 %%

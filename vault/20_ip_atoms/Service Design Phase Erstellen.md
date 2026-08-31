@@ -3,13 +3,15 @@ id: service_design_phase_erstellen
 aliases:
   - service_design_phase_erstellen
   - Service Design Phase Erstellen
-parent_topic: prozessmanagement
-subtopic: service_design
-type: framework
-intent: gestalten
+ebene_1: prozessmanagement
+ebene_2: prozesse-gestalten
+ebene_3: service-design
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Die Phase "Erstellen" ist der finale Schritt im Double Diamond, in dem Ideen zu konkreten Lösungen ausgearbeitet, getestet und implementiert werden. Durch Prototyping und Feedbackschleifen wird das Risiko von Fehlentwicklungen minimiert.
+updated:
+description: Die Phase "Erstellen" ist der finale Schritt im Double Diamond, in dem Ideen zu konkreten Lösungen ausgearbeitet, getestet und implementiert werden. Durch Prototyping und Feedbackschleifen wird das Risiko von Fehlentwicklungen minimiert.
+image:
 ---
 
 %%

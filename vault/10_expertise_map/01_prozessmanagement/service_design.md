@@ -3,13 +3,15 @@ id: service_design
 aliases:
   - Service Design
   - service_design
-moc_level: subtopic
-parent_topic: prozessmanagement
-subtopic: service_design
+ebene_1: prozessmanagement
+ebene_2: prozesse-gestalten
+ebene_3: service-design
+type: CollectionPage
 status: aktiv
 created: 2026-02-19
 updated:
-summary: Service Design ist eine interdisziplinäre Methodik zur systematischen Gestaltung von Dienstleistungen, sodass sie für Nutzer und Anbieter gleichermaßen funktionieren. Im Zentrum steht die Verbesserung der Qualität über den gesamten Service hinweg.
+description: Service Design ist eine interdisziplinäre Methodik zur systematischen Gestaltung von Dienstleistungen, sodass sie für Nutzer und Anbieter gleichermaßen funktionieren. Im Zentrum steht die Verbesserung der Qualität über den gesamten Service hinweg.
+image:
 ---
 # Service Design 
 

@@ -3,13 +3,15 @@ id: bpmn_endereignisse
 aliases:
   - bpmn_endereignisse
   - BPMN Endereignisse
-parent_topic: prozessmanagement
-subtopic: bpmn
-type: framework
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3: bpmn
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Endereignisse markieren den Abschluss eines Prozesspfades. Sie "konsumieren" die Prozess-Marke. Ein Prozess kann mehrere unterschiedliche Endereignisse haben, um verschiedene Ergebniszustände zu dokumentieren.
+updated:
+description: Endereignisse markieren den Abschluss eines Prozesspfades. Sie "konsumieren" die Prozess-Marke. Ein Prozess kann mehrere unterschiedliche Endereignisse haben, um verschiedene Ergebniszustände zu dokumentieren.
+image:
 ---
 
 %%

@@ -3,13 +3,15 @@ id: projekte_planen_und_steuern
 aliases:
   - projekte_planen_und_steuern
   - Projekte Planen und Steuern
-moc_level: subtopic
-parent_topic: prozessmanagement
-subtopic: projekte_planen_und_steuern
+ebene_1: prozessmanagement
+ebene_2: prozessmanagement-steuern
+ebene_3: projekte-planen-und-steuern
+type: CollectionPage
 status: aktiv
 created: 2026-02-16
 updated:
-summary: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.
+description: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.
+image:
 ---
 # Projekte planen und steuern
 

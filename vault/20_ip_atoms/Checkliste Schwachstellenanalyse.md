@@ -3,13 +3,15 @@ id: checkliste_schwachstellenanalyse
 aliases:
   - checkliste_schwachstellenanalyse
   - Checkliste Schwachstellenanalyse
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: grundlagen
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3:
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Eine strukturierte Checkliste zur Identifikation von Prozess-Schwachstellen in den Kategorien Technik, Mensch, Daten, Struktur, Ergebnis und Steuerung. Sie dient als pragmatisches Arbeitsinstrument zur Nachbereitung von Prozessaufnahmen, um Lücken aufzudecken, ohne ein komplexes Reifegrad-Audit d...
+updated:
+description: Eine strukturierte Checkliste zur Identifikation von Prozess-Schwachstellen in den Kategorien Technik, Mensch, Daten, Struktur, Ergebnis und Steuerung. Sie dient als pragmatisches Arbeitsinstrument zur Nachbereitung von Prozessaufnahmen, um Lücken aufzudecken, ohne ein komplexes Reifegrad-Audit d...
+image:
 ---
 
 %%

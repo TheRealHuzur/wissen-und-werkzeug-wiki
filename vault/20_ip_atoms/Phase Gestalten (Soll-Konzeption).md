@@ -3,13 +3,15 @@ id: phase_gestalten_soll_konzeption
 aliases:
   - phase_gestalten_soll_konzeption
   - Phase Gestalten (Soll-Konzeption)
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: theorie
-intent: gestalten
+ebene_1: prozessmanagement
+ebene_2: prozesse-gestalten
+ebene_3:
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: In dieser Phase werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design Thinking, um den Lösungsraum strukturiert zu öffnen.
+updated:
+description: In dieser Phase werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design Thinking, um den Lösungsraum strukturiert zu öffnen.
+image:
 ---
 
 %%

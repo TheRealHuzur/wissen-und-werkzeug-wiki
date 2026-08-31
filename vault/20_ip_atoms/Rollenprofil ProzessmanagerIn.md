@@ -3,13 +3,15 @@ id: rollenprofil_prozessmanagerin
 aliases:
   - rollenprofil_prozessmanagerin
   - Rollenprofil ProzessmanagerIn
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: grundlagen
-intent: steuern
+ebene_1: prozessmanagement
+ebene_2: prozessmanagement-steuern
+ebene_3:
+type: Article
 status: entwurf
 created: 2025-12-15
-summary: Das Rollenprofil des Prozessmanagers definiert eine Schnittstellenfunktion zwischen strategischer Planung, technischer Administration und operativer Projektbegleitung. Der Fokus liegt auf der methodischen Standardisierung, der Verwaltung der Prozessarchitektur sowie der Befähigung der Organisation zur eigenständigen Prozessoptimierung.
+updated:
+description: Das Rollenprofil des Prozessmanagers definiert eine Schnittstellenfunktion zwischen strategischer Planung, technischer Administration und operativer Projektbegleitung. Der Fokus liegt auf der methodischen Standardisierung, der Verwaltung der Prozessarchitektur sowie der Befähigung der Organisation zur eigenständigen Prozessoptimierung.
+image:
 ---
 
 %%

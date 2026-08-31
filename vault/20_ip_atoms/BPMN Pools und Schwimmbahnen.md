@@ -3,13 +3,15 @@ id: bpmn_pools_und_schwimmbahnen
 aliases:
   - bpmn_pools_und_schwimmbahnen
   - BPMN Pools und Schwimmbahnen
-parent_topic: prozessmanagement
-subtopic: bpmn
-type: framework
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3: bpmn
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Dieses Modul erläutert das Konzept von Pools und Schwimmbahnen (Lanes) in der BPMN. Es beschreibt, wie Verantwortlichkeiten (WER macht WAS) visualisiert werden, wie hierarchische Strukturen abgebildet werden und welche Granularität für verschiedene Zielgruppen (Entscheider vs. Umsetzung) geeignet...
+updated:
+description: Dieses Modul erläutert das Konzept von Pools und Schwimmbahnen (Lanes) in der BPMN. Es beschreibt, wie Verantwortlichkeiten (WER macht WAS) visualisiert werden, wie hierarchische Strukturen abgebildet werden und welche Granularität für verschiedene Zielgruppen (Entscheider vs. Umsetzung) geeignet...
+image:
 ---
 
 %%

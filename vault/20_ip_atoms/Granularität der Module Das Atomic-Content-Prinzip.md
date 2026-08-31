@@ -3,13 +3,15 @@ id: granularitat_der_ip_module_das_atomic_content_prinzip
 aliases:
   - granularitat_der_ip_module_das_atomic_content_prinzip
   - Granularität der IP-Module Das Atomic-Content-Prinzip
-parent_topic: second_brain
-subtopic: system_architektur
-type: theorie
-intent: verstehen
+ebene_1: wissensmanagement
+ebene_2: second-brain
+ebene_3: system-architektur
+type: Article
 status: ki_ready
 created: 2025-12-15
-summary: "Dieses Modul definiert die optimale Größe („Flughöhe“) für Wissenseinträge. Die Kernregel lautet Atomic Content: Ein Modul sollte genau ein spezifisches Problem lösen, um von KIs (RAG-Systemen) optimal gefunden und verarbeitet zu werden."
+updated:
+description: "Dieses Modul definiert die optimale Größe („Flughöhe“) für Wissenseinträge. Die Kernregel lautet Atomic Content: Ein Modul sollte genau ein spezifisches Problem lösen, um von KIs (RAG-Systemen) optimal gefunden und verarbeitet zu werden."
+image:
 ---
 
 %%

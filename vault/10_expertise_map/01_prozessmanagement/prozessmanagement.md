@@ -2,13 +2,15 @@
 id: prozessmanagement
 aliases:
   - prozessmanagement
-moc_level: parent
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
+ebene_1: prozessmanagement
+ebene_2:
+ebene_3:
+type: CollectionPage
 status: aktiv
 created: 2026-02-16
 updated:
-summary: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
+description: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
+image:
 ---
 # Prozessmanagement
 

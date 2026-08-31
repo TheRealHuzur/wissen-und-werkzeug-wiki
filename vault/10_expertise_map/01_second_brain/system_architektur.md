@@ -3,13 +3,15 @@ id: system_architektur
 aliases:
   - system_architektur
   - System Architektur
-moc_level: subtopic
-parent_topic: second_brain
-subtopic: system_architektur
+ebene_1: wissensmanagement
+ebene_2: second-brain
+ebene_3: system-architektur
+type: CollectionPage
 status: aktiv
 created: 2026-02-16
 updated:
-summary: Beschreibt wie das Secound Brain aufgebaut ist. Es wird dargelegt, welche Datenbanken angelegt sind, welche Eigenschaften die Datenbanken haben und wie die Eigenschaftsfelder gefüllt werden.
+description: Beschreibt wie das Secound Brain aufgebaut ist. Es wird dargelegt, welche Datenbanken angelegt sind, welche Eigenschaften die Datenbanken haben und wie die Eigenschaftsfelder gefüllt werden.
+image:
 ---
 # System Architektur
 

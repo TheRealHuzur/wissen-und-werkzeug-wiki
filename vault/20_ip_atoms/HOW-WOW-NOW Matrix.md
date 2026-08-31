@@ -3,13 +3,15 @@ id: how_wow_now_matrix
 aliases:
   - how_wow_now_matrix
   - HOW-WOW-NOW Matrix
-parent_topic: prozessmanagement
-subtopic: service_design
-type: vorlage
-intent: gestalten
+ebene_1: prozessmanagement
+ebene_2: prozesse-gestalten
+ebene_3: service-design
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Die HOW-WOW-NOW Matrix ist ein Priorisierungs-Werkzeug, das Ideen nach ihrer Machbarkeit und ihrem Innovationsgrad clustert, um die nächsten Schritte der Umsetzung zu definieren.
+updated:
+description: Die HOW-WOW-NOW Matrix ist ein Priorisierungs-Werkzeug, das Ideen nach ihrer Machbarkeit und ihrem Innovationsgrad clustert, um die nächsten Schritte der Umsetzung zu definieren.
+image:
 ---
 
 %%

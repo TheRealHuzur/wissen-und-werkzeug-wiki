@@ -3,13 +3,15 @@ id: phasenmodell_der_prozessoptimierung_3_phasen_zyklus
 aliases:
   - phasenmodell_der_prozessoptimierung_3_phasen_zyklus
   - Phasenmodell der Prozessoptimierung (3-Phasen-Zyklus)
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: theorie
-intent: steuern
+ebene_1: prozessmanagement
+ebene_2: prozessmanagement-steuern
+ebene_3:
+type: Article
 status: ki_ready
 created: 2025-12-15
-summary: 'Dieses Modell bildet das fundamentale Rückgrat jeglicher Prozessoptimierung. Es fungiert als zentrale Meta-Ebene, die den oft komplexen Projektalltag in einen klaren Dreiklang aus Verstehen, Gestalten und Umsetzen ordnet. Es ist die Antwort auf die Frage: "Wie gehe ich ein Optimierungsprojekt grundsätzlich an?"'
+updated:
+description: "Dieses Modell bildet das fundamentale Rückgrat jeglicher Prozessoptimierung. Es fungiert als zentrale Meta-Ebene, die den oft komplexen Projektalltag in einen klaren Dreiklang aus Verstehen, Gestalten und Umsetzen ordnet. Es ist die Antwort auf die Frage: \"Wie gehe ich ein Optimierungsprojekt grundsätzlich an?\""
+image:
 ---
 
 %%
