@@ -97,8 +97,28 @@ jobs:
           VORHER="$(ls -a1 "$PROBE/ziel" | sort | tr '\n' ' ')"
           echo "Ziel vor dem Testlauf:  $VORHER"
 
+          # Das vorangestellte "local" ist nicht schmueckendes Beiwerk,
+          # sondern die Bedingung dafuer, dass dieser Test ueberhaupt
+          # laeuft. "mirror -R" schiebt von oertlich nach entfernt und
+          # braucht dafuer eine Sitzung. Ein blosses
+          # lftp -c "mirror -R ..." hat keine -- der erste Lauf dieses
+          # Workflows ist genau daran gescheitert, mit "mirror: Not
+          # connected" und einem leeren "mkdir -p".
+          #
+          # "local <befehl>" ersetzt die Sitzung durch eine
+          # file://-Sitzung auf dem Runner selbst und fuehrt den Befehl
+          # dann unveraendert aus. Das Handbuch fuehrt "local mirror
+          # /dir1 /dir2" woertlich als Beispiel. Wichtig fuer diesen
+          # Schritt: "local" legt fest eine Sitzung des Typs "file" an und
+          # kann keine Netzverbindung oeffnen. Der Schritt bleibt also
+          # auch nach der Korrektur ausserstande, irgendeinen Server zu
+          # erreichen -- passend dazu, dass er keinen env:-Block hat.
+          #
+          # Der mirror-Aufruf dahinter ist zeichengleich mit dem des
+          # echten Trockenlaufs weiter unten. Nur so ist der Test
+          # aussagekraeftig.
           echo '--- Ausgabe des oertlichen Trockenlaufs ---'
-          lftp -c "mirror -R --delete --dry-run --verbose $PROBE/quelle $PROBE/ziel" 2>&1 | tee "$PROBE/ausgabe.txt"
+          lftp -c "local mirror -R --delete --dry-run --verbose $PROBE/quelle $PROBE/ziel" 2>&1 | tee "$PROBE/ausgabe.txt"
           echo '--- Ende der Ausgabe ---'
 
           NACHHER="$(ls -a1 "$PROBE/ziel" | sort | tr '\n' ' ')"
@@ -112,11 +132,20 @@ jobs:
           echo "OK: --dry-run hat nichts angelegt und nichts geloescht."
 
           # Gegenprobe: Der Trockenlauf muss die Loeschung wenigstens
-          # vorgeschlagen haben. Steht kein Hinweis darauf in der Ausgabe,
-          # dann wirkt entweder --delete oder --verbose nicht wie erwartet,
-          # und die Loeschliste des echten Trockenlaufs waere unvollstaendig
-          # -- also wertlos und irrefuehrend.
-          if ! grep -q 'nur-auf-dem-ziel' "$PROBE/ausgabe.txt"; then
+          # vorgeschlagen haben. Schlaegt er keine vor, waere die
+          # Loeschliste des echten Trockenlaufs unvollstaendig -- also
+          # wertlos und irrefuehrend.
+          #
+          # Gesucht wird eine Zeile, die mit "rm " BEGINNT. Das ist die
+          # Skriptausgabe, die --dry-run anstelle der Ausfuehrung
+          # schreibt. Nicht gesucht wird die Erzaehlzeile "Removing old
+          # file `...'", die --verbose ausgibt: die erscheint auch bei
+          # einem scharfen Lauf, der wirklich loescht. Eine ungebundene
+          # Suche nach dem Dateinamen wuerde deshalb ausgerechnet im
+          # gefaehrlichsten Fall -- --dry-run fehlt, es wird tatsaechlich
+          # geloescht -- ein falsches OK liefern. Der Anker ^rm schliesst
+          # das aus.
+          if ! grep -qE '^rm .*nur-auf-dem-ziel' "$PROBE/ausgabe.txt"; then
             echo "ABBRUCH: der Trockenlauf hat keine Loeschung vorgeschlagen."
             echo "Kein Verbindungsaufbau zum Produktivserver."
             exit 1
