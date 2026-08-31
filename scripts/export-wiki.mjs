@@ -20,9 +20,15 @@ const AUTHOR_DATA = {
   name: 'Patrick Roßkothen',
   expertise: 'Experte für Prozess- und Wissensmanagement',
   url: 'https://wissen-und-werkzeug.de/ueber-mich/',
-  linkedin: 'https://www.linkedin.com/in/patrickrosskothen/',
+  // Kennung der Person, zeichengleich mit dem Person-Knoten der Hauptdomain
+  personId: 'https://wissen-und-werkzeug.de/ueber-mich/#person',
+  linkedin: 'https://www.linkedin.com/in/patrick-rosskothen',
   organization: 'Wissen & Werkzeug',
   organizationUrl: 'https://wissen-und-werkzeug.de',
+  // Kennung der Organisation, von Yoast auf der Hauptdomain vergeben
+  organizationId: 'https://wissen-und-werkzeug.de/#organization',
+  // Logo aus der WordPress-Mediathek, kein Favicon und kein SVG
+  organizationLogo: 'https://wissen-und-werkzeug.de/wp-content/uploads/2026/08/Logo-Organisation-512.png',
 };
 
 // Interne Vault-Seiten, die nicht veroeffentlicht werden (Maschinenraum, Struktur, Inbox)
@@ -1321,6 +1327,7 @@ async function main() {
           url: canonicalHref,
           author: {
             '@type': 'Person',
+            '@id': AUTHOR_DATA.personId,
             name: AUTHOR_DATA.name,
             url: AUTHOR_DATA.url,
             sameAs: [AUTHOR_DATA.linkedin],
@@ -1328,11 +1335,14 @@ async function main() {
           },
           publisher: {
             '@type': 'Organization',
+            '@id': AUTHOR_DATA.organizationId,
             name: AUTHOR_DATA.organization,
             url: AUTHOR_DATA.organizationUrl,
             logo: {
               '@type': 'ImageObject',
-              url: `${SITE}/favicon.svg`
+              url: AUTHOR_DATA.organizationLogo,
+              width: 512,
+              height: 512
             }
           },
           mainEntityOfPage: {
