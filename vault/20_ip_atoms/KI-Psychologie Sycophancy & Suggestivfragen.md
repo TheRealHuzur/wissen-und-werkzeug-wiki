@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Dieses Modul analysiert, warum Large Language Models (LLMs) dazu neigen, Nutzermeinungen unkritisch zu übernehmen ("Sycophancy"). Es erklärt das Zusammenspiel von Mustervervollständigung und Sicherheits-Training (RLHF) und beleuchtet die Risiken von Bestätigungsfehlern und Halluzinationen bei suggestiven Fragestellungen.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

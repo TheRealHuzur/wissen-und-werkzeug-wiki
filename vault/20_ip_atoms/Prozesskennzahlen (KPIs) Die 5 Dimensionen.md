@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Dieses Modul leitet die fünf zentralen Key Performance Indicators (KPI) für das Prozessmanagement ab und erläutert die Besonderheiten bei der Übertragung auf die öffentliche Verwaltung, insbesondere den Fokus auf Prozesszeit als Indikator für Kosten.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

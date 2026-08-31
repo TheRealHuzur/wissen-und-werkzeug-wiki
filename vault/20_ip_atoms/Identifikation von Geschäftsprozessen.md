@@ -12,6 +12,8 @@ created: 2025-12-15
 updated:
 description: Dieses Modul definiert Methoden zur sauberen Identifikation und Abgrenzung von Geschäftsprozessen. Es liefert Benennungsregeln (Objekt + Verb) und eine Entscheidungsmatrix, um im "Prozess-Screening" echte End-to-End-Prozesse (Kundenfokus) von internen Teilprozessen (Amtsbrille) zu unterscheiden.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

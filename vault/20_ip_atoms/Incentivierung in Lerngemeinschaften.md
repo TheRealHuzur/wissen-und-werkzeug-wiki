@@ -12,6 +12,8 @@ created: 2026-02-17
 updated:
 description: Dieses Modul erläutert das Konzept der Incentivierung zur Förderung des Wissensaustauschs in Communities. Es konzentriert sich auf die Aktivierung intrinsischer Motivation durch psychologische Belohnung wie Sinnhaftigkeit, Anerkennung und Expertenstatus, um das freiwillige Teilen von Wissen als Unternehmenserfolg zu etablieren.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

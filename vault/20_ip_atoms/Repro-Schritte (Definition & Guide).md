@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Repro-Schritte (Reproduction Steps) sind präzise, sequenzielle Anweisungen, um ein technisches Problem oder ein Fehlverhalten exakt nachzustellen.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

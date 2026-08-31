@@ -11,6 +11,8 @@ created: 2026-02-16
 updated:
 description: Dieses Modul beschreibt ip_atoms als den zentralen Wissensbestand deines Systems. Es erklärt, was ein Modul ist, wie es für Menschen gut lesbar bleibt und gleichzeitig maschinenlesbar wird (YAML, Summary, Context Anchor, Links). Außerdem grenzt es ab, welche Inhalte nicht in den Inhaltspool gehören.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

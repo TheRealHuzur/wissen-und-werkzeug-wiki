@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Die Visualisierung von Geschäftsprozessen dient Werkzeug zur Identifikation struktureller Schwachstellen. Besonders in historisch gewachsenen Strukturen der öffentlichen Verwaltung ermöglicht die chronologische Aufbereitung das Erkennen von Schwachstellen und das kritische Hinterfragen althergebrachter Vorgehensweisen.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

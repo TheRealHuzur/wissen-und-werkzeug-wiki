@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Dieses Modul beschreibt die strukturierte Dokumentation von Umsetzungsmaßnahmen zur Realisierung von Soll-Modellen und bietet eine Schritt-für-Schritt-Anleitung zur Nutzung eines Maßnahmenplans. Er dient als zentrales Werkzeug für Verbindlichkeit, Verantwortlichkeit und Projektcontrolling.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

@@ -12,6 +12,8 @@ created: 2026-02-17
 updated:
 description: Prozesslernkarten dienen dem Einprägen und Wiederholen von Kernbegriffen und Methoden des Prozessmanagements. Basierend auf dem Prinzip des aktiven Erinnerns unterstützen sie sowohl das individuelle Lernen in kurzen Einheiten als auch die Strukturierung von Diskussionen und Workshops in der Teamarbeit.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

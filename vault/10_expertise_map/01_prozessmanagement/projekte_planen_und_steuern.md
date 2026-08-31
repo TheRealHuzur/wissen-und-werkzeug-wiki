@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement.
 image:
+offer_heading:
+offer_text:
 ---
 # Projekte planen und steuern
 

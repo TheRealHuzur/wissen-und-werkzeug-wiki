@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Diese Vorlage dient als standardisierter Prompt für das "Vibe Coding", um Software-Änderungen oder Bugfixes präzise und kontextreich an KI-Codegeräte zu kommunizieren.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

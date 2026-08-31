@@ -12,6 +12,8 @@ created: 2025-12-15
 updated:
 description: Leitfaden für die Durchführung von Prozessworkshops, inklusive technischer und methodischer Hinweise für Ist-Aufnahmen und Soll-Modellierung.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

@@ -12,6 +12,8 @@ created: 2025-12-15
 updated:
 description: "Dieses Modell bildet das fundamentale Rückgrat jeglicher Prozessoptimierung. Es fungiert als zentrale Meta-Ebene, die den oft komplexen Projektalltag in einen klaren Dreiklang aus Verstehen, Gestalten und Umsetzen ordnet. Es ist die Antwort auf die Frage: \"Wie gehe ich ein Optimierungsprojekt grundsätzlich an?\""
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

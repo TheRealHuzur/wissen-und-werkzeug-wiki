@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Dieses Modul beschreibt die spezifischen Modellierungsregeln für Teilprozesse innerhalb einer Ereigniskette. Es fokussiert sich auf den "Happy Day", den optimalen Detailgrad und die korrekte Sequenzierung von Zwischenereignissen.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

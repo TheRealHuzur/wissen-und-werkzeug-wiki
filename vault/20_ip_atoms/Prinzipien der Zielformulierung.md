@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Prägnante Ziele schaffen Klarheit, reduzieren Komplexität und sorgen für eine einheitliche Ausrichtung aller Beteiligten.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

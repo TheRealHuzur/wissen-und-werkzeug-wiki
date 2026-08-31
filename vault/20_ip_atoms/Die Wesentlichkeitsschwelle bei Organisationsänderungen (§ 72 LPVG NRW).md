@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Dieses Modul definiert die rechtliche Grenze zwischen dem freien Direktionsrecht des Dienstherrn und der Mitbestimmungspflicht bei organisatorischen Prozessen. Es liefert eine Prüfmatrix zur Bestimmung der "Grundlegendheit" einer Maßnahme. **Dieses Modul beantwortet folgende Fragen:** - Wann übersch
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

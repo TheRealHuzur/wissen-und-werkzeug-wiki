@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: "Innerhalb der Top-Down-Methode wird ein Prozess in drei Ebenen zerlegt: Von der abstrakten Prozessdefinition (Ebene 1) über das strategische Teilprozessmodell (Ebene 2) bis zum operativen Aktivitäten-Modell (Ebene 3). Dies sichert die nötige Granularität für verschiedene Zielgruppen."
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

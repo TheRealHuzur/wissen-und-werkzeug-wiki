@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Definition und Berechnung des First Pass Yield (FPY) als Qualitätskennzahl. Sie misst den Anteil der Prozessdurchläufe (Fälle), die im ersten Durchlauf ohne Nacharbeit fehlerfrei abgeschlossen werden, und deckt somit versteckte Ineffizienzen ("Hidden Factory") auf.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

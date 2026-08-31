@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Ein Service Design Sprint ist ein strukturierter Prozess zur schnellen Entwicklung und Optimierung von Dienstleistungen. Er gliedert sich in fünf Phasen und nutzt agile Prinzipien, um effizient nutzerzentrierte Lösungen zu generieren.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

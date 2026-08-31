@@ -12,6 +12,8 @@ created: 2026-02-19
 updated:
 description: Service Design ist eine interdisziplinäre Methodik zur systematischen Gestaltung von Dienstleistungen, sodass sie für Nutzer und Anbieter gleichermaßen funktionieren. Im Zentrum steht die Verbesserung der Qualität über den gesamten Service hinweg.
 image:
+offer_heading:
+offer_text:
 ---
 # Service Design 
 

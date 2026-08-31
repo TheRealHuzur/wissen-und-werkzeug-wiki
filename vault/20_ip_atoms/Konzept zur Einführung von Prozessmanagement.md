@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Ein Leitfaden zur Erstellung eines Prozessmanagement-Konzepts, der vor "Death by Concept" warnt. Es wird empfohlen, pilotbasierte Umsetzung und konzeptionelle Ausarbeitung parallel zu betreiben, statt streng sequenziell vorzugehen.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

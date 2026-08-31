@@ -12,6 +12,8 @@ created: 2025-12-15
 updated:
 description: Dieses Modul beschreibt die methodische Trennung zwischen explorativem, öffnendem Denken und konvergierendem, entscheidungsfokussiertem Denken zur Steigerung der Innovationsqualität.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

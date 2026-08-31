@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Dieses Modul definiert den Begriff des Geschäftsprozesses speziell für den Verwaltungskontext. Es klärt die zentralen Strukturmerkmale wie Kundenbezug, Auslöser und inhaltlich abgeschlossenes Ergebnis und grenzt Prozesse von bloßen Aktivitäten ab.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

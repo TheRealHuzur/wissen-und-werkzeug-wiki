@@ -11,6 +11,8 @@ created: 2026-02-16
 updated:
 description: Dieses Modul erklärt die Map of Content als Navigationsschicht deines Vaults. MOCs sind Übersichtsseiten, die Leserinnen und Leser durch Themen führen, ohne Inhalte zu duplizieren. Dadurch entsteht eine stabile Wiki-Struktur und eine klare Orientierung für den menschlichen Einstieg.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

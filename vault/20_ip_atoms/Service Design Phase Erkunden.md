@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Die Phase "Erkunden" ist der divergierende Startpunkt im Service Design Prozess, bei dem der Problemraum weit geöffnet wird. Ziel ist das tiefe Verständnis der Nutzerbedürfnisse durch qualitative Forschungsmethoden.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

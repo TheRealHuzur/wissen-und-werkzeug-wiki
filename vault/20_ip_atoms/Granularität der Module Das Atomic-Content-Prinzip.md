@@ -12,6 +12,8 @@ created: 2025-12-15
 updated:
 description: "Dieses Modul definiert die optimale Größe („Flughöhe“) für Wissenseinträge. Die Kernregel lautet Atomic Content: Ein Modul sollte genau ein spezifisches Problem lösen, um von KIs (RAG-Systemen) optimal gefunden und verarbeitet zu werden."
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

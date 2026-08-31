@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Die HOW-WOW-NOW Matrix ist ein Priorisierungs-Werkzeug, das Ideen nach ihrer Machbarkeit und ihrem Innovationsgrad clustert, um die nächsten Schritte der Umsetzung zu definieren.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

@@ -8,9 +8,12 @@ ebene_2: vibe-coding
 ebene_3:
 type: CollectionPage
 status: entwurf
+created:
 updated:
 description: Beschreibt Hintergründe, Anleitungen und Vorlagen zum Vibe Coding. Ebenfalls werden generelle Erläuterungen geleifert, wie Vibe Coding grundsätzlich funktioniert.
 image:
+offer_heading:
+offer_text:
 ---
 # Vibe Coding
 

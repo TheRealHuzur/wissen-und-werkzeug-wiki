@@ -12,6 +12,8 @@ created: 2026-02-17
 updated:
 description: Lerntandems sind persönliche Lernpartnerschaften zwischen zwei Personen zur gegenseitigen Unterstützung beim Wissenserwerb. Dieses Format zeichnet sich durch hohe zeitliche Flexibilität und eine vertrauliche Atmosphäre aus, in der individuelle Herausforderungen reflektiert und Erfahrungen aus dem Arbeitsalltag direkt geteilt werden können.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Dieses Modul erläutert das Konzept von Pools und Schwimmbahnen (Lanes) in der BPMN. Es beschreibt, wie Verantwortlichkeiten (WER macht WAS) visualisiert werden, wie hierarchische Strukturen abgebildet werden und welche Granularität für verschiedene Zielgruppen (Entscheider vs. Umsetzung) geeignet...
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

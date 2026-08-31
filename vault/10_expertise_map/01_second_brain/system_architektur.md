@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Beschreibt wie das Secound Brain aufgebaut ist. Es wird dargelegt, welche Datenbanken angelegt sind, welche Eigenschaften die Datenbanken haben und wie die Eigenschaftsfelder gefüllt werden.
 image:
+offer_heading:
+offer_text:
 ---
 # System Architektur
 

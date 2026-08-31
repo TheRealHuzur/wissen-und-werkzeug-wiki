@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Die Phase "Entwickeln" eröffnet den zweiten Diamanten (Lösungsraum) und fokussiert auf die Generierung einer Vielzahl von Ideen. Durch kreative Methoden werden unterschiedliche Lösungsansätze für das definierte Problem entworfen.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

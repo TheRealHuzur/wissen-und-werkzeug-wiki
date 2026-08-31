@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: "Beschreibt die drei zentralen Hürden, auf die Unternehmen und Verwaltungen stoßen, wenn sie versuchen, Prozessleistung zu messen: Definition des Messobjekts, Methodik der Messung und das Management-Commitment."
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

@@ -12,6 +12,8 @@ created: 2026-02-17
 updated:
 description: Das zentrale Wissensnetzwerk bündelt Wissen in Form eines Wikis, eines Methodenkoffers und visueller Knowledge Graphs. Es dient als kollaborative Plattform, auf der Mitarbeitende Wissen eigenständig ergänzen und aktualisieren können, wodurch eine lebendige und vernetzte Informationsbasis für die gesamte Organisation entsteht.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

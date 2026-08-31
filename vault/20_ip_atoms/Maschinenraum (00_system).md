@@ -11,6 +11,8 @@ created: 2026-02-16
 updated:
 description: Dieses Modul beschreibt 00_system als technischen Maschinenraum des Vaults. Es erklärt, welche Artefakte dort liegen (Taxonomie, Bases, Templates, Schemas, Anhänge, Skripte) und welche Regeln gelten, damit Validierung, Automatisierung und Link-Stabilität im GitHub-Astro-Flow zuverlässig bleiben.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

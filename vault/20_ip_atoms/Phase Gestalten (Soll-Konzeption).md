@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: In dieser Phase werden zukunftsfähige Soll-Prozesse entwickelt. Methodisch orientiert sich dies oft am Service Design (Double Diamond) oder Design Thinking, um den Lösungsraum strukturiert zu öffnen.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

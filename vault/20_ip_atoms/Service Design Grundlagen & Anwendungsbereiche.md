@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Service Design ist die nutzerzentrierte Gestaltung von Dienstleistungen unter Berücksichtigung aller Touchpoints, Prozesse und Technologien. Es nutzt Methoden wie den "Double Diamond", um Kundenbedürfnisse und Zielvorgaben in Einklang zu bringen, und findet auch in der öffentlichen Verwaltung spezifische Anwendung.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

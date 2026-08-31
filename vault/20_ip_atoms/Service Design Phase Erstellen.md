@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Die Phase "Erstellen" ist der finale Schritt im Double Diamond, in dem Ideen zu konkreten Lösungen ausgearbeitet, getestet und implementiert werden. Durch Prototyping und Feedbackschleifen wird das Risiko von Fehlentwicklungen minimiert.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

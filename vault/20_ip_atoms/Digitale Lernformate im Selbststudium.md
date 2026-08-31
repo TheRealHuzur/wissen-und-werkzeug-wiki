@@ -12,6 +12,8 @@ created: 2026-02-17
 updated:
 description: Dieses Modul analysiert verschiedene digitale Lernformate wie Videos, Podcasts und E-Learning-Kurse. Es beleuchtet deren Nutzen für das asynchrone, selbstgesteuerte Lernen sowie den Erstellungsaufwand und die didaktischen Anforderungen, die mit diesen flexiblen Angeboten verbunden sind.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

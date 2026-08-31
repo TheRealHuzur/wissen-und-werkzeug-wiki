@@ -12,6 +12,8 @@ created: 2025-12-15
 updated:
 description: Das Rollenprofil des Prozessmanagers definiert eine Schnittstellenfunktion zwischen strategischer Planung, technischer Administration und operativer Projektbegleitung. Der Fokus liegt auf der methodischen Standardisierung, der Verwaltung der Prozessarchitektur sowie der Befähigung der Organisation zur eigenständigen Prozessoptimierung.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

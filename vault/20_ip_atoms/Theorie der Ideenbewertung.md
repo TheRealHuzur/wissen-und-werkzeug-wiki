@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Dieses Modul erläutert die methodischen Grundlagen zur Auswahl von Ideen und verdeutlicht, warum Bewertungsprozesse inhärent subjektiv und kontextabhängig sind. **Dieses Modul beantwortet folgende Fragen:** - Warum können Ideen niemals rein objektiv bewertet werden? - Welche Rolle spielt die Entsche
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

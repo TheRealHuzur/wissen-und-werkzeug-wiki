@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Steuerung von Prozessen anhand von Kennzahlen.
 image:
+offer_heading:
+offer_text:
 ---
 # Controlling
 

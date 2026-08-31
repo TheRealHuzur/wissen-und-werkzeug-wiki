@@ -12,6 +12,8 @@ created: 2025-12-15
 updated:
 description: Das ereignisbasierte Gateway steuert den Prozessverlauf nicht über Datenentscheidungen, sondern über externe Ereignisse. Der Pfad des Ereignisses, das zuerst eintritt (z. B. Nachrichteneingang vs. Zeitablauf), bestimmt exklusiv den weiteren Weg des Prozesses.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

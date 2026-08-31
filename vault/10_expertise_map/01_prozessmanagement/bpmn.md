@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Business Process Model and Notation. Ein internationaler Standard für die grafische Darstellung von Geschäftsprozessen mittels Symbolen wie Gateways, Events und Aktivitäten.
 image:
+offer_heading:
+offer_text:
 ---
 # BPMN
 

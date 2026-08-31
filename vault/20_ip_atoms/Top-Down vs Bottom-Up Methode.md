@@ -12,6 +12,8 @@ created: 2025-12-15
 updated:
 description: "Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die \"Top-Down-Methode\" (vom Groben ins Feine) und die \"Bottom-Up-Methode\" (vom Feinen ins Grobe). Für eine strukturierte Modellierung wird in der Praxis der Top-Down-Ansatz empfohlen."
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

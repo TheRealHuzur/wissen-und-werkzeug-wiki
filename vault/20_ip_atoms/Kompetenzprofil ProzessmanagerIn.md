@@ -12,6 +12,8 @@ created: 2025-12-15
 updated:
 description: Das Kompetenzprofil für Prozessmanager verbindet analytische Schärfe mit hoher Sozialkompetenz. Neben der sicheren Beherrschung von Modellierungsstandards (BPMN) und Projektmanagement-Methoden ist die Fähigkeit zentral, Veränderungen in der Organisation kommunikativ zu begleiten und Widerstände konstruktiv aufzulösen.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

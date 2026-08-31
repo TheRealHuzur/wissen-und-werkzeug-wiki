@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Eine strukturierte Checkliste zur Identifikation von Prozess-Schwachstellen in den Kategorien Technik, Mensch, Daten, Struktur, Ergebnis und Steuerung. Sie dient als pragmatisches Arbeitsinstrument zur Nachbereitung von Prozessaufnahmen, um Lücken aufzudecken, ohne ein komplexes Reifegrad-Audit d...
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

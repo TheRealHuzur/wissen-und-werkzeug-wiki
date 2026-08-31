@@ -11,6 +11,8 @@ created: 2026-02-16
 updated:
 description: Eine kompakte Vorlage zur Planung und Steuerung der Projektkommunikation basierend auf den sechs W-Fragen.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

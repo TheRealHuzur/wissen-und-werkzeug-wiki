@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: "Dieses Modul stellt zwei grundlegende Strategien der Prozessoptimierung gegenüber: den evolutionären Ansatz (Schritt-für-Schritt-Verbesserung) und den revolutionären Ansatz (Green-Field-Methode). Es beleuchtet Entscheidungskriterien wie rechtliche Rahmenbedingungen oder Unternehmenskultur und und stellt einen hybriden Best-Practice-Ansatz vor, der Vision und Ist-Analyse verbindet."
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

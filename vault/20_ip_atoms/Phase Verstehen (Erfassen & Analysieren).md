@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: In dieser Phase wird der Ist-Zustand seziert. Es geht um die ungeschönte Aufnahme der Realität. Organisch gewachsene Strukturen werden nachvollzogen, in fachliche Modelle übersetzt und anschließend analysiert.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

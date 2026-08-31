@@ -12,6 +12,8 @@ created: 2025-12-15
 updated:
 description: Der KVP beschreibt den zyklischen Charakter des Prozessmanagements. Er stellt sicher, dass Organisationen auf Veränderungen reagieren und Prozesse nicht als statische Projekte, sondern als dauerhafte Aufgabe begreifen.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

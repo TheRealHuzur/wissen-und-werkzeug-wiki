@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Die Media Synchronicity Theory (MST) ist ein Modell zur aufgabenorientierten Wahl von Kommunikationsmedien. Sie unterscheidet zwischen Informationsübermittlung (Conveyance) und der Entwicklung eines gemeinsamen Verständnisses (Convergence) und ordnet diesen Zielen passende synchrone oder asynchrone Medien zu.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

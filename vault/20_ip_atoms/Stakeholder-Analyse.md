@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Eine strukturierte Methode, um in drei Schritten betroffene Personengruppen zu identifizieren, ihren Einfluss und ihr Interesse zu bewerten und daraus gezielte Kommunikationsmaßnahmen abzuleiten.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

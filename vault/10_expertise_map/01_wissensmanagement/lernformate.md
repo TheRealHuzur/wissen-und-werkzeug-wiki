@@ -12,6 +12,8 @@ created: 2026-02-19
 updated:
 description: Lernformate sind strukturierte Methoden und Settings, mit denen Lernen gestaltet wird. Die Kategorie sammelt und beschreibt unterschiedliche Formate, damit sie je nach Ziel, Zielgruppe, Aufwand und Kontext passend ausgewählt und umgesetzt werden können.
 image:
+offer_heading:
+offer_text:
 ---
 # Lernformate
 

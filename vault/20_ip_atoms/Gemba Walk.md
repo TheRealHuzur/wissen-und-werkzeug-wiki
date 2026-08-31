@@ -12,6 +12,8 @@ created: 2026-02-17
 updated:
 description: "Dieses Modul führt in das Konzept des Gemba Walks ein: Die Praxis des Managements, den Ort der tatsächlichen Wertschöpfung aufzusuchen, um Prozesse direkt zu beobachten. Es erläutert die Abgrenzung zur rein theoretischen Analyse und zeigt auf, wie durch Empathie und Präsenz vor Ort Verschwendung identifiziert und die Prozessqualität nachhaltig gesteigert werden kann."
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

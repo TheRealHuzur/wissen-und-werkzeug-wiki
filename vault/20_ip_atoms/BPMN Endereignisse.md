@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Endereignisse markieren den Abschluss eines Prozesspfades. Sie "konsumieren" die Prozess-Marke. Ein Prozess kann mehrere unterschiedliche Endereignisse haben, um verschiedene Ergebniszustände zu dokumentieren.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

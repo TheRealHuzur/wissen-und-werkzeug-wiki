@@ -11,6 +11,8 @@ created: 2026-02-16
 updated:
 description: Dieses Modul bündelt die funktionalen Anforderungen an ein BPM-System, optimiert für die Anforderungen der öffentlichen Verwaltung. Es deckt die Bereiche Modellierung, Kollaboration, Governance und Berichterstattung ab.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

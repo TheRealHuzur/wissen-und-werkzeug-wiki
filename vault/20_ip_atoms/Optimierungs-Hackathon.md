@@ -12,6 +12,8 @@ created: 2026-02-17
 updated:
 description: Der Optimierungs-Hackathon ist ein kompaktes, praxisorientiertes Format zur schnellen Entwicklung von Prozesslösungen. In einem zeitlich begrenzten Sprint arbeitet eine interdisziplinäre Gruppe an der Analyse und Neugestaltung eines realen Prozesses, wobei kreative Impulse und das gemeinsame Ausprobieren von Ideen im Vordergrund stehen.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

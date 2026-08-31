@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: In der Phase "Definieren" werden die gesammelten Erkenntnisse analysiert, gefiltert und in eine klare Problemstellung überführt. Es ist eine konvergierende Phase, die den Fokus für die Lösungsentwicklung setzt.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

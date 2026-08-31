@@ -12,6 +12,8 @@ created: 2025-12-15
 updated:
 description: Methode zur isolierten Darstellung eines Fokus-Prozesses und seiner direkten Abhängigkeiten (Vor-/Nachlagerung, Steuerung, Stützung). Ziel ist die Identifikation tatsächlicher Schnittstellen, vollkommen losgelöst von der bestehenden Aufbauorganisation.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

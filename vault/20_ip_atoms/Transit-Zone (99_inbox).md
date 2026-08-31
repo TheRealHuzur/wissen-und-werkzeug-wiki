@@ -11,6 +11,8 @@ created: 2026-02-16
 updated:
 description: Dieses Modul beschreibt 99_inbox als Transit-Zone für neue Entwürfe und Rohmaterial. Es erklärt, warum die Inbox wichtig ist, welche Minimalregeln verhindern, dass Inhalte verloren gehen, und wie du Notizen Schritt für Schritt in saubere Module im Inhaltspool überführst.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%

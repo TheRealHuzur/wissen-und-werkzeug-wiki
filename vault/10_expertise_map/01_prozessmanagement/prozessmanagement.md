@@ -11,6 +11,8 @@ created: 2026-02-16
 updated:
 description: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
 image:
+offer_heading:
+offer_text:
 ---
 # Prozessmanagement
 

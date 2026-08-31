@@ -12,6 +12,8 @@ created: 2026-02-16
 updated:
 description: Da Ressourcen begrenzt sind, können nicht alle Prozesse gleichzeitig optimiert werden. Dieses Modul beschreibt Kriterien und Vorgehensweisen, um Prozesse systematisch nach Handlungsbedarf, strategischer Relevanz und Machbarkeit zu bewerten und für die Bearbeitung auszuwählen.
 image:
+offer_heading:
+offer_text:
 ---
 
 %%
