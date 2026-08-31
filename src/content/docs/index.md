@@ -22,18 +22,27 @@ head:
         "inLanguage": "de",
         "author": {
           "@type": "Person",
+          "@id": "https://wissen-und-werkzeug.de/ueber-mich/#person",
           "name": "Patrick Roßkothen",
           "url": "https://wissen-und-werkzeug.de/ueber-mich/",
-          "sameAs": ["https://www.linkedin.com/in/patrickrosskothen/"],
+          "sameAs": ["https://www.linkedin.com/in/patrick-rosskothen"],
           "jobTitle": "Experte für Prozess- und Wissensmanagement"
         },
         "publisher": {
           "@type": "Organization",
+          "@id": "https://wissen-und-werkzeug.de/#organization",
           "name": "Wissen & Werkzeug",
-          "url": "https://wissen-und-werkzeug.de"
+          "url": "https://wissen-und-werkzeug.de",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://wissen-und-werkzeug.de/wp-content/uploads/2026/08/Logo-Organisation-512.png",
+            "width": 512,
+            "height": 512
+          }
         },
         "isPartOf": {
           "@type": "WebSite",
+          "@id": "https://wissen-und-werkzeug.de/#website",
           "name": "Wissen & Werkzeug",
           "url": "https://wissen-und-werkzeug.de"
         }
