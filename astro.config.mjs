@@ -11,7 +11,11 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [
     starlight({
-      title: 'Wissen & Werkzeug Wiki',
+      // Der Wert erreicht nur noch die 404-Seite: Alle anderen Seiten setzen
+      // ueber den Export einen eigenen title-Tag im head, und im Kopfbereich
+      // steht seit dem Logo die Wortmarke. Ohne "Wiki" liest sich der
+      // 404-Titel als "404 | Wissen & Werkzeug".
+      title: 'Wissen & Werkzeug',
       locales: {
         root: {
           label: 'Deutsch',
