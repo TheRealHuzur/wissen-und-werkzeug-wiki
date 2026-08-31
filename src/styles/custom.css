@@ -65,9 +65,12 @@ a {
 }
 
 /* Fix active link visibility in sidebar */
-[aria-current="page"],
-[aria-current="page"]:hover,
-[aria-current="page"]:focus {
+/* Nur Links: Seit dem Brotkruemelpfad traegt auch dessen letzte Stufe
+   aria-current="page", und die ist bewusst kein Link. Ohne die Einengung
+   bekaeme sie die tuerkise Flaeche der Seitenleiste. */
+a[aria-current="page"],
+a[aria-current="page"]:hover,
+a[aria-current="page"]:focus {
   color: #ffffff !important;
   background-color: var(--brand-accent-turquoise) !important;
 }

@@ -50,6 +50,8 @@ export default defineConfig({
       ],
       components: {
         ThemeSelect: './src/components/CustomThemeSelect.astro',
+        // Haengt den sichtbaren Brotkruemelpfad oberhalb der H1 ein.
+        PageTitle: './src/components/PageTitle.astro',
         Footer: './src/components/Footer.astro',
       },
     }),
