@@ -1,23 +1,18 @@
 ---
-id: ""
-parent_topic: ""
-subtopic: ""
-type: ""
-intent: ""
+id:
+aliases: []
+ebene_1:
+ebene_2:
+ebene_3:
+type: Article
 status: entwurf
-created: YYYY-MM-DD
-updated: YYYY-MM-DD
-summary: ""
-offer_heading: ""
-offer_text: ""
+created:
+updated:
+description:
+image:
+offer_heading:
+offer_text:
 ---
-
-%%
-RAG-CONTEXT-ANCHOR:
-Dieser Artikel dokumentiert Fachwissen im Wiki Wissen & Werkzeug.
-Er ist im Fachgebiet (parent_topic) verortet und dem Unterthema (subtopic) zugeordnet.
-Klassifizierung: type mit der Zielsetzung intent.
-%%
 
 # [Titel des Artikels]
 
