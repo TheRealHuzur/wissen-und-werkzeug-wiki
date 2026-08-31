@@ -95,3 +95,52 @@ a[aria-current="page"]:focus {
     height: 1.75rem;
   }
 }
+
+/* --- Karten der Wissensbereiche auf der Wiki-Startseite --------------- */
+
+/* Starlights <CardGrid> und <LinkCard> brauchen .mdx. Die Startseite bleibt
+   .md: Der Name index.mdx ist schon belegt, und cleanExportDocsDir() schont
+   beide Namen ausdruecklich. Deshalb schlichtes HTML im Markdown, gestaltet
+   an dieser Stelle. Kein Eingriff in den Export.
+
+   auto-fit mit einer Mindestbreite statt zwei festen Spalten: Die Karten
+   ruecken von selbst untereinander, sobald der Platz fehlt. */
+.bereichskarten {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1.5rem;
+}
+
+/* Die ganze Karte ist der Link, nicht nur eine Zeile darin. Deshalb steht im
+   Kartentext auch kein zweiter Link: Links lassen sich nicht schachteln. */
+.bereichskarte {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.5rem;
+  color: var(--sl-color-text);
+  text-decoration: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bereichskarte:hover,
+.bereichskarte:focus-visible {
+  border-color: var(--brand-accent-turquoise);
+  box-shadow: 0 0 0 1px var(--brand-accent-turquoise);
+}
+
+/* Bewusst keine echte Ueberschrift: Ein h3 im Markdown-Inhalt landet im
+   Verzeichnis "Auf dieser Seite" und stuende dort neben den echten
+   Abschnitten der Startseite. */
+.bereichskarte-titel {
+  font-size: var(--sl-text-h4);
+  font-weight: 600;
+  line-height: var(--sl-line-height-headings);
+  color: var(--brand-primary-blue);
+}
+
+:root[data-theme='dark'] .bereichskarte-titel {
+  color: #ffffff;
+}
