@@ -45,10 +45,38 @@ jobs:
           LFTP_SCRIPT="$(mktemp)"
           trap 'rm -f "$LFTP_SCRIPT"' EXIT
           chmod 600 "$LFTP_SCRIPT"
+          # cmd:fail-exit sorgt dafuer, dass lftp beim ersten
+          # fehlgeschlagenen Befehl aussteigt, statt die folgenden noch
+          # abzuarbeiten. Ohne diese Einstellung uebernimmt das
+          # abschliessende "quit" den Status des *letzten* Befehls -- ein
+          # frueherer Fehlschlag wird dadurch von jedem spaeteren Erfolg
+          # verdeckt und der Lauf endet gruen. Bei einem Ablauf, der ab
+          # jetzt loescht, darf das nicht passieren.
+          #
+          # "open" verbindet sich nicht sofort, sondern merkt sich nur die
+          # Sitzung; ein unerreichbarer Server faellt deshalb erst beim
+          # mirror auf. Mit fail-exit bricht lftp dann dort ab, statt
+          # weiterzulaufen.
+          #
+          # --delete macht den Serverinhalt zur genauen Kopie von dist/.
+          # Freigegeben durch den Trockenlauf vom 31.08.2026: Der Zielpfad
+          # trifft das Wiki-Verzeichnis, nicht die Webspace-Wurzel, und die
+          # Loeschliste umfasst 699 Dateien und 14 Verzeichnisse, alle
+          # verwaist. Wer --delete wieder entfernen will, sollte vorher den
+          # Workflow "Deploy Trockenlauf" starten; der zeigt ohne Risiko,
+          # was ein Lauf tun wuerde.
+          #
+          # --verbose ist hier keine Kosmetik: Ohne es gibt mirror bei
+          # einem erfolgreichen Lauf ueberhaupt keine Zeile aus. Das
+          # Entfernen von 699 Dateien wuerde im Actions-Protokoll dann
+          # keine Spur hinterlassen. Mit --verbose steht je Vorgang eine
+          # Zeile da -- rund 1500 fuer diesen Bestand, ohne messbaren
+          # Zeitverlust.
           cat > "$LFTP_SCRIPT" <<EOF
           set sftp:auto-confirm yes;
+          set cmd:fail-exit yes;
           open -u "$SFTP_USERNAME" --env-password sftp://$SFTP_SERVER;
-          mirror -R ./dist/ /;
+          mirror -R --delete --verbose ./dist/ /;
           quit;
           EOF
           lftp -f "$LFTP_SCRIPT"
