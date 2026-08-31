@@ -3,13 +3,17 @@ id: prinzipien_der_zielformulierung
 aliases:
   - prinzipien_der_zielformulierung
   - Prinzipien der Zielformulierung
-parent_topic: prozessmanagement
-subtopic: projekte_planen_und_steuern
-type: grundlagen
-intent: steuern
+ebene_1: prozessmanagement
+ebene_2: prozessmanagement-steuern
+ebene_3: projekte-planen-und-steuern
+type: Article
 status: entwurf
 created: 2026-02-16
-summary: Prägnante Ziele schaffen Klarheit, reduzieren Komplexität und sorgen für eine einheitliche Ausrichtung aller Beteiligten.
+updated:
+description: Prägnante Ziele schaffen Klarheit, reduzieren Komplexität und sorgen für eine einheitliche Ausrichtung aller Beteiligten.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

@@ -3,13 +3,17 @@ id: ki_psychologie_sycophancy_suggestivfragen
 aliases:
   - ki_psychologie_sycophancy_suggestivfragen
   - KI-Psychologie Sycophancy & Suggestivfragen
-parent_topic: kuenstliche_intelligenz
-subtopic: kuenstliche_intelligenz
-type: grundlagen
-intent: verstehen
+ebene_1: kuenstliche-intelligenz
+ebene_2:
+ebene_3:
+type: Article
 status: entwurf
 created: 2026-02-16
-summary: Dieses Modul analysiert, warum Large Language Models (LLMs) dazu neigen, Nutzermeinungen unkritisch zu übernehmen ("Sycophancy"). Es erklärt das Zusammenspiel von Mustervervollständigung und Sicherheits-Training (RLHF) und beleuchtet die Risiken von Bestätigungsfehlern und Halluzinationen bei suggestiven Fragestellungen.
+updated:
+description: Dieses Modul analysiert, warum Large Language Models (LLMs) dazu neigen, Nutzermeinungen unkritisch zu übernehmen ("Sycophancy"). Es erklärt das Zusammenspiel von Mustervervollständigung und Sicherheits-Training (RLHF) und beleuchtet die Risiken von Bestätigungsfehlern und Halluzinationen bei suggestiven Fragestellungen.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

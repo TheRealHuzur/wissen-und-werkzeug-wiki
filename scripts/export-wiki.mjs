@@ -37,7 +37,11 @@ const SITE = 'https://wissen-und-werkzeug.de';
 const BASE = '/wiki';
 const BASE_PREFIX = BASE;
 
-const SKIP_DIRS = new Set(['.obsidian', '.trash', '_private']);
+// _papierkorb steht hier, weil der Export den gesamten Vault durchlaeuft und
+// nicht nur 10_expertise_map und 20_ip_atoms. Ohne diesen Eintrag haengt es
+// allein am status einer Notiz, ob sie aus dem Papierkorb heraus
+// veroeffentlicht wird. Das ist kein Schutz, sondern ein Zufall.
+const SKIP_DIRS = new Set(['.obsidian', '.trash', '_private', '_papierkorb']);
 
 function toTitleCase(input) {
   // German common lowercase words in titles (if not at the start)
@@ -522,23 +526,30 @@ function formatDate(date) {
   return d.toISOString().split('T')[0];
 }
 
-function buildBreadcrumbs(slug) {
-  const parts = slug.split('-').filter(Boolean);
-  const breadcrumbs = [
-    { name: 'Wiki', item: `${SITE}${BASE}/` }
-  ];
+// Brotkruemel fuer das JSON-LD.
+//
+// Zwei Aenderungen gegenueber der Fassung vor der Struktur-Migration:
+//  1. Der Name kam aus der Adresse, was auf allen Seiten Ergebnisse wie
+//     "Bpmn das Exklusive Gateway Xor" erzeugte. Er kommt jetzt aus dem
+//     Titel, der an der Aufrufstelle ohnehin bereitsteht.
+//  2. Der Pfad wurde aus Adressteilen zusammengesetzt, was nie eine Stufe
+//     ergeben hat: Die Schleife rechnete eine Variable aus und verwendete
+//     sie nirgends. Der Pfad kommt jetzt aus den Ebenenfeldern, ueber die
+//     Hub-Notizen des Baums.
+//
+// Die Seite selbst ist immer die letzte Stufe. Ist sie zugleich ein Hub,
+// wird ihr eigener Knoten nicht doppelt genannt.
+function buildBreadcrumbs(slug, title, pfad, mocNachKnoten) {
+  const breadcrumbs = [{ name: 'Wiki', item: `${SITE}${BASE}/` }];
 
-  let currentSlug = '';
-  for (let i = 0; i < parts.length - 1; i++) {
-    currentSlug += (currentSlug ? '-' : '') + parts[i];
-    // This is a naive implementation; in a real scenario, we might want to check if the intermediate slug exists.
-    // However, for this wiki structure, it's often a flat or loosely hierarchical slug.
+  for (let i = 1; i <= pfad.length; i += 1) {
+    const moc = mocNachKnoten.get(pfad.slice(0, i).join('/'));
+    if (!moc) continue;
+    if (moc.slug === slug) continue;
+    breadcrumbs.push({ name: moc.label, item: `${SITE}${BASE}/${moc.slug}/` });
   }
 
-  breadcrumbs.push({
-    name: toTitleCase(slug.replace(/-/g, ' ')),
-    item: `${SITE}${BASE}/${slug}/`
-  });
+  breadcrumbs.push({ name: title, item: `${SITE}${BASE}/${slug}/` });
 
   return breadcrumbs.map((b, i) => ({
     '@type': 'ListItem',
@@ -643,79 +654,83 @@ function resolveInternalRoute(routeMap, target) {
   return routeMap.get(normalized) || routeMap.get(basenameKey) || null;
 }
 
-function buildSidebarItemsFromMocs(mocs, includeDraft) {
-  const parents = new Map();
+// --- Der Baum aus den Ebenenfeldern -----------------------------------------
+// Bis zur Struktur-Migration kannte der Erzeuger zwei Ebenen: eine Gruppe je
+// parent_topic, gesteuert ueber moc_level. Beide Felder gibt es nicht mehr.
+// Die Tiefe einer Notiz ergibt sich jetzt aus der Zahl ihrer gefuellten
+// Ebenenfelder, und ein Knoten mit Kindern wird zur verschachtelten Gruppe.
+function ebenenPfad(frontmatter) {
+  return ['ebene_1', 'ebene_2', 'ebene_3']
+    .map((key) => slugify(String(frontmatter[key] ?? '').trim()))
+    .filter(Boolean);
+}
 
+function knotenSchluessel(pfad) {
+  return pfad.join('/');
+}
+
+// Kinder je Knoten. Ein Knoten ist Kind, wenn sein Pfad ohne das letzte
+// Glied den Elternknoten ergibt.
+function kinderIndex(mocs) {
+  const kinder = new Map();
   for (const moc of mocs) {
-    const status = normalizeLookupKey(String(moc.status ?? ''));
-    if (status === STATUS_REJECTED) continue;
-    if (status !== STATUS_ACTIVE && !(includeDraft && status === STATUS_DRAFT)) continue;
-
-    if (moc.level === 'parent') {
-      const parentKey = moc.parentTopic || moc.id;
-      const node = parents.get(parentKey) ?? {
-        key: parentKey,
-        label: toTitleCase(parentKey),
-        parentMoc: null,
-        subtopics: [],
-      };
-      node.label = moc.label || node.label;
-      node.parentMoc = moc;
-      parents.set(parentKey, node);
-      continue;
-    }
-
-    if (moc.level === 'subtopic') {
-      const parentKey = moc.parentTopic;
-      const node = parents.get(parentKey) ?? {
-        key: parentKey,
-        label: toTitleCase(parentKey),
-        parentMoc: null,
-        subtopics: [],
-      };
-      node.subtopics.push(moc);
-      parents.set(parentKey, node);
-    }
+    if (moc.pfad.length < 2) continue;
+    const eltern = knotenSchluessel(moc.pfad.slice(0, -1));
+    if (!kinder.has(eltern)) kinder.set(eltern, []);
+    kinder.get(eltern).push(moc);
   }
+  return kinder;
+}
 
-  const groups = Array.from(parents.values())
-    .map((node) => {
-      if (!node.parentMoc && node.subtopics.length === 0) return null;
-      const items = [];
-      if (node.parentMoc) {
-        items.push({
-          label: 'Übersicht',
-          link: buildRoute(node.parentMoc.slug).replace(BASE_PREFIX, '') || '/',
-        });
-      }
+function buildSidebarItemsFromMocs(mocs, includeDraft) {
+  const sichtbar = mocs.filter((moc) => {
+    const status = normalizeLookupKey(String(moc.status ?? ''));
+    if (status === STATUS_REJECTED) return false;
+    return status === STATUS_ACTIVE || (includeDraft && status === STATUS_DRAFT);
+  });
 
-      const subtopics = node.subtopics
-        .slice()
-        .sort((a, b) => a.label.localeCompare(b.label, 'de', { sensitivity: 'base' }));
-      for (const subtopic of subtopics) {
-        items.push({
-          label: subtopic.label,
-          link: buildRoute(subtopic.slug).replace(BASE_PREFIX, '') || '/',
-        });
-      }
+  const kinder = kinderIndex(sichtbar);
+  const nachLabel = (liste) =>
+    liste.slice().sort((a, b) => a.label.localeCompare(b.label, 'de', { sensitivity: 'base' }));
+  const link = (moc) => buildRoute(moc.slug).replace(BASE_PREFIX, '') || '/';
 
-      return {
-        label: node.label,
-        items,
-      };
-    })
-    .filter(Boolean)
-    .sort((a, b) => a.label.localeCompare(b.label, 'de', { sensitivity: 'base' }));
+  const erreicht = new Set();
 
-  return groups;
+  // Ein Knoten ohne Kinder bleibt ein Link. Sobald er Kinder hat, wird er zur
+  // Gruppe und bekommt seine eigene Seite als ersten Eintrag "Uebersicht".
+  const baueEintrag = (moc) => {
+    erreicht.add(moc.knoten);
+    const eigene = nachLabel(kinder.get(moc.knoten) || []);
+    if (eigene.length === 0) return { label: moc.label, link: link(moc) };
+    return {
+      label: moc.label,
+      items: [{ label: 'Übersicht', link: link(moc) }, ...eigene.map(baueEintrag)],
+    };
+  };
+
+  const groups = nachLabel(sichtbar.filter((moc) => moc.pfad.length === 1)).map((wurzel) => {
+    erreicht.add(wurzel.knoten);
+    const eigene = nachLabel(kinder.get(wurzel.knoten) || []);
+    return {
+      label: wurzel.label,
+      items: [{ label: 'Übersicht', link: link(wurzel) }, ...eigene.map(baueEintrag)],
+    };
+  });
+
+  // Ein Hub, dessen uebergeordneter Hub fehlt oder auf entwurf steht, haengt
+  // an keinem Ast. Er verschwindet sonst lautlos aus dem Menue, deshalb wird
+  // er gezaehlt und weiter unten gemeldet.
+  const verwaist = sichtbar.filter((moc) => !erreicht.has(moc.knoten)).map((moc) => moc.knoten);
+
+  return { groups, verwaist };
 }
 
 async function generateSidebarFromMocs() {
   const mocFiles = await walkMarkdownFiles(MOC_ROOT_DIR);
   const mocs = [];
   const yamlWarningFiles = [];
-  let parentCount = 0;
-  let subtopicCount = 0;
+  const ohneEbeneFiles = [];
+  const tiefen = [0, 0, 0];
 
   for (const file of mocFiles) {
     const raw = await fs.readFile(file, 'utf8');
@@ -726,8 +741,9 @@ async function generateSidebarFromMocs() {
       continue;
     }
 
-    const level = normalizeLookupKey(String(parsed.frontmatter.moc_level ?? ''));
-    if (level !== 'parent' && level !== 'subtopic') {
+    const pfad = ebenenPfad(parsed.frontmatter);
+    if (pfad.length === 0) {
+      ohneEbeneFiles.push(file);
       continue;
     }
 
@@ -735,37 +751,27 @@ async function generateSidebarFromMocs() {
     const id = String(parsed.frontmatter.id ?? '').trim() || sourceName;
     const slug = slugify(id) || slugify(sourceName) || 'untitled';
     const label = buildMocLabel(parsed.frontmatter, parsed.body, sourceName);
-    const parentTopicRaw = String(parsed.frontmatter.parent_topic ?? '').trim();
-    const parentTopic = slugify(parentTopicRaw || (level === 'parent' ? id : ''));
-    const subtopic = String(parsed.frontmatter.subtopic ?? '').trim();
 
-    if (level === 'subtopic' && (!parentTopic || !subtopic)) {
-      yamlWarningFiles.push(file);
-      continue;
-    }
-
-    if (level === 'parent') parentCount += 1;
-    if (level === 'subtopic') subtopicCount += 1;
-
+    tiefen[pfad.length - 1] += 1;
     mocs.push({
       file,
       id,
       slug,
       label,
-      level,
       status: String(parsed.frontmatter.status ?? '').trim(),
-      parentTopic,
-      subtopic,
-      summary: String(parsed.frontmatter.summary ?? '').trim(),
+      pfad,
+      knoten: knotenSchluessel(pfad),
+      tiefe: pfad.length,
+      description: String(parsed.frontmatter.description ?? '').trim(),
     });
   }
 
-  let sidebar = buildSidebarItemsFromMocs(mocs, false);
+  let { groups: sidebar, verwaist } = buildSidebarItemsFromMocs(mocs, false);
   let fallbackUsed = false;
   let adoptedCount = mocs.filter((moc) => normalizeLookupKey(String(moc.status ?? '')) === STATUS_ACTIVE)
     .length;
   if (sidebar.length === 0) {
-    sidebar = buildSidebarItemsFromMocs(mocs, true);
+    ({ groups: sidebar, verwaist } = buildSidebarItemsFromMocs(mocs, true));
     fallbackUsed = true;
     adoptedCount = mocs.filter((moc) => {
       const status = normalizeLookupKey(String(moc.status ?? ''));
@@ -774,6 +780,13 @@ async function generateSidebarFromMocs() {
     if (sidebar.length > 0) {
       console.warn('[warn] Sidebar fallback: entwurf included');
     }
+  }
+
+  for (const knoten of verwaist) {
+    console.warn(`[warn] Hub ohne sichtbaren uebergeordneten Hub, fehlt im Menue: ${knoten}`);
+  }
+  for (const file of ohneEbeneFiles) {
+    console.warn(`[warn] MOC-Notiz ohne ebene_1: ${file}`);
   }
 
   await fs.mkdir(path.dirname(GENERATED_SIDEBAR_FILE), { recursive: true });
@@ -787,10 +800,13 @@ async function generateSidebarFromMocs() {
   return {
     mocs,
     totalMocs: mocs.length,
-    parentCount,
-    subtopicCount,
+    ebene1Count: tiefen[0],
+    ebene2Count: tiefen[1],
+    ebene3Count: tiefen[2],
     adoptedCount,
     fallbackUsed,
+    orphanCount: verwaist.length,
+    missingEbeneCount: ohneEbeneFiles.length,
     yamlWarningsCount: yamlWarningFiles.length,
     yamlWarningFiles,
   };
@@ -817,15 +833,28 @@ async function main() {
   const skippedSamples = [];
   const mocSummary = {
     totalMocs: 0,
-    parentCount: 0,
-    subtopicCount: 0,
+    ebene1Count: 0,
+    ebene2Count: 0,
+    ebene3Count: 0,
+    orphanCount: 0,
+    missingEbeneCount: 0,
     adoptedCount: 0,
     fallbackUsed: false,
     yamlWarningsCount: 0,
     yamlWarningFiles: [],
   };
 
-  const mocSummaryMap = new Map();
+  // Der MOC-Baum, nach Knotenpfad ansprechbar. Frueher lagen hier nur die
+  // Zusammenfassungen, angesprochen ueber id und Slug. Jetzt braucht der
+  // Export den ganzen Knoten: fuer den semantic-context, fuer die
+  // Brotkruemel und fuer den Waechter, der Notiz und Baum vergleicht.
+  const mocNachKnoten = new Map();
+  // Kinder je Knoten, unabhaengig vom Status: der Waechter soll auch dann
+  // melden, wenn ein Zwischen-Hub nur auf entwurf steht.
+  const mocKinder = new Map();
+  // Notizen, deren Pfad im Baum keine Entsprechung hat
+  let pfadOhneKnoten = 0;
+  const pfadOhneKnotenSlugs = [];
 
   function addSkipSample(file, reason) {
     if (skippedSamples.length < 10) {
@@ -838,13 +867,40 @@ async function main() {
   const mocResult = await generateSidebarFromMocs();
   Object.assign(mocSummary, mocResult);
 
-  // Build a lookup map for MOC summaries
-  // We use both ID and Slug as keys for easier lookup
   for (const m of mocResult.mocs || []) {
-    if (m.summary) {
-      mocSummaryMap.set(normalizeLookupKey(m.id), m.summary);
-      mocSummaryMap.set(normalizeLookupKey(m.slug), m.summary);
+    mocNachKnoten.set(m.knoten, m);
+    if (m.pfad.length < 2) continue;
+    const eltern = knotenSchluessel(m.pfad.slice(0, -1));
+    if (!mocKinder.has(eltern)) mocKinder.set(eltern, []);
+    mocKinder.get(eltern).push(m);
+  }
+
+  // Der semantic-context kommt aus dem tiefsten gefuellten Ebenenfeld und
+  // faellt nach oben zurueck, wenn dort keine description steht. Frueher kam
+  // er aus parent_topic, also aus dem obersten Knoten: 47 von 59 Seiten
+  // trugen dieselbe Zeile.
+  function semantischerKontextAusPfad(pfad) {
+    for (let i = pfad.length; i > 0; i -= 1) {
+      const moc = mocNachKnoten.get(knotenSchluessel(pfad.slice(0, i)));
+      if (moc && moc.description) return moc.description;
     }
+    return '';
+  }
+
+  // Waechter: der Pfad steht in der Notiz und im MOC-Baum. Jede Stufe des
+  // Pfades muss dort einen Knoten haben, sonst haengt die Notiz an einer
+  // Kette mit Luecke. Dieselbe Mechanik wie missingUpdated und missingOffer.
+  function pruefePfad(pfad, slug) {
+    const fehlend = [];
+    for (let i = 1; i <= pfad.length; i += 1) {
+      const knoten = knotenSchluessel(pfad.slice(0, i));
+      if (!mocNachKnoten.has(knoten)) fehlend.push(knoten);
+    }
+    if (fehlend.length > 0) {
+      pfadOhneKnoten += 1;
+      pfadOhneKnotenSlugs.push(`${slug} (kein Hub fuer: ${fehlend.join(', ')})`);
+    }
+    return fehlend;
   }
 
   const markdownFiles = await walkMarkdownFiles(SOURCE_VAULT);
@@ -949,8 +1005,16 @@ async function main() {
 
     const h1 = extractFirstH1(body);
     const title = frontmatter.title ? String(frontmatter.title) : (h1 || toTitleCase(sourceName));
+
+    // Der Pfad aus den Ebenenfeldern. Er ersetzt parent_topic und subtopic
+    // und steuert Artikelliste, semantic-context und Brotkruemel.
+    const pfad = ebenenPfad(frontmatter);
+    pruefePfad(pfad, slug);
+
     candidates.push({
       file,
+      pfad,
+      knoten: knotenSchluessel(pfad),
       id: rawId || sourceName,
       slug,
       rawId,
@@ -998,26 +1062,28 @@ async function main() {
       addLookupKey(String(candidate.frontmatter.title), route, `${candidate.file} (title)`);
     }
   }
-  const ipsByParentTopic = new Map();
-  const ipsBySubtopic = new Map();
+  // Artikel je Knoten. Frueher zwei getrennte Karten nach parent_topic und
+  // subtopic, also genau zwei Ebenen. Jetzt ein Eintrag je Knotenpfad; die
+  // Tiefe ist nicht mehr begrenzt.
+  const artikelNachKnoten = new Map();
 
   for (const candidate of candidates) {
     const isMoc = candidate.file.replace(/\\/g, '/').includes('/10_expertise_map/');
-    if (!isMoc) {
-      const parentTopicRaw = String(candidate.frontmatter.parent_topic ?? '').trim();
-      const parentTopic = slugify(parentTopicRaw);
-      const subtopicRaw = String(candidate.frontmatter.subtopic ?? '').trim();
-      const subtopic = slugify(subtopicRaw);
+    if (isMoc) continue;
+    if (candidate.pfad.length === 0) continue;
+    const knoten = candidate.knoten;
+    if (!artikelNachKnoten.has(knoten)) artikelNachKnoten.set(knoten, []);
+    artikelNachKnoten.get(knoten).push(candidate);
+  }
 
-      if (parentTopic) {
-        if (!ipsByParentTopic.has(parentTopic)) ipsByParentTopic.set(parentTopic, []);
-        ipsByParentTopic.get(parentTopic).push(candidate);
-      }
-      if (subtopic) {
-        if (!ipsBySubtopic.has(subtopic)) ipsBySubtopic.set(subtopic, []);
-        ipsBySubtopic.get(subtopic).push(candidate);
-      }
-    }
+  const nachTitel = (liste) =>
+    liste.slice().sort((a, b) => a.title.localeCompare(b.title, 'de', { sensitivity: 'base' }));
+
+  // Alle Artikel eines Knotens samt seiner untergeordneten Knoten.
+  function artikelImTeilbaum(knoten) {
+    const eigene = artikelNachKnoten.get(knoten) || [];
+    const kinder = mocKinder.get(knoten) || [];
+    return [...eigene, ...kinder.flatMap((kind) => artikelImTeilbaum(kind.knoten))];
   }
 
   for (const candidate of candidates) {
@@ -1119,86 +1185,48 @@ async function main() {
       return `[${text}](${route}${anchor})`;
     });
 
-    // Append related modules list for MOCs (with special grouping for Prozessmanagement)
-    if (isMoc) {
-      const mocLevel = normalizeLookupKey(String(candidate.frontmatter.moc_level ?? ''));
-      const id = candidate.id;
-      const subtopicValue = slugify(String(candidate.frontmatter.subtopic ?? ''));
+    // Artikelliste am Ende der Hub-Seite.
+    //
+    // Frueher gab es hier einen Sonderweg fuer /wiki/prozessmanagement/: Die
+    // Links wurden an fuenf Ueberschriften im Body eingehaengt, gesteuert
+    // ueber intent, und die Stelle wurde ueber die Adresse erkannt. Das war
+    // auf eine Doppelung der Ueberschriften im Notiz-Body angewiesen.
+    //
+    // Jetzt gilt fuer jede Hub-Seite dieselbe Regel, ohne Sonderfall und ohne
+    // Suche im Body: Der Hub listet seine eigenen Artikel und die aller
+    // untergeordneten Knoten, gruppiert nach Bereich.
+    if (isMoc && candidate.pfad.length > 0) {
+      const eigene = nachTitel(artikelNachKnoten.get(candidate.knoten) || []);
+      const kinder = (mocKinder.get(candidate.knoten) || [])
+        .slice()
+        .sort((a, b) => a.label.localeCompare(b.label, 'de', { sensitivity: 'base' }));
+      const gruppen = kinder
+        .map((kind) => ({ label: kind.label, artikel: nachTitel(artikelImTeilbaum(kind.knoten)) }))
+        .filter((gruppe) => gruppe.artikel.length > 0);
 
-      let relatedIps = [];
-      if (mocLevel === 'parent') {
-        relatedIps = ipsByParentTopic.get(slugify(id)) || [];
-      } else if (mocLevel === 'subtopic') {
-        relatedIps = ipsBySubtopic.get(subtopicValue) || [];
-      }
+      if (eigene.length > 0 || gruppen.length > 0) {
+        body += '\n\n## Zugehörige Artikel\n';
 
-      if (relatedIps.length > 0) {
-        // Sort by title
-        relatedIps.sort((a, b) => a.title.localeCompare(b.title, 'de', { sensitivity: 'base' }));
-
-        const isProzessmanagement = slugify(id) === 'prozessmanagement';
-        const intentHeadings = {
-          steuern: '### Steuern',
-          verstehen: '### Verstehen',
-          gestalten: '### Gestalten',
-          umsetzen: '### Umsetzen',
-          betreiben: '### Betreiben',
-        };
-
-        if (isProzessmanagement) {
-          const categorized = new Map();
-          const unassigned = [];
-
-          for (const ip of relatedIps) {
-            const intent = normalizeLookupKey(String(ip.frontmatter.intent ?? ''));
-            if (intent && intentHeadings[intent]) {
-              if (!categorized.has(intent)) categorized.set(intent, []);
-              categorized.get(intent).push(ip);
-            } else {
-              unassigned.push(ip);
-            }
-          }
-
-          // Insert into specific headings
-          for (const [intent, heading] of Object.entries(intentHeadings)) {
-            const modules = categorized.get(intent);
-            if (!modules) continue;
-
-            const escapedHeading = heading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            // Regex to find the LAST occurrence of the exact heading
-            const headingRegex = new RegExp(`(^|\\r?\\n)${escapedHeading}\\s*(\\r?\\n|$)`, 'g');
-            let lastMatch = null;
-            let match;
-            while ((match = headingRegex.exec(body)) !== null) {
-              lastMatch = match;
-            }
-
-            if (lastMatch) {
-              const insertPos = lastMatch.index + lastMatch[0].length;
-              const moduleLinks = modules.map((ip) => `- [[${ip.id}|${ip.title}]]`).join('\n') + '\n';
-              body = body.slice(0, insertPos) + moduleLinks + body.slice(insertPos);
-            } else {
-              // If heading not found, add to unassigned
-              unassigned.push(...modules);
-            }
-          }
-
-          if (unassigned.length > 0) {
-            unassigned.sort((a, b) => a.title.localeCompare(b.title, 'de', { sensitivity: 'base' }));
-            body += '\n\n## Zugehörige Artikel\n\n';
-            for (const ip of unassigned) {
-              body += `- [[${ip.id}|${ip.title}]]\n`;
-            }
-          }
-        } else {
-          // Standard behavior for other MOCs
-          body += '\n\n## Zugehörige Artikel\n\n';
-          for (const ip of relatedIps) {
+        // Artikel, die unmittelbar am Hub haengen, stehen ohne
+        // Bereichsueberschrift und vor den Gruppen.
+        if (eigene.length > 0) {
+          body += '\n';
+          for (const ip of eigene) {
             body += `- [[${ip.id}|${ip.title}]]\n`;
           }
         }
 
-        // Re-process the newly added wikilinks
+        // Je untergeordnetem Knoten eine Ueberschrift mit dem Titel des
+        // Unterhubs. Artikel tieferer Knoten stehen in der Gruppe ihres
+        // Unterhubs mit, damit die uebergeordnete Seite vollstaendig bleibt.
+        for (const gruppe of gruppen) {
+          body += `\n### ${gruppe.label}\n\n`;
+          for (const ip of gruppe.artikel) {
+            body += `- [[${ip.id}|${ip.title}]]\n`;
+          }
+        }
+
+        // Die eben eingefuegten Wikilinks aufloesen.
         body = body.replace(/\[\[([^\]]+)\]\]/g, (_, inner) => {
           const [targetRaw, aliasRaw] = inner.split('|');
           const { target, heading } = splitWikilinkTarget(targetRaw || '');
@@ -1239,12 +1267,28 @@ async function main() {
 
     const canonicalHref = `${SITE}${buildRoute(candidate.slug)}`;
 
+    // type traegt seit der Struktur-Migration die schema.org-Namen und
+    // erreicht damit erstmals die Ausgabe. Vorher stand hier fest Article,
+    // auch fuer die Hub-Seiten.
+    const TYPEN_ERLAUBT = ['Article', 'HowTo', 'CollectionPage'];
+    const sourceType = String(candidate.frontmatter.type ?? '').trim();
+    if (sourceType && !TYPEN_ERLAUBT.includes(sourceType)) {
+      console.warn(`[warn] type unbekannt, Article gesetzt: ${sourceType} (source: ${candidate.file})`);
+    }
+    const schemaType = TYPEN_ERLAUBT.includes(sourceType) ? sourceType : 'Article';
+    // HowTo stammt direkt von CreativeWork ab und traegt articleSection
+    // nicht. Deshalb beide Typen, damit die Angabe gueltig bleibt.
+    const jsonLdType = schemaType === 'HowTo' ? ['Article', 'HowTo'] : schemaType;
+    // articleSection kommt aus der tiefsten gefuellten Ebene.
+    const articleSection = candidate.pfad.length > 1 ? candidate.pfad[candidate.pfad.length - 1] : '';
+    const sourceImage = String(candidate.frontmatter.image ?? '').trim();
+
     // Expanded JSON-LD
     const jsonLd = {
       '@context': 'https://schema.org',
       '@graph': [
         {
-          '@type': 'Article',
+          '@type': jsonLdType,
           '@id': `${canonicalHref}#article`,
           headline: candidate.title,
           url: canonicalHref,
@@ -1272,13 +1316,25 @@ async function main() {
         {
           '@type': 'BreadcrumbList',
           '@id': `${canonicalHref}#breadcrumb`,
-          itemListElement: buildBreadcrumbs(candidate.slug)
+          itemListElement: buildBreadcrumbs(candidate.slug, candidate.title, candidate.pfad, mocNachKnoten)
         }
       ]
     };
 
     if (description) {
       jsonLd['@graph'][0].description = description;
+    }
+
+    // articleSection nur, wo es eine Fachebene gibt. CollectionPage traegt
+    // die Eigenschaft nicht, Hub-Seiten bekommen sie deshalb nicht.
+    if (articleSection && schemaType !== 'CollectionPage') {
+      jsonLd['@graph'][0].articleSection = articleSection;
+    }
+
+    // image nur, wenn im Frontmatter etwas steht. Ein leeres Feld erzeugt
+    // keine Angabe.
+    if (sourceImage) {
+      jsonLd['@graph'][0].image = sourceImage;
     }
 
     // Nur ausgeben, was im Frontmatter tatsaechlich steht — kein Datum ist
@@ -1303,13 +1359,13 @@ async function main() {
 
     const ragContext = extractRagContext(candidate.body);
 
-    // Automated Semantic Context Inheritance
-    // Try to find a summary from the matching MOC (parent_topic or subtopic)
+    // Der semantic-context kommt aus dem tiefsten gefuellten Ebenenfeld.
+    // Das Feld semantic_context bleibt als Handuebersteuerung bestehen und
+    // wird in keiner Notiz gepflegt; es hat Vorrang, wenn es doch einmal
+    // gesetzt wird.
     let semanticContext = String(candidate.frontmatter.semantic_context ?? '').trim();
     if (!semanticContext) {
-      const parentLookup = normalizeLookupKey(String(candidate.frontmatter.parent_topic ?? ''));
-      const subtopicLookup = normalizeLookupKey(String(candidate.frontmatter.subtopic ?? ''));
-      semanticContext = mocSummaryMap.get(parentLookup) || mocSummaryMap.get(subtopicLookup) || '';
+      semanticContext = semantischerKontextAusPfad(candidate.pfad);
     }
 
     const frontmatterLines = ['---', `title: ${yamlQuote(candidate.title)}`];
@@ -1331,6 +1387,17 @@ async function main() {
       frontmatterLines.push(`offer_heading: ${yamlQuote(candidate.offerHeading)}`);
       frontmatterLines.push(`offer_text: ${yamlQuote(candidate.offerText)}`);
     }
+
+    // type, image und die Ebenenfelder durchreichen. Ohne die Erweiterung in
+    // src/content.config.ts weist Astro sie zurueck; beide Haelften gehoeren
+    // zusammen.
+    frontmatterLines.push(`type: ${yamlQuote(schemaType)}`);
+    if (sourceImage) {
+      frontmatterLines.push(`image: ${yamlQuote(sourceImage)}`);
+    }
+    candidate.pfad.forEach((wert, i) => {
+      frontmatterLines.push(`ebene_${i + 1}: ${yamlQuote(wert)}`);
+    });
 
     frontmatterLines.push('head:');
     // Reiner Inhaltstitel ohne den Zusatz "| Wissen & Werkzeug Wiki"
@@ -1409,14 +1476,18 @@ async function main() {
   console.log(`[summary] descriptionsMissing: ${descriptionsMissing}`);
   console.log(`[summary] missingUpdated: ${missingUpdated}`);
   console.log(`[summary] missingOffer: ${missingOffer}`);
+  console.log(`[summary] pfadOhneKnoten: ${pfadOhneKnoten}`);
   console.log(`[summary] bestandsaufnahme.articlesWithQuestions: ${bestandsaufnahme.articlesWithQuestions}`);
   console.log(`[summary] bestandsaufnahme.questionsTotal: ${bestandsaufnahme.questionsTotal}`);
   console.log(`[summary] bestandsaufnahme.relatedEntries: ${bestandsaufnahme.relatedTotal}`);
   console.log(`[summary] bestandsaufnahme.shortDescriptions: ${bestandsaufnahme.shortDescriptions}`);
   console.log(`[summary] bestandsaufnahme.report: ${REPORT_FILE}`);
   console.log(`[summary] mocs.total: ${mocSummary.totalMocs}`);
-  console.log(`[summary] mocs.parent: ${mocSummary.parentCount}`);
-  console.log(`[summary] mocs.subtopic: ${mocSummary.subtopicCount}`);
+  console.log(`[summary] mocs.ebene1: ${mocSummary.ebene1Count}`);
+  console.log(`[summary] mocs.ebene2: ${mocSummary.ebene2Count}`);
+  console.log(`[summary] mocs.ebene3: ${mocSummary.ebene3Count}`);
+  console.log(`[summary] mocs.verwaist: ${mocSummary.orphanCount}`);
+  console.log(`[summary] mocs.ohneEbene: ${mocSummary.missingEbeneCount}`);
   console.log(`[summary] mocs.inSidebar: ${mocSummary.adoptedCount}`);
   console.log(`[summary] mocs.fallbackUsed: ${mocSummary.fallbackUsed}`);
   console.log(`[summary] mocs.yamlWarnings: ${mocSummary.yamlWarningsCount}`);
@@ -1442,6 +1513,16 @@ async function main() {
   // Zweite Warnliste, bewusst getrennt gefuehrt: missingUpdated ist ein
   // dokumentierter Pruefwert aus Paket 1 und darf nicht zwei Sachverhalte
   // vermischen. Fehlt eines der drei offer_-Felder, entfaellt der Block.
+  // Waechter: der Pfad steht in der Notiz und im MOC-Baum. Weicht er ab,
+  // haengt die Notiz an einer Kette mit Luecke und verschwindet aus der
+  // Artikelliste ihres Hubs, ohne dass etwas fehlschlaegt.
+  if (pfadOhneKnotenSlugs.length > 0) {
+    console.log(`[warn] Notizen, deren Ebenenfelder auf einen Knoten ohne Hub zeigen (${pfadOhneKnotenSlugs.length}):`);
+    for (const eintrag of pfadOhneKnotenSlugs) {
+      console.log(`  - ${eintrag}`);
+    }
+  }
+
   if (missingOfferSlugs.length > 0) {
     console.log(`[warn] Notizen ohne vollstaendigen Angebotsverweis (${missingOfferSlugs.length}) — offer_heading, offer_text und offer_link noetig:`);
     for (const slug of [...missingOfferSlugs].sort()) {

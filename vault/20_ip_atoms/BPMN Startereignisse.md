@@ -3,13 +3,15 @@ id: bpmn_startereignisse
 aliases:
   - bpmn_startereignisse
   - BPMN Startereignisse
-parent_topic: prozessmanagement
-subtopic: bpmn
-type: framework
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3: bpmn
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Startereignisse definieren den Auslöser eines Prozesses und erzeugen beim Eintreten eine neue Prozessinstanz (Token). Sie haben keinen eingehenden, aber genau einen ausgehenden Sequenzfluss. **Dieses Modul beantwortet folgende Fragen:** - Wie wird ein Prozess in BPMN korrekt gestartet? - Welche Arte
+updated:
+description: Startereignisse definieren den Auslöser eines Prozesses und erzeugen beim Eintreten eine neue Prozessinstanz (Token). Sie haben keinen eingehenden, aber genau einen ausgehenden Sequenzfluss. **Dieses Modul beantwortet folgende Fragen:** - Wie wird ein Prozess in BPMN korrekt gestartet? - Welche Arte
+image:
 offer_heading: "Womit ein Prozess beginnt, bestimmt seinen Zuschnitt"
 offer_text: "Der Auslöser legt fest, wo ein Prozess anfängt und was noch davor gehört. Der [Grundkurs BPMN](/grundkurs-bpmn/) zeigt, wie sich Prozessgrenzen bewusst setzen lassen, statt sich zu ergeben."
 ---

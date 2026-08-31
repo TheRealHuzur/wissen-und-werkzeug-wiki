@@ -26,6 +26,41 @@ ErrorDocument 404 /wiki/404.html
 RewriteCond %{HTTP_HOST} ^www\.wissen-und-werkzeug\.de$ [NC]
 RewriteRule ^ https://wissen-und-werkzeug.de%{REQUEST_URI} [R=301,L]
 
+# Weiterleitungen aus der Struktur-Migration vom 31.08.2026.
+#
+# Anlass, erste fuenf Zeilen: Fuenf Artikel trugen aus dem Notion-Export
+# verstuemmelte Kennungen ("manahmen" statt "massnahmen", "fur" statt
+# "fuer"). Aus der Kennung bildet der Export die Adresse, deshalb war das
+# Wort auch in der Adresse kaputt. Zusammen rund 150 KI-Zitierungen.
+#
+# Anlass, letzte drei Zeilen: Drei Seiten sind auf status: entwurf gesetzt
+# und verschwinden damit aus dem Wiki. Sie gehen auf die jeweils
+# uebergeordnete Hub-Seite.
+#
+# Warum die Zeilen hier stehen und nicht weiter unten: Die
+# Direktausliefer-Regel endet auf [L] und beendet den Durchlauf fuer jede
+# Anfrage, die auf eine vorhandene Datei oder ein vorhandenes Verzeichnis
+# trifft. Eine Weiterleitung dahinter kaeme fuer genau die Adressen nicht
+# zum Zug, um die es geht.
+#
+# Warum kein wiki/ im Muster: In einer Unterverzeichnis-.htaccess sieht
+# eine RewriteRule nur den Pfad nach dem Verzeichnis. Fuer /wiki/bpmn/
+# steht im Muster "bpmn/". Das Ziel ist deshalb eine vollstaendige
+# Adresse, die unabhaengig von RewriteBase gilt. Das /? faengt den Aufruf
+# mit und ohne abschliessenden Schraegstrich.
+#
+# Ueberpruefen fruehestens im Maerz 2027, also ein gutes halbes Jahr nach
+# der Umstellung. Bis dahin sollten die Antwortsysteme die neuen Adressen
+# kennen. Wer diese Zeilen entfernt, verliert die Zitierungen der alten.
+RewriteRule ^der-manahmenplan-grundlagen-anleitung/?$ https://wissen-und-werkzeug.de/wiki/massnahmenplan/ [R=301,L]
+RewriteRule ^denkmodi-ideen-vs-losungsorientierung/?$ https://wissen-und-werkzeug.de/wiki/denkmodi-ideen-und-loesungsorientierung/ [R=301,L]
+RewriteRule ^bpmn-grundlagen-und-regeln-fur-bpmn-gateways/?$ https://wissen-und-werkzeug.de/wiki/bpmn-gateways-grundlagen-regeln/ [R=301,L]
+RewriteRule ^definition-geschaftsprozess-verwaltung/?$ https://wissen-und-werkzeug.de/wiki/geschaeftsprozess-verwaltung/ [R=301,L]
+RewriteRule ^identifikation-von-geschaftsprozessen/?$ https://wissen-und-werkzeug.de/wiki/geschaeftsprozesse-identifizieren/ [R=301,L]
+RewriteRule ^obsidian/?$ https://wissen-und-werkzeug.de/wiki/second-brain/ [R=301,L]
+RewriteRule ^bases-views-konzept/?$ https://wissen-und-werkzeug.de/wiki/second-brain/ [R=301,L]
+RewriteRule ^die-smart-regel/?$ https://wissen-und-werkzeug.de/wiki/projekte-planen-und-steuern/ [R=301,L]
+
 # If the request is for a real file or directory, serve it directly
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d

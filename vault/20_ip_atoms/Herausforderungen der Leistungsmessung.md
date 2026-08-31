@@ -3,13 +3,17 @@ id: herausforderungen_der_leistungsmessung
 aliases:
   - herausforderungen_der_leistungsmessung
   - Herausforderungen der Leistungsmessung
-parent_topic: prozessmanagement
-subtopic: controlling
-type: grundlagen
-intent: steuern
+ebene_1: prozessmanagement
+ebene_2: prozessmanagement-betreiben
+ebene_3: controlling
+type: Article
 status: entwurf
 created: 2026-02-16
-summary: "Beschreibt die drei zentralen Hürden, auf die Unternehmen und Verwaltungen stoßen, wenn sie versuchen, Prozessleistung zu messen: Definition des Messobjekts, Methodik der Messung und das Management-Commitment."
+updated:
+description: "Beschreibt die drei zentralen Hürden, auf die Unternehmen und Verwaltungen stoßen, wenn sie versuchen, Prozessleistung zu messen: Definition des Messobjekts, Methodik der Messung und das Management-Commitment."
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

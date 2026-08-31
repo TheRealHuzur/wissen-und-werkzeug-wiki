@@ -3,13 +3,17 @@ id: vorgehensmodelle_der_prozessoptimierung_evolutionar_vs_revolutionar
 aliases:
   - vorgehensmodelle_der_prozessoptimierung_evolutionar_vs_revolutionar
   - Vorgehensmodelle der Prozessoptimierung Evolutionär vs. Revolutionär
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: theorie
-intent: steuern
+ebene_1: prozessmanagement
+ebene_2: prozessmanagement-steuern
+ebene_3:
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: "Dieses Modul stellt zwei grundlegende Strategien der Prozessoptimierung gegenüber: den evolutionären Ansatz (Schritt-für-Schritt-Verbesserung) und den revolutionären Ansatz (Green-Field-Methode). Es beleuchtet Entscheidungskriterien wie rechtliche Rahmenbedingungen oder Unternehmenskultur und und stellt einen hybriden Best-Practice-Ansatz vor, der Vision und Ist-Analyse verbindet."
+updated:
+description: "Dieses Modul stellt zwei grundlegende Strategien der Prozessoptimierung gegenüber: den evolutionären Ansatz (Schritt-für-Schritt-Verbesserung) und den revolutionären Ansatz (Green-Field-Methode). Es beleuchtet Entscheidungskriterien wie rechtliche Rahmenbedingungen oder Unternehmenskultur und und stellt einen hybriden Best-Practice-Ansatz vor, der Vision und Ist-Analyse verbindet."
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

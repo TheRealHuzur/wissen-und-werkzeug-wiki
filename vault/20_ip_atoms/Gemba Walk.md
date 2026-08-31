@@ -3,13 +3,17 @@ id: gemba_walk
 aliases:
   - gemba_walk
   - der_eigentliche_ort
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: grundlagen
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3:
+type: Article
 status: ki_ready
 created: 2026-02-17
-summary: "Dieses Modul führt in das Konzept des Gemba Walks ein: Die Praxis des Managements, den Ort der tatsächlichen Wertschöpfung aufzusuchen, um Prozesse direkt zu beobachten. Es erläutert die Abgrenzung zur rein theoretischen Analyse und zeigt auf, wie durch Empathie und Präsenz vor Ort Verschwendung identifiziert und die Prozessqualität nachhaltig gesteigert werden kann."
+updated:
+description: "Dieses Modul führt in das Konzept des Gemba Walks ein: Die Praxis des Managements, den Ort der tatsächlichen Wertschöpfung aufzusuchen, um Prozesse direkt zu beobachten. Es erläutert die Abgrenzung zur rein theoretischen Analyse und zeigt auf, wie durch Empathie und Präsenz vor Ort Verschwendung identifiziert und die Prozessqualität nachhaltig gesteigert werden kann."
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

@@ -2,13 +2,17 @@
 id: kommunikationsplan
 aliases:
   - kommunikationsplan
-parent_topic: prozessmanagement
-subtopic: projekte_planen_und_steuern
-type: grundlagen
-intent: steuern
+ebene_1: prozessmanagement
+ebene_2: prozessmanagement-steuern
+ebene_3: projekte-planen-und-steuern
+type: Article
 status: entwurf
 created: 2026-02-16
-summary: Eine kompakte Vorlage zur Planung und Steuerung der Projektkommunikation basierend auf den sechs W-Fragen.
+updated:
+description: Eine kompakte Vorlage zur Planung und Steuerung der Projektkommunikation basierend auf den sechs W-Fragen.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

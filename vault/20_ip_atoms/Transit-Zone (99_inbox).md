@@ -2,13 +2,17 @@
 id: 99_inbox_transit_zone
 aliases:
   - 99_inbox_transit_zone
-parent_topic: second_brain
-subtopic: system_architektur
-type: grundlagen
-intent: umsetzen
+ebene_1: wissensmanagement
+ebene_2: second-brain
+ebene_3: system-architektur
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Dieses Modul beschreibt 99_inbox als Transit-Zone für neue Entwürfe und Rohmaterial. Es erklärt, warum die Inbox wichtig ist, welche Minimalregeln verhindern, dass Inhalte verloren gehen, und wie du Notizen Schritt für Schritt in saubere Module im Inhaltspool überführst.
+updated:
+description: Dieses Modul beschreibt 99_inbox als Transit-Zone für neue Entwürfe und Rohmaterial. Es erklärt, warum die Inbox wichtig ist, welche Minimalregeln verhindern, dass Inhalte verloren gehen, und wie du Notizen Schritt für Schritt in saubere Module im Inhaltspool überführst.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

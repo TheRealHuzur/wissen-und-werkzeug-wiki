@@ -3,13 +3,15 @@ id: bpmn_aufgaben_und_teilprozesse
 aliases:
   - bpmn_aufgaben_und_teilprozesse
   - BPMN Aufgaben und Teilprozesse
-parent_topic: prozessmanagement
-subtopic: bpmn
-type: framework
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3: bpmn
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Dieses Modul beschreibt die Darstellung des "Was" in einem Prozessmodell durch Aktivitäten. Es definiert Tasks als atomare Einheiten und erläutert die Kapselung von Komplexität durch Teilprozesse sowie die Wiederverwendung mittels Aufrufaktivitäten.
+updated:
+description: Dieses Modul beschreibt die Darstellung des "Was" in einem Prozessmodell durch Aktivitäten. Es definiert Tasks als atomare Einheiten und erläutert die Kapselung von Komplexität durch Teilprozesse sowie die Wiederverwendung mittels Aufrufaktivitäten.
+image:
 offer_heading: "Wo ein Teilprozess anfängt, ist eine Entscheidung"
 offer_text: "Ob etwas eine Aufgabe bleibt oder ein eigener Teilprozess wird, hängt davon ab, für wen ein Modell gedacht ist. Der [Grundkurs BPMN](/grundkurs-bpmn/) zeigt, woran sich dieser Schnitt festmachen lässt."
 ---

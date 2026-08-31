@@ -3,13 +3,17 @@ id: prozesse_priorisieren
 aliases:
   - prozesse_priorisieren
   - Prozesse priorisieren
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: grundlagen
-intent: steuern
+ebene_1: prozessmanagement
+ebene_2: prozessmanagement-steuern
+ebene_3:
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Da Ressourcen begrenzt sind, können nicht alle Prozesse gleichzeitig optimiert werden. Dieses Modul beschreibt Kriterien und Vorgehensweisen, um Prozesse systematisch nach Handlungsbedarf, strategischer Relevanz und Machbarkeit zu bewerten und für die Bearbeitung auszuwählen.
+updated:
+description: Da Ressourcen begrenzt sind, können nicht alle Prozesse gleichzeitig optimiert werden. Dieses Modul beschreibt Kriterien und Vorgehensweisen, um Prozesse systematisch nach Handlungsbedarf, strategischer Relevanz und Machbarkeit zu bewerten und für die Bearbeitung auszuwählen.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

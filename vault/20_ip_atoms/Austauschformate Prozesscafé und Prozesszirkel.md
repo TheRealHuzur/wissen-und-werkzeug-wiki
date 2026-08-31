@@ -3,13 +3,17 @@ id: austauschformate_prozesscafe_und_prozesszirkel
 aliases:
   - austauschformate_prozesscafe_und_prozesszirkel
   - Austauschformate Prozesscafé und Prozesszirkel
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: anleitung
-intent: betreiben
+ebene_1: prozessmanagement
+ebene_2: prozessmanagement-betreiben
+ebene_3:
+type: Article
 status: ki_ready
 created: 2026-02-17
-summary: "Dieses Modul beschreibt zwei zentrale Formate des sozialen Lernens: das Prozesscafé und den Prozesszirkel. Während das Prozesscafé als niedrigschwelliger, offener Austausch dient, bietet der Prozesszirkel einer festen Kleingruppe Raum für die kontinuierliche Vertiefung und Reflexion von Arbeitsabläufen im Alltag."
+updated:
+description: "Dieses Modul beschreibt zwei zentrale Formate des sozialen Lernens: das Prozesscafé und den Prozesszirkel. Während das Prozesscafé als niedrigschwelliger, offener Austausch dient, bietet der Prozesszirkel einer festen Kleingruppe Raum für die kontinuierliche Vertiefung und Reflexion von Arbeitsabläufen im Alltag."
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

@@ -3,13 +3,17 @@ id: prozess_fmea_methode_praxisbeispiel
 aliases:
   - prozess_fmea_methode_praxisbeispiel
   - Prozess-FMEA Methode & Praxisbeispiel
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: framework
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3:
+type: HowTo
 status: ki_ready
 created: 2026-02-16
-summary: Die Prozess-FMEA (Fehlermöglichkeits- und Einflussanalyse) ist eine präventive Methode zur systematischen Identifikation und Bewertung von Schwachsstellen in Prozessen. Dieses Modul kombiniert die theoretischen Grundlagen (RPZ, Ablaufschritte) mit einem konkreten Anwendungsbeispiel aus der Fortbildungsorganisation.
+updated:
+description: Die Prozess-FMEA (Fehlermöglichkeits- und Einflussanalyse) ist eine präventive Methode zur systematischen Identifikation und Bewertung von Schwachsstellen in Prozessen. Dieses Modul kombiniert die theoretischen Grundlagen (RPZ, Ablaufschritte) mit einem konkreten Anwendungsbeispiel aus der Fortbildungsorganisation.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

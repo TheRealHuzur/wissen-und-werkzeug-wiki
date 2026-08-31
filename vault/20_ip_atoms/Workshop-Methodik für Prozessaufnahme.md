@@ -1,15 +1,19 @@
 ---
-id: workshop_methodik_fur_prozessaufnahme
+id: workshop-methodik-prozessaufnahme
 aliases:
   - workshop_methodik_fur_prozessaufnahme
   - Workshop-Methodik für Prozessaufnahme
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: grundlagen
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3:
+type: Article
 status: entwurf
 created: 2025-12-15
-summary: Leitfaden für die Durchführung von Prozessworkshops, inklusive technischer und methodischer Hinweise für Ist-Aufnahmen und Soll-Modellierung.
+updated:
+description: Leitfaden für die Durchführung von Prozessworkshops, inklusive technischer und methodischer Hinweise für Ist-Aufnahmen und Soll-Modellierung.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

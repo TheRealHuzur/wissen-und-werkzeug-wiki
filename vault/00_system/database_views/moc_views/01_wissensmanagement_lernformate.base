@@ -3,9 +3,9 @@ views:
     name: Tabelle
     filters:
       and:
-        - parent_topic == "wissensmanagement"
-        - subtopic == "lernformate"
-        - "!type.isEmpty()"
+        - ebene_1 == "wissensmanagement"
+        - ebene_2 == "lernformate"
+        - file.folder == "20_ip_atoms"
     order:
       - file.name
       - status

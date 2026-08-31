@@ -3,13 +3,15 @@ id: bpmn_das_parallele_gateway_and
 aliases:
   - bpmn_das_parallele_gateway_and
   - BPMN Das Parallele Gateway (AND)
-parent_topic: prozessmanagement
-subtopic: bpmn
-type: framework
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3: bpmn
+type: Article
 status: ki_ready
 created: 2025-12-15
-summary: "Das parallele Gateway (AND) steuert die gleichzeitige oder reihenfolgeunabhängige Ausführung aller ausgehenden Pfade. Gekennzeichnet durch das + Symbol, aktiviert es im Split-Modus ausnahmslos alle Wege, während es bei der Zusammenführung als Synchronisationspunkt dient: Der Prozess wird erst fortge"
+updated:
+description: "Das parallele Gateway (AND) steuert die gleichzeitige oder reihenfolgeunabhängige Ausführung aller ausgehenden Pfade. Gekennzeichnet durch das + Symbol, aktiviert es im Split-Modus ausnahmslos alle Wege, während es bei der Zusammenführung als Synchronisationspunkt dient: Der Prozess wird erst fortge"
+image:
 offer_heading: "Die Zusammenführung ist die schwierigere Hälfte"
 offer_text: "Das parallele Gateway ist schnell gesetzt, falsch gebaut wird häufiger die Zusammenführung als die Verzweigung. Der [Grundkurs BPMN](/grundkurs-bpmn/) erklärt beide Seiten im Zusammenhang und macht sichtbar, woran ein hängender Pfad liegt."
 ---

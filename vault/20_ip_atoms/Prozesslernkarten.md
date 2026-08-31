@@ -3,13 +3,17 @@ id: prozesslernkarten
 aliases:
   - prozesslernkarten
   - Prozesslernkarten
-parent_topic: wissensmanagement
-subtopic: lernformate
-type: vorlage
-intent: betreiben
+ebene_1: wissensmanagement
+ebene_2: lernformate
+ebene_3:
+type: Article
 status: ki_ready
 created: 2026-02-17
-summary: Prozesslernkarten dienen dem Einprägen und Wiederholen von Kernbegriffen und Methoden des Prozessmanagements. Basierend auf dem Prinzip des aktiven Erinnerns unterstützen sie sowohl das individuelle Lernen in kurzen Einheiten als auch die Strukturierung von Diskussionen und Workshops in der Teamarbeit.
+updated:
+description: Prozesslernkarten dienen dem Einprägen und Wiederholen von Kernbegriffen und Methoden des Prozessmanagements. Basierend auf dem Prinzip des aktiven Erinnerns unterstützen sie sowohl das individuelle Lernen in kurzen Einheiten als auch die Strukturierung von Diskussionen und Workshops in der Teamarbeit.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

@@ -3,13 +3,17 @@ id: kompetenzprofil_prozessmanagerin
 aliases:
   - kompetenzprofil_prozessmanagerin
   - Kompetenzprofil ProzessmanagerIn
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: grundlagen
-intent: steuern
+ebene_1: prozessmanagement
+ebene_2: prozessmanagement-steuern
+ebene_3:
+type: Article
 status: entwurf
 created: 2025-12-15
-summary: Das Kompetenzprofil für Prozessmanager verbindet analytische Schärfe mit hoher Sozialkompetenz. Neben der sicheren Beherrschung von Modellierungsstandards (BPMN) und Projektmanagement-Methoden ist die Fähigkeit zentral, Veränderungen in der Organisation kommunikativ zu begleiten und Widerstände konstruktiv aufzulösen.
+updated:
+description: Das Kompetenzprofil für Prozessmanager verbindet analytische Schärfe mit hoher Sozialkompetenz. Neben der sicheren Beherrschung von Modellierungsstandards (BPMN) und Projektmanagement-Methoden ist die Fähigkeit zentral, Veränderungen in der Organisation kommunikativ zu begleiten und Widerstände konstruktiv aufzulösen.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

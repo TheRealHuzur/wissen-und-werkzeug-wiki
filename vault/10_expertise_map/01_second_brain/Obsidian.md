@@ -6,10 +6,12 @@ aliases:
 moc_level: subtopic
 parent_topic: second_brain
 subtopic: obsidian
-status: aktiv
+status: entwurf
 created: 2026-02-19
 updated:
 summary: Obsidian ist eine lokale Wissensmanagement-Software für Markdown-Notizen. Inhalte werden über Links, Tags und Struktur vernetzt, sodass aus vielen einzelnen Notizen ein navigierbares Wissensnetz entsteht – erweiterbar durch Plugins und Workflows.
+offer_heading:
+offer_text:
 ---
 # Obsidian
 
@@ -26,7 +28,5 @@ Stärken von Obsidian:
 - Erweiterbarkeit: Plugins (Community/Core) und Automationen erlauben individuelle Workflows (z. B. Vorlagen, Dataview, Daily Notes).
 
 - Praxisfokus: geeignet, um Wissen sowohl zu dokumentieren als auch aktiv weiterzuentwickeln (Notizen, Konzepte, Projekte, Lernpfade).
-
-![[01_second_brain_obsidian.base]]
 
 

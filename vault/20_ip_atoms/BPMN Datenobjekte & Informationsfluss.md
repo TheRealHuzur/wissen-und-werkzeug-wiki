@@ -3,13 +3,15 @@ id: bpmn_datenobjekte_informationsfluss
 aliases:
   - bpmn_datenobjekte_informationsfluss
   - BPMN Datenobjekte & Informationsfluss
-parent_topic: prozessmanagement
-subtopic: bpmn
-type: framework
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3: bpmn
+type: Article
 status: ki_ready
 created: 2025-12-15
-summary: "Datenobjekte und Datenspeicher visualisieren den Informationsfluss innerhalb eines Prozesses, indem sie Transportmedien (z. B. Dokumente) und persistente Ablagen (z. B. Datenbanken) darstellen. Die Verbindung erfolgt über Datenassoziationen, wobei die Pfeilrichtung zwischen Input (Lesen) und Output "
+updated:
+description: "Datenobjekte und Datenspeicher visualisieren den Informationsfluss innerhalb eines Prozesses, indem sie Transportmedien (z. B. Dokumente) und persistente Ablagen (z. B. Datenbanken) darstellen. Die Verbindung erfolgt über Datenassoziationen, wobei die Pfeilrichtung zwischen Input (Lesen) und Output "
+image:
 offer_heading: "Wenn das Modell auch die Unterlagen erklären soll"
 offer_text: "Datenobjekte zeigen, was ein Prozess braucht und was er hinterlässt, ohne den Ablauf zu überfrachten. Der [Grundkurs BPMN](/grundkurs-bpmn/) ordnet ein, wann sich der Aufwand lohnt und wann er ein Modell nur voller macht."
 ---

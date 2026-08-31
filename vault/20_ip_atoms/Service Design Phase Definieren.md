@@ -3,13 +3,17 @@ id: service_design_phase_definieren_define
 aliases:
   - service_design_phase_definieren_define
   - Service Design Phase Definieren (Define)
-parent_topic: prozessmanagement
-subtopic: service_design
-type: framework
-intent: gestalten
+ebene_1: prozessmanagement
+ebene_2: prozesse-gestalten
+ebene_3: service-design
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: In der Phase "Definieren" werden die gesammelten Erkenntnisse analysiert, gefiltert und in eine klare Problemstellung überführt. Es ist eine konvergierende Phase, die den Fokus für die Lösungsentwicklung setzt.
+updated:
+description: In der Phase "Definieren" werden die gesammelten Erkenntnisse analysiert, gefiltert und in eine klare Problemstellung überführt. Es ist eine konvergierende Phase, die den Fokus für die Lösungsentwicklung setzt.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

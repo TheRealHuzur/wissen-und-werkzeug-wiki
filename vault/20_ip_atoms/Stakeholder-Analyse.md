@@ -3,13 +3,17 @@ id: stakeholder_analyse
 aliases:
   - stakeholder_analyse
   - Stakeholder-Analyse
-parent_topic: prozessmanagement
-subtopic: projekte_planen_und_steuern
-type: grundlagen
-intent: steuern
+ebene_1: prozessmanagement
+ebene_2: prozessmanagement-steuern
+ebene_3: projekte-planen-und-steuern
+type: HowTo
 status: entwurf
 created: 2026-02-16
-summary: Eine strukturierte Methode, um in drei Schritten betroffene Personengruppen zu identifizieren, ihren Einfluss und ihr Interesse zu bewerten und daraus gezielte Kommunikationsmaßnahmen abzuleiten.
+updated:
+description: Eine strukturierte Methode, um in drei Schritten betroffene Personengruppen zu identifizieren, ihren Einfluss und ihr Interesse zu bewerten und daraus gezielte Kommunikationsmaßnahmen abzuleiten.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

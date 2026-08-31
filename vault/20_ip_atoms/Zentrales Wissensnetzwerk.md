@@ -3,13 +3,17 @@ id: zentrales_wissensnetzwerk
 aliases:
   - zentrales_wissensnetzwerk
   - Zentrales Wissensnetzwerk
-parent_topic: wissensmanagement
-subtopic: wissensmanagement
-type: framework
-intent: betreiben
+ebene_1: wissensmanagement
+ebene_2:
+ebene_3:
+type: Article
 status: ki_ready
 created: 2026-02-17
-summary: "Das zentrale Wissensnetzwerk bündelt Wissen in Form eines Wikis, eines Methodenkoffers und visueller Knowledge Graphs. Es dient als kollaborative Plattform, auf der Mitarbeitende Wissen eigenständig ergänzen und aktualisieren können, wodurch eine lebendige und vernetzte Informationsbasis für die gesamte Organisation entsteht."
+updated:
+description: Das zentrale Wissensnetzwerk bündelt Wissen in Form eines Wikis, eines Methodenkoffers und visueller Knowledge Graphs. Es dient als kollaborative Plattform, auf der Mitarbeitende Wissen eigenständig ergänzen und aktualisieren können, wodurch eine lebendige und vernetzte Informationsbasis für die gesamte Organisation entsteht.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

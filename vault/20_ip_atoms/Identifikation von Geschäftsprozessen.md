@@ -1,15 +1,19 @@
 ---
-id: identifikation_von_geschaftsprozessen
+id: geschaeftsprozesse-identifizieren
 aliases:
   - identifikation_von_geschaftsprozessen
   - Identifikation von Geschäftsprozessen
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: grundlagen
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3:
+type: Article
 status: ki_ready
 created: 2025-12-15
-summary: Dieses Modul definiert Methoden zur sauberen Identifikation und Abgrenzung von Geschäftsprozessen. Es liefert Benennungsregeln (Objekt + Verb) und eine Entscheidungsmatrix, um im "Prozess-Screening" echte End-to-End-Prozesse (Kundenfokus) von internen Teilprozessen (Amtsbrille) zu unterscheiden.
+updated:
+description: Dieses Modul definiert Methoden zur sauberen Identifikation und Abgrenzung von Geschäftsprozessen. Es liefert Benennungsregeln (Objekt + Verb) und eine Entscheidungsmatrix, um im "Prozess-Screening" echte End-to-End-Prozesse (Kundenfokus) von internen Teilprozessen (Amtsbrille) zu unterscheiden.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

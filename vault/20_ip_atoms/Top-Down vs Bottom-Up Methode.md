@@ -3,13 +3,17 @@ id: top_down_vs_bottom_up_methode
 aliases:
   - top_down_vs_bottom_up_methode
   - Top-Down vs Bottom-Up Methode
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: theorie
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3:
+type: Article
 status: ki_ready
 created: 2025-12-15
-summary: 'Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die "Top-Down-Methode" (vom Groben ins Feine) und die "Bottom-Up-Methode" (vom Feinen ins Grobe). Für eine strukturierte Modellierung wird in der Praxis der Top-Down-Ansatz empfohlen.'
+updated:
+description: "Bei der Prozessaufnahme unterscheidet man zwei Vorgehensweisen: Die \"Top-Down-Methode\" (vom Groben ins Feine) und die \"Bottom-Up-Methode\" (vom Feinen ins Grobe). Für eine strukturierte Modellierung wird in der Praxis der Top-Down-Ansatz empfohlen."
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

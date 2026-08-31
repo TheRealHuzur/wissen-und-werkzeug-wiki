@@ -8,21 +8,16 @@ views:
     order:
       - file.name
       - id
-      - area
-      - parent_topic
-      - subtopic
+      - ebene_1
+      - ebene_2
       - type
-      - intent
       - status
       - created
       - aliases
-      - moc_level
     sort:
-      - property: area
+      - property: ebene_1
         direction: ASC
-      - property: parent_topic
-        direction: ASC
-      - property: subtopic
+      - property: ebene_2
         direction: ASC
   - type: table
     name: 🔍 Fehlende Aliases
@@ -33,7 +28,6 @@ views:
     order:
       - file.name
       - id
-      - area
       - status
     sort:
       - property: file.name
@@ -69,20 +63,6 @@ views:
     group:
       - property: type
   - type: table
-    name: 📊 Intent-Werte (Drift-Check)
-    filters:
-      and:
-        - file.folder == "20_ip_atoms"
-    order:
-      - intent
-      - file.name
-      - id
-    sort:
-      - property: intent
-        direction: ASC
-    group:
-      - property: intent
-  - type: table
     name: 📊 Status-Verteilung
     filters:
       or:
@@ -91,7 +71,6 @@ views:
     order:
       - status
       - file.name
-      - area
       - type
     sort:
       - property: status
@@ -105,46 +84,44 @@ views:
         - file.folder == "20_ip_atoms"
         - file.folder == "10_expertise_map"
     order:
-      - parent_topic
+      - ebene_1
       - file.name
-      - subtopic
+      - ebene_2
     sort:
-      - property: parent_topic
+      - property: ebene_1
         direction: ASC
     group:
-      - property: parent_topic
+      - property: ebene_1
   - type: table
     name: 📊 Subtopics (Drift-Check)
     filters:
       and:
         - file.folder == "20_ip_atoms"
-        - subtopic
+        - ebene_2
     order:
-      - subtopic
-      - parent_topic
+      - ebene_2
+      - ebene_1
       - file.name
     sort:
-      - property: subtopic
+      - property: ebene_2
         direction: ASC
     group:
-      - property: subtopic
+      - property: ebene_2
   - type: table
     name: ⚠️ Fehlende Pflichtfelder (IP)
     filters:
       and:
         - file.folder == "20_ip_atoms"
-        - "!id || !area || !parent_topic || !subtopic || !type || !intent || !status || !created || !summary"
+        - "!id || !ebene_1 || !type || !status || !created || !description"
     order:
       - file.name
       - id
-      - area
-      - parent_topic
-      - subtopic
+      - ebene_1
+      - ebene_2
       - type
-      - intent
       - status
       - created
-      - summary
+      - description
     sort:
       - property: file.name
         direction: ASC
@@ -153,13 +130,12 @@ views:
     filters:
       and:
         - file.folder == "10_expertise_map"
-        - "!id || !moc_level || !status || !summary"
+        - "!id || !ebene_1 || !status || !description"
     order:
       - file.name
       - id
-      - moc_level
       - status
-      - summary
+      - description
     sort:
       - property: file.name
         direction: ASC
@@ -168,11 +144,11 @@ views:
     filters:
       and:
         - file.folder == "20_ip_atoms"
-        - summary
-        - summary.length < 150
+        - description
+        - description.length < 150
     order:
       - file.name
-      - summary
+      - description
     sort:
       - property: file.name
         direction: ASC
@@ -185,9 +161,8 @@ views:
     order:
       - created
       - file.name
-      - area
-      - parent_topic
-      - subtopic
+      - ebene_1
+      - ebene_2
     sort:
       - property: created
         direction: ASC

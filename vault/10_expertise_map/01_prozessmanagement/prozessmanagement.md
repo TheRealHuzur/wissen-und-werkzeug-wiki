@@ -2,13 +2,17 @@
 id: prozessmanagement
 aliases:
   - prozessmanagement
-moc_level: parent
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
+ebene_1: prozessmanagement
+ebene_2:
+ebene_3:
+type: CollectionPage
 status: aktiv
 created: 2026-02-16
 updated:
-summary: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
+description: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen.
+image:
+offer_heading:
+offer_text:
 ---
 # Prozessmanagement
 
@@ -30,16 +34,6 @@ Bildlich gesprochen: Es geht in die Werkstatt.
 
 ### Betreiben
 Prozessmanagement ist kein Projekt mit Abschlussdatum, es ist eine Daueraufgabe. Betreiben beschreibt, wie Prozessmanagement dauerhaft aufrechterhalten, in den Alltag der Organisation integriert und durch einen kontinuierlichen Verbesserungsprozess lebendig gehalten wird. Ziel ist eine Kultur, in der das Hinterfragen und Weiterentwickeln von Prozessen zur Selbstverständlichkeit wird.
-
-### Steuern
-
-### Verstehen
-
-### Gestalten
-
-### Umsetzen
-
-### Betreiben
 
 
 ![[01_prozessmanagement.base]]

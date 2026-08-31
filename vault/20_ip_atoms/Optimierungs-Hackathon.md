@@ -3,13 +3,17 @@ id: optimierungs_hackathon
 aliases:
   - optimierungs_hackathon
   - Optimierungs-Hackathon
-parent_topic: prozessmanagement
-subtopic: service_design
-type: best_practice
-intent: gestalten
+ebene_1: prozessmanagement
+ebene_2: prozesse-gestalten
+ebene_3: service-design
+type: Article
 status: ki_ready
 created: 2026-02-17
-summary: Der Optimierungs-Hackathon ist ein kompaktes, praxisorientiertes Format zur schnellen Entwicklung von Prozesslösungen. In einem zeitlich begrenzten Sprint arbeitet eine interdisziplinäre Gruppe an der Analyse und Neugestaltung eines realen Prozesses, wobei kreative Impulse und das gemeinsame Ausprobieren von Ideen im Vordergrund stehen.
+updated:
+description: Der Optimierungs-Hackathon ist ein kompaktes, praxisorientiertes Format zur schnellen Entwicklung von Prozesslösungen. In einem zeitlich begrenzten Sprint arbeitet eine interdisziplinäre Gruppe an der Analyse und Neugestaltung eines realen Prozesses, wobei kreative Impulse und das gemeinsame Ausprobieren von Ideen im Vordergrund stehen.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

@@ -3,13 +3,17 @@ id: phase_umsetzen_change_management
 aliases:
   - phase_umsetzen_change_management
   - Phase Umsetzen (Change Management)
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: theorie
-intent: umsetzen
+ebene_1: prozessmanagement
+ebene_2: prozesse-umsetzen
+ebene_3:
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Die "Werkstatt-Phase" überführt das Soll-Konzept in den Arbeitsalltag. Sie ist die kritischste Phase, da sie tief in Routinen eingreift. Der Fokus liegt auf Schulung, technischer Implementierung und kommunikativer Begleitung (Change Management).
+updated:
+description: Die "Werkstatt-Phase" überführt das Soll-Konzept in den Arbeitsalltag. Sie ist die kritischste Phase, da sie tief in Routinen eingreift. Der Fokus liegt auf Schulung, technischer Implementierung und kommunikativer Begleitung (Change Management).
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

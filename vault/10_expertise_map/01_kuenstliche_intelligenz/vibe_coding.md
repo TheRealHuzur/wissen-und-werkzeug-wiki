@@ -1,13 +1,19 @@
 ---
-id: vibe_coding
+id: vibe-coding
 aliases:
   - vibe_coding
   - Vibe Coding
-moc_level: subtopic
-parent_topic: kuenstliche_intelligenz
-subtopic: vibe_coding
+ebene_1: kuenstliche-intelligenz
+ebene_2: vibe-coding
+ebene_3:
+type: CollectionPage
 status: entwurf
-summary: Beschreibt Hintergründe, Anleitungen und Vorlagen zum Vibe Coding. Ebenfalls werden generelle Erläuterungen geleifert, wie Vibe Coding grundsätzlich funktioniert.
+created:
+updated:
+description: Beschreibt Hintergründe, Anleitungen und Vorlagen zum Vibe Coding. Ebenfalls werden generelle Erläuterungen geleifert, wie Vibe Coding grundsätzlich funktioniert.
+image:
+offer_heading:
+offer_text:
 ---
 # Vibe Coding
 

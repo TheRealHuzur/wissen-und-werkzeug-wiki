@@ -3,13 +3,17 @@ id: methodik_visuelle_schwachstellenanalyse
 aliases:
   - methodik_visuelle_schwachstellenanalyse
   - Methodik Visuelle Schwachstellenanalyse
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: theorie
-intent: gestalten
+ebene_1: prozessmanagement
+ebene_2: prozesse-gestalten
+ebene_3:
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Die Visualisierung von Geschäftsprozessen dient Werkzeug zur Identifikation struktureller Schwachstellen. Besonders in historisch gewachsenen Strukturen der öffentlichen Verwaltung ermöglicht die chronologische Aufbereitung das Erkennen von Schwachstellen und das kritische Hinterfragen althergebrachter Vorgehensweisen.
+updated:
+description: Die Visualisierung von Geschäftsprozessen dient Werkzeug zur Identifikation struktureller Schwachstellen. Besonders in historisch gewachsenen Strukturen der öffentlichen Verwaltung ermöglicht die chronologische Aufbereitung das Erkennen von Schwachstellen und das kritische Hinterfragen althergebrachter Vorgehensweisen.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

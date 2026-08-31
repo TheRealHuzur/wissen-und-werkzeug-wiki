@@ -3,13 +3,17 @@ id: service_design_grundlagen_anwendungsbereiche
 aliases:
   - service_design_grundlagen_anwendungsbereiche
   - Service Design Grundlagen & Anwendungsbereiche
-parent_topic: prozessmanagement
-subtopic: service_design
-type: framework
-intent: gestalten
+ebene_1: prozessmanagement
+ebene_2: prozesse-gestalten
+ebene_3: service-design
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Service Design ist die nutzerzentrierte Gestaltung von Dienstleistungen unter Berücksichtigung aller Touchpoints, Prozesse und Technologien. Es nutzt Methoden wie den "Double Diamond", um Kundenbedürfnisse und Zielvorgaben in Einklang zu bringen, und findet auch in der öffentlichen Verwaltung spezifische Anwendung.
+updated:
+description: Service Design ist die nutzerzentrierte Gestaltung von Dienstleistungen unter Berücksichtigung aller Touchpoints, Prozesse und Technologien. Es nutzt Methoden wie den "Double Diamond", um Kundenbedürfnisse und Zielvorgaben in Einklang zu bringen, und findet auch in der öffentlichen Verwaltung spezifische Anwendung.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

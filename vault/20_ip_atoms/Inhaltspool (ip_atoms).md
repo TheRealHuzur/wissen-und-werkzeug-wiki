@@ -2,13 +2,17 @@
 id: 20_ip_atoms_inhaltspool
 aliases:
   - 20_ip_atoms_inhaltspool
-parent_topic: second_brain
-subtopic: system_architektur
-type: grundlagen
-intent: verstehen
+ebene_1: wissensmanagement
+ebene_2: second-brain
+ebene_3: system-architektur
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: Dieses Modul beschreibt ip_atoms als den zentralen Wissensbestand deines Systems. Es erklärt, was ein Modul ist, wie es für Menschen gut lesbar bleibt und gleichzeitig maschinenlesbar wird (YAML, Summary, Context Anchor, Links). Außerdem grenzt es ab, welche Inhalte nicht in den Inhaltspool gehören.
+updated:
+description: Dieses Modul beschreibt ip_atoms als den zentralen Wissensbestand deines Systems. Es erklärt, was ein Modul ist, wie es für Menschen gut lesbar bleibt und gleichzeitig maschinenlesbar wird (YAML, Summary, Context Anchor, Links). Außerdem grenzt es ab, welche Inhalte nicht in den Inhaltspool gehören.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

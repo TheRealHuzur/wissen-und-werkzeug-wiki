@@ -3,13 +3,17 @@ id: die_wesentlichkeitsschwelle_bei_organisationsanderungen_72_lpvg_nrw
 aliases:
   - die_wesentlichkeitsschwelle_bei_organisationsanderungen_72_lpvg_nrw
   - Die Wesentlichkeitsschwelle bei Organisationsänderungen (§ 72 LPVG NRW)
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: grundlagen
-intent: steuern
+ebene_1: prozessmanagement
+ebene_2: prozessmanagement-steuern
+ebene_3:
+type: Article
 status: entwurf
 created: 2026-02-16
-summary: Dieses Modul definiert die rechtliche Grenze zwischen dem freien Direktionsrecht des Dienstherrn und der Mitbestimmungspflicht bei organisatorischen Prozessen. Es liefert eine Prüfmatrix zur Bestimmung der "Grundlegendheit" einer Maßnahme. **Dieses Modul beantwortet folgende Fragen:** - Wann übersch
+updated:
+description: Dieses Modul definiert die rechtliche Grenze zwischen dem freien Direktionsrecht des Dienstherrn und der Mitbestimmungspflicht bei organisatorischen Prozessen. Es liefert eine Prüfmatrix zur Bestimmung der "Grundlegendheit" einer Maßnahme. **Dieses Modul beantwortet folgende Fragen:** - Wann übersch
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

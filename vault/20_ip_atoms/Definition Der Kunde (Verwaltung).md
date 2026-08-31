@@ -3,13 +3,17 @@ id: definition_der_kunde_verwaltung
 aliases:
   - definition_der_kunde_verwaltung
   - Definition Der Kunde (Verwaltung)
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: grundlagen
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3:
+type: Article
 status: ki_ready
 created: 2026-02-16
-summary: "Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+updated:
+description: "Thema-Kontext: Die Identifikation, Gestaltung, Dokumentation, Steuerung und Optimierung von Geschäftsprozessen zur Steigerung der Effizienz und Qualität in Organisationen."
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

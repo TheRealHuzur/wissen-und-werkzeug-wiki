@@ -3,13 +3,17 @@ id: modellieren_von_teilprozessen
 aliases:
   - modellieren_von_teilprozessen
   - Modellieren von Teilprozessen
-parent_topic: prozessmanagement
-subtopic: prozessmanagement
-type: framework
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3:
+type: Article
 status: entwurf
 created: 2026-02-16
-summary: Dieses Modul beschreibt die spezifischen Modellierungsregeln für Teilprozesse innerhalb einer Ereigniskette. Es fokussiert sich auf den "Happy Day", den optimalen Detailgrad und die korrekte Sequenzierung von Zwischenereignissen.
+updated:
+description: Dieses Modul beschreibt die spezifischen Modellierungsregeln für Teilprozesse innerhalb einer Ereigniskette. Es fokussiert sich auf den "Happy Day", den optimalen Detailgrad und die korrekte Sequenzierung von Zwischenereignissen.
+image:
+offer_heading:
+offer_text:
 ---
 
 %%

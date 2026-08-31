@@ -1,13 +1,19 @@
 ---
-id: kuenstliche_intelligenz
+id: kuenstliche-intelligenz
 aliases:
   - kuenstliche_intelligenz
   - Künstliche Intelligenz
-moc_level: parent
-parent_topic: kuenstliche_intelligenz
-subtopic: kuenstliche_intelligenz
+ebene_1: kuenstliche-intelligenz
+ebene_2:
+ebene_3:
+type: CollectionPage
 status: entwurf
-summary: Der praktische Einsatz von KI-Tools und Sprachmodellen (LLMs like ChatGPT) zur Automatisierung von Aufgaben, Generierung von Inhalten und Unterstützung in der Wissensarbeit.
+created:
+updated:
+description: Der praktische Einsatz von KI-Tools und Sprachmodellen (LLMs like ChatGPT) zur Automatisierung von Aufgaben, Generierung von Inhalten und Unterstützung in der Wissensarbeit.
+image:
+offer_heading:
+offer_text:
 ---
 # Künstliche Intelligenz
 

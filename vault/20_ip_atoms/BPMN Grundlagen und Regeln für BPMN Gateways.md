@@ -1,15 +1,17 @@
 ---
-id: bpmn_grundlagen_und_regeln_fur_bpmn_gateways
+id: bpmn-gateways-grundlagen-regeln
 aliases:
   - bpmn_grundlagen_und_regeln_fur_bpmn_gateways
   - BPMN Grundlagen und Regeln für BPMN Gateways
-parent_topic: prozessmanagement
-subtopic: bpmn
-type: framework
-intent: verstehen
+ebene_1: prozessmanagement
+ebene_2: prozesse-verstehen
+ebene_3: bpmn
+type: Article
 status: ki_ready
 created: 2025-12-15
-summary: Gateways fungieren in der BPMN als reine Logik-Knoten zur Steuerung des Prozessflusses durch Verzweigung (Split) und Zusammenführung (Join). Sie stellen keine Tätigkeiten dar und verbrauchen keine Zeit. Nach dem „Wissen und Werkzeug“-Prinzip müssen Gateways explizit modelliert werden, wobei ein Spli
+updated:
+description: Gateways fungieren in der BPMN als reine Logik-Knoten zur Steuerung des Prozessflusses durch Verzweigung (Split) und Zusammenführung (Join). Sie stellen keine Tätigkeiten dar und verbrauchen keine Zeit. Nach dem „Wissen und Werkzeug“-Prinzip müssen Gateways explizit modelliert werden, wobei ein Spli
+image:
 offer_heading: "Regeln kennen und Regeln anwenden sind zwei Dinge"
 offer_text: "Die Regeln für Gateways sind schnell gelesen, im fertigen Modell tauchen sie trotzdem als Fehler wieder auf. Der [Grundkurs BPMN](/grundkurs-bpmn/) zeigt, woran das liegt und worauf es beim Verzweigen ankommt."
 ---
