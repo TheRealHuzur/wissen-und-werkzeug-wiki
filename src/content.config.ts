@@ -23,6 +23,17 @@ export const collections = {
         // Der Export gibt beide nur aus, wenn die Pruefung dort bestanden ist.
         offer_heading: z.string().optional(),
         offer_text: z.string().optional(),
+        // Seit der Struktur-Migration. type traegt die schema.org-Namen und
+        // steuert @type im JSON-LD; die Ebenenfelder tragen den Pfad und
+        // steuern Brotkruemel und articleSection. image bleibt optional und
+        // ist heute in keiner Notiz gefuellt.
+        // Der Export schreibt die Ebenenfelder nur bis zur tatsaechlichen
+        // Tiefe, deshalb sind auch ebene_1 und ebene_2 optional.
+        type: z.enum(['Article', 'HowTo', 'CollectionPage']).optional(),
+        image: z.string().optional(),
+        ebene_1: z.string().optional(),
+        ebene_2: z.string().optional(),
+        ebene_3: z.string().optional(),
       }),
     }),
   }),

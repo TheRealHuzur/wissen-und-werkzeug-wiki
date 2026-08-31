@@ -33,16 +33,6 @@ Bildlich gesprochen: Es geht in die Werkstatt.
 ### Betreiben
 Prozessmanagement ist kein Projekt mit Abschlussdatum, es ist eine Daueraufgabe. Betreiben beschreibt, wie Prozessmanagement dauerhaft aufrechterhalten, in den Alltag der Organisation integriert und durch einen kontinuierlichen Verbesserungsprozess lebendig gehalten wird. Ziel ist eine Kultur, in der das Hinterfragen und Weiterentwickeln von Prozessen zur Selbstverständlichkeit wird.
 
-### Steuern
-
-### Verstehen
-
-### Gestalten
-
-### Umsetzen
-
-### Betreiben
-
 
 ![[01_prozessmanagement.base]]
 
