@@ -3,8 +3,8 @@ views:
     name: Tabelle
     filters:
       and:
-        - parent_topic == "kuenstliche_intelligenz"
-        - "!type.isEmpty()"
+        - ebene_1 == "kuenstliche-intelligenz"
+        - file.folder == "20_ip_atoms"
     order:
       - file.name
       - status

@@ -3,8 +3,8 @@ views:
     name: Tabelle
     filters:
       and:
-        - parent_topic == "wissensmanagement"
-        - "!type.isEmpty()"
+        - ebene_1 == "wissensmanagement"
+        - file.folder == "20_ip_atoms"
     order:
       - file.name
       - status

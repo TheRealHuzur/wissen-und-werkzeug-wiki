@@ -3,9 +3,9 @@ views:
     name: Tabelle
     filters:
       and:
-        - parent_topic == "kuenstliche_intelligenz"
-        - subtopic == "vibe_coding"
-        - "!type.isEmpty()"
+        - ebene_1 == "kuenstliche-intelligenz"
+        - ebene_2 == "vibe-coding"
+        - file.folder == "20_ip_atoms"
     order:
       - file.name
       - status

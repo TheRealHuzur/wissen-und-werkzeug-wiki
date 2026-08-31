@@ -3,9 +3,9 @@ views:
     name: Tabelle
     filters:
       and:
-        - parent_topic == "prozessmanagement"
-        - subtopic == "controlling"
-        - "!type.isEmpty()"
+        - ebene_1 == "prozessmanagement"
+        - ebene_3 == "controlling"
+        - file.folder == "20_ip_atoms"
     order:
       - file.name
       - status

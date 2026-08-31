@@ -3,5 +3,5 @@ views:
     name: Tabelle
     filters:
       and:
-        - parent_topic == "organisationsentwicklung"
-        - "!type.isEmpty()"
+        - ebene_1 == "organisationsentwicklung"
+        - file.folder == "20_ip_atoms"

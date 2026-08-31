@@ -3,14 +3,14 @@ views:
     name: Tabelle
     filters:
       and:
-        - parent_topic == "second_brain"
-        - "!type.isEmpty()"
+        - ebene_2 == "second-brain"
+        - file.folder == "20_ip_atoms"
     order:
       - file.name
       - status
-      - subtopic
+      - ebene_2
     sort:
-      - property: subtopic
+      - property: ebene_2
         direction: ASC
     columnSize:
       file.name: 444

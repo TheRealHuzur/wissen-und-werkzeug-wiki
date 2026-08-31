@@ -3,5 +3,5 @@ views:
     name: Tabelle
     filters:
       and:
-        - parent_topic == "changemanagement"
-        - "!type.isEmpty()"
+        - ebene_1 == "changemanagement"
+        - file.folder == "20_ip_atoms"

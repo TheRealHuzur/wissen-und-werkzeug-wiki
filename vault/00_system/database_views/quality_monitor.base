@@ -9,21 +9,18 @@ views:
       - status
       - file.folder
       - id
-      - area
       - type
-      - intent
-      - parent_topic
-      - subtopic
+      - ebene_1
+      - ebene_2
       - created
-      - summary
+      - description
     sort:
       - property: status
         direction: ASC
-      - property: subtopic
+      - property: ebene_2
         direction: DESC
       - property: type
         direction: ASC
     columnSize:
       file.folder: 98
       note.type: 157
-      note.intent: 126

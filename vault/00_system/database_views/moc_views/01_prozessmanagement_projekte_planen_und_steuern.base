@@ -3,12 +3,12 @@ views:
     name: Tabelle
     filters:
       and:
-        - parent_topic == "prozessmanagement"
-        - subtopic == "projekte_planen_und_steuern"
-        - "!type.isEmpty()"
+        - ebene_1 == "prozessmanagement"
+        - ebene_3 == "projekte-planen-und-steuern"
+        - file.folder == "20_ip_atoms"
     order:
       - file.name
       - status
-      - subtopic
+      - ebene_2
     columnSize:
       file.name: 251

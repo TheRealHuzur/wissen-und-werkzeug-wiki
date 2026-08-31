@@ -3,9 +3,9 @@ views:
     name: Tabelle
     filters:
       and:
-        - parent_topic == "second_brain"
-        - "!type.isEmpty()"
-        - subtopic == "system_architektur"
+        - ebene_2 == "second-brain"
+        - file.folder == "20_ip_atoms"
+        - ebene_3 == "system-architektur"
     order:
       - file.name
       - status
