@@ -1,5 +1,5 @@
 ---
-id: vibe_coding
+id: vibe-coding
 aliases:
   - vibe_coding
   - Vibe Coding

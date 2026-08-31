@@ -1,5 +1,5 @@
 ---
-id: kuenstliche_intelligenz
+id: kuenstliche-intelligenz
 aliases:
   - kuenstliche_intelligenz
   - Künstliche Intelligenz
