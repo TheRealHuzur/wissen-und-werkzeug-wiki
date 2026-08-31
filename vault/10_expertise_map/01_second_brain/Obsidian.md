@@ -29,6 +29,4 @@ Stärken von Obsidian:
 
 - Praxisfokus: geeignet, um Wissen sowohl zu dokumentieren als auch aktiv weiterzuentwickeln (Notizen, Konzepte, Projekte, Lernpfade).
 
-![[01_second_brain_obsidian.base]]
-
 

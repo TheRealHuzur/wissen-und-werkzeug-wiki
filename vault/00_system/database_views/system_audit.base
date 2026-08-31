@@ -63,16 +63,6 @@ views:
     group:
       - property: type
   - type: table
-    name: 📊 Intent-Werte (Drift-Check)
-    filters:
-      and:
-        - file.folder == "20_ip_atoms"
-    order:
-      - file.name
-      - id
-    sort:
-    group:
-  - type: table
     name: 📊 Status-Verteilung
     filters:
       or:

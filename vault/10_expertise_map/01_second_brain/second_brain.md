@@ -22,7 +22,7 @@ Das Second Brain-Konzept nach Tiago Forte beschreibt ein persönliches, digitale
 
 ## Themen (Subtopics)
 - [[system_architektur|System Architektur]]
-- [[obsidian|Obsidian]]
+- Obsidian
 
 
 

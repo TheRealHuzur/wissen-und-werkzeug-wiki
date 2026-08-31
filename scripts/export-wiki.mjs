@@ -37,7 +37,11 @@ const SITE = 'https://wissen-und-werkzeug.de';
 const BASE = '/wiki';
 const BASE_PREFIX = BASE;
 
-const SKIP_DIRS = new Set(['.obsidian', '.trash', '_private']);
+// _papierkorb steht hier, weil der Export den gesamten Vault durchlaeuft und
+// nicht nur 10_expertise_map und 20_ip_atoms. Ohne diesen Eintrag haengt es
+// allein am status einer Notiz, ob sie aus dem Papierkorb heraus
+// veroeffentlicht wird. Das ist kein Schutz, sondern ein Zufall.
+const SKIP_DIRS = new Set(['.obsidian', '.trash', '_private', '_papierkorb']);
 
 function toTitleCase(input) {
   // German common lowercase words in titles (if not at the start)
