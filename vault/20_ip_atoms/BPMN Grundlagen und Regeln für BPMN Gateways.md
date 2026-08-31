@@ -1,5 +1,5 @@
 ---
-id: bpmn_grundlagen_und_regeln_fur_bpmn_gateways
+id: bpmn-gateways-grundlagen-regeln
 aliases:
   - bpmn_grundlagen_und_regeln_fur_bpmn_gateways
   - BPMN Grundlagen und Regeln für BPMN Gateways

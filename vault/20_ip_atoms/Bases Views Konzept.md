@@ -6,7 +6,7 @@ ebene_1: wissensmanagement
 ebene_2: second-brain
 ebene_3: system-architektur
 type: Article
-status: ki_ready
+status: entwurf
 created: 2026-02-16
 updated:
 description: Dieses Modul beschreibt das Konzept, wie du Obsidian Bases als Kontroll- und Navigationsinstrument nutzt. Es erklärt, warum Bases in deinem System fehlende Dropdown-Zwänge kompensieren, wie Views wie quality_monitor, bpmn_view und system_audit zusammenhängen und wie du damit Inhalte schnell prüfst, filterst und kuratierst.

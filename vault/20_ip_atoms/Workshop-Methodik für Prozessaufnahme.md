@@ -1,5 +1,5 @@
 ---
-id: workshop_methodik_fur_prozessaufnahme
+id: workshop-methodik-prozessaufnahme
 aliases:
   - workshop_methodik_fur_prozessaufnahme
   - Workshop-Methodik für Prozessaufnahme

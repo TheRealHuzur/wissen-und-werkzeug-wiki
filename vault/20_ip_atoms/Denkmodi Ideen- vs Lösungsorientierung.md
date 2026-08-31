@@ -1,5 +1,5 @@
 ---
-id: denkmodi_ideen_vs_losungsorientierung
+id: denkmodi-ideen-und-loesungsorientierung
 aliases:
   - denkmodi_ideen_vs_losungsorientierung
   - Denkmodi Ideen- vs Lösungsorientierung

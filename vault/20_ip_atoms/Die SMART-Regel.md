@@ -7,7 +7,7 @@ ebene_1: prozessmanagement
 ebene_2: prozessmanagement-steuern
 ebene_3: projekte-planen-und-steuern
 type: Article
-status: ki_ready
+status: entwurf
 created: 2026-02-16
 updated:
 description: "Thema-Kontext: Anleitungen und Methoden zur Planung und Steuerung von Projekten im Kontext des Prozessmanagement."

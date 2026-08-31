@@ -1,5 +1,5 @@
 ---
-id: definition_geschaftsprozess_verwaltung
+id: geschaeftsprozess-verwaltung
 aliases:
   - definition_geschaftsprozess_verwaltung
   - Definition Geschäftsprozess (Verwaltung)

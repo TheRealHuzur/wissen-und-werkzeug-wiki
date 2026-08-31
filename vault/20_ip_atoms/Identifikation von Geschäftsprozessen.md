@@ -1,5 +1,5 @@
 ---
-id: identifikation_von_geschaftsprozessen
+id: geschaeftsprozesse-identifizieren
 aliases:
   - identifikation_von_geschaftsprozessen
   - Identifikation von Geschäftsprozessen

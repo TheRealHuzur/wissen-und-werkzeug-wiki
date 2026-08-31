@@ -1,5 +1,5 @@
 ---
-id: der_manahmenplan_grundlagen_anleitung
+id: massnahmenplan
 aliases:
   - der_manahmenplan_grundlagen_anleitung
   - Der Maßnahmenplan Grundlagen & Anleitung
