@@ -34,7 +34,20 @@ export default defineConfig({
       },
       sidebar,
       favicon: '/favicon.svg',
-      customCss: ['./src/styles/custom.css'],
+      // Montserrat wie auf der Hauptwebsite, als npm-Paket und damit vom
+      // eigenen Server. Bewusst nicht ueber fonts.googleapis.com: Ein Abruf
+      // dort uebertraege die IP-Adresse jedes Besuchers an Google.
+      //
+      // Zwei Eintraege, nicht einer: Der Standardeinstieg des Pakets bringt
+      // allein den aufrechten Schnitt mit. Die Gewichtsachse deckt Fett ab,
+      // Kursiv liegt in einer eigenen Datei.
+      //
+      // Die eigene Datei steht hinten, damit --sl-font dort das letzte Wort hat.
+      customCss: [
+        '@fontsource-variable/montserrat',
+        '@fontsource-variable/montserrat/wght-italic.css',
+        './src/styles/custom.css',
+      ],
       components: {
         ThemeSelect: './src/components/CustomThemeSelect.astro',
         Footer: './src/components/Footer.astro',

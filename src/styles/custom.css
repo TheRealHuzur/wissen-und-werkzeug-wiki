@@ -1,6 +1,11 @@
 /* Custom CI Styles for Wissen & Werkzeug Wiki */
 
 :root {
+  /* Schrift der Hauptwebsite. Ausgeliefert vom eigenen Server ueber das
+     Fontsource-Paket, siehe customCss in astro.config.mjs. Die Groessen
+     bleiben vorerst die von Starlight. */
+  --sl-font: 'Montserrat Variable', system-ui, sans-serif;
+
   /* Brand Colors */
   --brand-primary-blue: #2a314d;
   --brand-deep-stage: #0B162A;
