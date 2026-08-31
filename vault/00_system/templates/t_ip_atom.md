@@ -47,5 +47,5 @@ offer_text:
 [Erster Satz mit der vollständigen Antwort, danach die Einordnung.]
 
 ## Verwandte Artikel
-- **[[Titel aus CSV oder aktueller Session]]**  
+- **Titel aus CSV oder aktueller Session**  
   [Ein Satz, warum dieser Artikel hierher gehört]

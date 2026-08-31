@@ -6,6 +6,7 @@ aliases:
 ebene_1: prozessmanagement
 ebene_2: prozessmanagement-betreiben
 ebene_3: controlling
+reihenfolge:
 type: CollectionPage
 status: aktiv
 created: 2026-02-16

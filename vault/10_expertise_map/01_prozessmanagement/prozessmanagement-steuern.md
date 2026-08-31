@@ -4,6 +4,7 @@ aliases:
 ebene_1: prozessmanagement
 ebene_2: prozessmanagement-steuern
 ebene_3:
+reihenfolge: 10
 type: CollectionPage
 status: aktiv
 created: 2026-08-31

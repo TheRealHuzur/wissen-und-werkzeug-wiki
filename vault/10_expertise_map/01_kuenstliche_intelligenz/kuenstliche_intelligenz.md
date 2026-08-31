@@ -6,6 +6,7 @@ aliases:
 ebene_1: kuenstliche-intelligenz
 ebene_2:
 ebene_3:
+reihenfolge:
 type: CollectionPage
 status: entwurf
 created:

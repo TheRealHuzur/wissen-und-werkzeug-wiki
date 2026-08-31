@@ -4,6 +4,7 @@ aliases:
 ebene_1: prozessmanagement
 ebene_2: prozesse-umsetzen
 ebene_3:
+reihenfolge: 40
 type: CollectionPage
 status: aktiv
 created: 2026-08-31
