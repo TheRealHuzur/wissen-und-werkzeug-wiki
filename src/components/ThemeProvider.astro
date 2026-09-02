@@ -1,0 +1,28 @@
+---
+/**
+ * Starlight-Override fuer die Farbmodus-Erkennung.
+ *
+ * Das Wiki wird vorerst nur im hellen Modus gebaut: Die Design-Tokens aus der
+ * Vorlage liegen bisher allein als helle Fassung in custom.css. Starlights
+ * eigener Provider waehlt ohne gespeicherte Auswahl anhand von
+ * prefers-color-scheme, und liefe damit auf vielen Geraeten in einen
+ * Dunkelmodus, den es hier noch nicht gibt.
+ *
+ * Deshalb wird data-theme fest auf "light" gesetzt. Der Umschalter ist in
+ * CustomThemeSelect.astro entfernt, eine frueher gespeicherte Auswahl in
+ * localStorage bleibt unbeachtet.
+ *
+ * window.StarlightThemeProvider muss trotzdem existieren: Starlights
+ * ThemeSelect-Skript ruft updatePickers auf, sobald irgendwo doch ein Waehler
+ * gerendert wird. Die leere Fassung verhindert einen Fehler in der Konsole.
+ *
+ * Rueckbau, sobald der Dunkelmodus gebaut wird: Datei loeschen und den
+ * Eintrag in astro.config.mjs entfernen.
+ */
+---
+
+{/* Inline, damit die Seite nicht kurz im falschen Modus aufblitzt. */}
+<script is:inline>
+	document.documentElement.dataset.theme = 'light';
+	window.StarlightThemeProvider = { updatePickers() {} };
+</script>

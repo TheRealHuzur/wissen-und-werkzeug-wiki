@@ -1,0 +1,24 @@
+---
+/**
+ * Starlight-Override fuer das Seitengeruest.
+ *
+ * Einziger Zweck: die Fusszeile der Vorlage ans Ende von .main-frame haengen.
+ * Dort liegt sie neben der Seitenleiste statt darunter, weil .main-frame auf
+ * breiten Bildschirmen um die Sidebar-Breite eingerueckt ist. Genau dieser
+ * Aufbau steht in der Vorlage.
+ *
+ * Bewusst eine Huelle um <Default /> statt einer Kopie: Starlights PageFrame
+ * bringt das gesamte Raster aus Kopfzeile, Seitenleiste und Inhalt mit. Eine
+ * Kopie muesste bei jedem Starlight-Update nachgezogen werden. Die beiden
+ * benannten Bereiche werden unveraendert durchgereicht.
+ */
+import Default from '@astrojs/starlight/components/PageFrame.astro';
+import SiteFooter from './SiteFooter.astro';
+---
+
+<Default>
+  <slot name="header" slot="header" />
+  <slot name="sidebar" slot="sidebar" />
+  <slot />
+  <SiteFooter />
+</Default>
