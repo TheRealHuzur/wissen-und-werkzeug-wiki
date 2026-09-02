@@ -543,16 +543,20 @@ function sanitizeDescription(input) {
  * Abschnitts, in aller Regel "Dieser Artikel beantwortet folgende Fragen" mit
  * seiner Liste, bleibt im Body stehen.
  *
- * Erkannt werden beide Schreibweisen des Bestands: als Blockzitat und als
- * gewoehnlicher Absatz. Steht keine Zusammenfassung am Kopf, bleibt alles
- * unveraendert; rund ein Drittel der Notizen hat keine.
+ * Erkannt werden alle Schreibweisen des Bestands. Die Ueberschrift steht mal
+ * als H2, mal fett gesetzt -- die Vorlage t_ip_atom.md gibt die fette Form vor,
+ * der aeltere Teil des Bestands nutzt die H2. Der Text darunter steht mal als
+ * Blockzitat, mal als gewoehnlicher Absatz. Steht keine Zusammenfassung am
+ * Kopf, bleibt alles unveraendert.
  */
+const ZUSAMMENFASSUNG_RE = /^(?:##\s+Zusammenfassung|\*\*Zusammenfassung\*\*)\s*:?\s*$/i;
+
 function extractLead(body) {
   const lines = String(body ?? '').split(/\r?\n/);
 
   let index = 0;
   while (index < lines.length && lines[index].trim() === '') index += 1;
-  if (!/^##\s+Zusammenfassung\s*$/i.test(lines[index] ?? '')) {
+  if (!ZUSAMMENFASSUNG_RE.test(lines[index] ?? '')) {
     return { lead: '', body };
   }
 
