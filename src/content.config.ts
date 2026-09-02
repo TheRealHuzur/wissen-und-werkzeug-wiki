@@ -1,8 +1,13 @@
 import { defineCollection, z } from 'astro:content';
-import { docsSchema } from '@astrojs/starlight/schema';
-import { docsLoader } from '@astrojs/starlight/loaders';
+import { docsSchema, i18nSchema } from '@astrojs/starlight/schema';
+import { docsLoader, i18nLoader } from '@astrojs/starlight/loaders';
 
 export const collections = {
+  // Nur fuer einzelne Beschriftungen der Oberflaeche. src/content/i18n/de.json
+  // aendert bisher allein den Text im Suchfeld auf "Wiki durchsuchen", wie in
+  // der Designvorlage. Alle uebrigen Begriffe bleiben Starlights deutsche
+  // Standardtexte.
+  i18n: defineCollection({ loader: i18nLoader(), schema: i18nSchema() }),
   docs: defineCollection({
     loader: docsLoader(),
     // Die Felder schreibt scripts/export-wiki.mjs aus der Vault-Notiz durch.

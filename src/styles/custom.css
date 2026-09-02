@@ -1,83 +1,194 @@
-/* Custom CI Styles for Wissen & Werkzeug Wiki */
+/* Custom CI Styles for Wissen & Werkzeug Wiki
+   ============================================================================
+
+   Umsetzung der Designvorlage "Wissen & Werkzeug Wiki" (Astro Starlight).
+   Diese Datei traegt Paket 5: Schrift, Farbtokens und Typografie-Skala.
+   Layoutmasse (Kopfzeilenhoehe, Sidebar-Breite, Inhaltsbreite) folgen in
+   Paket 6, die Artikelbausteine in Paket 7.
+
+   Vorerst nur der helle Modus. Die dunklen Werte der Vorlage sind bewusst
+   nicht gesetzt; der Umschalter ist entfernt, siehe ThemeProvider.astro.
+
+   Starlights eigene Werte liegen in @layer starlight.base. Diese Datei ist
+   ungeschichtet und gewinnt damit unabhaengig von der Spezifitaet. Deshalb
+   genuegt hier schlichtes :root, kein :root[data-theme='light'].
+   ========================================================================= */
+
+/* --- Schrift ---------------------------------------------------------------
+
+   Drei Schriften, alle vom eigenen Server ueber Fontsource-Pakete, siehe
+   customCss in astro.config.mjs. Bewusst nicht ueber fonts.googleapis.com:
+   Ein Abruf dort uebertraege die IP-Adresse jedes Besuchers an Google.
+
+   Inter loest Montserrat ab. Das ist eine Entscheidung der Designueberarbeitung
+   vom 02.09.2026: Die gesamte Groessen- und Abstandsskala der Vorlage ist auf
+   Inter gerechnet.
+
+   Public Sans traegt allein die H1 der Startseite, JetBrains Mono die
+   Mikro-Label, Tabellenkoepfe, Datumsangaben und Inline-Code.
+   ------------------------------------------------------------------------- */
 
 :root {
-  /* Schrift der Hauptwebsite. Ausgeliefert vom eigenen Server ueber das
-     Fontsource-Paket, siehe customCss in astro.config.mjs. Die Groessen
-     bleiben vorerst die von Starlight. */
-  --sl-font: 'Montserrat Variable', system-ui, sans-serif;
+  --sl-font: 'Inter Variable', system-ui, sans-serif;
+  --sl-font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
 
-  /* Brand Colors */
-  --brand-primary-blue: #2a314d;
-  --brand-deep-stage: #0B162A;
-  --brand-accent-turquoise: #0e97ad;
-  --brand-body-text: #484848;
-
-  /* Starlight overrides - Light Mode */
-  --sl-color-accent-low: #0b7a8c;
-  --sl-color-accent: var(--brand-accent-turquoise);
-  --sl-color-accent-high: #3ec7db;
-
-  --sl-color-text: var(--brand-body-text);
-  --sl-color-text-accent: var(--brand-accent-turquoise);
-
-  /* Heading color */
-  --sl-color-white: var(--brand-primary-blue);
+  /* Nur fuer die Hero-Ueberschrift der Startseite, Weight 800. Kein
+     Starlight-Gegenstueck, deshalb ein eigener Name. */
+  --w-font-display: 'Public Sans Variable', 'Inter Variable', sans-serif;
 }
 
-/* Dark Mode overrides */
-:root[data-theme='dark'] {
-  --sl-color-accent-low: #0b7a8c;
-  --sl-color-accent: var(--brand-accent-turquoise);
-  --sl-color-accent-high: #3ec7db;
+/* --- Farbtokens der Vorlage -------------------------------------------------
 
-  --sl-color-bg: var(--brand-deep-stage);
-  --sl-color-bg-nav: var(--brand-deep-stage);
-  --sl-color-bg-sidebar: var(--brand-deep-stage);
+   Die Namen folgen dem Handoff, damit sich Vorlage und Umsetzung nebeneinander
+   lesen lassen. Darunter die Zuordnung auf die Starlight-Variablen.
+   ------------------------------------------------------------------------- */
 
-  --sl-color-text: #e2e8f0;
-  --sl-color-white: #ffffff;
+:root {
+  --w-bg: #ffffff;          /* Seitenhintergrund */
+  --w-side: #f9f9f9;        /* Sidebar und abgesetzte Flaechen */
+  --w-text: #484848;        /* Fliesstext */
+  --w-head: #2a314d;        /* Ueberschriften */
+  --w-border: #e3e4e8;      /* Linien */
+  --w-card: #ffffff;        /* Kartenflaeche */
+  --w-muted: #6c7180;       /* Sekundaertext */
+  --w-accent: #0e97ad;      /* Akzent */
+  --w-accent-soft: #e5f4f6; /* Akzentflaeche */
+  --w-code: #f4f4f4;        /* Inline-Code */
+  --w-side-active: #e5f4f6; /* aktiver Navigationseintrag */
+
+  /* Zustaende. Der Primaerknopf dunkelt beim Ueberfahren ab. */
+  --w-accent-hover: #097385;
+
+  /* Schatten. Karten heben sich beim Ueberfahren, die Kopfzeile liegt
+     dauerhaft leicht ueber dem Inhalt. */
+  --w-shadow-card: 0 12px 30px 2px rgba(11, 22, 42, 0.18);
+  --w-shadow-header: 0 2px 10px rgba(0, 0, 0, 0.06);
+  --w-shadow-button: 0 8px 15px rgba(0, 0, 0, 0.2);
+
+  /* Radien. Drei Stufen, mehr braucht die Vorlage nicht. */
+  --w-radius-sm: 6px;  /* Navigationseintraege, Badges */
+  --w-radius: 8px;     /* Karten, Knoepfe, Tabellen, Callouts */
+  --w-radius-lg: 10px; /* Autorkasten */
+
+  /* Bisherige Markennamen. ArticleFooter.astro und Breadcrumbs.astro greifen
+     in ihren eigenen Stilbloecken darauf zu; die Namen bleiben als Verweis
+     bestehen, bis diese Komponenten in Paket 7 und 8 umgebaut sind. */
+  --brand-primary-blue: var(--w-head);
+  --brand-accent-turquoise: var(--w-accent);
+  --brand-body-text: var(--w-text);
 }
 
-/* Ensure Sidebar stays light if requested (using Starlight specificity) */
-:root:not([data-theme='dark']) .sidebar-content {
-  background-color: var(--sl-color-bg);
+/* --- Zuordnung auf Starlight ------------------------------------------------
+
+   Wo eine Starlight-Variable genuegt, wird sie gesetzt statt eine Komponente
+   zu ueberschreiben. Die Grauabstufungen tragen bei Starlight Flaechen und
+   Linien quer durch die Oberflaeche: gray-6 steht hinter --sl-color-hairline
+   und dem Inline-Code, gray-3 ist der Sekundaertext. Deshalb werden sie
+   mitgesetzt und nicht nur die sichtbaren Endwerte.
+   ------------------------------------------------------------------------- */
+
+:root {
+  --sl-color-bg: var(--w-bg);
+  --sl-color-bg-sidebar: var(--w-side);
+  /* Weiss, nicht --w-side: Die Tokentabelle des Handoffs fuehrt bg-nav neben
+     der Seitenleiste auf, Vorlagentext und Prototyp zeigen die Kopfzeile aber
+     auf weissem Grund. Der sichtbare Entwurf hat hier Vorrang. */
+  --sl-color-bg-nav: var(--w-bg);
+  --sl-color-bg-inline-code: var(--w-code);
+
+  --sl-color-text: var(--w-text);
+  --sl-color-white: var(--w-head);
+  --sl-color-gray-3: var(--w-muted);
+
+  --sl-color-hairline: var(--w-border);
+  --sl-color-hairline-light: var(--w-border);
+  --sl-color-hairline-shade: var(--w-border);
+  --sl-color-gray-5: var(--w-border);
+  --sl-color-gray-6: var(--w-border);
+
+  --sl-color-accent: var(--w-accent);
+  --sl-color-accent-low: var(--w-accent-soft);
+  --sl-color-accent-high: var(--w-accent-hover);
+  --sl-color-text-accent: var(--w-accent);
+  --sl-color-bg-accent: var(--w-accent);
 }
 
-/* Typography refinements */
+/* --- Typografie-Skala -------------------------------------------------------
+
+   Werte aus dem Handoff, umgerechnet in rem bei 16 Pixel Grundgroesse.
+   Starlight staffelt die Ueberschriften selbst ueber einen Umbruch bei 50em;
+   diese Datei folgt derselben Struktur, damit nichts doppelt greift.
+
+   Unten stehen die Werte fuer schmale Bildschirme (Vorlage: H1 30, H2 24),
+   im Medienblock die des Schreibtischs (H1 40, H2 27).
+   ------------------------------------------------------------------------- */
+
+:root {
+  --sl-text-h1: 1.875rem;  /* 30px */
+  --sl-text-h2: 1.5rem;    /* 24px */
+  --sl-text-h3: 1.25rem;   /* 20px */
+  --sl-text-h4: 1.1875rem; /* 19px */
+  --sl-text-h5: 1.0625rem; /* 17px */
+
+  --sl-text-body: 1rem;    /* 16px */
+  --sl-text-code: 0.875rem;/* 14px */
+
+  --sl-line-height: 1.7;
+  --sl-line-height-headings: 1.2;
+}
+
+@media (min-width: 50em) {
+  :root {
+    --sl-text-h1: 2.5rem;    /* 40px */
+    --sl-text-h2: 1.6875rem; /* 27px */
+    --sl-text-h3: 1.25rem;   /* 20px */
+    --sl-text-h4: 1.1875rem; /* 19px */
+  }
+}
+
+/* Ueberschriften tragen in der Vorlage durchgehend Weight 700. Starlight setzt
+   je nach Ebene unterschiedliche Gewichte. */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: var(--brand-primary-blue) !important;
+  color: var(--w-head);
+  font-weight: 700;
 }
 
-:root[data-theme='dark'] h1,
-:root[data-theme='dark'] h2,
-:root[data-theme='dark'] h3 {
-  color: #ffffff !important;
+/* Mikro-Label, Tabellenkoepfe und Datumsangaben der Vorlage. Eine Klasse statt
+   verstreuter Einzelregeln, damit die Bausteine in Paket 6 bis 9 sie nur noch
+   aufrufen muessen. */
+.w-eyebrow {
+  font-family: var(--sl-font-mono);
+  font-weight: 600;
+  font-size: 0.84375rem; /* 13.5px */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--w-accent);
+}
+
+/* Kleinere Schwester des Eyebrows: Kastenbeschriftungen wie "WER SCHREIBT
+   HIER" oder "AUTOR", zurueckgenommen statt in Akzentfarbe. */
+.w-label {
+  font-family: var(--sl-font-mono);
+  font-weight: 500;
+  font-size: 0.71875rem; /* 11.5px */
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--w-muted);
 }
 
 a {
-  color: var(--brand-accent-turquoise);
+  color: var(--w-accent);
   text-decoration: none;
 }
 
-/* Fix active link visibility in sidebar */
-/* Nur Links: Seit dem Brotkruemelpfad traegt auch dessen letzte Stufe
-   aria-current="page", und die ist bewusst kein Link. Ohne die Einengung
-   bekaeme sie die tuerkise Flaeche der Seitenleiste. */
-a[aria-current="page"],
-a[aria-current="page"]:hover,
-a[aria-current="page"]:focus {
-  color: #ffffff !important;
-  background-color: var(--brand-accent-turquoise) !important;
-}
+/* --- Kopfbereich: Wortmarke ------------------------------------------------
 
-/* --- Kopfbereich: Wortmarke ------------------------------------------- */
-
-/* Starlight rechnet die Bildhoehe aus der Navigationshoehe und laesst der
+   Starlight rechnet die Bildhoehe aus der Navigationshoehe und laesst der
    Breite freien Lauf. Die Wortmarke ist rund dreimal so breit wie hoch; ohne
    eigene Grenze waechst sie mit jeder Aenderung der Navigationshoehe mit und
    draengt auf schmalen Bildschirmen Suche und Menueknopf an den Rand.
@@ -96,19 +207,112 @@ a[aria-current="page"]:focus {
   }
 }
 
-/* --- Karten der Wissensbereiche auf der Wiki-Startseite --------------- */
+/* --- Layoutmasse ------------------------------------------------------------
 
-/* Starlights <CardGrid> und <LinkCard> brauchen .mdx. Die Startseite bleibt
+   Werte aus dem Handoff. Die Kopfzeile ist bei Starlight auf schmalen
+   Bildschirmen niedriger; die Vorlage kennt nur eine Hoehe, deshalb 64 Pixel
+   durchgehend.
+
+   Das Seitenpolster faellt in drei Stufen, wie im Abschnitt "Responsive":
+   56 Pixel, ab 1180 dann 32, ab 1023 dann 24. Starlights eigene Staffelung
+   wird damit vollstaendig ersetzt.
+   ------------------------------------------------------------------------- */
+
+:root {
+  --sl-nav-height: 4rem;      /* 64px */
+  --sl-sidebar-width: 17rem;  /* 272px */
+  --sl-content-width: 47.5rem;/* 760px, Artikelspalte */
+  --sl-content-pad-x: 1.5rem; /* 24px */
+}
+
+@media (min-width: 64em) {
+  :root {
+    --sl-content-pad-x: 2rem; /* 32px */
+  }
+}
+
+@media (min-width: 74em) {
+  :root {
+    --sl-content-pad-x: 3.5rem; /* 56px */
+  }
+}
+
+/* --- Kopfzeile --------------------------------------------------------------
+
+   Weisser Grund und Hairline kommen bereits aus den Tokens. Hier fehlt nur der
+   leichte Schatten, mit dem die Kopfzeile ueber dem Inhalt liegt.
+   ------------------------------------------------------------------------- */
+
+.header {
+  box-shadow: var(--w-shadow-header);
+}
+
+/* --- Seitenleiste -----------------------------------------------------------
+
+   Grund und rechte Linie kommen aus den Tokens. Hier stehen die Eintraege
+   selbst: Polster, Radius und die drei Zustaende.
+   ------------------------------------------------------------------------- */
+
+/* Gruppentitel der obersten Ebene als Mono-Versalie. Bewusst eng gefasst:
+   .large traegt Starlight auch an Links der obersten Ebene, und geschachtelte
+   Gruppen sollen wie gewoehnliche Eintraege aussehen, nicht wie ein zweiter
+   Titel. */
+.sidebar-content .top-level > li > details > summary .large {
+  font-family: var(--sl-font-mono);
+  font-weight: 600;
+  font-size: 0.71875rem; /* 11.5px */
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--w-head);
+}
+
+.sidebar-content a {
+  padding: 7px 10px;
+  border-radius: var(--w-radius-sm);
+  font-size: 0.90625rem; /* 14.5px */
+  color: var(--w-text);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-content a:hover,
+.sidebar-content a:focus-visible {
+  background-color: var(--w-accent-soft);
+  color: var(--w-accent);
+}
+
+/* Aktiver Eintrag: helle Akzentflaeche, Akzentschrift, 2 Pixel Balken links.
+   Der Balken ueber inset-Schatten statt border, damit die Zeile nicht um zwei
+   Pixel einrueckt.
+
+   Bewusst auf die Seitenleiste eingegrenzt: Seit dem Brotkruemelpfad traegt
+   auch dessen letzte Stufe aria-current="page", und im Verzeichnis rechts
+   setzt Starlight aria-current ebenfalls. Beide sollen diese Flaeche nicht
+   bekommen. */
+.sidebar-content a[aria-current='page'],
+.sidebar-content a[aria-current='page']:hover,
+.sidebar-content a[aria-current='page']:focus {
+  font-weight: 500;
+  color: var(--w-accent);
+  background-color: var(--w-side-active);
+  box-shadow: inset 2px 0 0 var(--w-accent);
+}
+
+/* --- Karten der Wissensbereiche auf der Wiki-Startseite --------------------
+
+   Starlights <CardGrid> und <LinkCard> brauchen .mdx. Die Startseite bleibt
    .md: Der Name index.mdx ist schon belegt, und cleanExportDocsDir() schont
    beide Namen ausdruecklich. Deshalb schlichtes HTML im Markdown, gestaltet
    an dieser Stelle. Kein Eingriff in den Export.
+
+   Diese Karten weichen der Startseite aus Paket 9; bis dahin tragen sie die
+   Kartenform der Vorlage.
 
    auto-fit mit einer Mindestbreite statt zwei festen Spalten: Die Karten
    ruecken von selbst untereinander, sobald der Platz fehlt. */
 .bereichskarten {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
 /* Die ganze Karte ist der Link, nicht nur eine Zeile darin. Deshalb steht im
@@ -117,18 +321,19 @@ a[aria-current="page"]:focus {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  padding: 1.5rem;
-  border: 1px solid var(--sl-color-gray-5);
-  border-radius: 0.5rem;
-  color: var(--sl-color-text);
+  padding: 26px 24px 28px;
+  border: 1px solid var(--w-border);
+  border-radius: var(--w-radius);
+  background: var(--w-card);
+  color: var(--w-text);
   text-decoration: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .bereichskarte:hover,
 .bereichskarte:focus-visible {
-  border-color: var(--brand-accent-turquoise);
-  box-shadow: 0 0 0 1px var(--brand-accent-turquoise);
+  border-color: var(--w-accent);
+  box-shadow: var(--w-shadow-card);
 }
 
 /* Bewusst keine echte Ueberschrift: Ein h3 im Markdown-Inhalt landet im
@@ -136,11 +341,11 @@ a[aria-current="page"]:focus {
    Abschnitten der Startseite. */
 .bereichskarte-titel {
   font-size: var(--sl-text-h4);
-  font-weight: 600;
+  font-weight: 700;
   line-height: var(--sl-line-height-headings);
-  color: var(--brand-primary-blue);
+  color: var(--w-head);
 }
 
-:root[data-theme='dark'] .bereichskarte-titel {
-  color: #ffffff;
+.bereichskarte-text {
+  font-size: 0.96875rem; /* 15.5px */
 }

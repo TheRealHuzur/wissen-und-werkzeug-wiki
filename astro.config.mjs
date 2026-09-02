@@ -34,22 +34,38 @@ export default defineConfig({
       },
       sidebar,
       favicon: '/favicon.svg',
-      // Montserrat wie auf der Hauptwebsite, als npm-Paket und damit vom
-      // eigenen Server. Bewusst nicht ueber fonts.googleapis.com: Ein Abruf
-      // dort uebertraege die IP-Adresse jedes Besuchers an Google.
+      // Drei Schriften der Designvorlage, als npm-Pakete und damit vom eigenen
+      // Server. Bewusst nicht ueber fonts.googleapis.com: Ein Abruf dort
+      // uebertraege die IP-Adresse jedes Besuchers an Google.
       //
-      // Zwei Eintraege, nicht einer: Der Standardeinstieg des Pakets bringt
-      // allein den aufrechten Schnitt mit. Die Gewichtsachse deckt Fett ab,
-      // Kursiv liegt in einer eigenen Datei.
+      // Inter loest Montserrat ab. Die Groessen- und Abstandsskala der Vorlage
+      // ist auf Inter gerechnet, siehe Handoff zur Designueberarbeitung.
+      // JetBrains Mono traegt Mikro-Label, Tabellenkoepfe und Inline-Code,
+      // Public Sans allein die H1 der Startseite.
+      //
+      // Bei Inter zwei Eintraege, nicht einer: Der Standardeinstieg des Pakets
+      // bringt allein den aufrechten Schnitt mit, Kursiv liegt in einer eigenen
+      // Datei. Mono und Public Sans brauchen keinen kursiven Schnitt.
       //
       // Die eigene Datei steht hinten, damit --sl-font dort das letzte Wort hat.
       customCss: [
-        '@fontsource-variable/montserrat',
-        '@fontsource-variable/montserrat/wght-italic.css',
+        '@fontsource-variable/inter',
+        '@fontsource-variable/inter/wght-italic.css',
+        '@fontsource-variable/jetbrains-mono',
+        '@fontsource-variable/public-sans',
         './src/styles/custom.css',
       ],
       components: {
-        ThemeSelect: './src/components/CustomThemeSelect.astro',
+        // Die drei Angebotslinks der Kopfzeile. Sie besetzen Starlights
+        // ThemeSelect-Stelle, weil die in der rechten Kopfgruppe und zusaetzlich
+        // im Menue schmaler Bildschirme gerendert wird. Begruendung in der
+        // Komponente.
+        ThemeSelect: './src/components/HeaderNav.astro',
+        // Setzt den hellen Modus fest, solange die dunkle Fassung der
+        // Design-Tokens fehlt. Siehe Kommentar in der Komponente.
+        ThemeProvider: './src/components/ThemeProvider.astro',
+        // Haengt die Fusszeile der Vorlage unter den Inhaltsbereich.
+        PageFrame: './src/components/PageFrame.astro',
         // Haengt den sichtbaren Brotkruemelpfad oberhalb der H1 ein.
         PageTitle: './src/components/PageTitle.astro',
         Footer: './src/components/Footer.astro',
