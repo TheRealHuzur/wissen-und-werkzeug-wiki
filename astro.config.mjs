@@ -34,6 +34,12 @@ export default defineConfig({
       },
       sidebar,
       favicon: '/favicon.svg',
+      // Keine Vor- und Zurueck-Verweise am Artikelende. Die Designvorlage
+      // laesst sie bewusst weg: Am Fuss stehen bereits Autorenblock und
+      // Angebotsverweis, eine dritte Navigationsstufe dahinter fuehrt aus dem
+      // Artikel heraus, ohne einen Zusammenhang zu stiften. Die Seitenleiste
+      // traegt die Reihenfolge ohnehin.
+      pagination: false,
       // Drei Schriften der Designvorlage, als npm-Pakete und damit vom eigenen
       // Server. Bewusst nicht ueber fonts.googleapis.com: Ein Abruf dort
       // uebertraege die IP-Adresse jedes Besuchers an Google.

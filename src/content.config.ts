@@ -21,6 +21,12 @@ export const collections = {
         // Zeichenkettenvergleich und bleibt in diesem Format richtig.
         created: z.string().optional(),
         updated: z.string().optional(),
+        // Der Einleitungssatz oberhalb des Inhalts. Der Export zieht ihn aus
+        // dem Abschnitt "Zusammenfassung" der Notiz, siehe extractLead().
+        // Reiner Text ohne Markdown; ArticleLead.astro gibt ihn unveraendert
+        // aus. Nicht mit description zu verwechseln: Die ist fuer die
+        // Suchmaschinen gekuerzt und traegt zusaetzlich die Fragenliste.
+        lead: z.string().optional(),
         // Angebotsverweis, Standards-Wiki Abschnitt 6 und 8, Muster in
         // Verlinkungsmatrix. offer_heading ist die unverlinkte H2, offer_text
         // traegt den Link als Inline-Markdown. Ein eigenes Zielfeld gibt es

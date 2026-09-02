@@ -3,12 +3,19 @@
  * Starlight-Override fuer die Seitenueberschrift.
  *
  * Der Brotkruemelpfad wird vor <Default /> gerendert und steht damit als
- * erstes im Inhaltsbereich, oberhalb der H1. Dasselbe Muster wie
- * Footer.astro, nur an das andere Ende der Seite.
+ * erstes im Inhaltsbereich, oberhalb der H1. Lead und Meta-Zeile folgen
+ * dahinter. Damit steht der Kopf eines Artikels in der Reihenfolge der
+ * Designvorlage: Pfad, H1, Lead, Datum, Trennlinie.
+ *
+ * Beides gehoert hierher und nicht in den Inhaltsbereich: Starlight rendert
+ * Titel und Markdown in zwei getrennten Bereichen, zwischen die sich nichts
+ * einschieben laesst.
  */
 import Default from '@astrojs/starlight/components/PageTitle.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
+import ArticleLead from './ArticleLead.astro';
 ---
 
 <Breadcrumbs />
 <Default />
+<ArticleLead />

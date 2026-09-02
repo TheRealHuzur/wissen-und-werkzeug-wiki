@@ -529,6 +529,72 @@ function sanitizeDescription(input) {
   return `${compact}\u2026`;
 }
 
+/**
+ * Zieht den Lead-Absatz aus dem Abschnitt "## Zusammenfassung" am Kopf einer
+ * Notiz und gibt ihn zusammen mit dem gekuerzten Body zurueck.
+ *
+ * Die Designvorlage setzt unter die H1 einen hervorgehobenen Einleitungssatz.
+ * Im Bestand steht genau dieser Satz als Blockzitat unter einer H2
+ * "Zusammenfassung". Aus dem Frontmatter laesst er sich nicht nehmen: Das Feld
+ * description traegt dort Zusammenfassung und Fragenliste in einem und wird
+ * fuer die Suchmaschinen auf 160 Zeichen gekuerzt.
+ *
+ * Entfernt werden nur die Ueberschrift und das Blockzitat. Der Rest des
+ * Abschnitts, in aller Regel "Dieser Artikel beantwortet folgende Fragen" mit
+ * seiner Liste, bleibt im Body stehen.
+ *
+ * Erkannt werden beide Schreibweisen des Bestands: als Blockzitat und als
+ * gewoehnlicher Absatz. Steht keine Zusammenfassung am Kopf, bleibt alles
+ * unveraendert; rund ein Drittel der Notizen hat keine.
+ */
+function extractLead(body) {
+  const lines = String(body ?? '').split(/\r?\n/);
+
+  let index = 0;
+  while (index < lines.length && lines[index].trim() === '') index += 1;
+  if (!/^##\s+Zusammenfassung\s*$/i.test(lines[index] ?? '')) {
+    return { lead: '', body };
+  }
+
+  const headingIndex = index;
+  index += 1;
+  while (index < lines.length && lines[index].trim() === '') index += 1;
+
+  const isQuote = (lines[index] ?? '').trimStart().startsWith('>');
+  const collected = [];
+  while (index < lines.length) {
+    const trimmed = lines[index].trim();
+    if (isQuote) {
+      // Das Blockzitat endet mit der ersten Zeile ohne Zeichen davor. Leere
+      // Zitatzeilen ("> ") kommen im Bestand vor und werden uebersprungen.
+      if (!trimmed.startsWith('>')) break;
+      const text = trimmed.replace(/^>\s?/, '').trim();
+      if (text) collected.push(text);
+    } else {
+      // Gewoehnlicher Absatz: bis zur naechsten Leerzeile oder Ueberschrift.
+      if (trimmed === '' || /^#{1,6}\s/.test(trimmed)) break;
+      collected.push(trimmed);
+    }
+    index += 1;
+  }
+
+  // Dieselbe Saeuberung wie bei der description, nur ohne deren Kuerzung: Der
+  // Lead wird als Text ausgegeben, nicht als Markdown. Ein stehengebliebenes
+  // [Label](Ziel) waere sonst woertlich zu lesen.
+  const lead = collected
+    .join(' ')
+    .replace(/\bDieses Modul\b/g, 'Dieser Artikel')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1')
+    .replace(/[*_`]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  if (!lead) return { lead: '', body };
+
+  const rest = [...lines.slice(0, headingIndex), ...lines.slice(index)].join('\n').trim();
+  return { lead, body: rest };
+}
+
 function formatDate(date) {
   if (!date) return '';
   const d = new Date(date);
@@ -876,6 +942,7 @@ async function main() {
   let brokenWikilinksCount = 0;
   let missingAssetsCount = 0;
   let descriptionsFromSummary = 0;
+  let leadsFromSummary = 0;
   let descriptionsFromDescription = 0;
   let descriptionsMissing = 0;
   // Notizen ohne updated: — zugleich die Arbeitsliste fuer die Artikelueberarbeitung
@@ -1507,6 +1574,17 @@ async function main() {
     // Remove the first H1 from the body (it's already in the frontmatter as 'title' and rendered by Starlight)
     bodyWithoutRag = bodyWithoutRag.replace(/^#\s+.+\r?\n?/, '').trim();
 
+    // Der Lead-Absatz der Designvorlage. Er steht im Bestand als Blockzitat
+    // unter einer H2 "Zusammenfassung"; beides wandert ins Frontmatter und
+    // wird von ArticleLead.astro oberhalb des Inhalts ausgegeben. Damit faellt
+    // auch der Eintrag "Zusammenfassung" aus dem Verzeichnis der Seite weg.
+    const { lead, body: bodyOhneLead } = extractLead(bodyWithoutRag);
+    if (lead) {
+      frontmatterLines.push(`lead: ${yamlQuote(lead)}`);
+      bodyWithoutRag = bodyOhneLead;
+      leadsFromSummary += 1;
+    }
+
     // Der Autorenblock wird nicht mehr in den Body geschrieben. Er entsteht seit
     // Paket 3 zentral in src/components/ArticleFooter.astro, gemeinsam mit dem
     // Angebotsverweis. AUTHOR_DATA bleibt die Quelle der maschinenlesbaren
@@ -1530,6 +1608,7 @@ async function main() {
   console.log(`[summary] brokenWikilinksCount: ${brokenWikilinksCount}`);
   console.log(`[summary] missingAssetsCount: ${missingAssetsCount}`);
   console.log(`[summary] descriptionsFromSummary: ${descriptionsFromSummary}`);
+  console.log(`[summary] leadsFromSummary: ${leadsFromSummary}`);
   console.log(`[summary] descriptionsFromDescription: ${descriptionsFromDescription}`);
   console.log(`[summary] descriptionsMissing: ${descriptionsMissing}`);
   console.log(`[summary] missingUpdated: ${missingUpdated}`);
