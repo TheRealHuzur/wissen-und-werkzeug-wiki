@@ -292,57 +292,36 @@ a {
   box-shadow: inset 2px 0 0 var(--w-accent);
 }
 
-/* --- Karten der Wissensbereiche auf der Wiki-Startseite --------------------
+/* --- Startseite und Themenuebersicht ---------------------------------------
 
-   Starlights <CardGrid> und <LinkCard> brauchen .mdx. Die Startseite bleibt
-   .md: Der Name index.mdx ist schon belegt, und cleanExportDocsDir() schont
-   beide Namen ausdruecklich. Deshalb schlichtes HTML im Markdown, gestaltet
-   an dieser Stelle. Kein Eingriff in den Export.
+   Beide Seiten laufen breiter als eine Artikelspalte: 1000 statt 760 Pixel,
+   wie in der Vorlage. Erkannt am Hero-Bereich beziehungsweise am Kartenraster,
+   die es nur dort gibt. Ueber :has(), weil Starlight keine Moeglichkeit
+   vorsieht, einer einzelnen Seite eine Klasse mitzugeben, und ein Override von
+   ContentPanel fuer diese eine Regel zu viel waere.
+   ------------------------------------------------------------------------- */
 
-   Diese Karten weichen der Startseite aus Paket 9; bis dahin tragen sie die
-   Kartenform der Vorlage.
+.main-pane:has(.hero) .sl-container,
+.main-pane:has(.karten-raster) .sl-container {
+  max-width: 1000px;
+}
 
-   auto-fit mit einer Mindestbreite statt zwei festen Spalten: Die Karten
-   ruecken von selbst untereinander, sobald der Platz fehlt. */
-.bereichskarten {
+/* Die Karten selbst stehen in Karte.astro. Hier nur ihre Anordnung: zwei oder
+   drei Spalten, die von selbst untereinander ruecken, sobald der Platz fehlt.
+   auto-fit mit Mindestbreite statt fester Spaltenzahl erspart einen eigenen
+   Umbruchpunkt je Raster. */
+.karten-raster {
   display: grid;
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.karten-raster--2 {
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.karten-raster--3 {
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-  gap: 1.75rem;
-}
-
-/* Die ganze Karte ist der Link, nicht nur eine Zeile darin. Deshalb steht im
-   Kartentext auch kein zweiter Link: Links lassen sich nicht schachteln. */
-.bereichskarte {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding: 26px 24px 28px;
-  border: 1px solid var(--w-border);
-  border-radius: var(--w-radius);
-  background: var(--w-card);
-  color: var(--w-text);
-  text-decoration: none;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.bereichskarte:hover,
-.bereichskarte:focus-visible {
-  border-color: var(--w-accent);
-  box-shadow: var(--w-shadow-card);
-}
-
-/* Bewusst keine echte Ueberschrift: Ein h3 im Markdown-Inhalt landet im
-   Verzeichnis "Auf dieser Seite" und stuende dort neben den echten
-   Abschnitten der Startseite. */
-.bereichskarte-titel {
-  font-size: var(--sl-text-h4);
-  font-weight: 700;
-  line-height: var(--sl-line-height-headings);
-  color: var(--w-head);
-}
-
-.bereichskarte-text {
-  font-size: 0.96875rem; /* 15.5px */
 }
 
 /* --- Artikelseite: Inline-Code ---------------------------------------------

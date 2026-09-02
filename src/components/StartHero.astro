@@ -1,0 +1,157 @@
+---
+/**
+ * Der Hero-Bereich der Startseite.
+ *
+ * Zweispaltig: links Eyebrow, Ueberschrift, Einleitung, Claim und die beiden
+ * Schaltflaechen, rechts der Autorkasten ueber den benannten Bereich "kasten".
+ *
+ * Die H1 steht hier und nicht im Frontmatter-Titel: PageTitle.astro laesst
+ * Starlights eigene Ueberschrift auf der Startseite aus, damit die Seite genau
+ * eine H1 hat. Sie traegt als einzige Stelle im Wiki die Schrift Public Sans.
+ */
+
+interface Props {
+  eyebrow: string;
+  titel: string;
+  lead: string;
+  claim: string;
+  primaerLabel: string;
+  primaerHref: string;
+  sekundaerLabel: string;
+  sekundaerHref: string;
+}
+
+const {
+  eyebrow,
+  titel,
+  lead,
+  claim,
+  primaerLabel,
+  primaerHref,
+  sekundaerLabel,
+  sekundaerHref,
+} = Astro.props;
+---
+
+<section class="hero">
+  <div class="hero-raster">
+    <div>
+      <p class="w-eyebrow hero-eyebrow">{eyebrow}</p>
+      <h1 class="hero-titel">{titel}</h1>
+      <p class="hero-lead">{lead}</p>
+      <p class="hero-claim">{claim}</p>
+      <div class="hero-knoepfe">
+        <a class="knopf knopf--primaer" href={primaerHref}>{primaerLabel}</a>
+        <a class="knopf knopf--sekundaer" href={sekundaerHref}>{sekundaerLabel}</a>
+      </div>
+    </div>
+    <slot name="kasten" />
+  </div>
+</section>
+
+<style>
+  /* Der Hero laeuft ueber die volle Breite des Inhaltsbereichs, nicht nur ueber
+     die Artikelspalte. Deshalb hier eigene Polster statt der Spaltenbreite. */
+  .hero {
+    padding-bottom: 88px;
+    border-bottom: 1px solid var(--w-border);
+  }
+
+  .hero-raster {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+    align-items: center;
+    max-width: 1000px;
+  }
+
+  .hero .w-eyebrow {
+    margin: 0 0 20px;
+  }
+
+  /* Die einzige Stelle mit Public Sans. 60 Pixel, eng gesetzt, auf 16 Zeichen
+     Zeilenlaenge begrenzt: So steht die Ueberschrift in der Vorlage. */
+  .hero-titel {
+    margin: 0 0 20px;
+    font-family: var(--w-font-display);
+    font-weight: 800;
+    font-size: 3.75rem; /* 60px */
+    line-height: 1.03;
+    letter-spacing: -0.04em;
+    max-width: 16ch;
+    text-wrap: balance;
+    color: var(--w-head);
+  }
+
+  .hero-lead {
+    margin: 0 0 16px;
+    font-size: 1.3125rem; /* 21px */
+    line-height: 1.6;
+    max-width: 52ch;
+    text-wrap: pretty;
+  }
+
+  .hero-claim {
+    margin: 0 0 36px;
+    font-weight: 600;
+    font-size: 1.1875rem; /* 19px */
+    color: var(--w-accent);
+  }
+
+  .hero-knoepfe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .knopf {
+    display: inline-flex;
+    align-items: center;
+    height: 52px;
+    padding: 0 30px;
+    border-radius: var(--w-radius);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+  }
+
+  .knopf--primaer {
+    background: var(--w-accent);
+    color: #ffffff;
+  }
+
+  .knopf--primaer:hover,
+  .knopf--primaer:focus-visible {
+    background: var(--w-accent-hover);
+    box-shadow: var(--w-shadow-button);
+  }
+
+  .knopf--sekundaer {
+    border: 1px solid var(--w-accent);
+    color: var(--w-accent);
+  }
+
+  .knopf--sekundaer:hover,
+  .knopf--sekundaer:focus-visible {
+    background: var(--w-accent-soft);
+  }
+
+  /* Unterhalb der Umbruchbreite der Vorlage einspaltig, Ueberschrift deutlich
+     kleiner. Der Autorkasten rutscht unter den Text. */
+  @media (max-width: 64em) {
+    .hero-raster {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .hero-titel {
+      font-size: 2.125rem; /* 34px */
+      max-width: none;
+    }
+
+    .hero {
+      padding-bottom: 56px;
+    }
+  }
+</style>
