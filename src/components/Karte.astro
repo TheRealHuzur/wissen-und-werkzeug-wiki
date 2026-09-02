@@ -1,0 +1,105 @@
+---
+/**
+ * Die Karte der Designvorlage.
+ *
+ * Tritt in drei Zuschnitten auf, die sich nur in Symbolgroesse und Anordnung
+ * unterscheiden: auf der Startseite mit Symbol ueber dem Titel (34 Pixel bei
+ * den Wissensbereichen, 30 in den beiden Abschnitten darunter), auf der
+ * Themenuebersicht mit Symbol neben dem Titel (26 Pixel).
+ *
+ * Die ganze Karte ist der Link. Deshalb steht im Kartentext auch nie ein
+ * zweiter: Links lassen sich nicht schachteln. Die Zeile "meta" ist reine
+ * Auszeichnung, kein eigener Verweis.
+ */
+import Icon from './Icon.astro';
+
+interface Props {
+  titel: string;
+  href: string;
+  icon: string;
+  /** Symbol ueber dem Titel (Startseite) oder daneben (Themenuebersicht). */
+  anordnung?: 'oben' | 'neben';
+  iconGroesse?: number;
+  /** Akzentzeile am Fuss, etwa "12 Seiten →". */
+  meta?: string;
+}
+
+const { titel, href, icon, anordnung = 'oben', iconGroesse = 30, meta } = Astro.props;
+---
+
+<a class:list={['karte', `karte--${anordnung}`]} href={href}>
+  <div class="karte-kopf">
+    <Icon name={icon} size={iconGroesse} class="karte-icon" />
+    <span class="karte-titel">{titel}</span>
+  </div>
+  <span class="karte-text"><slot /></span>
+  {meta && <span class="karte-meta">{meta}</span>}
+</a>
+
+<style>
+  .karte {
+    display: flex;
+    flex-direction: column;
+    padding: 26px 24px 28px;
+    border: 1px solid var(--w-border);
+    border-radius: var(--w-radius);
+    background: var(--w-card);
+    color: var(--w-text);
+    text-decoration: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .karte:hover,
+  .karte:focus-visible {
+    border-color: var(--w-accent);
+    box-shadow: var(--w-shadow-card);
+  }
+
+  .karte-icon {
+    color: var(--w-accent);
+    flex: none;
+  }
+
+  /* Symbol ueber dem Titel: gestapelt, mit Abstand darunter. */
+  .karte--oben .karte-kopf {
+    display: block;
+  }
+
+  .karte--oben .karte-icon {
+    margin-bottom: 16px;
+  }
+
+  /* Symbol neben dem Titel: eine Zeile, mittig zueinander. */
+  .karte--neben .karte-kopf {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  /* Bewusst keine echte Ueberschrift: Ein h3 im Inhalt landet im Verzeichnis
+     "Auf dieser Seite" und stuende dort neben den echten Abschnitten. */
+  .karte-titel {
+    display: block;
+    font-weight: 700;
+    font-size: 1.1875rem; /* 19px */
+    line-height: var(--sl-line-height-headings);
+    color: var(--w-head);
+  }
+
+  .karte--oben .karte-titel {
+    margin-bottom: 8px;
+  }
+
+  .karte-text {
+    font-size: 0.96875rem; /* 15.5px */
+    line-height: 1.6;
+  }
+
+  .karte-meta {
+    margin-top: 14px;
+    font-weight: 600;
+    font-size: 0.90625rem; /* 14.5px */
+    color: var(--w-accent);
+  }
+</style>

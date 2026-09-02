@@ -1,0 +1,122 @@
+---
+/**
+ * Der Kasten "Wer schreibt hier" in der rechten Haelfte des Hero-Bereichs.
+ *
+ * Der Kreis traegt die Initialen, wie in der Designvorlage. Das echte Portrait
+ * liegt unter src/assets/patrick-rosskothen.png und steht am Fuss jedes
+ * Artikels; hier bleibt es bei den Initialen, weil die Vorlage an dieser
+ * Stelle ausdruecklich ein gezeichnetes Element und kein Foto vorsieht.
+ */
+
+interface Props {
+  initialen: string;
+  name: string;
+  rolle: string;
+  text: string;
+  seminarText: string;
+  seminarLabel: string;
+  seminarHref: string;
+}
+
+const { initialen, name, rolle, text, seminarText, seminarLabel, seminarHref } = Astro.props;
+---
+
+<aside class="autorkasten">
+  <p class="w-label">Wer schreibt hier</p>
+  <div class="autorkasten-person">
+    <span class="autorkasten-initialen" aria-hidden="true">{initialen}</span>
+    <span>
+      <span class="autorkasten-name">{name}</span>
+      <span class="autorkasten-rolle">{rolle}</span>
+    </span>
+  </div>
+  <p class="autorkasten-text">{text}</p>
+  <div class="autorkasten-seminar">
+    <p class="w-label">Lieber im Seminar?</p>
+    <p class="autorkasten-seminartext">{seminarText}</p>
+    <a href={seminarHref}>{seminarLabel} →</a>
+  </div>
+</aside>
+
+<style>
+  .autorkasten {
+    padding: 30px 32px 32px;
+    border: 1px solid var(--w-border);
+    border-radius: var(--w-radius-lg);
+    background: var(--w-side);
+  }
+
+  /* Die Beschriftungen tragen die globale Klasse .w-label. Astro haengt an
+     gescopte Regeln ein eigenes Attribut und hebt damit deren Spezifitaet;
+     ohne eigene Regel bekaemen die Label die Abstaende der Absaetze. */
+  .autorkasten .w-label {
+    margin: 0 0 20px;
+  }
+
+  .autorkasten-person {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+
+  .autorkasten-initialen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--w-accent-soft);
+    font-weight: 600;
+    font-size: 1.125rem; /* 18px */
+    letter-spacing: 0.5px;
+    color: var(--w-head);
+  }
+
+  .autorkasten-name {
+    display: block;
+    font-weight: 600;
+    font-size: 1.3125rem; /* 21px */
+    line-height: 1.25;
+    color: var(--w-head);
+  }
+
+  .autorkasten-rolle {
+    display: block;
+    font-size: 1rem;
+    color: var(--w-muted);
+  }
+
+  .autorkasten-text {
+    margin: 0 0 24px;
+    font-size: 1.0625rem; /* 17px */
+    line-height: 1.65;
+    text-wrap: pretty;
+  }
+
+  /* Eingesetzter Kasten auf Kartenfarbe, damit er sich von der ruhigen
+     Flaeche des Autorkastens abhebt. */
+  .autorkasten-seminar {
+    padding: 20px 22px 22px;
+    border: 1px solid var(--w-border);
+    border-radius: var(--w-radius);
+    background: var(--w-card);
+  }
+
+  .autorkasten-seminar .w-label {
+    margin-bottom: 10px;
+  }
+
+  .autorkasten-seminartext {
+    margin: 0 0 14px;
+    font-size: 1.03125rem; /* 16.5px */
+    line-height: 1.6;
+  }
+
+  .autorkasten-seminar a {
+    font-size: 1.03125rem;
+    color: var(--w-accent);
+  }
+</style>

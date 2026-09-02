@@ -1,7 +1,182 @@
 ---
-title: Legacy Index
-slug: legacy-index
-draft: true
+title: Wissen & Werkzeug Wiki
+description: "BPMN, Geschäftsprozesse & Innovationsmethoden praxisnah erklärt – das kostenfreie Wissens-Wiki für den öffentlichen Dienst von Patrick Roßkothen."
+# Kein Verzeichnis "Auf dieser Seite": Die Startseite ist eine Einstiegsseite,
+# keine Lektuere, und die Vorlage zeigt dort keine dritte Spalte. Ohne das
+# Abschalten liefe der breitere Inhalt ausserdem unter das Verzeichnis.
+tableOfContents: false
+head:
+  - tag: title
+    content: "Wissen & Werkzeug Wiki"
+  - tag: meta
+    attrs:
+      property: "og:description"
+      content: "BPMN, Geschäftsprozesse & Innovationsmethoden praxisnah erklärt – das kostenfreie Wissens-Wiki für den öffentlichen Dienst von Patrick Roßkothen."
+  - tag: script
+    attrs:
+      type: "application/ld+json"
+    content: |
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://wissen-und-werkzeug.de/wiki/#collectionpage",
+        "name": "Wissen & Werkzeug Wiki",
+        "description": "BPMN, Geschäftsprozesse & Innovationsmethoden praxisnah erklärt – das kostenfreie Wissens-Wiki für den öffentlichen Dienst von Patrick Roßkothen.",
+        "url": "https://wissen-und-werkzeug.de/wiki/",
+        "inLanguage": "de",
+        "author": {
+          "@type": "Person",
+          "@id": "https://wissen-und-werkzeug.de/ueber-mich/#person",
+          "name": "Patrick Roßkothen",
+          "url": "https://wissen-und-werkzeug.de/ueber-mich/",
+          "sameAs": ["https://www.linkedin.com/in/patrick-rosskothen"],
+          "jobTitle": "Experte für Prozess- und Wissensmanagement"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://wissen-und-werkzeug.de/#organization",
+          "name": "Wissen & Werkzeug",
+          "url": "https://wissen-und-werkzeug.de",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://wissen-und-werkzeug.de/wp-content/uploads/2026/08/Logo-Organisation-512.png",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://wissen-und-werkzeug.de/#website",
+          "name": "Wissen & Werkzeug",
+          "url": "https://wissen-und-werkzeug.de"
+        }
+      }
 ---
 
-Legacy page placeholder.
+import StartHero from '../../components/StartHero.astro';
+import AutorKasten from '../../components/AutorKasten.astro';
+import Karte from '../../components/Karte.astro';
+import { sidebar } from '../../generated/sidebar.mjs';
+
+{/* Die Seitenzahl auf den Karten kommt aus derselben Quelle wie die
+    Seitenleiste. Damit stimmt sie nach jedem Export von selbst, statt von Hand
+    nachgezogen werden zu muessen. Gezaehlt werden alle Verweise einer Gruppe
+    ueber alle Ebenen hinweg. */}
+export const zaehleSeiten = (label) => {
+  const zaehle = (eintraege) =>
+    (eintraege ?? []).reduce(
+      (summe, eintrag) => summe + (eintrag.link ? 1 : zaehle(eintrag.items)),
+      0
+    );
+  return zaehle(sidebar.find((gruppe) => gruppe.label === label)?.items);
+};
+
+<StartHero
+  eyebrow="Wissensbasis für die Verwaltung"
+  titel="Das Wiki für Prozesse, KI und modernes Wissensmanagement"
+  lead="Deine zentrale Ressource für praxisnahes Wissen rund um Prozessmanagement im öffentlichen Dienst, Wissensmanagement und das Konzept des Second Brain."
+  claim="Verstehen. Gestalten. Umsetzen."
+  primaerLabel="Themen ansehen"
+  primaerHref="/wiki/themenuebersicht/"
+  sekundaerLabel="Mit dem Prozesskapitel starten"
+  sekundaerHref="/wiki/prozessmanagement/"
+>
+  <AutorKasten
+    slot="kasten"
+    initialen="PR"
+    name="Patrick Roßkothen"
+    rolle="Organisationsberater und Dozent"
+    text="Ich begleite Ämter, Landkreise und Verbände bei Prozessmanagement und Wissensmanagement. Was hier steht, stammt aus dieser Arbeit."
+    seminarText="Die Themen dieses Wikis vermittle ich auch in Seminaren."
+    seminarLabel="Zu den Seminaren"
+    seminarHref="https://wissen-und-werkzeug.de/seminare/"
+  />
+</StartHero>
+
+## Was dich hier erwartet
+
+Dieses Wiki richtet sich an alle, die ihre Organisation zukunftsfähig gestalten wollen – mit klarem Fokus auf den **öffentlichen Sektor**. Du findest hier keine Theorie um der Theorie willen, sondern strukturiertes, anwendbares Wissen, das du direkt in deinem Arbeitsalltag einsetzen kannst.
+
+## Die Wissensbereiche im Überblick
+
+<div class="karten-raster karten-raster--2">
+  <Karte
+    icon="layers"
+    iconGroesse={34}
+    titel="Prozessmanagement im öffentlichen Dienst"
+    href="/wiki/prozessmanagement/"
+    meta={`${zaehleSeiten('Prozessmanagement')} Seiten →`}
+  >
+    Prozesse sind die Grundlage allen Handelns. Eine Organisation zu gestalten bedeutet im Kern,
+    ihre Prozesse zu gestalten. Ob Digitalisierung, Wissensmanagement oder die Einführung von KI –
+    für all diese Vorhaben musst du deine Prozesse kennen, sie dokumentieren und kontinuierlich
+    optimieren. Hier lernst du, wie du dabei systematisch vorgehen kannst.
+  </Karte>
+  <Karte
+    icon="book"
+    iconGroesse={34}
+    titel="Wissensmanagement"
+    href="/wiki/wissensmanagement/"
+    meta={`${zaehleSeiten('Wissensmanagement')} Seiten →`}
+  >
+    Wissen ist die wertvollste Ressource jeder Organisation. Am wirkungsvollsten wird es zugänglich,
+    wenn es entlang der Prozesse erfasst und aufbereitet wird. Und noch etwas: Wenn KI keine
+    generischen Antworten liefern soll, sondern Antworten, die wirklich zu deiner Organisation
+    passen, musst du sie mit deinem spezifischen Wissen versorgen. Erfahre, wie du Wissen sichtbar
+    machst, KI-gerecht aufbereitest, Wissensverlust durch Personalwechsel vermeidest und eine Kultur
+    strukturierter Wissensweitergabe aufbaust. Dazu gehört auch das Second Brain: ein persönliches,
+    digitales Wissenssystem nach der CODE-Methode, das deinen Kopf entlastet und dein Wissen
+    dauerhaft verfügbar macht.
+  </Karte>
+</div>
+
+## Prozessmanagement-Phasenmodell
+
+Prozessarbeit läuft in drei Phasen, die aufeinander aufbauen. Die Seiten dieses Wikis sind derselben Reihenfolge zugeordnet, damit erkennbar bleibt, wo ein Vorhaben gerade steht.
+
+<div class="karten-raster karten-raster--3">
+  <Karte icon="compass" titel="Verstehen" href="/wiki/prozesse-verstehen/">
+    Anlass, Beteiligte und Ist-Zustand klären. Erhebung, Modellierung und die Frage, welche
+    Entscheidung das Ergebnis tragen soll.
+  </Karte>
+  <Karte icon="settings" titel="Gestalten" href="/wiki/prozesse-gestalten/">
+    Soll-Prozesse entwerfen, Aufgaben kritisch prüfen und Zuständigkeiten neu schneiden. Ergebnis
+    ist ein beschlussfähiger Vorschlag.
+  </Karte>
+  <Karte icon="check" titel="Umsetzen" href="/wiki/prozesse-umsetzen/">
+    Verfahren dokumentieren, Beschäftigte einarbeiten und Kennzahlen aufsetzen, mit denen die
+    Änderung überprüft wird.
+  </Karte>
+</div>
+
+## Weitere Angebote
+
+Das Wiki ist frei zugänglich. Wenn du darüber hinaus Begleitung brauchst, führen diese drei Wege weiter.
+
+<div class="karten-raster karten-raster--3">
+  <Karte icon="users" titel="Seminare" href="https://wissen-und-werkzeug.de/seminare/">
+    Präsenz- und Onlineformate zu Prozess- und Wissensmanagement, auch als Inhouse-Termin für
+    einzelne Ämter.
+  </Karte>
+  <Karte icon="messageSquare" titel="Beratung" href="https://wissen-und-werkzeug.de/beratung/">
+    Begleitung konkreter Vorhaben: Erhebung, Moderation, Prozessoptimierung und Aufgabenkritik.
+  </Karte>
+  <Karte icon="fileText" titel="Werkzeuge" href="https://wissen-und-werkzeug.de/werkzeuge/">
+    Vorlagen, Prüfraster und Leitfäden aus laufenden Projekten, zum Herunterladen und Anpassen.
+  </Karte>
+</div>
+
+## Für wen ist dieses Wiki gemacht?
+
+Dieses Wiki richtet sich an:
+
+- **Mitarbeiterinnen und Mitarbeiter im öffentlichen Dienst**, die Verwaltungsabläufe modernisieren möchten
+- **Wissensarbeiterinnen und Wissensarbeiter**, die ihr persönliches und organisationales Wissen besser strukturieren wollen
+- **Führungskräfte und Projektverantwortliche**, die Veränderungsprojekte erfolgreich umsetzen
+- **Alle, die ein Second Brain aufbauen** und ihre Produktivität nachhaltig steigern möchten
+
+## Warum dieses Wiki?
+
+Informationen gibt es im Internet zuhauf. Was fehlt, ist **strukturiertes, kontextbezogenes und praxiserprobtes Wissen** – aufbereitet für die spezifischen Herausforderungen der deutschsprachigen Verwaltungslandschaft und des modernen Wissensarbeiters. Genau das liefert dieses Wiki: klar gegliedert, regelmäßig aktualisiert und mit direktem Praxisbezug.
+
+Starte jetzt und entdecke, wie Prozesse, Wissen und Technologie zusammenspielen.

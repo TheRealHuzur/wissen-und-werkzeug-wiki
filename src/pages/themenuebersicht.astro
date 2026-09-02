@@ -1,0 +1,126 @@
+---
+/**
+ * Themenuebersicht: alle Kapitel des Wikis auf einer Seite.
+ *
+ * Eigene Route statt einer Datei in src/content/docs, weil
+ * cleanExportDocsDir() dort bei jedem Export alles ausser den beiden
+ * Startseitennamen loescht. Eine handgepflegte Seite haette den naechsten
+ * Exportlauf nicht ueberlebt.
+ *
+ * Der Inhalt wird nicht gepflegt, sondern erzeugt: Die Gliederung kommt aus
+ * derselben src/generated/sidebar.mjs wie die Seitenleiste, die Beschreibungen
+ * aus dem Frontmatter der jeweiligen Uebersichtsseite. Damit waechst die Seite
+ * mit dem Bestand mit, ohne dass jemand daran denken muss.
+ *
+ * <StarlightPage> setzt die Seite in denselben Rahmen wie den Rest des Wikis,
+ * mitsamt Kopfzeile, Seitenleiste und Fuss.
+ */
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getCollection } from 'astro:content';
+import { sidebar } from '../generated/sidebar.mjs';
+import Karte from '../components/Karte.astro';
+
+const basis = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+// Beschreibungen der Uebersichtsseiten, angesprochen ueber ihre Kennung.
+const seiten = await getCollection('docs');
+const beschreibungen = new Map(
+  seiten.map((eintrag) => [eintrag.id, String(eintrag.data.description ?? '')])
+);
+
+const kennungAus = (link: string) => link.replace(/^\/|\/$/g, '');
+
+const zaehleSeiten = (eintraege: any[]): number =>
+  (eintraege ?? []).reduce(
+    (summe, eintrag) => summe + (eintrag.link ? 1 : zaehleSeiten(eintrag.items)),
+    0
+  );
+
+/**
+ * Je Bereich der obersten Ebene die Kapitel darunter. Ein Kapitel ist entweder
+ * eine Gruppe -- dann verweist die Karte auf deren "Uebersicht" -- oder ein
+ * einzelner Verweis. Die "Uebersicht" des Bereichs selbst wird uebersprungen:
+ * Sie ist kein Kapitel, sondern die Seite hinter dem Bereichsnamen.
+ */
+const bereiche = sidebar.map((bereich: any) => ({
+  label: bereich.label,
+  icon: bereich.label === 'Wissensmanagement' ? 'book' : 'layers',
+  kapitel: (bereich.items ?? [])
+    .filter((eintrag: any) => eintrag.label !== 'Übersicht')
+    .map((eintrag: any) => {
+      const uebersicht = eintrag.link
+        ? eintrag
+        : (eintrag.items ?? []).find((i: any) => i.label === 'Übersicht');
+      if (!uebersicht?.link) return null;
+      const anzahl = eintrag.link ? 1 : zaehleSeiten(eintrag.items);
+      return {
+        label: eintrag.label,
+        href: `${basis}${uebersicht.link}`,
+        text: beschreibungen.get(kennungAus(uebersicht.link)) ?? '',
+        meta: anzahl > 1 ? `${anzahl} Seiten →` : 'Zur Seite →',
+      };
+    })
+    .filter(Boolean),
+}));
+---
+
+<StarlightPage
+  frontmatter={{
+    title: 'Alle Kapitel und Werkzeuge',
+    description:
+      'Alle Kapitel des Wissen & Werkzeug Wiki auf einen Blick: Prozessmanagement, Wissensmanagement und die Werkzeuge dazu.',
+    tableOfContents: false,
+  }}
+>
+  <p class="w-eyebrow uebersicht-eyebrow">Themenübersicht</p>
+  <p class="uebersicht-lead">
+    Der Bestand wächst laufend. Kapitel bündeln Methodenwissen, die Seiten darunter führen es aus.
+  </p>
+
+  {
+    bereiche.map((bereich) => (
+      <section class="uebersicht-bereich">
+        <h2>{bereich.label}</h2>
+        <div class="karten-raster karten-raster--2">
+          {bereich.kapitel.map((kapitel: any) => (
+            <Karte
+              icon={bereich.icon}
+              iconGroesse={26}
+              anordnung="neben"
+              titel={kapitel.label}
+              href={kapitel.href}
+              meta={kapitel.meta}
+            >
+              {kapitel.text}
+            </Karte>
+          ))}
+        </div>
+      </section>
+    ))
+  }
+</StarlightPage>
+
+<style>
+  /* Das Eyebrow steht ueber der H1, die StarlightPage selbst rendert. Es
+     nachtraeglich davor zu ziehen ginge nur ueber einen weiteren Override;
+     hier steht es darunter und traegt denselben Zweck. */
+  .uebersicht-eyebrow {
+    margin: 0 0 14px;
+  }
+
+  .uebersicht-lead {
+    margin: 0 0 48px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 64ch;
+    text-wrap: pretty;
+  }
+
+  .uebersicht-bereich + .uebersicht-bereich {
+    margin-top: 56px;
+  }
+
+  .uebersicht-bereich h2 {
+    margin: 0;
+  }
+</style>
