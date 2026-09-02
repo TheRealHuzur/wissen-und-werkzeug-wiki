@@ -24,21 +24,10 @@ const isArticle =
   !/(^|\/)index\.mdx?$/.test(filePath) &&
   routeId !== '404';
 
-const created = typeof data.created === 'string' ? data.created.trim() : '';
-const updated = typeof data.updated === 'string' ? data.updated.trim() : '';
-
-// Sichtbares Datum genau dann, wenn updated gesetzt und echt groesser als
-// created ist. Bewusst schaerfer als die Bedingung fuer dateModified in den
-// strukturierten Daten: Ein pauschal nachgetragenes updated wird so nicht
-// sichtbar. Standards-Wiki Abschnitt 4, Entscheidung vom 28.08.2026.
-// Beide Werte liegen als JJJJ-MM-TT vor, der Zeichenkettenvergleich ordnet
-// in diesem Format korrekt.
-const showUpdated = Boolean(created && updated && updated > created);
-const updatedLabel = showUpdated
-  ? new Intl.DateTimeFormat('de-DE', { day: 'numeric', month: 'long', year: 'numeric' }).format(
-      new Date(`${updated}T12:00:00Z`)
-    )
-  : '';
+// Das Datum der letzten Bearbeitung stand bis Paket 6 hier unten. Es steht
+// jetzt als Meta-Zeile unter dem Lead am Kopf des Artikels, wie in der
+// Designvorlage; die Bedingung dafuer ist unveraendert nach
+// ArticleLead.astro gewandert.
 
 // Angebotsverweis: Die H2 aus offer_heading bleibt unverlinkte Ueberleitung,
 // der Link steht als Inline-Markdown mitten in offer_text. Muster in
@@ -71,30 +60,31 @@ const offer =
   isArticle && (
     <div class="artikelfuss">
       <div class="autorenblock">
-        {/* Die Quelldatei ist 1536x1024 und damit nicht quadratisch, anders als
-            Standards-Wiki Abschnitt 8 es vorsieht. Bis sie ersetzt ist, schneidet
-            Astro mittig auf ein Quadrat zu: Das Gesicht sitzt dort vollstaendig
-            im Bild. 176 Pixel Kantenlaenge fuer 88 Pixel Darstellung. */}
+        {/* Die Quelldatei ist 1536x1024 und damit querformatig, das Ziel ist
+            hochformatig. Astro schneidet mittig zu: Der Kopf sitzt in der Mitte
+            der Aufnahme und bleibt dabei vollstaendig im Bild. 208x260 Pixel
+            fuer 104x130 Darstellung, also doppelte Aufloesung. */}
         <Image
           class="autorenfoto"
           src={portrait}
           alt="Patrick Roßkothen"
-          width={176}
-          height={176}
+          width={208}
+          height={260}
           fit="cover"
           position="center"
         />
         <div class="autorentext">
+          <p class="w-label">Autor</p>
           <p>
             Geschrieben von Patrick Roßkothen, Organisationsberater und Dozent. Mehr zu mir und
             meiner Arbeit: <a href="/ueber-mich/">Über mich</a>
           </p>
-          {showUpdated && <p class="autorendatum">Zuletzt aktualisiert am {updatedLabel}</p>}
         </div>
       </div>
 
       {offer && (
         <section class="angebotsverweis">
+          <p class="w-label seminarlabel">Passendes Seminar</p>
           <h2>{offer.heading}</h2>
           <p>
             {offer.before}
@@ -108,24 +98,26 @@ const offer =
 }
 
 <style>
-  /* Grosszuegige Abstaende sind der Gestaltungsstandard der Hauptwebsite.
-     Farben ausschliesslich ueber bestehende Variablen, keine neuen Farbwerte. */
+  /* Masse aus der Designvorlage: Trennlinie, darunter 36 Pixel Abstand. */
   .artikelfuss {
-    margin-top: 4rem;
-    padding-top: 2.5rem;
-    border-top: 1px solid var(--sl-color-gray-5);
+    margin-top: 2.5rem;
+    padding-top: 36px;
+    border-top: 1px solid var(--w-border);
   }
 
+  /* Oben ausgerichtet, nicht mittig: Das Bild ist hoeher als der Textblock
+     daneben, und die Beschriftung "Autor" soll mit seiner Oberkante beginnen. */
   .autorenblock {
     display: flex;
-    align-items: center;
-    gap: 1.5rem;
+    align-items: flex-start;
+    gap: 22px;
     flex-wrap: wrap;
   }
 
   .autorenfoto {
-    width: 88px;
-    height: 88px;
+    width: 104px;
+    height: 130px;
+    border-radius: var(--w-radius-sm);
     flex: none;
     object-fit: cover;
   }
@@ -134,40 +126,62 @@ const offer =
     flex: 1 1 18rem;
   }
 
-  .autorentext p {
+  /* Die Beschriftung ausgenommen: Sie traegt die globale Klasse .w-label, und
+     Astro haengt an gescopte Regeln ein eigenes Attribut. Ohne das :not()
+     gewaenne diese Regel und die Beschriftung saehe aus wie Fliesstext. */
+  .autorentext p:not(.w-label) {
     margin: 0;
-    color: var(--sl-color-text);
+    font-size: 1.0625rem; /* 17px */
+    line-height: 1.6;
+    max-width: 52ch;
+    text-wrap: pretty;
+    color: var(--w-text);
+  }
+
+  .autorentext .w-label {
+    margin: 0 0 0.5rem;
   }
 
   .autorentext a {
-    color: var(--brand-accent-turquoise);
+    color: var(--w-accent);
   }
 
-  /* Unauffaellige eigene Zeile unter dem Satz. Keine eigene Farbe, nur
-     zurueckgenommen. */
-  .autorendatum {
-    margin-top: 0.5rem;
-    font-size: var(--sl-text-sm);
-    opacity: 0.75;
-  }
-
-  /* Textblock, kein Kasten, keine Hintergrundflaeche, keine Schaltflaeche.
-     Standards-Wiki Abschnitt 8: Am Artikelende stehen bereits zwei Bloecke,
-     ein dritter in Bannerform wuerde als Werbung gelesen. */
+  /* Seit der Designueberarbeitung eine Karte mit Akzent-Oberkante. Der
+     Standard aus Abschnitt 8 des Standards-Wiki -- Textblock statt Kasten,
+     damit der Verweis nicht als Werbebanner gelesen wird -- ist damit
+     abgeloest; die neue Form ist Teil der Vorlage. */
   .angebotsverweis {
-    margin-top: 3.5rem;
+    margin-top: 44px;
+    padding: 26px 28px 28px;
+    border: 1px solid var(--w-border);
+    border-top: 3px solid var(--w-accent);
+    border-radius: var(--w-radius);
+    background: var(--w-card);
+  }
+
+  /* Dieselbe Beschriftung wie beim Autor, nur in Akzentfarbe statt gedaempft.
+     So zeigt es die Vorlage. */
+  .angebotsverweis .seminarlabel {
+    margin: 0 0 10px;
+    color: var(--w-accent);
   }
 
   .angebotsverweis h2 {
-    margin-bottom: 0.75rem;
+    margin: 0 0 10px;
+    font-size: 1.5rem; /* 24px */
+    line-height: 1.25;
   }
 
-  .angebotsverweis p {
-    margin: 0 0 0.75rem;
-    color: var(--sl-color-text);
+  .angebotsverweis p:not(.w-label) {
+    margin: 0;
+    font-size: 1.03125rem; /* 16.5px */
+    line-height: 1.65;
+    max-width: 60ch;
+    text-wrap: pretty;
+    color: var(--w-text);
   }
 
   .angebotsverweis a {
-    color: var(--brand-accent-turquoise);
+    color: var(--w-accent);
   }
 </style>

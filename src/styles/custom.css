@@ -2,9 +2,10 @@
    ============================================================================
 
    Umsetzung der Designvorlage "Wissen & Werkzeug Wiki" (Astro Starlight).
-   Diese Datei traegt Paket 5: Schrift, Farbtokens und Typografie-Skala.
-   Layoutmasse (Kopfzeilenhoehe, Sidebar-Breite, Inhaltsbreite) folgen in
-   Paket 6, die Artikelbausteine in Paket 7.
+   Aufbau der Datei in der Reihenfolge der Pakete: Schrift, Farbtokens und
+   Typografie-Skala (Paket 5), Layoutmasse, Kopfzeile, Seitenleiste (Paket 6),
+   Artikelbausteine (Paket 7). Der Artikelfuss folgt in Paket 8, die
+   Startseite in Paket 9.
 
    Vorerst nur der helle Modus. Die dunklen Werte der Vorlage sind bewusst
    nicht gesetzt; der Umschalter ist entfernt, siehe ThemeProvider.astro.
@@ -70,12 +71,6 @@
   --w-radius: 8px;     /* Karten, Knoepfe, Tabellen, Callouts */
   --w-radius-lg: 10px; /* Autorkasten */
 
-  /* Bisherige Markennamen. ArticleFooter.astro und Breadcrumbs.astro greifen
-     in ihren eigenen Stilbloecken darauf zu; die Namen bleiben als Verweis
-     bestehen, bis diese Komponenten in Paket 7 und 8 umgebaut sind. */
-  --brand-primary-blue: var(--w-head);
-  --brand-accent-turquoise: var(--w-accent);
-  --brand-body-text: var(--w-text);
 }
 
 /* --- Zuordnung auf Starlight ------------------------------------------------
@@ -348,4 +343,173 @@ a {
 
 .bereichskarte-text {
   font-size: 0.96875rem; /* 15.5px */
+}
+
+/* --- Artikelseite: Inline-Code ---------------------------------------------
+
+   Flaeche und Schriftart kommen aus den Tokens. Rand und Radius fehlen dort,
+   weil sie keine Starlight-Variable haben.
+   ------------------------------------------------------------------------- */
+
+.sl-markdown-content code:not(pre code) {
+  border: 1px solid var(--w-border);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 0.875rem; /* 14px */
+}
+
+/* --- Artikelseite: Callouts -------------------------------------------------
+
+   Die Vorlage kennt zwei Formen. Beide entstehen aus Starlights Aside-Syntax,
+   die auch in .md funktioniert und deshalb ohne Umstellung auf .mdx auskommt:
+
+     :::note[Hinweis]   -- Akzentflaeche mit Akzentbalken und Symbol
+     :::tip[Werkzeug]   -- ruhige Flaeche mit grauem Balken, ohne Symbol
+
+   tip traegt hier also den Werkzeugkasten, nicht einen Tipp. Das ist eine
+   Umwidmung: Die Vorlage kennt genau diese zwei Formen, und eine dritte
+   Variante liesse sich ohne eigenes Remark-Plugin nicht anlegen.
+
+   Abweichung von der Vorlage: Das Symbol bleibt Starlights eigenes. Die
+   Vorlage zeigt dort messageSquare aus ihrem Set; ein Austausch ginge nur
+   ueber einen Eingriff in die Markdown-Verarbeitung.
+
+   Im Bestand nutzt bisher keine Notiz Callouts. Die Regeln stehen hier
+   bereit, damit sie es ab sofort koennen.
+   ------------------------------------------------------------------------- */
+
+.sl-markdown-content .starlight-aside {
+  padding: 20px 22px;
+  border-radius: var(--w-radius);
+  border-inline-start-width: 3px;
+  color: var(--w-text);
+}
+
+.sl-markdown-content .starlight-aside__title {
+  font-family: var(--sl-font);
+  font-weight: 700;
+  font-size: 0.9375rem; /* 15px */
+  text-transform: none;
+  color: var(--w-head);
+}
+
+.sl-markdown-content .starlight-aside__content {
+  font-size: 0.96875rem; /* 15.5px */
+}
+
+/* Hinweis */
+.sl-markdown-content .starlight-aside--note {
+  background-color: var(--w-accent-soft);
+  --sl-color-asides-border: var(--w-accent);
+  --sl-color-asides-text-accent: var(--w-accent);
+}
+
+.sl-markdown-content .starlight-aside--note .starlight-aside__icon {
+  width: 22px;
+  height: 22px;
+  color: var(--w-accent);
+}
+
+/* Werkzeug: ruhige Flaeche, grauer Balken, kein Symbol. */
+.sl-markdown-content .starlight-aside--tip {
+  background-color: var(--w-side);
+  --sl-color-asides-border: var(--w-muted);
+  --sl-color-asides-text-accent: var(--w-head);
+}
+
+.sl-markdown-content .starlight-aside--tip .starlight-aside__icon {
+  display: none;
+}
+
+/* --- Artikelseite: Tabellen -------------------------------------------------
+
+   Rahmen mit Radius, Kopfzeile als Mono-Versalie auf ruhiger Flaeche, Zeilen
+   durch Haarlinien getrennt, erste Spalte fett.
+
+   Abweichung von der Vorlage: Auf schmalen Bildschirmen bleiben die Zeilen
+   nebeneinander und die Tabelle laesst sich seitlich schieben, so wie
+   Starlight es vorsieht. Die Vorlage stapelt sie stattdessen einspaltig; das
+   ginge bei einer echten Markdown-Tabelle nur mit wiederholten Spaltentiteln
+   je Zeile.
+   ------------------------------------------------------------------------- */
+
+.sl-markdown-content table {
+  border: 1px solid var(--w-border);
+  border-radius: var(--w-radius);
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  font-size: 0.96875rem; /* 15.5px */
+}
+
+.sl-markdown-content table th {
+  padding: 13px 20px;
+  background: var(--w-side);
+  border-bottom: 1px solid var(--w-border);
+  font-family: var(--sl-font-mono);
+  font-weight: 600;
+  font-size: 0.75rem; /* 12px */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--w-head);
+  text-align: start;
+}
+
+.sl-markdown-content table td {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--w-border);
+}
+
+/* Die letzte Zeile schliesst mit dem Rahmen ab, eine eigene Linie davor waere
+   eine doppelte. */
+.sl-markdown-content table tr:last-child td {
+  border-bottom: 0;
+}
+
+.sl-markdown-content table td:first-child {
+  font-weight: 700;
+  color: var(--w-head);
+}
+
+/* --- Artikelseite: Verzeichnis rechts ---------------------------------------
+
+   Mono-Versalie als Beschriftung, Eintraege an einer linken Haarlinie, der
+   aktive Eintrag in Akzentfarbe mit eigenem Balken.
+   ------------------------------------------------------------------------- */
+
+.right-sidebar #starlight__on-this-page {
+  font-family: var(--sl-font-mono);
+  font-weight: 600;
+  font-size: 0.71875rem; /* 11.5px */
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--w-head);
+  margin-bottom: 0.875rem;
+}
+
+.right-sidebar nav > ul {
+  border-inline-start: 1px solid var(--w-border);
+}
+
+.right-sidebar nav a {
+  border-radius: 0;
+  font-size: 0.875rem; /* 14px */
+  color: var(--w-text);
+}
+
+.right-sidebar nav a:hover {
+  color: var(--w-accent);
+}
+
+/* Starlight setzt aria-current="true" beim Mitlaufen der Ueberschriften. */
+.right-sidebar nav a[aria-current='true'] {
+  color: var(--w-accent);
+  box-shadow: inset 1px 0 0 var(--w-accent);
+}
+
+/* Starlight legt den Behaelter fuer Vor- und Zurueck-Verweise auch dann an,
+   wenn pagination: false keine Verweise hineingibt. Leer bleibt er unsichtbar,
+   erzeugt im Raster des Fusses aber einen zusaetzlichen Abstand. */
+.pagination-links:empty {
+  display: none;
 }
