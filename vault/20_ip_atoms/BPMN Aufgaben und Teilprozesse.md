@@ -3,85 +3,73 @@ id: bpmn_aufgaben_und_teilprozesse
 aliases:
   - bpmn_aufgaben_und_teilprozesse
   - BPMN Aufgaben und Teilprozesse
+  - BPMN Aufgaben
 ebene_1: prozessmanagement
 ebene_2: prozesse-verstehen
 ebene_3: bpmn
 type: Article
 status: ki_ready
 created: 2026-02-16
-updated:
-description: Dieses Modul beschreibt die Darstellung des "Was" in einem Prozessmodell durch Aktivitäten. Es definiert Tasks als atomare Einheiten und erläutert die Kapselung von Komplexität durch Teilprozesse sowie die Wiederverwendung mittels Aufrufaktivitäten.
+updated: 2026-09-13
+description: Die Aufgabe ist das Grundelement jedes BPMN-Modells. Benennung nach Objekt und Verb, genau ein eingehender und ein ausgehender Sequenzfluss.
 image:
-offer_heading: "Wo ein Teilprozess anfängt, ist eine Entscheidung"
-offer_text: "Ob etwas eine Aufgabe bleibt oder ein eigener Teilprozess wird, hängt davon ab, für wen ein Modell gedacht ist. Der [Grundkurs BPMN](/grundkurs-bpmn/) zeigt, woran sich dieser Schnitt festmachen lässt."
+offer_heading: "Regeln kennen ist das eine, schneiden das andere"
+offer_text: "Wo eine Aufgabe endet und die nächste beginnt, entscheidet sich am Zweck des Modells. Der [Grundkurs BPMN](/grundkurs-bpmn/) übt diesen Schnitt an Prozessen aus der Verwaltung."
 ---
 
-%%
-RAG-CONTEXT-ANCHOR:
-Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
-Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet.
-Klassifizierung: framework mit der Zielsetzung verstehen.
-%%
+# BPMN: Aufgaben
 
-# BPMN: Aufgaben und Teilprozesse
+**Zusammenfassung**
 
-## Zusammenfassung
+Eine Aufgabe beschreibt eine Tätigkeit, die im Modell nicht weiter detailliert wird. Sie wird als Rechteck mit abgerundeten Ecken dargestellt, nach dem Schema Objekt und Verb benannt und hat nach der Konvention von Wissen & Werkzeug genau einen eingehenden und einen ausgehenden Sequenzfluss.
 
-Dieses Modul beschreibt die Darstellung des "Was" in einem Prozessmodell durch Aktivitäten. Es definiert Tasks als atomare Einheiten und erläutert die Kapselung von Komplexität durch Teilprozesse sowie die Wiederverwendung mittels Aufrufaktivitäten.
+## Wofür eine Aufgabe steht
 
-**Dieses Modul beantwortet folgende Fragen:**
+Aufgaben bilden den Kern jedes Prozessmodells. Sie geben an, welche Tätigkeiten ausgeführt werden. Eine Aufgabe beschreibt dabei eine einzelne Tätigkeit, die im Modell nicht weiter detailliert wird.
 
-- Wie werden Tätigkeiten in BPMN grafisch dargestellt?
-- Was ist der Unterschied zwischen einem Task und einem Teilprozess?
-- Wie genau bewegt sich eine Marke (Token) durch hierarchische Modelle?
+![[bpmn-aufgabe.png]]
 
-## Aktivitäten: Der Kern des Prozesses
+## Objekt und Verb
 
-Aktivitäten bilden den Kern eines jeden Prozessmodells. Sie geben an, welche Tätigkeiten ausgeführt werden und werden grundsätzlich als Rechtecke mit abgerundeten Ecken dargestellt. Wir unterscheiden zwischen atomaren **Tasks** (Aufgaben) und **Teilprozessen**.
+Die Bezeichnung folgt immer dem Schema Objekt und Verb: „Antrag prüfen", „Bescheid erstellen", „Akte anlegen".
 
-## Die Aufgabe (Task)
+Der häufigste Fehler in der Praxis ist die Substantivierung. „Antragsprüfung" lässt offen, was tatsächlich getan wird, und verdeckt, dass hinter dem Wort mehrere Tätigkeiten stecken können. Die Form Objekt und Verb zwingt dazu, beides zu benennen, und macht damit auch sichtbar, wenn eine Aufgabe in Wahrheit mehrere ist.
 
-Ein Task beschreibt eine atomare Tätigkeit, die im Prozess nicht weiter detailliert wird.
+## Genau ein Eingang, ein Ausgang
 
-### Gestaltungsregeln für Tasks
+Eine Aufgabe hat genau einen eingehenden und genau einen ausgehenden [[BPMN Der Sequenzfluss|Sequenzfluss]]. Das folgt aus der Regel, dass alle Verzweigungen und Zusammenführungen über [[BPMN Grundlagen und Regeln für BPMN Gateways|Gateways]] modelliert werden. Mehr als einen Ein- oder Ausgang haben deshalb nur Gateways.
 
-- **Sequenzfluss:** Tasks haben immer genau einen eingehenden und einen ausgehenden Sequenzfluss. Verzweigungen oder Zusammenführungen werden ausschließlich über Gateways gelöst.
-- **Namenskonvention (Objekt-Verrichtungsprinzip):** Die Bezeichnung folgt der Formel **Substantiv + Verb** (z. B. "Antrag prüfen"). Das "-ung Verbot" untersagt Substantivierungen wie "Antragsprüfung".
+Der zweite häufige Fehler betrifft genau diese Stelle: Mehrere Pfade laufen direkt in eine Aufgabe hinein, ohne dass ein Gateway davor steht. Damit bleibt offen, ob die Aufgabe beginnt, sobald der erste Pfad ankommt, oder erst, wenn alle angekommen sind. Ein Gateway macht diese Entscheidung sichtbar: Das exklusive führt zusammen, sobald ein Pfad ankommt, das parallele wartet auf alle.
 
-## Hierarchisierung durch Teilprozesse
+## Wie detailliert
 
-Teilprozesse (Sub-Processes) fassen mehrere Aufgaben zusammen. Sie helfen, Komplexität zu kapseln ("verstecken") und Modelle übersichtlich zu halten (z. B. Details einer "Anspruchsprüfung"). Ein Plus-Zeichen im unteren Bereich markiert, dass sich hinter der Aktivität weitere Details verbergen.
+Der Detailgrad leitet sich aus dem Modellierungsziel ab. Für einen Überblick reicht die Aufgabe „Formelle Voraussetzungen prüfen". Soll das Modell Wissen für die Einarbeitung tragen, muss sichtbar werden, welche Prüfungen im Einzelnen stattfinden und welche Folgen sie haben.
 
-### Der Ablauf im Teilprozess (Das Marken-Modell)
+## Häufige Fragen
 
-Um die Wirkweise der Hierarchisierung zu verstehen, betrachten wir den Weg der Marke (Token) im Detail:
+### Wie benenne ich eine Aufgabe in BPMN?
 
-1. **Eintritt:** Trifft die Marke auf einen Teilprozess, "fällt" sie von der Haupt-Ebene in die darunterliegende Ebene des Teilprozesses.
-2. **Generierung:** Sie wird am **unbestimmten Startereignis** des Teilprozesses neu generiert.
-3. **Durchlauf:** Sie durchläuft den detaillierten Detail-Prozess (die Kapsel) gemäß der dortigen Logik.
-4. **Konsumtion:** Am **Endereignis** des Teilprozesses wird die Marke konsumiert und an den darüberliegenden Prozess (die Haupt-Ebene) zurückgegeben.
-5. **Fortsetzung:** Der Prozess wird auf der Haupt-Ebene über den ausgehenden Sequenzfluss des Teilprozesses fortgesetzt.
+Die Bezeichnung folgt immer dem Schema Objekt und Verb, zum Beispiel „Antrag prüfen" oder „Bescheid erstellen". Substantivierungen wie „Antragsprüfung" sind nicht zulässig. Die Form zwingt dazu, Gegenstand und Tätigkeit zu benennen, und macht für Lesende eindeutig, was an dieser Stelle im Prozess geschieht.
 
-### Verschachtelungstiefe
+### Darf eine Aufgabe mehrere eingehende Sequenzflüsse haben?
 
-Teilprozesse können selbst wieder Teilprozesse enthalten. Obwohl die BPMN hier keine technischen Grenzen setzt, sollte im Sinne der Übersichtlichkeit auf zu tiefe Verschachtelungen verzichtet werden.
+Nach der Konvention von Wissen & Werkzeug nicht. Eine Aufgabe hat genau einen eingehenden und einen ausgehenden Sequenzfluss. Laufen mehrere Pfade zusammen, gehört ein Gateway davor. Die BPMN selbst lässt mehrere eingehende Flüsse zwar zu, die Art der Zusammenführung bleibt dann aber unausgesprochen und das Modell mehrdeutig.
 
-### Darstellungsformen
+### Wie detailliert modelliere ich Aufgaben?
 
-- **Inline-Darstellung:** Der Teilprozess wird als aufgeklappte "Kapsel" innerhalb des Hauptmodells dargestellt.
-- **Separates Modell:** Der Teilprozess liegt als eigenes Dokument vor und wird im Hauptmodell verlinkt.
+Der Detailgrad leitet sich aus dem Modellierungsziel ab. Für einen Überblick genügt eine grobe Aufgabe. Soll das Modell als Wissensspeicher für die Einarbeitung dienen, werden die einzelnen Schritte und ihre Folgen sichtbar gemacht. Ein Modell hat den richtigen Detailgrad, wenn es die Frage beantwortet, für die es erstellt wurde.
 
-## Die Aufrufaktivität (Call Activity)
+### Worin unterscheidet sich eine Aufgabe von einem Teilprozess?
 
-Eine Aufrufaktivität ist ein global wiederverwendbarer Prozess (z. B. "Rechnung bezahlen").
+Eine Aufgabe beschreibt eine Tätigkeit auf der Aktivitätenebene und wird dort nicht weiter detailliert. Ein Teilprozess fasst einen Hauptbestandteil des Prozesses zusammen und liegt eine Ebene darüber. Erkennbar ist er am Pluszeichen im Symbol, und dahinter liegt ein eigenes Modell mit eigenem Startereignis und mindestens einem Endereignis.
 
-- **Funktion:** Sie verweist nicht auf ein eingebettetes Detail, sondern auf einen zentral abgelegten Standardprozess, der von vielen verschiedenen Prozessen genutzt wird.
-- **Vorteil:** Zentrale Wartbarkeit – Änderungen am Standardprozess wirken sich sofort auf alle aufrufenden Prozesse aus.
+## Verwandte Artikel
 
----
-
-## 🔗 Verwandte Module
-
-- **[[BPMN Der Sequenzfluss]]***Kontext:* Erläutert die Verbindung von Aktivitäten und die zwingende Nutzung von Gateways.
-- **[[BPMN Pools und Schwimmbahnen]]***Kontext:* Ergänzt das "Was" (Aktivität) um das "Wer" (Verantwortlichkeit).
-- **[[Grundlagen und Regeln für BPMN Gateways]]***Kontext:* Vertieft die Regel, warum Tasks nur einen Ein- und Ausgang haben dürfen.
+- **[[BPMN Der Sequenzfluss]]**  
+  Beschreibt, welche Elemente verbunden werden dürfen und warum ein Sequenzfluss keine Poolgrenze überschreitet.
+- **[[BPMN Grundlagen und Regeln für BPMN Gateways]]**  
+  Zeigt, wie Verzweigungen und Zusammenführungen modelliert werden, die an einer Aufgabe nicht erlaubt sind.
+- **[[BPMN Pools und Schwimmbahnen]]**  
+  Ergänzt die Aufgabe um die Rolle, die sie ausführt, und um die Grenzen des Prozesses.
+- **[[Die 3 Ebenen der Prozessmodellierung]]**  
+  Ordnet die Aktivitätenebene in das Vorgehen vom groben Überblick bis zum detaillierten Modell ein.
