@@ -3,79 +3,112 @@ id: bpmn_ereignisse_grundlagen_konzept
 aliases:
   - bpmn_ereignisse_grundlagen_konzept
   - BPMN Ereignisse (Grundlagen & Konzept)
+  - BPMN Ereignisse
 ebene_1: prozessmanagement
 ebene_2: prozesse-verstehen
 ebene_3: bpmn
 type: Article
 status: ki_ready
 created: 2026-02-16
-updated:
-description: Ereignisse sind zentrale Elemente der BPMN, die den Prozessfluss steuern, indem sie den Start, Zwischenschritte oder das Ende eines Prozesses definieren. Sie repräsentieren Zustände („etwas ist passiert“), verbrauchen keine Zeit und werden visuell durch Kreise dargestellt.
+updated: 2026-09-16
+description: Ereignisse steuern den Fluss eines Prozesses in BPMN. Die drei Arten, die zehn Ereignisse des Basis-Level und die Regeln für ihre Beschriftung.
 image:
 offer_heading: "Ereignisse sind das Fundament, nicht das Beiwerk"
 offer_text: "Start, Zwischenereignis und Ende folgen einem gemeinsamen Konzept, das sich leichter versteht als die einzelnen Symbole. Der [Grundkurs BPMN](/grundkurs-bpmn/) baut dieses Verständnis systematisch auf."
 ---
 
-%%
-RAG-CONTEXT-ANCHOR:
-Dieses Modul dokumentiert Fachwissen im Bereich Prozessmanagement.
-Es ist im Thema Prozessmanagement verortet und dem Subtopic Bpmn zugeordnet.
-Klassifizierung: framework mit der Zielsetzung verstehen.
-%%
+# BPMN: Ereignisse
 
-# BPMN: Ereignisse (Grundlagen & Konzept)
+**Zusammenfassung**
 
-## Zusammenfassung
+Ereignisse steuern den Fluss eines Prozesses. Sie legen fest, wodurch er ausgelöst wird, worauf er wartet und womit er endet. Ein Ereignis beschreibt dabei immer einen Zustand, der eingetreten ist, nie eine Tätigkeit. Dargestellt wird es als Kreis, und die Art des Randes zeigt, um welche Art von Ereignis es sich handelt.
 
-> Ereignisse sind zentrale Elemente der BPMN, die den Prozessfluss steuern, indem sie den Start, Zwischenschritte oder das Ende eines Prozesses definieren. Sie repräsentieren Zustände („etwas ist passiert“), verbrauchen keine Zeit und werden visuell durch Kreise dargestellt.
-> 
+## Was ein Ereignis ist
 
-**Dieses Modul beantwortet folgende Fragen:**
+Ein Ereignis ist etwas, das während eines Prozesses passiert. Es hat eine Ursache oder eine Wirkung und beeinflusst, wie es weitergeht. Der Unterschied zur [[BPMN Aufgaben und Teilprozesse|Aufgabe]] ist der entscheidende Punkt: Eine Aufgabe beschreibt Arbeit, die jemand erledigt, ein Ereignis beschreibt einen Zustand, der eintritt.
 
-- Was ist ein Ereignis in der BPMN?
-- Wie unterscheiden sich Start-, Zwischen- und Endereignisse optisch und funktional?
-- Was passiert mit einer "Marke" (Token), wenn sie auf ein Ereignis trifft?
+Daraus folgt die Grundregel: Ereignisse enthalten nie Bearbeitungszeit. Ein Nachrichtenereignis hält allein fest, dass eine Information eingegangen ist. Alles, was mit dieser Information anschließend geschieht, modellierst du als Aufgabe.
 
-## Definition und Bedeutung
+## Die drei Arten von Ereignissen
 
-Ein Ereignis (Event) ist etwas, das während des Ablaufs eines Prozesses "passiert". Diese Ereignisse beeinflussen den Fluss des Modells und haben üblicherweise eine Ursache (Auslöser/Trigger) oder eine Auswirkung (Ergebnis/Result).
+Um welche Art von Ereignis es sich handelt, erkennst du an seinem Rand.
 
-Im Gegensatz zu Aktivitäten, die eine aktive Handlung darstellen, beschreiben Ereignisse einen Zustand.
+![[bpmn-ereignisse-rand.png]]
 
-- **Grundregel:** Ereignisse beinhalten nie Bearbeitungszeit.
-- **Funktion:** Sie setzen den Prozess in Gang, verzögern ihn (Warten auf ein Ereignis) oder beenden ihn.
-
-## Die drei Ereignistypen
-
-Ereignisse lassen sich anhand ihrer Position im Prozessfluss unterscheiden. Optisch werden sie primär durch die Dicke und Art ihres Randes differenziert.
-
-| Typ | Beschreibung | Visuelles Merkmal |
+| Art | Rand | Funktion |
 | --- | --- | --- |
-| **Startereignis** | Löst den Prozess aus. | Dünner Rand |
-| **Zwischenereignis** | Tritt während des Prozesses auf (z. B. Warten). | Doppelter Rand |
-| **Endereignis** | Schließt den Prozess oder einen Pfad ab. | Dicker Rand |
+| Startereignis | dünn | löst den Prozess aus |
+| Zwischenereignis | doppelt | hält den Prozess an, bis etwas eintritt |
+| Endereignis | dick | schließt den Prozess oder einen Pfad ab |
 
-## Das Token-Konzept (Die Marke)
+Manche Werkzeuge färben Startereignisse grün und Endereignisse rot. Das ist Darstellung, keine Aussage: Maßgeblich ist allein der Rand.
 
-Um die Dynamik von Ereignissen zu verstehen, hilft das Konzept der "Marke" (Token), die den Prozess durchläuft:
+## Die zehn Ereignisse des Basis-Level
 
-1. **Start:** Tritt das Startereignis ein, wird eine Marke erzeugt.
-2. **Zwischen:** Trifft die Marke auf ein empfangendes Zwischenereignis, wartet sie dort, bis das Ereignis eintritt. Ereignisse prüfen keinen Zustand rückwirkend – sie warten auf das Eintreten in der Zukunft.
-3. **Ende:** Trifft eine Marke auf ein Endereignis, wird sie "konsumiert" und aus dem System genommen.
+Zusätzlich zum Rand kann ein Symbol im Kreis angeben, worum es sich handelt: ein Briefumschlag für eine Nachricht, eine Uhr für die Zeit, ein Blatt für eine Bedingung. Aus allen Kombinationen kennt die BPMN über 50 Ereignissymbole. Für die fachliche Modellierung brauchst du davon zehn. Sie bilden das Basis-Level der Modellierungskonvention von Wissen & Werkzeug.
 
-## Spezifikation durch Symbole
+![[bpmn-ereignisse-basis-level.png]]
 
-Zusätzlich zum Rand können Ereignisse durch Symbole im Inneren genauer bestimmt werden (z. B. Briefumschlag für Nachrichten, Uhr für Zeit).
+| Ereignistyp | Startereignis | Zwischenereignis | Endereignis |
+| --- | --- | --- | --- |
+| Unbestimmt | ja | ja | ja |
+| Nachricht | ja | ja | ja |
+| Zeit | ja | ja | nein |
+| Bedingt | ja | ja | nein |
 
-- **Unbestimmt:** Kein Symbol.
-- **Spezifiziert:** Mit Symbol (Typisierung des Auslösers).
-- **Richtung:** Unterscheidung in sendende (ausgefülltes Symbol) und empfangende (leeres Symbol) Ereignisse.
+Zwei Dinge fallen an dieser Übersicht auf.
 
----
+Erstens sind die vier Zwischenereignisse ausschließlich empfangend, ihre Symbole sind also nicht ausgefüllt. Der Prozess wartet an dieser Stelle, er löst nichts aus. Ein Versand wird als Aufgabe modelliert oder als [[BPMN Endereignisse|Nachrichten-Endereignis]].
 
-## 🔗 Verwandte Module
+Zweitens gibt es kein zeitbasiertes Endereignis. Ein Zeitereignis kann der Prozess nie selbst herbeiführen, und am Ende steht immer ein Ergebnis, das er erzeugt hat.
 
-- **[[BPMN Startereignisse]]***Kontext:* Vertiefung des ersten Ereignistyps.
-- **[[BPMN Zwischenereignisse]]***Kontext:* Vertiefung der Ereignisse innerhalb des Flusses.
-- **[[BPMN Endereignisse]]***Kontext:* Vertiefung des Prozessabschlusses.
-- **[[BPMN Der Sequenzfluss]]***Kontext:* Verbindung der Ereignisse untereinander.
+## Was im Modell geschieht: die Marke
+
+Die Dynamik von Ereignissen lässt sich an einer Marke nachvollziehen, die den Prozess durchläuft.
+
+1. **Start:** Tritt das Startereignis ein, entsteht eine Marke.
+2. **Zwischen:** Trifft die Marke auf ein Zwischenereignis, wartet sie dort, bis das Ereignis eintritt.
+3. **Ende:** Trifft die Marke auf ein Endereignis, wird sie aufgebraucht und verlässt das Modell.
+
+## Ereignisse richtig beschriften
+
+Die Beschriftung sagt, welcher Zustand eingetreten ist oder eingetreten sein muss, damit der Prozess fortgesetzt werden kann. Sie steht deshalb in der Vollzugsform: „Antrag ist eingegangen“, „Frist ist verstrichen“, „Akte ist archiviert“.
+
+Das ist der häufigste Fehler in der Praxis. In der Beschriftung steckt dann doch eine Handlung, etwa „Antrag entgegennehmen“, und aus dem Ereignis wird eine verkappte Aufgabe. Die Probe ist einfach: Lässt sich die Beschriftung mit „ist“ oder „hat“ zu einem Satz ergänzen, beschreibt sie einen Zustand. Braucht sie ein „wird gerade“, gehört sie in eine Aufgabe.
+
+## Jeder Prozess beginnt und endet mit einem Ereignis
+
+Nach dem Wissen und Werkzeug-Prinzip startet jeder Prozess mit mindestens einem Startereignis und endet mit mindestens einem Endereignis. Kein Pfad im Modell läuft ins Leere.
+
+Mehrere Startereignisse sind zulässig, wenn ein Prozess auf verschiedene Arten ausgelöst wird. Sie werden modelliert und im weiteren Verlauf über ein Gateway zusammengeführt.
+
+Mehrere Endereignisse sind nicht nur zulässig, sondern erwünscht, sobald ein Prozess tatsächlich unterschiedliche Ergebnisse hat. Die Ablehnung wegen Unzuständigkeit und der bewilligende Bescheid sind zwei Ergebnisse und gehören als zwei Endereignisse ins Modell, nicht in ein gemeinsames „Prozess beendet“.
+
+## Häufige Fragen
+
+### Wie beschrifte ich ein Ereignis in BPMN richtig?
+
+Die Beschriftung eines Ereignisses benennt den Zustand, der eingetreten ist, zum Beispiel „Antrag ist eingegangen“ oder „Frist ist verstrichen“. Sie beschreibt nie eine Tätigkeit. Steckt in der Beschriftung eine Handlung, ist das Element in Wahrheit eine Aufgabe und gehört als Rechteck ins Modell, nicht als Kreis.
+
+### Kann ein Prozess mehrere Start- und Endereignisse haben?
+
+Ja, ein Prozess kann mehrere Start- und mehrere Endereignisse haben. Wird er auf verschiedene Arten ausgelöst, modellierst du mehrere Startereignisse und führst die Pfade über ein Gateway zusammen. Bei den Endereignissen ist Vielfalt sogar erwünscht: Jedes fachlich unterschiedliche Ergebnis bekommt sein eigenes Endereignis statt eines gemeinsamen Abschlusses.
+
+### Woran erkenne ich, ob ein Kreis ein Start-, Zwischen- oder Endereignis ist?
+
+Der Rand des Kreises entscheidet: dünn beim Startereignis, doppelt beim Zwischenereignis, dick beim Endereignis. Das Symbol im Inneren sagt dagegen nur, um welchen Typ es sich handelt, etwa Nachricht oder Zeit. Farben sind Sache des Werkzeugs und ohne fachliche Bedeutung.
+
+### Wie viele Ereignissymbole brauche ich für ein fachliches Prozessmodell?
+
+Zehn Ereignisse reichen für die fachliche Modellierung aus, obwohl die BPMN über 50 Symbole kennt. Es sind vier Startereignisse, vier Zwischenereignisse und zwei Endereignisse, jeweils in den Ausprägungen unbestimmt, Nachricht, Zeit und Bedingung. Alles darüber hinaus gehört in technisch ausführbare Modelle, nicht in ein fachliches.
+
+## Verwandte Artikel
+
+- **[[BPMN Startereignisse]]**  
+  Zeigt die vier Auslöser im Detail und wie mehrere Startereignisse eines Prozesses zusammengeführt werden.
+- **[[BPMN Zwischenereignisse]]**  
+  Behandelt die vier empfangenden Zwischenereignisse und wie du damit Wartepunkte im Prozess darstellst.
+- **[[BPMN Endereignisse]]**  
+  Erklärt, wie ein Prozess abschließt und warum unterschiedliche Ergebnisse eigene Endereignisse bekommen.
+- **[[BPMN Der Sequenzfluss]]**  
+  Beschreibt die Verbindung, über die Ereignisse, Aufgaben und Gateways zu einem Ablauf werden.
