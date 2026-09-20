@@ -63,22 +63,25 @@ const updatedLabel = showUpdated
     margin-top: 0.875rem;
   }
 
-  /* 21 Pixel bei 1.6 Zeilenhoehe, wie in der Vorlage. text-wrap:pretty
-     verhindert einzelne Woerter in der letzten Zeile. */
+  /* 18 Pixel bei 1.6 Zeilenhoehe: eine Stufe ueber dem Fliesstext (16) und
+     unter der H3 (20). Die Vorlage sah 21 Pixel vor, das stand zu nah an der
+     H2 (27) und liess den Lead wie eine zweite Ueberschrift wirken;
+     Entscheidung vom 20.09.2026. text-wrap:pretty verhindert einzelne
+     Woerter in der letzten Zeile. */
   .artikel-lead {
     margin: 0;
-    font-size: 1.3125rem;
+    font-size: 1.125rem;
     line-height: 1.6;
     color: var(--w-text);
     text-wrap: pretty;
   }
 
-  /* Die Trennlinie gehoert an die Meta-Zeile, nicht an den Lead: Ohne Datum
-     soll auch keine Linie stehen. */
+  /* Die Trennlinie unter der Meta-Zeile aus der Vorlage ist am 20.09.2026
+     ersatzlos entfallen. Das Polster nach unten bleibt, damit der Inhalt
+     nicht an das Datum rueckt. */
   .artikel-meta {
     margin-top: 1.25rem;
     padding-bottom: 1.75rem;
-    border-bottom: 1px solid var(--w-border);
     font-family: var(--sl-font-mono);
     font-size: 0.78125rem; /* 12.5px */
     color: var(--w-muted);
@@ -86,7 +89,7 @@ const updatedLabel = showUpdated
 
   @media (max-width: 50em) {
     .artikel-lead {
-      font-size: 1.125rem; /* 18px */
+      font-size: 1.0625rem; /* 17px */
     }
   }
 </style>
