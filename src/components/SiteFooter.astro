@@ -31,17 +31,23 @@ const links = [
 </footer>
 
 <style>
+  /* position und z-index: Starlights Verzeichnis "Auf dieser Seite" ist fest
+     positioniert, 100vh hoch und traegt links seine Trennlinie. Ohne eigene
+     Ebene liefe diese Linie durch die Fusszeile hindurch; so deckt die
+     Fusszeile sie mit ihrem Hintergrund ab und die Linie endet an ihrer
+     Oberkante. */
   .seitenfuss {
+    position: relative;
+    z-index: 1;
     padding: 36px var(--sl-content-pad-x) 56px;
     border-top: 1px solid var(--w-border);
     background: var(--w-side);
   }
 
-  /* Dieselbe Inhaltsbreite wie die Startseite der Vorlage, damit Fusszeile und
-     Inhalt darueber an derselben Kante stehen. */
+  /* Dieselbe Inhaltsbreite wie die Startseite der Vorlage. */
   .seitenfuss-inhalt {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -49,6 +55,23 @@ const links = [
     gap: 1.5rem;
     font-size: 0.90625rem; /* 14.5px */
     color: var(--w-muted);
+  }
+
+  /* Linke Kante buendig mit der Artikelspalte. Dieselbe Rechnung wie fuer
+     Startseite und Themenuebersicht in custom.css: Starlight teilt den freien
+     Raum neben Artikelspalte und Verzeichnisspalte zur Haelfte auf, der Rand
+     hier rechnet dieselbe Kante nach. Unterhalb von 72em zentriert Starlight
+     nicht mehr, dort bleibt der Rand bei null. */
+  @media (min-width: 72em) {
+    .seitenfuss-inhalt {
+      margin-inline-start: max(
+        0px,
+        calc(
+          (100% - var(--sl-content-width) - var(--sl-sidebar-width)) / 2
+            - var(--sl-content-pad-x)
+        )
+      );
+    }
   }
 
   .seitenfuss-links {

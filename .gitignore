@@ -35,3 +35,6 @@ reports/bestandsaufnahme.md
 # --- Lokale Werkzeugkonfiguration (Claude Code Desktop) ---
 .claude/launch.json
 .claude/settings.local.json
+
+# --- Bilder, die der Export aus vault/00_system/attachments kopiert ---
+public/wiki-assets/
