@@ -14,29 +14,41 @@ offer_heading:
 offer_text:
 ---
 
-# [Titel des Artikels]
+# [Titel: Thema zuerst, Substantivform, 50 bis 60 Zeichen, ohne Markenname. Verwaltungsbezug nur, wenn der Inhalt verwaltungsspezifisch ist]
 
 **Zusammenfassung**
 
-[Hier steht eine prägnante Inhaltsangabe in 2–4 Sätzen, die die Kernfrage des Artikels bereits vollständig beantwortet. Ansprache: du. Kein Zitatblock — die Einrückung suggeriert eine fremde Quelle.]
+[2 bis 4 Sätze, die die Kernfrage des Artikels bereits vollständig beantworten. Ansprache: du. Normaler Absatz, kein Zitatblock. Ohne Links und Fettungen, der Lead wird als reiner Text ausgegeben.]
 
 ## [Zwischenüberschrift]
 
-[Bereinigter Text ohne Zitat-Marker.]
+[Fließtext. Du, sachlich, keine Gedankenstriche als Einschub. Interner Verweis nur beim ersten Vorkommen eines Begriffs: [[Titel der Notiz]] oder [[Titel der Notiz|eigener Ankertext]].]
 
-> 🖼 **GRAFIK: [Titel]**  
-> **KI-Beschreibung:** [Detaillierte Beschreibung…]  
-> - [ ] Screenshot einfügen
+### [Unterüberschrift, nur bei Bedarf. Nicht tiefer als H3]
 
----
+[Text.]
+
+![[Dateiname.png]]
+
+:::note[Hinweis]
+[Optional. Eine Praxisregel oder Warnung, die niemand überlesen soll. Sonst Kasten streichen.]
+:::
+
+## [Zwischenüberschrift]
+
+[Text.]
+
+:::tip[Werkzeug]
+[Optional. Nur wenn ein Werkzeug den Inhalt tatsächlich stützt: [Name des Werkzeugs](/werkzeuge/). Sonst Kasten streichen.]
+:::
 
 ## Häufige Fragen
 
-[Nur aufnehmen, wenn es 3–5 echte Fragen aus der Praxis gibt — sonst diesen Abschnitt ersatzlos streichen. Keine Preise, Termine, Buchung oder Stornobedingungen.]
+[Nur bei 3 bis 5 echten Fragen aus der Praxis, sonst Abschnitt streichen. Vorher gegen das Fragenregister abgleichen. Keine Preise, Termine, Buchung.]
 
 ### [Frage 1 als vollständiger Satz mit Fragezeichen?]
 
-[Der erste Satz beantwortet die Frage vollständig und trägt allein, auch aus dem Zusammenhang gerissen. Danach ein bis zwei Sätze zur Einordnung. 40–80 Wörter, Ansprache: du.]
+[Der erste Satz beantwortet die Frage vollständig und trägt allein. Danach ein bis zwei Sätze Einordnung. 40 bis 80 Wörter.]
 
 ### [Frage 2 als vollständiger Satz mit Fragezeichen?]
 
@@ -47,5 +59,8 @@ offer_text:
 [Erster Satz mit der vollständigen Antwort, danach die Einordnung.]
 
 ## Verwandte Artikel
-- **Titel aus CSV oder aktueller Session**  
-  [Ein Satz, warum dieser Artikel hierher gehört]
+
+- **[[Titel der Notiz]]**  
+  [Ein vollständiger Satz, wie dieser Artikel zu diesem hier gehört. Ist es kein vollständiger Satz, Zeile streichen und nur den Titel stehen lassen.]
+- **[[Titel der Notiz]]**  
+  [Ein vollständiger Satz zur Beziehung.]

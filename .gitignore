@@ -31,3 +31,7 @@ src/generated/
 
 # --- Generierte Berichte (der Export erzeugt sie bei jedem Lauf neu) ---
 reports/bestandsaufnahme.md
+
+# --- Lokale Werkzeugkonfiguration (Claude Code Desktop) ---
+.claude/launch.json
+.claude/settings.local.json
