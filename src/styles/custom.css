@@ -306,6 +306,28 @@ a {
   max-width: 1000px;
 }
 
+/* Beide Seiten haben kein Verzeichnis "Auf dieser Seite". Starlight zentriert
+   den Inhalt dann im gesamten Hauptbereich, und der Abstand zur Seitenleiste
+   faellt breiter aus als auf Artikelseiten. Dort teilt Starlight den freien
+   Raum neben Artikelspalte und Verzeichnisspalte zur Haelfte auf; die Spalte
+   beginnt bei (Hauptbereich - 760 - 272) / 2. Der linke Rand hier rechnet
+   dieselbe Kante nach, damit der Inhalt buendig mit den Artikeln steht. 100%
+   ist der Innenbereich ohne Seitenpolster, deshalb kommt das Polster einmal
+   wieder herunter. Unterhalb von 72em zentriert Starlight nicht mehr, dort
+   bleibt der Rand bei null. */
+@media (min-width: 72em) {
+  .main-pane:has(.hero) .sl-container,
+  .main-pane:has(.karten-raster) .sl-container {
+    margin-inline-start: max(
+      0px,
+      calc(
+        (100% - var(--sl-content-width) - var(--sl-sidebar-width)) / 2
+          - var(--sl-content-pad-x)
+      )
+    );
+  }
+}
+
 /* Die Karten selbst stehen in Karte.astro. Hier nur ihre Anordnung: zwei oder
    drei Spalten, die von selbst untereinander ruecken, sobald der Platz fehlt.
    auto-fit mit Mindestbreite statt fester Spaltenzahl erspart einen eigenen
