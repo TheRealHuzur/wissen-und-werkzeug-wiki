@@ -1,6 +1,6 @@
 ---
 /**
- * Fusszeile der Vorlage: Lizenzhinweis links, drei Verweise rechts.
+ * Fusszeile der Vorlage: Name des Wikis links, drei Verweise rechts.
  *
  * Steht in PageFrame.astro als letztes Kind von .main-frame und liegt damit
  * neben der Seitenleiste, nicht darunter. Genau so ist es in der Vorlage
@@ -9,9 +9,9 @@
  * Nicht zu verwechseln mit Footer.astro: Das ist Starlights Artikelfuss und
  * traegt Autorenblock und Angebotsverweis am Ende eines Beitrags.
  *
- * ACHTUNG, noch zu bestaetigen: Der Lizenzsatz und die Adressen von Impressum
- * und Datenschutz stammen aus der Designvorlage beziehungsweise sind
- * angenommen. Im Repo gab es dazu bisher keine Angabe.
+ * Der Lizenzhinweis "Inhalte unter CC BY-SA 4.0" aus der Vorlage ist am
+ * 20.09.2026 ersatzlos entfallen. Die Adressen von Impressum und Datenschutz
+ * stammen aus der Designvorlage.
  */
 
 const links = [
@@ -23,7 +23,7 @@ const links = [
 
 <footer class="seitenfuss">
   <div class="seitenfuss-inhalt">
-    <span>Wissen &amp; Werkzeug Wiki · Inhalte unter CC BY-SA 4.0</span>
+    <span>Wissen &amp; Werkzeug Wiki</span>
     <div class="seitenfuss-links">
       {links.map((link) => <a href={link.href}>{link.label}</a>)}
     </div>

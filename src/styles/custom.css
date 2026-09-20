@@ -346,6 +346,19 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
 }
 
+/* --- Artikelkopf: keine Trennlinie unter dem Lead --------------------------
+
+   Starlight rendert Titel und Markdown in zwei Bereichen und zieht zwischen
+   beide eine Hairline. Auf Artikelseiten stand sie damit unter Lead und
+   Meta-Zeile, auf der Themenuebersicht unter dem Titel, auf der Startseite
+   ueber dem Hero. Am 20.09.2026 ersatzlos entfallen, das Polster der Bereiche
+   bleibt.
+   ------------------------------------------------------------------------- */
+
+.content-panel + .content-panel {
+  border-top: 0;
+}
+
 /* --- Artikelseite: Inline-Code ---------------------------------------------
 
    Flaeche und Schriftart kommen aus den Tokens. Rand und Radius fehlen dort,

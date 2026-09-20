@@ -40,6 +40,14 @@ export default defineConfig({
       // Artikel heraus, ohne einen Zusammenhang zu stiften. Die Seitenleiste
       // traegt die Reihenfolge ohnehin.
       pagination: false,
+      // Keine Ankerverweise an den Ueberschriften. Starlight haengt sonst an
+      // jede H2 bis H6 einen Link auf die Ueberschrift selbst, mit
+      // Kettensymbol beim Ueberfahren. Entscheidung vom 20.09.2026: Die
+      // Sprungmarken (id) bleiben, das Verzeichnis "Auf dieser Seite" und
+      // Verweise auf Abschnitte funktionieren weiter.
+      markdown: {
+        headingLinks: false,
+      },
       // Drei Schriften der Designvorlage, als npm-Pakete und damit vom eigenen
       // Server. Bewusst nicht ueber fonts.googleapis.com: Ein Abruf dort
       // uebertraege die IP-Adresse jedes Besuchers an Google.
