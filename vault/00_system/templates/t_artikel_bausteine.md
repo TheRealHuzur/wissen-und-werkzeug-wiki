@@ -72,11 +72,6 @@ semantic_context: Business Process Model and Notation. Ein internationaler Stand
 **Zusammenfassung**
 > Dieser erste Absatz wird zum Lead: dem hervorgehobenen Einleitungssatz unter der Überschrift. Der Export zieht ihn aus diesem Abschnitt ins Frontmatter und entfernt Überschrift und Zitatzeichen aus dem Text. Erkannt werden beide Schreibweisen — fett gesetzt wie hier oder als H2 — und der Satz darunter als Zitatblock oder als gewöhnlicher Absatz.
 
-**Dieser Artikel beantwortet folgende Fragen:**
-
-- Welche Bausteine kann eine Artikelseite darstellen?
-- Wo steht welcher Baustein auf der fertigen Seite?
-- Was entsteht automatisch und was muss in die Notiz?
 
 ## Fließtext, Hervorhebungen und Listen
 
