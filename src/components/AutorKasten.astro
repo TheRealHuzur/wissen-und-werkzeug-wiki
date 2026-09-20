@@ -2,14 +2,14 @@
 /**
  * Der Kasten "Wer schreibt hier" in der rechten Haelfte des Hero-Bereichs.
  *
- * Der Kreis traegt die Initialen, wie in der Designvorlage. Das echte Portrait
- * liegt unter src/assets/patrick-rosskothen.png und steht am Fuss jedes
- * Artikels; hier bleibt es bei den Initialen, weil die Vorlage an dieser
- * Stelle ausdruecklich ein gezeichnetes Element und kein Foto vorsieht.
+ * Der Kreis traegt das Portrait aus src/assets/patrick-rosskothen.png,
+ * dasselbe Bild wie im Autorenblock am Fuss jedes Artikels. Die Vorlage sah
+ * hier Initialen vor; am 20.09.2026 entschieden: Foto statt Initialen.
  */
+import { Image } from 'astro:assets';
+import portrait from '../assets/patrick-rosskothen.png';
 
 interface Props {
-  initialen: string;
   name: string;
   rolle: string;
   text: string;
@@ -18,13 +18,25 @@ interface Props {
   seminarHref: string;
 }
 
-const { initialen, name, rolle, text, seminarText, seminarLabel, seminarHref } = Astro.props;
+const { name, rolle, text, seminarText, seminarLabel, seminarHref } = Astro.props;
 ---
 
 <aside class="autorkasten">
   <p class="w-label">Wer schreibt hier</p>
   <div class="autorkasten-person">
-    <span class="autorkasten-initialen" aria-hidden="true">{initialen}</span>
+    {/* Die Quelldatei ist 1536x1024, Astro schneidet mittig auf das Quadrat
+        zu; der Kopf sitzt in der Mitte der Aufnahme. 120x120 fuer 60x60
+        Darstellung, also doppelte Aufloesung. Leerer Alternativtext, weil der
+        Name direkt daneben steht. */}
+    <Image
+      class="autorkasten-foto"
+      src={portrait}
+      alt=""
+      width={120}
+      height={120}
+      fit="cover"
+      position="center"
+    />
     <span>
       <span class="autorkasten-name">{name}</span>
       <span class="autorkasten-rolle">{rolle}</span>
@@ -60,19 +72,13 @@ const { initialen, name, rolle, text, seminarText, seminarLabel, seminarHref } =
     margin-bottom: 22px;
   }
 
-  .autorkasten-initialen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  /* Rund und in derselben Groesse wie der Initialenkreis der Vorlage. */
+  .autorkasten-foto {
     flex: none;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: var(--w-accent-soft);
-    font-weight: 600;
-    font-size: 1.125rem; /* 18px */
-    letter-spacing: 0.5px;
-    color: var(--w-head);
+    object-fit: cover;
   }
 
   .autorkasten-name {
