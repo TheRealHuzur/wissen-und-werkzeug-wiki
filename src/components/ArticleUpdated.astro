@@ -1,0 +1,62 @@
+---
+/**
+ * Datum der letzten Bearbeitung.
+ *
+ * Steht rechts in der Kopfzeile neben dem Brotkruemelpfad, siehe
+ * PageTitle.astro. Bis zum 21.09.2026 stand es als Meta-Zeile unter dem Lead,
+ * wie in der Designvorlage; dort hing es auf Hub-Seiten ohne Lead allein
+ * zwischen H1 und Text und riss zusammen mit dem Polster der Starlight-
+ * Bereiche eine Luecke von 76 Pixeln. Vorher, bis Paket 6, stand es im
+ * Artikelfuss.
+ */
+
+const { entry, id: routeId } = Astro.locals.starlightRoute;
+const data = entry.data as Record<string, unknown>;
+
+// Dieselbe Eingrenzung wie in ArticleFooter.astro: nur exportierte Artikel,
+// nicht die beiden handgepflegten Startseiten und nicht die 404-Seite, die
+// Starlight aus einem virtuellen Eintrag baut.
+const filePath = (typeof entry.filePath === 'string' ? entry.filePath : '').replace(/\\/g, '/');
+const isArticle =
+  filePath.startsWith('src/content/docs/') &&
+  !/(^|\/)index\.mdx?$/.test(filePath) &&
+  routeId !== '404';
+
+const created = typeof data.created === 'string' ? data.created.trim() : '';
+const updated = typeof data.updated === 'string' ? data.updated.trim() : '';
+
+// Sichtbares Datum genau dann, wenn updated gesetzt und echt groesser als
+// created ist. Bewusst schaerfer als die Bedingung fuer dateModified in den
+// strukturierten Daten: Ein pauschal nachgetragenes updated wird so nicht
+// sichtbar. Standards-Wiki Abschnitt 4, Entscheidung vom 28.08.2026.
+// Beide Werte liegen als JJJJ-MM-TT vor, der Zeichenkettenvergleich ordnet
+// in diesem Format korrekt.
+const showUpdated = Boolean(isArticle && created && updated && updated > created);
+const updatedLabel = showUpdated
+  ? new Intl.DateTimeFormat('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(
+      new Date(`${updated}T12:00:00Z`)
+    )
+  : '';
+---
+
+{
+  showUpdated && (
+    <span class="artikel-datum">
+      Zuletzt bearbeitet am <time datetime={updated}>{updatedLabel}</time>
+    </span>
+  )
+}
+
+<style>
+  /* Rechts in der Kopfzeile, Schrift wie die fruehere Meta-Zeile: Monospace,
+     klein, gedaempft. margin-inline-start: auto schiebt es an den rechten Rand
+     und haelt es dort auch, wenn der Pfad auf schmalen Bildschirmen umbricht. */
+  .artikel-datum {
+    margin-inline-start: auto;
+    font-family: var(--sl-font-mono);
+    font-size: 0.78125rem; /* 12.5px */
+    line-height: 1.5;
+    color: var(--w-muted);
+    white-space: nowrap;
+  }
+</style>
