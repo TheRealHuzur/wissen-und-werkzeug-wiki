@@ -1,17 +1,19 @@
 ---
 /**
- * Lead-Absatz und Meta-Zeile am Kopf eines Artikels.
+ * Lead-Absatz am Kopf eines Artikels.
  *
- * Reihenfolge der Designvorlage: Brotkruemelpfad, H1, Lead, Meta-Zeile,
- * Trennlinie, dann der Inhalt. Diese Komponente traegt die beiden mittleren
- * Stufen und wird von PageTitle.astro hinter <Default /> gerendert.
+ * Reihenfolge: Kopfzeile aus Brotkruemelpfad und Datum, H1, Lead, dann der
+ * Inhalt. Diese Komponente traegt den Lead und wird von PageTitle.astro
+ * hinter <Default /> gerendert.
  *
  * Der Lead kommt aus dem Frontmatter, nicht aus dem Body: Nur so steht er
  * ueber dem Inhaltsbereich und damit vor allem, was Starlight aus dem Markdown
  * baut. Der Export legt das Feld an, siehe extractLead() in
  * scripts/export-wiki.mjs.
  *
- * Die Lesezeit der Vorlage entfaellt, wie im Handoff vorgesehen.
+ * Die Lesezeit der Vorlage entfaellt, wie im Handoff vorgesehen. Das Datum
+ * der letzten Bearbeitung stand bis zum 21.09.2026 als Meta-Zeile hier
+ * unter dem Lead und steht jetzt in der Kopfzeile, siehe ArticleUpdated.astro.
  */
 
 const { entry, id: routeId } = Astro.locals.starlightRoute;
@@ -27,33 +29,12 @@ const isArticle =
   routeId !== '404';
 
 const lead = typeof data.lead === 'string' ? data.lead.trim() : '';
-
-const created = typeof data.created === 'string' ? data.created.trim() : '';
-const updated = typeof data.updated === 'string' ? data.updated.trim() : '';
-
-// Sichtbares Datum genau dann, wenn updated gesetzt und echt groesser als
-// created ist. Bewusst schaerfer als die Bedingung fuer dateModified in den
-// strukturierten Daten: Ein pauschal nachgetragenes updated wird so nicht
-// sichtbar. Standards-Wiki Abschnitt 4, Entscheidung vom 28.08.2026.
-// Beide Werte liegen als JJJJ-MM-TT vor, der Zeichenkettenvergleich ordnet
-// in diesem Format korrekt.
-const showUpdated = Boolean(created && updated && updated > created);
-const updatedLabel = showUpdated
-  ? new Intl.DateTimeFormat('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(
-      new Date(`${updated}T12:00:00Z`)
-    )
-  : '';
 ---
 
 {
-  isArticle && (lead || showUpdated) && (
+  isArticle && lead && (
     <div class="artikelkopf">
-      {lead && <p class="artikel-lead">{lead}</p>}
-      {showUpdated && (
-        <div class="artikel-meta">
-          <span>Zuletzt bearbeitet am {updatedLabel}</span>
-        </div>
-      )}
+      <p class="artikel-lead">{lead}</p>
     </div>
   )
 }
@@ -74,17 +55,6 @@ const updatedLabel = showUpdated
     line-height: 1.6;
     color: var(--w-text);
     text-wrap: pretty;
-  }
-
-  /* Die Trennlinie unter der Meta-Zeile aus der Vorlage ist am 20.09.2026
-     ersatzlos entfallen. Das Polster nach unten bleibt, damit der Inhalt
-     nicht an das Datum rueckt. */
-  .artikel-meta {
-    margin-top: 1.25rem;
-    padding-bottom: 1.75rem;
-    font-family: var(--sl-font-mono);
-    font-size: 0.78125rem; /* 12.5px */
-    color: var(--w-muted);
   }
 
   @media (max-width: 50em) {
