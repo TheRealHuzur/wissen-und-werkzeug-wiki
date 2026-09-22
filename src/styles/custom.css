@@ -359,6 +359,18 @@ a {
   border-top: 0;
 }
 
+/* Das Datum der letzten Bearbeitung schliesst den Artikelkopf ab und steht
+   damit als letzte Zeile im oberen Starlight-Bereich. Dessen Polster von 24
+   Pixeln traf auf die 24 des Inhaltsbereichs darunter: 48 Pixel zwischen einer
+   kleinen Meta-Zeile und der ersten Ueberschrift, der Kopf sah zerrissen aus.
+   Auf den Seiten mit Datum bleiben davon 32 Pixel. Seiten ohne Datum behalten
+   die 48, dort grenzt der Lead selbst an den Inhalt und traegt den Abstand.
+   Entscheidung vom 22.09.2026. */
+
+.content-panel:has(.artikel-datum) {
+  padding-bottom: 0.5rem;
+}
+
 /* --- Artikelseite: Inline-Code ---------------------------------------------
 
    Flaeche und Schriftart kommen aus den Tokens. Rand und Radius fehlen dort,

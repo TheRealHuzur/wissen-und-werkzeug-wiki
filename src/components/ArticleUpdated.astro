@@ -2,12 +2,14 @@
 /**
  * Datum der letzten Bearbeitung.
  *
- * Steht rechts in der Kopfzeile neben dem Brotkruemelpfad, siehe
- * PageTitle.astro. Bis zum 21.09.2026 stand es als Meta-Zeile unter dem Lead,
- * wie in der Designvorlage; dort hing es auf Hub-Seiten ohne Lead allein
- * zwischen H1 und Text und riss zusammen mit dem Polster der Starlight-
- * Bereiche eine Luecke von 76 Pixeln. Vorher, bis Paket 6, stand es im
- * Artikelfuss.
+ * Steht als Meta-Zeile unter dem Lead und vor dem ersten Abschnitt, wie in
+ * der Designvorlage, siehe PageTitle.astro. Vom 21. bis zum 22.09.2026 stand
+ * es rechts in der Pfadzeile ueber der H1 und zog dort den Blick vor die
+ * Ueberschrift. Vorher, bis Paket 6, stand es im Artikelfuss.
+ *
+ * Die Luecke, die das Datum unter dem Lead frueher aufriss, kommt nicht von
+ * dieser Komponente, sondern vom Polster der beiden Starlight-Bereiche. Das
+ * ist in custom.css zusammengezogen, Abschnitt "Artikelkopf".
  */
 
 const { entry, id: routeId } = Astro.locals.starlightRoute;
@@ -41,22 +43,22 @@ const updatedLabel = showUpdated
 
 {
   showUpdated && (
-    <span class="artikel-datum">
+    <p class="artikel-datum">
       Zuletzt bearbeitet am <time datetime={updated}>{updatedLabel}</time>
-    </span>
+    </p>
   )
 }
 
 <style>
-  /* Rechts in der Kopfzeile, Schrift wie die fruehere Meta-Zeile: Monospace,
-     klein, gedaempft. margin-inline-start: auto schiebt es an den rechten Rand
-     und haelt es dort auch, wenn der Pfad auf schmalen Bildschirmen umbricht. */
+  /* Monospace, klein, gedaempft: eine Meta-Zeile, keine zweite Textspur. Der
+     Abstand nach oben haelt sie am Lead und laesst sie nicht zwischen Lead und
+     erstem Abschnitt schweben. Nach unten kein Rand, dort polstern die beiden
+     Starlight-Bereiche. */
   .artikel-datum {
-    margin-inline-start: auto;
+    margin: 0.625rem 0 0;
     font-family: var(--sl-font-mono);
     font-size: 0.78125rem; /* 12.5px */
     line-height: 1.5;
     color: var(--w-muted);
-    white-space: nowrap;
   }
 </style>
