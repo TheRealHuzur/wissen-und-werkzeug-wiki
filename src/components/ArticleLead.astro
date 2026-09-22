@@ -2,8 +2,8 @@
 /**
  * Lead-Absatz am Kopf eines Artikels.
  *
- * Reihenfolge: Kopfzeile aus Brotkruemelpfad und Datum, H1, Lead, dann der
- * Inhalt. Diese Komponente traegt den Lead und wird von PageTitle.astro
+ * Reihenfolge: Brotkruemelpfad, H1, Lead, Datum der letzten Bearbeitung, dann
+ * der Inhalt. Diese Komponente traegt den Lead und wird von PageTitle.astro
  * hinter <Default /> gerendert.
  *
  * Der Lead kommt aus dem Frontmatter, nicht aus dem Body: Nur so steht er
@@ -12,8 +12,8 @@
  * scripts/export-wiki.mjs.
  *
  * Die Lesezeit der Vorlage entfaellt, wie im Handoff vorgesehen. Das Datum
- * der letzten Bearbeitung stand bis zum 21.09.2026 als Meta-Zeile hier
- * unter dem Lead und steht jetzt in der Kopfzeile, siehe ArticleUpdated.astro.
+ * der letzten Bearbeitung folgt als eigene Zeile hinter dem Lead, siehe
+ * ArticleUpdated.astro.
  */
 
 const { entry, id: routeId } = Astro.locals.starlightRoute;

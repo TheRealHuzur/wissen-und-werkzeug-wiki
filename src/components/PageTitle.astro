@@ -2,17 +2,19 @@
 /**
  * Starlight-Override fuer die Seitenueberschrift.
  *
- * Auf Artikelseiten wird die Kopfzeile vor <Default /> gerendert und steht
- * damit als erstes im Inhaltsbereich, oberhalb der H1: links der
- * Brotkruemelpfad, rechts das Datum der letzten Bearbeitung. Der Lead folgt
- * hinter der H1. Damit steht der Kopf eines Artikels in der Reihenfolge:
- * Pfad und Datum, H1, Lead. Die Designvorlage sah das Datum als Meta-Zeile
- * unter dem Lead vor; am 21.09.2026 in die Kopfzeile gewandert, siehe
- * ArticleUpdated.astro.
+ * Auf Artikelseiten wird der Kopf vor <Default /> gerendert und steht damit
+ * als erstes im Inhaltsbereich, oberhalb der H1: der Brotkruemelpfad. Hinter
+ * der H1 folgen Lead und darunter das Datum der letzten Bearbeitung. Der Kopf
+ * eines Artikels liest sich damit in der Reihenfolge: Pfad, H1, Lead, Datum,
+ * dann der Inhalt.
  *
- * Alles drei gehoert hierher und nicht in den Inhaltsbereich: Starlight
- * rendert Titel und Markdown in zwei getrennten Bereichen, zwischen die sich
- * nichts einschieben laesst.
+ * Das Datum stand vom 21. bis zum 22.09.2026 rechts in der Pfadzeile; es
+ * zog dort den Blick vor die Ueberschrift. Jetzt steht es wieder unter dem
+ * Lead wie in der Designvorlage, siehe ArticleUpdated.astro.
+ *
+ * Alles gehoert hierher und nicht in den Inhaltsbereich: Starlight rendert
+ * Titel und Markdown in zwei getrennten Bereichen, zwischen die sich nichts
+ * einschieben laesst.
  *
  * Auf der Startseite faellt dieser ganze Block weg. Ihre Ueberschrift steht im
  * Hero-Bereich, in Public Sans und mit eigenem Zuschnitt; Starlights Titel
@@ -32,24 +34,10 @@ const istStartseite = /(^|\/)index\.mdx?$/.test(filePath);
 {
   !istStartseite && (
     <>
-      <div class="kopfzeile">
-        <Breadcrumbs />
-        <ArticleUpdated />
-      </div>
+      <Breadcrumbs />
       <Default />
       <ArticleLead />
+      <ArticleUpdated />
     </>
   )
 }
-
-<style>
-  /* Pfad links, Datum rechts, auf einer Grundlinie. Bricht der Pfad auf
-     schmalen Bildschirmen um, rutscht das Datum in eine eigene Zeile darunter
-     und bleibt dort rechts (margin-inline-start: auto in ArticleUpdated). */
-  .kopfzeile {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 0.25rem 1.5rem;
-  }
-</style>
