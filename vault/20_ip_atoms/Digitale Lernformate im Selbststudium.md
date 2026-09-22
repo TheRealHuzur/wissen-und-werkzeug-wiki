@@ -25,7 +25,7 @@ Klassifizierung: grundlagen mit der Zielsetzung verstehen.
 
 # Digitale Lernformate im Selbststudium
 
-**Zusammenfassung**
+## Zusammenfassung
 
 > Digitale Lernformate ermöglichen asynchrones Lernen unabhängig von Zeit und Ort. Durch Angebote wie Lernvideos, automatisierte Podcasts oder interaktive E-Learning-Kurse können Mitarbeitende Inhalte im eigenen Tempo vertiefen. Während der Nutzen in der Skalierbarkeit liegt, darf der initiale Erstellungs- und Pflegeaufwand nicht unterschätzt werden.
 

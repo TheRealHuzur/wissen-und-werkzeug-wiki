@@ -24,7 +24,7 @@ Klassifizierung: grundlagen mit der Zielsetzung steuern.
 
 # Kommunikationsplan
 
-**Zusammenfassung**
+## Zusammenfassung
 
 > Eine kompakte Vorlage zur Planung und Steuerung der Projektkommunikation basierend auf den sechs W-Fragen. Eine zielgerichtete Kommunikation schafft Bewusstsein und Transparenz während des Veränderungsprozesses. Dieser Plan dient dazu, Maßnahmen konkret zu terminieren und Verantwortlichkeiten zu klären.
 

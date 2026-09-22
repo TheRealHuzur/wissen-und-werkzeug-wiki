@@ -24,7 +24,7 @@ Klassifizierung: grundlagen mit der Zielsetzung verstehen.
 
 # Map of Content Struktur (expertise_map)
 
-**Zusammenfassung**
+## Zusammenfassung
 
 > Maps of Content sind die Landkarte deines Wissens. Sie geben Orientierung, führen durch Themen und verlinken auf die eigentlichen Inhalte. Damit bleibt das System lesbar, ohne dass du Inhalte doppelt pflegen musst.
 

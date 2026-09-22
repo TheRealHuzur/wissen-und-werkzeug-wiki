@@ -19,7 +19,7 @@ offer_text: "Start, Zwischenereignis und Ende folgen einem gemeinsamen Konzept, 
 
 # BPMN: Ereignisse
 
-**Zusammenfassung**
+## Zusammenfassung
 
 Ereignisse steuern den Fluss eines Prozesses. Sie legen fest, wodurch er ausgelöst wird, worauf er wartet und womit er endet. Ein Ereignis beschreibt dabei immer einen Zustand, der eingetreten ist, nie eine Tätigkeit. Dargestellt wird es als Kreis, und die Art des Randes zeigt, um welche Art von Ereignis es sich handelt.
 

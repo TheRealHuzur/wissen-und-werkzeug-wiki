@@ -24,7 +24,7 @@ Klassifizierung: grundlagen mit der Zielsetzung verstehen.
 
 # Bases Views Konzept
 
-**Zusammenfassung**
+## Zusammenfassung
 
 > Bases sind dein „Datenbankblick“ auf Markdown. Sie machen Metadaten sichtbar, filterbar und prüfbar. In deinem System sind Bases ein zentraler Ersatz für fehlende UI-Zwänge: Qualität entsteht nicht durch Dropdowns, sondern durch konsequente Sichtbarkeit und Kontrolle.
 

@@ -25,7 +25,7 @@ Klassifizierung: grundlagen mit der Zielsetzung gestalten.
 
 # Incentivierung in Lerngemeinschaften
 
-**Zusammenfassung**
+## Zusammenfassung
 
 > Incentivierung bedeutet in Lerngemeinschaften die gezielte Schaffung von Rahmenbedingungen, die das Engagement sichtbar machen und Mitarbeitende ermutigen, ihr Wissen zu teilen. Der Fokus liegt dabei nicht auf materiellen Anreizen, sondern auf psychologischer Belohnung durch Anerkennung, Sinnhaftigkeit und die Steigerung des persönlichen Expertenstatus.
 

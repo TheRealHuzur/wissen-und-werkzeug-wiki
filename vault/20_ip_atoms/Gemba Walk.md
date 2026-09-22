@@ -25,7 +25,7 @@ Klassifizierung: grundlagen mit der Zielsetzung verstehen.
 
 # Gemba Walk
 
-**Zusammenfassung**
+## Zusammenfassung
 
 > Gemba bezeichnet den „eigentlichen Ort“ des Geschehens. Ein Gemba Walk ist die bewusste Entscheidung der Führungsebene, den Schreibtisch zu verlassen und dorthin zu gehen, wo die Arbeit passiert. Nur durch diese unmittelbare Beobachtung können Probleme und Optimierungspotenziale erkannt werden, die in abstrakten Berichten oder Besprechungen verborgen bleiben.
 

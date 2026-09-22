@@ -19,7 +19,7 @@ offer_text: "Wo eine Aufgabe endet und die nächste beginnt, entscheidet sich am
 
 # BPMN: Aufgaben
 
-**Zusammenfassung**
+## Zusammenfassung
 
 Eine Aufgabe beschreibt eine Tätigkeit, die im Modell nicht weiter detailliert wird. Sie wird als Rechteck mit abgerundeten Ecken dargestellt, nach dem Schema Objekt und Verb benannt und hat nach der Konvention von Wissen & Werkzeug genau einen eingehenden und einen ausgehenden Sequenzfluss.
 

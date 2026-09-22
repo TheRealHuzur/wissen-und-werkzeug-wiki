@@ -18,7 +18,7 @@ offer_text: "Welches Zwischenereignis das richtige ist, entscheidet sich selten 
 
 # BPMN: Zwischenereignisse
 
-**Zusammenfassung**
+## Zusammenfassung
 
 Ein Zwischenereignis modellierst du, wenn dein Prozess auf etwas warten muss und erst weitergehen kann, sobald dieses Ereignis eintritt. Es steht zwischen zwei Aufgaben im Prozessfluss und hat einen doppelten Rand. Für die fachliche Modellierung reichen vier empfangende Typen: das unbestimmte Zwischenereignis sowie das Nachrichten-, Zeit- und Bedingungs-Zwischenereignis.
 

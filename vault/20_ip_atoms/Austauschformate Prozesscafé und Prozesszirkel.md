@@ -25,7 +25,7 @@ Klassifizierung: anleitung mit der Zielsetzung betreiben.
 
 # Austauschformate Prozesscafé und Prozesszirkel
 
-**Zusammenfassung**
+## Zusammenfassung
 
 > Der laufende Dialog über Prozesse wird durch spezifische Austauschformate unterstützt. Das **Prozesscafé** ist ein offener Ort für den Erfahrungsaustausch zu variierenden Fragestellungen. Der **Prozesszirkel** hingegen bietet einer festen Gruppe die Möglichkeit, über einen längeren Zeitraum an konkreten Herausforderungen aus ihrem persönlichen Arbeitsumfeld dranzubleiben.
 

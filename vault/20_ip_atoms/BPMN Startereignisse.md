@@ -18,7 +18,7 @@ offer_text: "Der Auslöser legt fest, wo ein Prozess anfängt und was noch davor
 
 # BPMN: Startereignisse
 
-**Zusammenfassung**
+## Zusammenfassung
 
 Ein Startereignis sagt, wodurch ein Prozess ausgelöst wird. Es steht am Anfang des Modells, ist am dünnen Rand zu erkennen und hat keinen eingehenden, dafür genau einen ausgehenden Sequenzfluss. Für die fachliche Modellierung reichen vier Typen: das unbestimmte, das Nachrichten-, das zeitbasierte und das bedingte Startereignis.
 
