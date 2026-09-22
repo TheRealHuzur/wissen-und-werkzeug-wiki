@@ -25,7 +25,7 @@ Klassifizierung: vorlage mit der Zielsetzung betreiben.
 
 # Prozesslernkarten
 
-**Zusammenfassung**
+## Zusammenfassung
 
 > Prozesslernkarten sind kompakte Wissenseinheiten nach dem Karteikarten-Prinzip. Sie helfen dabei, Definitionen, Methoden und Symbole (z.B. BPMN) langfristig im Gedächtnis zu verankern. Ihr Nutzen erstreckt sich vom individuellen Selbststudium bis hin zur praktischen Unterstützung als Moderationshilfe in Workshops.
 

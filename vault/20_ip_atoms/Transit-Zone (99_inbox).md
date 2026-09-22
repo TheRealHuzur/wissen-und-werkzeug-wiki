@@ -24,7 +24,7 @@ Klassifizierung: grundlagen mit der Zielsetzung umsetzen.
 
 # Transit-Zone (99_inbox)
 
-**Zusammenfassung**
+## Zusammenfassung
 
 > Die Inbox ist dein Sicherheitsnetz. Sie erlaubt dir, Dinge schnell festzuhalten, ohne sofort Struktur herstellen zu müssen. Gleichzeitig verhindert sie, dass Unfertiges den Wissensbestand verwässert.
 

@@ -25,7 +25,7 @@ Klassifizierung: framework mit der Zielsetzung betreiben.
 
 # Zentrales Wissensnetzwerk
 
-**Zusammenfassung**
+## Zusammenfassung
 
 > Ein lebendiges Wissensmanagement benötigt eine zentrale Anlaufstelle. Durch die Kombination eines **Wikis** (für kompaktes Wissen), eines **Methodenkoffers** (für Vorlagen und Anleitungen) und eines **Knowledge Graphs** (für visuelle Zusammenhänge) wird Wissen nicht nur gespeichert, sondern aktiv vernetzt und für alle zugänglich gemacht.
 

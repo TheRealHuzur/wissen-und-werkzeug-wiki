@@ -16,7 +16,7 @@ offer_text:
 
 # [Titel: Thema zuerst, Substantivform, 50 bis 60 Zeichen, ohne Markenname. Verwaltungsbezug nur, wenn der Inhalt verwaltungsspezifisch ist]
 
-**Zusammenfassung**
+## Zusammenfassung
 
 [2 bis 4 Sätze, die die Kernfrage des Artikels bereits vollständig beantworten. Ansprache: du. Normaler Absatz, kein Zitatblock. Ohne Links und Fettungen, der Lead wird als reiner Text ausgegeben.]
 

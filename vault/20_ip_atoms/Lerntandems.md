@@ -25,7 +25,7 @@ Klassifizierung: anleitung mit der Zielsetzung betreiben.
 
 # Lerntandems
 
-**Zusammenfassung**
+## Zusammenfassung
 
 > In einem Lerntandem unterstützen sich zwei Mitarbeitende gegenseitig über einen festgelegten Zeitraum. Der Fokus liegt auf dem informellen Austausch, der gemeinsamen Reflexion und der Klärung individueller Fragen. Durch die 1:1-Konstellation entsteht ein geschützter Raum für ehrliche Gespräche und gemeinsames Lernen auf Augenhöhe.
 

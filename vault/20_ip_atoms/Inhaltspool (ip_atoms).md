@@ -24,7 +24,7 @@ Klassifizierung: grundlagen mit der Zielsetzung verstehen.
 
 # Inhaltspool (ip_atoms)
 
-**Zusammenfassung**
+## Zusammenfassung
 
 > ip_atoms ist dein Wissensinventar. Hier liegen Module, die man lesen kann wie kleine Handbuchkapitel – und die zugleich so strukturiert sind, dass RAG und Wikis später zuverlässig damit arbeiten können.
 

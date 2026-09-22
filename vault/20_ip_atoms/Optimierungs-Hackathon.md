@@ -25,7 +25,7 @@ Klassifizierung: best_practice mit der Zielsetzung gestalten.
 
 # Optimierungs-Hackathon
 
-**Zusammenfassung**
+## Zusammenfassung
 
 > Ein Optimierungs-Hackathon bündelt Energien für einen kurzen, intensiven Zeitraum. Im Fokus steht die gemeinsame Arbeit an einem konkreten Prozess (Sprint). Ziel ist nicht die perfekte Dokumentation, sondern das Generieren kreativer Lösungsansätze durch verschiedene Perspektiven und unmittelbares Ausprobieren.
 

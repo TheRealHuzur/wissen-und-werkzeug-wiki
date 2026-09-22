@@ -24,7 +24,7 @@ Klassifizierung: grundlagen mit der Zielsetzung verstehen.
 
 # Maschinenraum (00_system)
 
-**Zusammenfassung**
+## Zusammenfassung
 
 > 00_system enthält alles, was den Vault stabil, prüfbar und automatisierbar macht. Man kann sich das wie den Maschinenraum eines Schiffes vorstellen: Er sorgt für Betriebssicherheit, ist aber nicht der Ort, an dem die eigentlichen Inhalte „leben“.
 
