@@ -44,8 +44,27 @@ jobs:
       - name: Build
         run: npm run build
 
+      # IndexNow, Teil 1: Fingerabdruck jeder Sitemap-Seite nach
+      # dist/indexnow-manifest.json. Steht vor dem mirror, damit --delete das
+      # Manifest nicht beim naechsten Lauf vom Server nimmt. Zeichengleich
+      # auch im Trockenlauf, damit dessen Loeschliste stimmt.
+      # Das Skript endet immer mit Status 0; continue-on-error ist die zweite
+      # Absicherung, falls Node selbst scheitert. Der Deploy darf nie an
+      # IndexNow haengen.
+      - name: IndexNow-Manifest bauen
+        continue-on-error: true
+        run: node scripts/indexnow.mjs manifest
+
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
+
+      # IndexNow, Teil 2: Manifest des letzten Deploys von der Live-Seite
+      # holen und mit dem frischen vergleichen. Muss vor dem mirror laufen,
+      # danach liegt live schon das neue. Die Liste geht nach RUNNER_TEMP,
+      # nicht nach dist/, damit sie nicht mit hochgeladen wird.
+      - name: IndexNow-Meldeliste ermitteln
+        continue-on-error: true
+        run: node scripts/indexnow.mjs vergleichen "$RUNNER_TEMP/indexnow-liste.json"
 
       - name: Deploy via lftp (SFTP protocol)
         env:
@@ -100,3 +119,12 @@ jobs:
           quit;
           EOF
           lftp -f "$LFTP_SCRIPT"
+
+      # IndexNow, Teil 3: erst nach erfolgreichem mirror melden. Scheitert
+      # der mirror, laeuft dieser Schritt nicht (Vorgabe if: success()). Im
+      # Protokoll stehen Anzahl der Adressen und HTTP-Status; 200 und 202
+      # sind Erfolg, alles andere erscheint als Warnung in der
+      # Zusammenfassung, ohne den Lauf rot zu faerben.
+      - name: IndexNow melden
+        continue-on-error: true
+        run: node scripts/indexnow.mjs melden "$RUNNER_TEMP/indexnow-liste.json"

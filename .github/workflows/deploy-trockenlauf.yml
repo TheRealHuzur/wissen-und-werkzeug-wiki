@@ -63,7 +63,7 @@ jobs:
   trockenlauf:
     runs-on: ubuntu-latest
     steps:
-      # Die vier Bauschritte sind zeichengleich mit deploy.yml. Nur so hat
+      # Die fuenf Bauschritte sind zeichengleich mit deploy.yml. Nur so hat
       # dist/ denselben Inhalt wie bei einem echten Deploy, und nur dann ist
       # die Loeschliste aussagekraeftig.
       - name: Checkout
@@ -79,6 +79,17 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      # IndexNow, Teil 1: Fingerabdruck jeder Sitemap-Seite nach
+      # dist/indexnow-manifest.json. Steht vor dem mirror, damit --delete das
+      # Manifest nicht beim naechsten Lauf vom Server nimmt. Zeichengleich
+      # auch im Trockenlauf, damit dessen Loeschliste stimmt.
+      # Das Skript endet immer mit Status 0; continue-on-error ist die zweite
+      # Absicherung, falls Node selbst scheitert. Der Deploy darf nie an
+      # IndexNow haengen.
+      - name: IndexNow-Manifest bauen
+        continue-on-error: true
+        run: node scripts/indexnow.mjs manifest
 
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
