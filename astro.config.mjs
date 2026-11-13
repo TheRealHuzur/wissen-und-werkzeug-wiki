@@ -90,7 +90,21 @@ export default defineConfig({
         !page.includes('/10-expertise') &&
         !page.includes('/20-ip-atoms') &&
         !page.includes('/99-inbox'),
+      // lastmod folgt derselben Regel wie dateModified im JSON-LD
+      // (Standards-Wiki, Abschnitt 4): Es kommt allein aus dem Feld updated,
+      // das der Export nach src/content/docs durchreicht. Fehlt updated,
+      // bekommt die Adresse kein lastmod. Kein Datum ist besser als ein
+      // falsches.
+      //
+      // Bis zum 13.11.2026 suchte diese Funktion nach lastmod, updatedDate
+      // oder dateModified. Keines davon schreibt der Export, gefunden wurde
+      // also nie etwas, und es griff der Rueckfall auf die Dateizeit. Im
+      // CI-Checkout ist das der Zeitpunkt des Deploys: Jede Adresse trug bei
+      // jedem Lauf ein frisches lastmod, ob sich etwas geaendert hatte oder
+      // nicht. Genau dieses Signal verwerfen Suchmaschinen, und zwar im
+      // unguenstigen Fall fuer die ganze Sitemap.
       serialize(item) {
+        delete item.lastmod;
         try {
           const urlPath = new URL(item.url).pathname.replace('/wiki/', '');
           const filePathWithoutExt = path.join(process.cwd(), 'src/content/docs', urlPath.replace(/\/$/, ''));
@@ -103,21 +117,20 @@ export default defineConfig({
             potentialFilePath = path.join(process.cwd(), 'src/content/docs/index.md');
           }
 
-          let lastmod = new Date().toISOString();
-
           if (fs.existsSync(potentialFilePath)) {
             const content = fs.readFileSync(potentialFilePath, 'utf-8');
-            const match = content.match(/^(lastmod|updatedDate|dateModified):\s*"?([^"\n]+)"?/m);
-            if (match && match[2]) {
-              lastmod = new Date(match[2]).toISOString();
-            } else {
-              const stat = fs.statSync(potentialFilePath);
-              lastmod = stat.mtime.toISOString();
+            // Nur im Frontmatter suchen, nicht im Text. Der Export schreibt
+            // updated als "JJJJ-MM-TT". Das Sitemap-Paket macht daraus
+            // Mitternacht UTC desselben Tages (2026-09-18T00:00:00.000Z),
+            // also dasselbe Datum wie dateModified im JSON-LD.
+            const frontmatter = content.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? '';
+            const match = frontmatter.match(/^updated:\s*"?(\d{4}-\d{2}-\d{2})"?\s*$/m);
+            if (match) {
+              item.lastmod = match[1];
             }
           }
-          item.lastmod = lastmod;
         } catch (e) {
-          item.lastmod = new Date().toISOString();
+          // Im Zweifel kein lastmod, siehe oben.
         }
         return item;
       }
